@@ -147,13 +147,17 @@ Divide each day into four session windows based on sunrise/sunset times (extract
 4. **Which spots light up under these conditions** — cross-reference the forecast data against each spot's ideal conditions in the JSON
 5. **Filter for ALL surfer profiles** from `current_situation.md` — for each person in the group, check their wave size limits, skill level, and crowd tolerance. Exclude spots that don't work for everyone who's surfing that day. Tag each session with who it's suitable for (e.g. "Girlfriend-friendly" or "Roman only — too heavy for Cato"). Use the `girlfriend_friendly` field in the spot database as a starting point, but also cross-reference against each person's specific limits.
 6. **Pick the best spot for the window** and explain why
-7. **Rate it** on a 1-10 scale:
+7. **Pick alternatives (when relevant)** — If 2-3 spots could all work for this window and conditions are close enough that it's hard to call a clear winner from forecast data alone, list them as alternatives. This is common when the swell is borderline for multiple spots, or when crowd could tip the balance.
+   - **Proximity rule**: Alternatives MUST be in the same area — spots you can realistically check on your way or within a short detour (under ~15 minutes extra drive). Never suggest alternatives that are in different forecast regions or more than 20 minutes apart. "D-Bah or Snapper" makes sense (5 min walk). "D-Bah or Lennox Head" does not (65 min drive). The whole point is that the surfer checks one, and if it's not great, drives 5 minutes down the road to the other.
+   - **Camera check suggestion**: When alternatives exist, suggest checking Surfline cameras before leaving. Be specific: "Check the D-Bah and Snapper cams before you head out — if Snapper looks too crowded, D-Bah will be a better bet." This saves the surfer from committing to a spot blind when the forecast can't distinguish between nearby options.
+   - **Don't force alternatives**: If one spot is clearly the best and nothing else is close, just recommend that one spot. Alternatives are for genuinely close calls, not for padding every session window with options.
+8. **Rate it** on a 1-10 scale:
    - 1-3: Barely worth paddling out
    - 4-5: Fun if you're keen, nothing special
    - 6-7: Good session, worth the effort
    - 8-9: Excellent, don't miss it
    - 10: Epic, once-in-a-trip conditions
-8. **Note any caveats** (crowd risk, drive time, hazards)
+9. **Note any caveats** (crowd risk, drive time, hazards)
 
 ### Report structure
 
@@ -166,6 +170,8 @@ For each day (today, tomorrow, day after):
 
 ### Dawn Patrol (5:30am - 8:00am)
 **Best spot**: [Name] ([drive time] drive)
+**Also worth checking**: [Nearby spot B] and [Nearby spot C] — [brief reason, e.g. "if the crowd's too much at Snapper, Greenmount handles the same swell with fewer people"]
+**Check the cams**: [Specific camera suggestion, e.g. "Pull up the Snapper and D-Bah cams before you leave — if Snapper's packed, head straight to D-Bah"]
 **Rating**: [X/10]
 **Why**: [2-3 sentences explaining conditions and why this spot works]
 **Surf**: [height range], [swell details]
@@ -185,6 +191,8 @@ For each day (today, tomorrow, day after):
 [Your honest recommendation — which session to prioritize, whether to drive far or stay local, whether the girlfriend will enjoy it, etc.]
 ```
 
+**Note on "Also worth checking" and "Check the cams"**: These lines are OPTIONAL — only include them when there are genuine alternatives in the same area. If one spot is the clear winner, skip these lines entirely. A clean single recommendation is better than forced alternatives.
+
 ### Tone
 
 Write like a knowledgeable local surf forecaster talking to a mate. Be direct, honest, and practical. Don't hype mediocre conditions. If it's flat, say it's flat. If there's a once-in-a-trip swell coming, get excited about it.
@@ -202,7 +210,7 @@ The HTML should be a single self-contained file (no external dependencies except
 - Last updated timestamp
 - Chrome connection status (warning banner if disconnected)
 - Current location and trip dates
-- Today's forecast with session windows and spot recommendations
+- Today's forecast with session windows, spot recommendations, alternatives, and camera check suggestions
 - Tomorrow and day-after forecasts (collapsible)
 - A "days to watch" highlight section
 - **Data confidence indicators**: For each forecast region used, show whether a human forecaster's written report was available. Regions with written reports should display a small badge like "Forecaster verified — [Name]" to indicate enhanced accuracy. Regions without written reports should note "Numerical data only" so the user knows the analysis is purely algorithmic. This distinction matters because human forecasters account for local nuances (sand movement, rip patterns, local wind effects) that numerical models miss.

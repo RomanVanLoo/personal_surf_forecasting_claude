@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surf Forecast — Gold Coast</title>
+<title>Surf Forecast — Tweed Heads</title>
 <style>
   :root {
     --bg: #0a0f1a;
@@ -233,6 +233,19 @@
     margin-bottom: 12px;
   }
 
+  /* Alternatives and camera check */
+  .alternatives {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+  .cam-check {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
   /* Conditions grid */
   .conditions {
     display: grid;
@@ -373,17 +386,18 @@
 
   <!-- Header -->
   <div class="header">
-    <h1>Surf Forecast</h1>
+    <h1>Roman's Surf Forecast</h1>
+    <h1>By Claude</h1>
     <div class="subtitle">Personal forecast for Roman + Girlfriend</div>
     <div class="location-badge">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Gold Coast, QLD — until 31 Mar
+      Tweed Heads, NSW — until 31 Mar
     </div>
   </div>
 
   <!-- Status bar -->
   <div class="status-bar">
-    <span class="updated">Updated: Mon 16 Mar, 4:00pm</span>
+    <span class="updated">Updated: Fri 20 Mar, 9:00pm AEDT</span>
     <span class="chrome-status">
       <span class="status-dot ok"></span>
       Chrome connected
@@ -398,62 +412,64 @@
   <!-- Big Picture -->
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>Small, gutless E swell (1.0-1.3m @ 8s) with persistent ENE onshore winds. Not much to get excited about for the next 3 days. Dawn patrol is your only real window — winds are lightest before 8am. Byron and Noosa are even smaller. <strong>Mark Tue 24 March</strong> — D-Bah forecast 2.4-5.5m. That's your big event.</p>
+    <p>Small grovel today (Sat 21) and tomorrow (Sun 22), with a transition new swell bringing more push. Real magic starts Tuesday — multiple big swells incoming through the week. Peak day is Thursday 26 March: 2.4-3m at dawn with near-calm 5kph wind. That's your crown jewel. Wednesday also massive (2.4-3.7m). Wind will be a factor most days. Sheltered point breaks win out during the windy windows.</p>
   </div>
 
   <!-- Day tabs -->
   <div class="day-tabs">
     <div class="day-tab active" onclick="showDay(0)">
-      <div class="day-name">Mon</div>
-      <div class="day-date">16 Mar</div>
+      <div class="day-name">Sat</div>
+      <div class="day-date">21 Mar</div>
       <div class="day-rating">Best: <span class="rate-4">4/10</span></div>
     </div>
     <div class="day-tab" onclick="showDay(1)">
-      <div class="day-name">Tue</div>
-      <div class="day-date">17 Mar</div>
-      <div class="day-rating">Best: <span class="rate-4">4/10</span></div>
+      <div class="day-name">Sun</div>
+      <div class="day-date">22 Mar</div>
+      <div class="day-rating">Best: <span class="rate-5">5/10</span></div>
     </div>
     <div class="day-tab" onclick="showDay(2)">
-      <div class="day-name">Wed</div>
-      <div class="day-date">18 Mar</div>
-      <div class="day-rating">Best: <span class="rate-4">4.5/10</span></div>
+      <div class="day-name">Mon</div>
+      <div class="day-date">23 Mar</div>
+      <div class="day-rating">Best: <span class="rate-5">5/10</span></div>
     </div>
   </div>
 
-  <!-- DAY 0: Monday 16 March -->
+  <!-- DAY 0: Saturday 21 March -->
   <div class="day-content active" id="day0">
 
     <div class="session-card rate-border-4">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
-          <div class="session-spot">Currumbin Alley</div>
-          <div class="session-drive">15 min drive</div>
+          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
         </div>
         <div class="session-rating">
           <span class="rating-num rate-4">4</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">E swell is right in Currumbin's window. Dawn winds lightest — cleanest faces of the day. Waist-to-chest-high rights with some wall to work with.</div>
+      <div class="session-why">Low-to-mid tide rising = best window. Same swell as today (0.6-1.1m ENE 6-8s) but catch it early before the tide gets too high and fat. Yesterday D-Bah was 6/10 this morning but fat at high tide — get there early. Wind 7kph light.</div>
+      <div class="alternatives">↳ Snapper (5 min walk) if D-Bah crowded — check cam first</div>
+      <div class="cam-check">📹 Check cams before heading out</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-1.0m</div>
-          <div class="cond-detail">E @ 8s</div>
+          <div class="cond-value">0.6-1.1m</div>
+          <div class="cond-detail">0.7m 6s + 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 5-8</div>
-          <div class="cond-detail">kph, light</div>
+          <div class="cond-value">7 kph</div>
+          <div class="cond-detail">light</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.8m</div>
-          <div class="cond-detail">mid, rising</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">47 kJ</div>
+          <div class="cond-detail">low</div>
         </div>
       </div>
-      <div class="gf-tag yes">Girlfriend-friendly</div>
+      <div class="gf-tag yes">Cato-friendly</div>
     </div>
 
     <div class="session-card rate-border-3">
@@ -461,32 +477,31 @@
         <div>
           <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
           <div class="session-spot">D-Bah</div>
-          <div class="session-drive">33 min drive</div>
+          <div class="session-drive">Walk</div>
         </div>
         <div class="session-rating">
           <span class="rating-num rate-3">3</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">D-Bah picks up every bit of swell — 0.9-1.2m observed. A-frame wedges still punchy in onshore slop, but don't expect clean faces.</div>
+      <div class="session-why">High tide kills it — yesterday D-Bah was fat at high tide, same setup today. Only if desperate. Wind building to 13-16kph.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
           <div class="cond-value">0.9-1.2m</div>
-          <div class="cond-detail">choppy</div>
+          <div class="cond-detail">0.8m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 15</div>
-          <div class="cond-detail">kph, onshore</div>
+          <div class="cond-value">13-16 kph</div>
+          <div class="cond-detail">building</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.2m</div>
-          <div class="cond-detail">high, turning</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">57 kJ</div>
+          <div class="cond-detail">low</div>
         </div>
       </div>
-      <div class="gf-tag maybe">Better off at Currumbin</div>
     </div>
 
     <div class="session-card rate-border-2">
@@ -501,22 +516,22 @@
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">Full onshore, small, blown out everywhere. Palm Beach (15 min) if you must — multiple peaks, find a quiet section. Better to explore the Gold Coast.</div>
+      <div class="session-why">Wind 12-19kph, small and onshore. Stay on the couch. This is straight grovel territory.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-0.9m</div>
-          <div class="cond-detail">poor</div>
+          <div class="cond-value">0.9-1.2m</div>
+          <div class="cond-detail">0.9m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 15+</div>
-          <div class="cond-detail">kph, onshore</div>
+          <div class="cond-value">12-19 kph</div>
+          <div class="cond-detail">onshore</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.0m</div>
-          <div class="cond-detail">dropping</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">75 kJ</div>
+          <div class="cond-detail">low</div>
         </div>
       </div>
     </div>
@@ -524,49 +539,223 @@
     <div class="session-card rate-border-3">
       <div class="session-header">
         <div>
-          <div class="session-time">Evening — 4:30pm - 6:30pm</div>
-          <div class="session-spot">The Spit</div>
-          <div class="session-drive">5 min drive</div>
+          <div class="session-time">Evening — 4:00pm - 6:30pm</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
         </div>
         <div class="session-rating">
           <span class="rating-num rate-3">3</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">Closest option. E swell wraps into river mouth — small left-handers, forgiving and fun for a sunset paddle. Won't be epic.</div>
+      <div class="session-why">Tide dropping back which helps shape, but wind still up at 12-19kph. Marginal.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-0.9m</div>
-          <div class="cond-detail">E @ 8s</div>
+          <div class="cond-value">0.9-1.2m</div>
+          <div class="cond-detail">0.8m-0.9m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 10-12</div>
-          <div class="cond-detail">easing</div>
+          <div class="cond-value">12-19 kph</div>
+          <div class="cond-detail">still up</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.6m</div>
-          <div class="cond-detail">low-mid, rising</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">58 kJ</div>
+          <div class="cond-detail">low</div>
         </div>
       </div>
-      <div class="gf-tag yes">Girlfriend-friendly</div>
     </div>
 
     <div class="advice-card">
-      <h3>Best advice for Monday</h3>
-      <p>Dawn patrol at Currumbin is the only session worth prioritising. Get there by 5:30am, surf 90 minutes, call it. Rest of the day is better spent out of the water. If your girlfriend wants to come, dawn Currumbin is perfect for both of you.</p>
+      <h3>Best advice for Saturday</h3>
+      <p>Dawn patrol is the only real window tomorrow. Same swell as today — Roman reported D-Bah was a 6/10 this morning but fat on high tide. Get there by 5:30am, catch it before the tide pushes up. After 9am it's couch time. The real surf starts Sunday when a new 10s swell arrives.</p>
     </div>
   </div>
 
-  <!-- DAY 1: Tuesday 17 March -->
+  <!-- DAY 1: Sunday 22 March -->
   <div class="day-content" id="day1">
+
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-5">5</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">New 10s swell arriving = more push and shape than yesterday. 302kJ wave energy vs 47kJ yesterday. Wind 10kph still manageable. More defined walls to work with.</div>
+      <div class="alternatives">↳ Snapper (5 min walk) — with more size the point will have better-defined walls</div>
+      <div class="cam-check">📹 Check cams for both spots before heading out</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.4m</div>
+          <div class="cond-detail">1.4m 10s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">10 kph</div>
+          <div class="cond-detail">manageable</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">302 kJ</div>
+          <div class="cond-detail">solid jump</div>
+        </div>
+      </div>
+      <div class="gf-tag yes">Cato-friendly</div>
+    </div>
 
     <div class="session-card rate-border-4">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
+          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-4">4</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Wind building to 14-23kph. Still surfable but textured. New 10s swell brings more push though.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.4m</div>
+          <div class="cond-detail">1.4m 10s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">14-23 kph</div>
+          <div class="cond-detail">building</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">231 kJ</div>
+          <div class="cond-detail">good</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-card rate-border-3">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
+          <div class="session-spot">Cabarita</div>
+          <div class="session-drive">25 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-3">3</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">If you're keen to explore — Cabarita picks up swell later in the day. But wind makes it marginal. Better to save energy for Monday.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.2m</div>
+          <div class="cond-detail">1.3m 10s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">14-23 kph</div>
+          <div class="cond-detail">onshore</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">224 kJ</div>
+          <div class="cond-detail">good</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-card rate-border-4">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Evening — 4:00pm - 6:30pm</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-4">4</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Swell building to 1.6m 10s with 340kJ. More juice but wind still up at 11-26kph.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.4m</div>
+          <div class="cond-detail">1.6m 10s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">11-26 kph</div>
+          <div class="cond-detail">up</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">340 kJ</div>
+          <div class="cond-detail">building</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advice-card">
+      <h3>Best advice for Sunday</h3>
+      <p>Sunday is the transition day. New 10s swell brings more push — should feel punchier than the fat stuff on Saturday. Dawn patrol D-Bah is the pick. Don't bother driving to Byron or Lennox — barely registering down there. Save your energy — Monday is when it really starts building, and next week is the main event.</p>
+    </div>
+  </div>
+
+  <!-- DAY 2: Monday 23 March -->
+  <div class="day-content" id="day2">
+
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-spot">D-Bah</div>
+          <div class="session-drive">Walk</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-5">5</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Chest-high+ with building energy (298kJ). Wind 11kph still borderline manageable at dawn. Also worth checking: Snapper and Greenmount — with more size, the point breaks start working properly. Snapper will be crowded though.</div>
+      <div class="alternatives">↳ Snapper (Walk) or Greenmount (Walk) — points come alive with size</div>
+      <div class="cam-check">📹 Check cams before deciding</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.4m</div>
+          <div class="cond-detail">1.8m 8s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">11 kph</div>
+          <div class="cond-detail">light</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">298 kJ</div>
+          <div class="cond-detail">building</div>
+        </div>
+      </div>
+      <div class="gf-tag maybe">Roman only if overhead</div>
+    </div>
+
+    <div class="session-card rate-border-4">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
           <div class="session-spot">Currumbin Alley</div>
           <div class="session-drive">15 min drive</div>
         </div>
@@ -575,269 +764,95 @@
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">Same play as Monday. E swell hits Currumbin's sweet spot, dawn winds lightest. Slightly lower tide creates better-shaped banks on the inside.</div>
+      <div class="session-why">Wind picks up (16-28kph) so D-Bah will be messy. Currumbin is more sheltered. Fun walls on the E swell.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-1.0m</div>
-          <div class="cond-detail">E @ 8s</div>
+          <div class="cond-value">1.2-1.8m</div>
+          <div class="cond-detail">2.1m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 5-8</div>
-          <div class="cond-detail">kph, light</div>
+          <div class="cond-value">16-28 kph</div>
+          <div class="cond-detail">shelter</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.5m</div>
-          <div class="cond-detail">low, rising</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">422 kJ</div>
+          <div class="cond-detail">strong</div>
         </div>
       </div>
-      <div class="gf-tag yes">Girlfriend-friendly</div>
-    </div>
-
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
-          <div class="session-spot">Palm Beach</div>
-          <div class="session-drive">15 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Low-to-mid tide E swell creates fun peaks along the beach. Multiple sandbars = spread out and avoid crowds. Messy but forgiving of wind chop.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-1.0m</div>
-          <div class="cond-detail">bumpy</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 12-15</div>
-          <div class="cond-detail">kph, onshore</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.8m</div>
-          <div class="cond-detail">mid, rising</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Girlfriend-friendly</div>
-    </div>
-
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">The Pass, Byron Bay</div>
-          <div class="session-drive">1h 15min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Cape Byron blocks ENE wind. Faces might be cleaner than Gold Coast by afternoon. Even at 2-3ft The Pass is a beautiful longboard wave. Worth the drive for the experience.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-0.9m</div>
-          <div class="cond-detail">E @ 8s</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 10</div>
-          <div class="cond-detail">cross, sheltered</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.4m</div>
-          <div class="cond-detail">high</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Girlfriend-friendly — mellow peeling rights</div>
+      <div class="gf-tag yes">Cato-friendly</div>
     </div>
 
     <div class="session-card rate-border-2">
       <div class="session-header">
         <div>
-          <div class="session-time">Evening — 4:30pm - 6:30pm</div>
-          <div class="session-spot">The Spit / Currumbin</div>
-          <div class="session-drive">5-15 min</div>
+          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
+          <div class="session-spot">Skip it</div>
+          <div class="session-drive">—</div>
         </div>
         <div class="session-rating">
           <span class="rating-num rate-2">2</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">Nothing special. Quick sunset paddle if you're back from Byron. Low expectations.</div>
+      <div class="session-why">Skip the open spots. Wind 14-33kph. If desperate, Currumbin Alley for shelter but keep expectations low.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.5-0.8m</div>
-          <div class="cond-detail">fading</div>
+          <div class="cond-value">1.2-2.0m</div>
+          <div class="cond-detail">2.2m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 10</div>
-          <div class="cond-detail">easing</div>
+          <div class="cond-value">14-33 kph</div>
+          <div class="cond-detail">strong</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.8m</div>
-          <div class="cond-detail">mid</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">515 kJ</div>
+          <div class="cond-detail">max</div>
         </div>
       </div>
     </div>
 
-    <div class="advice-card">
-      <h3>Best advice for Tuesday</h3>
-      <p>Dawn Currumbin again, then consider the Byron day trip — even mediocre Pass is a beautiful wave and your girlfriend will love it. Good day to rest otherwise. The big swell isn't until next Tuesday (24th).</p>
-    </div>
-  </div>
-
-  <!-- DAY 2: Wednesday 18 March -->
-  <div class="day-content" id="day2">
-
-    <div class="session-card rate-border-4">
+    <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
-          <div class="session-spot">Currumbin Alley</div>
-          <div class="session-drive">15 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-4">4.5</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Slightly longer period swell (9s vs 8s) means more push. If the banks cooperate, chest-high walls with a bit more power than Mon/Tue.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.7-1.0m</div>
-          <div class="cond-detail">E @ 9s</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 5-8</div>
-          <div class="cond-detail">kph, light</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.4m</div>
-          <div class="cond-detail">low, rising</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Girlfriend-friendly</div>
-    </div>
-
-    <div class="session-card rate-border-4">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
-          <div class="session-spot">Cabarita Beach</div>
-          <div class="session-drive">40 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-4">4</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Worth mixing it up. Cabarita faces SE — slight SE component means more swell than GC spots. Crowd level 3/10. Long sectioned right-hander. Beautiful spot.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.7-1.0m</div>
-          <div class="cond-detail">E-SE</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 12-15</div>
-          <div class="cond-detail">kph, onshore</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.0m</div>
-          <div class="cond-detail">mid, rising</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Girlfriend-friendly — uncrowded</div>
-    </div>
-
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">Hastings Point / Kingscliff</div>
-          <div class="session-drive">38-42 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Already on the Tweed Coast? Push south to Hastings Point — rivermouth peaks, almost zero crowd. Kingscliff another option. Neither memorable, but pleasant for a cruisy paddle.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-0.9m</div>
-          <div class="cond-detail">E-SE</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 10-12</div>
-          <div class="cond-detail">may ease</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.3m</div>
-          <div class="cond-detail">high, turning</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Girlfriend-friendly — very uncrowded</div>
-    </div>
-
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Evening — 4:30pm - 6:30pm</div>
+          <div class="session-time">Evening — 4:00pm - 6:30pm</div>
           <div class="session-spot">D-Bah</div>
-          <div class="session-drive">33 min drive</div>
+          <div class="session-drive">Walk</div>
         </div>
         <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
+          <span class="rating-num rate-5">5</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">If wind drops as forecast, D-Bah's evening session could offer punchiest waves of the day. Dropping tide creates better-shaped banks. Quick and punchy A-frames.</div>
+      <div class="session-why">Biggest surf of the day (1.2-2m, 515kJ) but wind is 14-33kph. Only if you can handle the chop.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
-          <div class="cond-value">0.8-1.1m</div>
-          <div class="cond-detail">E @ 9s</div>
+          <div class="cond-value">1.2-2.0m</div>
+          <div class="cond-detail">2.2m 8s</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">ENE 8-10</div>
-          <div class="cond-detail">easing</div>
+          <div class="cond-value">14-33 kph</div>
+          <div class="cond-detail">strong</div>
         </div>
         <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">0.7m</div>
-          <div class="cond-detail">dropping</div>
+          <div class="cond-label">Energy</div>
+          <div class="cond-value">515 kJ</div>
+          <div class="cond-detail">max</div>
         </div>
       </div>
-      <div class="gf-tag maybe">Messy — she'd prefer Kingscliff</div>
+      <div class="gf-tag no">Roman only</div>
     </div>
 
     <div class="advice-card">
-      <h3>Best advice for Wednesday</h3>
-      <p>Make it a Tweed Coast day. Dawn at Currumbin, then drive 40 min south to explore Cabarita, Hastings Point, and Kingscliff. Beautiful uncrowded spots your girlfriend will love, even if the surf is average. Pack lunch, make a day of it.</p>
+      <h3>Best advice for Monday</h3>
+      <p>Monday is building — chest to head high by evening. But wind is the problem all day. Best play is an early dawn patrol at D-Bah or Snapper, then switch to Currumbin for shelter mid-morning if wind blows out. The REAL magic starts Tuesday. Hugh McDowell is calling head high+ for sheltered points by Tuesday, and Thursday dawn is shaping up as the crown jewel of the trip — 2.4-3m with 5kph wind.</p>
     </div>
   </div>
 
@@ -845,22 +860,40 @@
   <div class="dtw-section">
     <h2>Days to Watch</h2>
 
+    <div class="dtw-card">
+      <div class="dtw-date">Sunday 22 March</div>
+      <div class="dtw-size">D-Bah: 0.9-1.4m | Cabarita: 0.9-1.2m</div>
+      <div class="dtw-detail">New 10s swell fills in. More push but still small. Cleanest AM window.</div>
+    </div>
+
+    <div class="dtw-card">
+      <div class="dtw-date">Monday 23 March</div>
+      <div class="dtw-size">D-Bah: 0.9-2.0m | Cabarita: 1.2-1.8m</div>
+      <div class="dtw-detail">Building. Points and southern GC best. Chest to head high by evening. Wind a problem all day.</div>
+    </div>
+
     <div class="dtw-card big">
       <div class="dtw-date">Tuesday 24 March</div>
-      <div class="dtw-size">D-Bah: 2.4 - 5.5m &nbsp;|&nbsp; The Pass: 2.0 - 4.0m</div>
-      <div class="dtw-detail">THIS IS THE ONE. Strong S-SE swell, long period. Every point break firing. Too big for girlfriend at main spots — look at sheltered Currumbin or Tallebudgera. Roman: Snapper/D-Bah at dawn.</div>
+      <div class="dtw-size">D-Bah: 1.8-2.4m &nbsp;|&nbsp; Cabarita: 2.0+</div>
+      <div class="dtw-detail">Building further. 2.9m 9s primary swell (1081kJ at dawn). Head high+ for sheltered points. Big but messy with 15-41kph wind.</div>
     </div>
 
     <div class="dtw-card big">
       <div class="dtw-date">Wednesday 25 March</div>
-      <div class="dtw-size">D-Bah: 3.0 - 4.5m &nbsp;|&nbsp; Easing through the day</div>
-      <div class="dtw-detail">Swell peaks overnight. Still pumping morning. Starting to ease by afternoon. Wind direction will be key — check closer to the date.</div>
+      <div class="dtw-size">D-Bah: 2.4-3m &nbsp;|&nbsp; Cabarita: 2.4-3.7m</div>
+      <div class="dtw-detail">THE PEAK. 3.4m 10s primary (1675kJ). Solid everywhere. Most manageable at points. Wind 14-41kph.</div>
+    </div>
+
+    <div class="dtw-card big">
+      <div class="dtw-date">Thursday 26 March</div>
+      <div class="dtw-size">D-Bah: 2.4-3m dawn (3.1m 12s, 2367kJ!!)</div>
+      <div class="dtw-detail">THE SWEET SPOT. Dawn patrol has wind NEAR CALM 5kph. Drops to 1.2-2m by noon. Cabarita 2.4-3m dawn, 5kph wind. THIS IS THE DAY. Don't miss dawn patrol.</div>
     </div>
 
     <div class="dtw-card">
-      <div class="dtw-date">Thursday 26 March</div>
-      <div class="dtw-size">Easing — potential sweet spot</div>
-      <div class="dtw-detail">Easing swell, potentially cleaner. Could drop to girlfriend-friendly range at the point breaks. Might be the best day for surfing together.</div>
+      <div class="dtw-date">Monday 30 March</div>
+      <div class="dtw-size">D-Bah: 1.5-2.1m | 2.8m 11s</div>
+      <div class="dtw-detail">Second swell event. Another big one (1449kJ) before trip ends.</div>
     </div>
   </div>
 
@@ -871,7 +904,7 @@
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
         <div>
           <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Gold Coast (D-Bah)</div>
-          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: Snapper, Kirra, Burleigh, Currumbin, Palm Beach, The Spit, D-Bah</div>
+          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: D-Bah, Snapper, Kirra, Burleigh, Currumbin, Palm Beach, The Spit</div>
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
@@ -880,8 +913,8 @@
       </div>
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
         <div>
-          <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Byron Bay (The Pass)</div>
-          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: Brunswick, The Pass, Wategos, Tallows, The Wreck, Broken Head</div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Northern NSW (Tweed/Byron)</div>
+          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: Cabarita, The Pass, Broken Head, Lennox Head</div>
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
@@ -890,31 +923,22 @@
       </div>
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
         <div>
-          <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Noosa Heads</div>
-          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: First Point, Tea Tree, Granite Bay, Double Island, Rainbow Beach</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          Forecaster: Hugh McDowell
-        </div>
-      </div>
-      <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
-        <div>
-          <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Tweed Coast, Sunshine Coast, Ballina/Lennox</div>
-          <div style="font-size:0.72rem;color:var(--text-dim);">Interpolated from nearest fetched regions — not fetched separately this run</div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Sunshine Coast / Noosa</div>
+          <div style="font-size:0.72rem;color:var(--text-dim);">Not fetched — 2hr+ drive, small swell, not worth it this run</div>
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#422006;color:#fbbf24;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
-          Estimated
+          Skipped
         </div>
       </div>
     </div>
+    <div style="margin-top:12px;font-size:0.78rem;color:var(--text-dim);">Model run: 20 Mar 5am AEDT</div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
     Data from Surfline Premium via Chrome automation<br>
     Spots cross-referenced against 57-spot database<br>
-    <span style="margin-top:4px;display:inline-block;">Next update: Tue 17 Mar, 5:00am</span>
+    <span style="margin-top:4px;display:inline-block;">Next update: Sat 21 Mar, 9:00pm</span>
   </div>
 
 </div>
