@@ -111,9 +111,25 @@ If Chrome is not connected or the browser automation fails:
 
 Do NOT save the Surfline data to a file. Keep it in your working context for the report generation step.
 
+## Step 3e: Load recent observations
+
+Read `observations.json` from the workspace folder. Filter for observations from the **last 3 days** that are relevant to the current forecast period.
+
+For each recent observation, check:
+
+1. **Same swell event?** Compare the observation date's swell (direction, period, size) against today's/tomorrow's forecast. If the swell is from the same event or a similar pattern, the observation is highly relevant for calibration.
+2. **Forecast accuracy feedback**: If the user reported conditions were bigger/smaller than forecast, or wind changed earlier/later, apply that as a confidence adjustment to today's forecast for the same region. Mention it explicitly in the report: "Yesterday Roman reported D-Bah was running a foot bigger than Surfline predicted — same swell today, so expect similar."
+3. **Crowd intel**: If the user reported crowd levels at specific spots and times, and conditions are similar today, factor that into spot recommendations.
+4. **Spot character notes**: If the user noted something about a spot's current state (sand shift, rip change, barrel section shorter than usual), mention it when recommending that spot.
+5. **Rating calibration**: If the user's rating for a spot was notably different from what the forecast system would have predicted, note the discrepancy and adjust your confidence for similar conditions.
+
+Weave observation insights naturally into the Step 4 report — don't add a separate "observations" section. Instead, reference them inline: "Based on Roman's session yesterday..." or "Note: Snapper was packed yesterday in similar conditions..."
+
+If there are no recent observations, skip this step silently.
+
 ## Step 4: Generate the surf report
 
-Using the forecast data from Step 3 and the spot database from Step 2, generate a personalized surf report.
+Using the forecast data from Step 3, the spot database from Step 2, and any recent observations from Step 3e, generate a personalized surf report.
 
 ### Session windows
 
@@ -175,11 +191,11 @@ Write like a knowledgeable local surf forecaster talking to a mate. Be direct, h
 
 ## Step 5: Update the HTML dashboard
 
-Read the current `index.html` from the GitHub Pages repo. The local repo path is stored in `current_situation.md` under System Notes (currently `~/code/personal_surf_forecasting`, mounted in Cowork at `/sessions/.../mnt/personal_surf_forecasting`). **Read and write `index.html` using the normal mounted folder path** — do NOT use Desktop Commander for file operations.
+Read the current `index.html` from the GitHub Pages repo. The local repo path is stored in `current_situation.md` under System Notes (currently `~/code/personal_surf_forecasting_claude`, mounted in Cowork at `/sessions/.../mnt/personal_surf_forecasting_claude`). **Read and write `index.html` using the normal mounted folder path** — do NOT use Desktop Commander for file operations.
 
 **After writing the file, commit and push using Desktop Commander (git only):**
 Use `mcp__Desktop_Commander__start_process` with `timeout_ms: 30000` to run:
-`cd /Users/romanvanloo/code/personal_surf_forecasting && git add -A && git commit -m "Forecast update: [DATE]" && git push`
+`cd /Users/romanvanloo/code/personal_surf_forecasting_claude && git add -A && git commit -m "Forecast update: [DATE]" && git push`
 This pushes directly to GitHub Pages via the user's local git credentials. Desktop Commander is ONLY used for this git step — not for reading or writing files.
 
 The HTML should be a single self-contained file (no external dependencies except CDN-hosted CSS/fonts) that works as a mobile-friendly dashboard showing:
