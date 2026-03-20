@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Except skills and index.html
+!skills/
+!skills/**
+!index.html
+!.gitignore
