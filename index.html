@@ -399,11 +399,16 @@
 
   <!-- Status bar -->
   <div class="status-bar">
-    <span class="updated">Updated: Sun 22 Mar, 5:00pm AEDT</span>
+    <span class="updated">Updated: Mon 23 Mar, 5:00am AEDT</span>
     <span class="chrome-status">
-      <span class="status-dot ok"></span>
-      Chrome connected
+      <span class="status-dot error"></span>
+      Chrome failed — cached data
     </span>
+  </div>
+
+  <!-- Chrome failure warning -->
+  <div class="warning-banner">
+    &#9888;&#65039; Chrome was not connected during the 5am scheduled run. Forecast data below is from the last successful scrape (Sun 22 Mar 5:00pm AEDT, LOTUS model 22 Mar 5am AEDT). Data is ~12 hours old but still based on the same model run. Open Chrome with the Claude extension to get fresh data on the next run.
   </div>
 
   <!-- Big Picture -->
@@ -934,14 +939,14 @@
         </div>
       </div>
     </div>
-    <div style="margin-top:12px;font-size:0.78rem;color:var(--text-dim);">LOTUS model run: 22 Mar 5am AEDT (21 Mar 18 UTC) — 12hr newer than morning forecast &bull; 5 observations calibrated (2 today, 3 from Fri 20) &bull; Chrome connected — fresh scrape Sun 22 5:00pm &bull; Next update: Mon 23 Mar ~5:30am AEDT (scheduled)</div>
+    <div style="margin-top:12px;font-size:0.78rem;color:var(--text-dim);">LOTUS model run: 22 Mar 5am AEDT (21 Mar 18 UTC) &bull; 5 observations calibrated (2 from Sun 22, 3 from Fri 20) &bull; Chrome FAILED — using cached data from Sun 22 5:00pm scrape &bull; Next update: Mon 23 Mar ~5:00pm AEDT (scheduled)</div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
     Data from Surfline Premium via Chrome automation<br>
     Spots cross-referenced against 57-spot database<br>
-    <span style="margin-top:4px;display:inline-block;">Next update: Mon 23 Mar, ~5:30am AEDT (scheduled)</span>
+    <span style="margin-top:4px;display:inline-block;">Next update: Mon 23 Mar, ~5:00pm AEDT (scheduled)</span>
   </div>
 
 </div>
