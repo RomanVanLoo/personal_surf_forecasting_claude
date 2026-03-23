@@ -21,372 +21,87 @@
     --border: #1e293b;
     --radius: 12px;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+    min-height: 100vh; -webkit-font-smoothing: antialiased;
   }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 16px;
-  }
-
-  /* Header */
-  .header {
-    text-align: center;
-    padding: 24px 0 16px;
-  }
-  .header h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-bright);
-    letter-spacing: -0.02em;
-  }
-  .header .subtitle {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    margin-top: 4px;
-  }
-  .header .location-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent-dim);
-    color: var(--accent);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-top: 10px;
-  }
-
-  /* Status bar */
-  .status-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 14px;
-    background: var(--card);
-    border-radius: var(--radius);
-    margin-bottom: 16px;
-    font-size: 0.78rem;
-  }
-  .status-bar .updated {
-    color: var(--text-dim);
-  }
-  .status-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 6px;
-  }
+  .container { max-width: 680px; margin: 0 auto; padding: 16px; }
+  .header { text-align: center; padding: 24px 0 16px; }
+  .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em; }
+  .header .subtitle { font-size: 0.85rem; color: var(--text-dim); margin-top: 4px; }
+  .header .location-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-dim); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 10px; }
+  .status-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--card); border-radius: var(--radius); margin-bottom: 16px; font-size: 0.78rem; }
+  .status-bar .updated { color: var(--text-dim); }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
   .status-dot.ok { background: var(--green); }
   .status-dot.warn { background: var(--yellow); }
   .status-dot.error { background: var(--red); }
-  .chrome-status {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-  }
-
-  /* Warning banner */
-  .warning-banner {
-    background: #422006;
-    border: 1px solid #92400e;
-    border-radius: var(--radius);
-    padding: 12px 16px;
-    margin-bottom: 16px;
-    font-size: 0.85rem;
-    color: #fbbf24;
-  }
-
-  /* Overview card */
-  .overview {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .overview h2 {
-    font-size: 1rem;
-    color: var(--text-bright);
-    margin-bottom: 8px;
-  }
-  .overview p {
-    font-size: 0.88rem;
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  /* Day tabs */
-  .day-tabs {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .day-tab {
-    flex: 1;
-    min-width: 0;
-    padding: 10px 8px;
-    background: var(--card);
-    border: 2px solid transparent;
-    border-radius: var(--radius);
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    -webkit-tap-highlight-color: transparent;
-  }
+  .chrome-status { display: flex; align-items: center; font-weight: 500; }
+  .overview { background: var(--card); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .overview h2 { font-size: 1rem; color: var(--text-bright); margin-bottom: 8px; }
+  .overview p { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+  .day-tabs { display: flex; gap: 6px; margin-bottom: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .day-tab { flex: 1; min-width: 0; padding: 10px 8px; background: var(--card); border: 2px solid transparent; border-radius: var(--radius); text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
   .day-tab:hover { background: var(--card-hover); }
-  .day-tab.active {
-    border-color: var(--accent);
-    background: var(--accent-dim);
-  }
-  .day-tab .day-name {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+  .day-tab.active { border-color: var(--accent); background: var(--accent-dim); }
+  .day-tab .day-name { font-size: 0.75rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
   .day-tab.active .day-name { color: var(--accent); }
-  .day-tab .day-date {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-bright);
-    margin-top: 2px;
-  }
-  .day-tab .day-rating {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    margin-top: 4px;
-  }
-
-  /* Session cards */
+  .day-tab .day-date { font-size: 0.85rem; font-weight: 700; color: var(--text-bright); margin-top: 2px; }
+  .day-tab .day-rating { font-size: 0.7rem; color: var(--text-dim); margin-top: 4px; }
   .day-content { display: none; }
   .day-content.active { display: block; }
-
-  .session-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 10px;
-    border-left: 3px solid var(--border);
-    transition: background 0.2s;
-  }
+  .session-card { background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; border-left: 3px solid var(--border); transition: background 0.2s; }
   .session-card:hover { background: var(--card-hover); }
-
-  .session-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  .session-time {
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-  .session-rating {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .rating-num {
-    font-size: 1.1rem;
-    font-weight: 800;
-    line-height: 1;
-  }
-  .rating-label {
-    font-size: 0.65rem;
-    color: var(--text-dim);
-  }
-
-  .session-spot {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text-bright);
-    margin-bottom: 2px;
-  }
-  .session-drive {
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    margin-bottom: 8px;
-  }
-  .session-why {
-    font-size: 0.85rem;
-    color: var(--text);
-    line-height: 1.55;
-    margin-bottom: 12px;
-  }
-
-  /* Alternatives and camera check */
-  .alternatives {
-    font-size: 0.78rem;
-    color: var(--text-dim);
-    margin-bottom: 4px;
-  }
-  .cam-check {
-    font-size: 0.75rem;
-    color: var(--accent);
-    font-style: italic;
-    margin-bottom: 8px;
-  }
-
-  /* Conditions grid */
-  .conditions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-  .cond-item {
-    background: var(--bg);
-    border-radius: 8px;
-    padding: 8px 10px;
-    text-align: center;
-  }
-  .cond-label {
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 2px;
-  }
-  .cond-value {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--text-bright);
-  }
-  .cond-detail {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-  }
-
-  /* Girlfriend tag */
-  .gf-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    border-radius: 12px;
-    margin-top: 8px;
-  }
+  .session-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .session-time { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em; }
+  .session-rating { display: flex; align-items: center; gap: 4px; }
+  .rating-num { font-size: 1.1rem; font-weight: 800; line-height: 1; }
+  .rating-label { font-size: 0.65rem; color: var(--text-dim); }
+  .session-spot { font-size: 1.05rem; font-weight: 700; color: var(--text-bright); margin-bottom: 2px; }
+  .session-drive { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 8px; }
+  .session-why { font-size: 0.85rem; color: var(--text); line-height: 1.55; margin-bottom: 12px; }
+  .alternatives { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 4px; }
+  .cam-check { font-size: 0.75rem; color: var(--accent); font-style: italic; margin-bottom: 8px; }
+  .conditions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .cond-item { background: var(--bg); border-radius: 8px; padding: 8px 10px; text-align: center; }
+  .cond-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+  .cond-value { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); }
+  .cond-detail { font-size: 0.7rem; color: var(--text-dim); }
+  .gf-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; padding: 3px 8px; border-radius: 12px; margin-top: 8px; }
   .gf-tag.yes { background: #052e16; color: #4ade80; }
   .gf-tag.no { background: #2a0a0a; color: #f87171; }
   .gf-tag.maybe { background: #422006; color: #fbbf24; }
-
-  /* Best advice */
-  .advice-card {
-    background: linear-gradient(135deg, #1e3a5f 0%, #141b2d 100%);
-    border: 1px solid var(--accent-dim);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-top: 6px;
-    margin-bottom: 10px;
-  }
-  .advice-card h3 {
-    font-size: 0.82rem;
-    color: var(--accent);
-    margin-bottom: 6px;
-    font-weight: 700;
-  }
-  .advice-card p {
-    font-size: 0.85rem;
-    color: var(--text);
-    line-height: 1.55;
-  }
-
-  /* Days to watch */
-  .dtw-section {
-    margin-top: 24px;
-  }
-  .dtw-section h2 {
-    font-size: 1.1rem;
-    color: var(--text-bright);
-    margin-bottom: 12px;
-    padding-left: 4px;
-  }
-  .dtw-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 8px;
-    border-left: 3px solid var(--orange);
-  }
-  .dtw-card.big {
-    border-left-color: var(--red);
-    background: linear-gradient(135deg, #1a0a0a 0%, var(--card) 40%);
-  }
-  .dtw-date {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--text-bright);
-  }
-  .dtw-detail {
-    font-size: 0.82rem;
-    color: var(--text);
-    margin-top: 4px;
-    line-height: 1.5;
-  }
-  .dtw-size {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--orange);
-    margin-top: 4px;
-  }
+  .advice-card { background: linear-gradient(135deg, #1e3a5f 0%, #141b2d 100%); border: 1px solid var(--accent-dim); border-radius: var(--radius); padding: 16px; margin-top: 6px; margin-bottom: 10px; }
+  .advice-card h3 { font-size: 0.82rem; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
+  .advice-card p { font-size: 0.85rem; color: var(--text); line-height: 1.55; }
+  .dtw-section { margin-top: 24px; }
+  .dtw-section h2 { font-size: 1.1rem; color: var(--text-bright); margin-bottom: 12px; padding-left: 4px; }
+  .dtw-card { background: var(--card); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; border-left: 3px solid var(--orange); }
+  .dtw-card.big { border-left-color: var(--red); background: linear-gradient(135deg, #1a0a0a 0%, var(--card) 40%); }
+  .dtw-date { font-size: 0.82rem; font-weight: 700; color: var(--text-bright); }
+  .dtw-detail { font-size: 0.82rem; color: var(--text); margin-top: 4px; line-height: 1.5; }
+  .dtw-size { font-size: 0.75rem; font-weight: 700; color: var(--orange); margin-top: 4px; }
   .dtw-card.big .dtw-size { color: var(--red); }
-
-  /* Rating colors */
   .rate-1, .rate-2 { color: var(--red); }
   .rate-3 { color: var(--orange); }
-  .rate-4 { color: var(--yellow); }
-  .rate-5 { color: var(--yellow); }
+  .rate-4, .rate-5 { color: var(--yellow); }
   .rate-6, .rate-7 { color: var(--green); }
   .rate-8, .rate-9, .rate-10 { color: #06b6d4; }
-
   .session-card.rate-border-2 { border-left-color: var(--red); }
   .session-card.rate-border-3 { border-left-color: var(--orange); }
-  .session-card.rate-border-4 { border-left-color: var(--yellow); }
-  .session-card.rate-border-5 { border-left-color: var(--yellow); }
-  .session-card.rate-border-6 { border-left-color: var(--green); }
-  .session-card.rate-border-7 { border-left-color: var(--green); }
-  .session-card.rate-border-8 { border-left-color: #06b6d4; }
-
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 24px 0;
-    font-size: 0.72rem;
-    color: var(--text-dim);
-  }
+  .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
+  .session-card.rate-border-6, .session-card.rate-border-7 { border-left-color: var(--green); }
+  .session-card.rate-border-8, .session-card.rate-border-9 { border-left-color: #06b6d4; }
+  .footer { text-align: center; padding: 24px 0; font-size: 0.72rem; color: var(--text-dim); }
   .footer a { color: var(--accent); text-decoration: none; }
-
-  /* Responsive */
-  @media (max-width: 400px) {
-    .conditions { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-    .cond-item { padding: 6px; }
-    .day-tab { padding: 8px 4px; }
-  }
+  @media (max-width: 400px) { .conditions { gap: 4px; } .cond-item { padding: 6px; } .day-tab { padding: 8px 4px; } }
 </style>
 </head>
 <body>
-
 <div class="container">
 
-  <!-- Header -->
   <div class="header">
     <h1>Roman's Surf Forecast</h1>
     <h1>By Claude</h1>
@@ -397,409 +112,306 @@
     </div>
   </div>
 
-  <!-- Status bar -->
   <div class="status-bar">
-    <span class="updated">Updated: Mon 23 Mar, 3:00pm AEDT</span>
-    <span class="chrome-status">
-      <span class="status-dot ok"></span>
-      Chrome connected
-    </span>
+    <span class="updated">Updated: Mon 23 Mar, 5:00pm AEDT</span>
+    <span class="chrome-status"><span class="status-dot ok"></span>Chrome connected</span>
   </div>
 
-  <!-- Big Picture -->
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>Newest LOTUS model (22 Mar 11pm AEDT). INCOMING: Solid tropical swell. Monday warm-up done — Roman surfed D-Bah 11am-1pm (8/10, great waves despite wind). Tuesday: rest day — D-Bah goes overhead+ (1.8-2.4m, 810-941kJ) which is too much. Maybe check Currumbin Alley for a sheltered session, otherwise rest. Wednesday: BYRON BAY ROAD TRIP — while D-Bah pumps 2.4-3m, The Pass filters it down to a fun 1.2-1.8m with 12kph wind. Surf morning, explore Byron afternoon. Thursday is THE DAY: 1909kJ at 5kph GLASS at D-Bah (massive upgrade from 1435kJ last forecast!). Alarm 4:30am. The plan: rest Tue, Byron Wed, glass-off Thu.</p>
+    <p>LOTUS model run 23 Mar 5am AEDT (22 Mar 18 UTC). The tropical swell is HERE. Today Roman surfed D-Bah pre-lunch and scored 8/10 (chest to head high, great peeling walls despite moderate wind) — D-Bah in building trade swell delivers better quality than the FAIR rating suggests. Tomorrow the ex-tropical swell arrives properly: D-Bah 1.8-2.4m all day with 829kJ at dawn (100% consistency). But wind is the problem — 13-34kph gusts everywhere. Hugh McDowell says sheltered bays and points clean all day, exposures lumpy. Roman flagged D-Bah/Snapper/Rainbow as too big for his comfort this swell — and wants to explore Byron Bay. THE PLAN: Byron Bay trip Tue-Thu. The Pass filters this monster swell to manageable overhead surf. Thursday pre-lunch is THE SESSION of the trip: 1.2-1.8m at The Pass with 6kph GLASS and 12s groundswell quality. Set the alarm.</p>
   </div>
 
-  <!-- Day tabs -->
   <div class="day-tabs">
     <div class="day-tab active" onclick="showDay(0)">
-      <div class="day-name">Mon</div>
-      <div class="day-date">23 Mar</div>
+      <div class="day-name">Tue</div>
+      <div class="day-date">24 Mar</div>
       <div class="day-rating">Best: <span class="rate-6">6/10</span></div>
     </div>
     <div class="day-tab" onclick="showDay(1)">
-      <div class="day-name">Tue</div>
-      <div class="day-date">24 Mar</div>
-      <div class="day-rating">Rest day / <span class="rate-4">4/10</span></div>
-    </div>
-    <div class="day-tab" onclick="showDay(2)">
       <div class="day-name">Wed</div>
       <div class="day-date">25 Mar</div>
-      <div class="day-rating">Byron! <span class="rate-7">7/10</span></div>
+      <div class="day-rating">Best: <span class="rate-7">7/10</span></div>
+    </div>
+    <div class="day-tab" onclick="showDay(2)">
+      <div class="day-name">Thu</div>
+      <div class="day-date">26 Mar</div>
+      <div class="day-rating">Best: <span class="rate-9">9/10</span></div>
     </div>
   </div>
 
-  <!-- DAY 0: Monday 23 March -->
+  <!-- Tuesday 24 March -->
   <div class="day-content active" id="day0">
+    <div class="session-card rate-border-6">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-spot">The Pass (Byron Bay)</div>
+          <div class="session-drive">60 min drive</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">Byron Bay day trip starts here. The Pass filters the 2.5m 9s primary down to 0.9-1.4m — waist to chest-high right-handers wrapping around Cape Byron. Wind is 25kph from the E but that's offshore at The Pass (faces north into the bay), so wave faces will be clean and held up, just sprayey. Hugh McDowell says sheltered bays and points clean all day — The Pass is exactly that. Meanwhile D-Bah is 1.8-2.4m with 34kph gusts (too big and messy at exposed breaks). Leave Tweed at 4:30am, be in the water at first light.</div>
+      <div class="alternatives">&#8627; Wategos Beach (5 min walk) — even more sheltered inside the cape, smaller and mellower if The Pass is too windswept</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">2.5m 9s filtered</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25 kph E</div><div class="cond-detail">offshore (sprayey)</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">708 kJ</div><div class="cond-detail">decent push</div></div>
+      </div>
+      <div class="gf-tag no">Roman only — strong offshore wind makes paddle-out tough for Cato</div>
+    </div>
 
     <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
-          <div class="session-spot">D-Bah</div>
-          <div class="session-drive">Walk</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-5">5</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Dual swells combining — 1.3m 7s primary plus 1.1m 9s secondary at D-Bah, with a bonus 0.4m 14s long-period pulse. Dawn wind only 7kph (11kph gusts) — the lightest window of the day. 154kJ at dawn so not punchy, but the 9s secondary gives real walls. Cato rated D-Bah 7/10 yesterday in similar 10s swell — the period delivers better quality than the energy numbers suggest. A fun warm-up if you're keen.</div>
-      <div class="alternatives">&#8627; Snapper or Greenmount (walk) — the points handle wind better and give shape to the building swell. But Snapper was insanely crowded Sunday even in small surf — D-Bah beach break spreads the crowd better.</div>
-      <div class="cam-check">&#x1F4F9; Check D-Bah and Snapper cams at first light — D-Bah likely the smarter call for wave count given Sunday's crowd intel.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-1.8m</div>
-          <div class="cond-detail">1.3m 7s + 1.1m 9s</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">7 kph</div>
-          <div class="cond-detail">11kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Energy</div>
-          <div class="cond-value">154 kJ</div>
-          <div class="cond-detail">building</div>
-        </div>
-      </div>
-      <div class="gf-tag yes">Cato-friendly — small and manageable</div>
-    </div>
-
-    <div class="session-card rate-border-4">
-      <div class="session-header">
-        <div>
           <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
-          <div class="session-spot">Currumbin Alley</div>
-          <div class="session-drive">10 min drive</div>
+          <div class="session-spot">The Pass or Broken Head</div>
+          <div class="session-drive">In Byron area</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-4">4</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Wind ramps hard — 17kph with 32kph gusts at D-Bah. Open coast getting choppy fast. Currumbin's sheltered position filters the growing swell with wind protection. D-Bah pushing to 1.2-1.5m with 1.9m 8s primary and 364kJ at noon — decent energy but the chop kills quality on exposed breaks. Anthony Spinks says northern breaks onshore and lumpy, points and southern GC seeing best conditions.</div>
+      <div class="session-why">The Pass holds at 0.9-1.4m with 24/31kph offshore. Still clean-faced but relentless gusts. Broken Head (15 min south) could offer more sheltered pockets at the headland. D-Bah pumping 1.5-2.1m with 788kJ and 100% consistency, but 16/33kph S wind makes it messy. If dawn was good, go again. If the wind was too much, explore Byron town — save legs for Wednesday.</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-1.5m</div>
-          <div class="cond-detail">1.9m 8s primary</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">17 kph SSE</div>
-          <div class="cond-detail">32kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Energy</div>
-          <div class="cond-value">364 kJ</div>
-          <div class="cond-detail">solid push</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">2.5m 9s primary</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24 kph</div><div class="cond-detail">31kph gusts, offshore</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">754 kJ</div><div class="cond-detail">consistent</div></div>
       </div>
-      <div class="gf-tag maybe">Borderline for Cato — wind making it messy</div>
+      <div class="gf-tag no">Too windy for Cato — explore Byron together</div>
     </div>
 
-    <div class="session-card rate-border-2">
+    <div class="session-card rate-border-3">
       <div class="session-header">
         <div>
           <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">Skip open coast</div>
+          <div class="session-spot">Rest / Explore Byron</div>
           <div class="session-drive">—</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-2">2</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Currently observed: 1.2-1.5m FAIR at D-Bah with 20kph SSE wind (24kph gusts, cross-shore). Swell building all afternoon — D-Bah pushing toward 1.2-2m with 563kJ by 6pm — but the SSE chop is killing quality everywhere exposed. The forecaster says shape improves on the outgoing tide. Rest up and watch the evening window.</div>
+      <div class="session-why">Wind strong everywhere. D-Bah 1.5-2.1m but 16/33kph makes it choppy. The Pass 0.9-1.4m with 24/31kph — rideable but tiring in gusty offshore. Best plan: explore Byron town with Cato, eat well, rest up. The swell builds all day — The Pass pushes to 1.2-1.5m by evening. Save energy for Wednesday when wind drops to 14kph with even bigger swell.</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-1.5m</div>
-          <div class="cond-detail">building fast</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">17-20 kph</div>
-          <div class="cond-detail">blown out</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Energy</div>
-          <div class="cond-value">364+ kJ</div>
-          <div class="cond-detail">wasted on wind</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">building</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24-25 kph</div><div class="cond-detail">gusty everywhere</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">754-822 kJ</div><div class="cond-detail">wasted on wind</div></div>
       </div>
     </div>
 
-    <div class="session-card rate-border-6">
+    <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
           <div class="session-time">Evening — 4:00pm - 6:00pm</div>
-          <div class="session-spot">Snapper Rocks</div>
-          <div class="session-drive">Walk</div>
+          <div class="session-spot">The Pass</div>
+          <div class="session-drive">In Byron area</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-6">6</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">This is the session of the day. D-Bah hits 1.2-2m with a chunky 2.2m 8s primary and 563kJ — head-high sets on the bigger ones. Wind 12kph SSE (25kph gusts) but Snapper's headland shelters from the S. The forecaster says biggest surf late today. Tide dropping to 0.3m at 5:43pm — low tide means the points have more shape and punch. Cabarita also building (569kJ) but with 26kph gusts making it messier. If wind cooperates at sunset, Snapper could be properly fun.</div>
-      <div class="alternatives">&#8627; Greenmount (walk) — if Snapper is packed (it was Sunday), Greenmount filters the same swell with similar headland protection and fewer people</div>
-      <div class="cam-check">&#x1F4F9; Check Snapper and Greenmount cams at 4pm — if wind has eased below 15kph, get in for head-high sets at the point on low tide</div>
+      <div class="session-why">The Pass builds to 1.2-1.5m as the 2.6m 9s primary fills in — 822kJ and 68% consistency. Wind still 25/32kph offshore. If you rested all afternoon, grab a quick evening session — the size is up and offshore holds faces nicely. But don't burn out: Wednesday dawn has lighter wind (14kph) with bigger swell, and Thursday is the session of the trip.</div>
+      <div class="cam-check">&#x1F4F9; Check The Pass cam at 4pm — if offshore has eased, the evening session will be fun with bigger waves wrapping in</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-2.0m</div>
-          <div class="cond-detail">2.2m 8s primary</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">12 kph SSE</div>
-          <div class="cond-detail">25kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Energy</div>
-          <div class="cond-value">563 kJ</div>
-          <div class="cond-detail">pumping</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.6m 9s building</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25 kph E</div><div class="cond-detail">offshore, gusty</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">822 kJ</div><div class="cond-detail">solid push</div></div>
       </div>
-      <div class="gf-tag no">Roman only — too big and messy for Cato</div>
-    </div>
-
-    <div class="advice-card">
-      <h3>Best advice for Monday</h3>
-      <p>Monday is the warm-up act. Dawn was the cleanest window (7kph, dual swell combining for fun walls) — Cato would have loved it. The afternoon is blown out. The evening session at Snapper is the prize: 563kJ with head-high sets on low tide, sheltered by the headland. Check the cam at 4pm. But don't burn yourself out: Tuesday brings 810kJ at dawn with 100% consistency, and the tropical swell is lining up for a massive Wed-Thu. Keep fuel in the tank.</p>
-    </div>
-  </div>
-
-  <!-- DAY 1: Tuesday 24 March — Rest / Currumbin check -->
-  <div class="day-content" id="day1">
-
-    <div class="session-card rate-border-4">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Morning option — Check Currumbin Alley</div>
-          <div class="session-spot">Currumbin Alley</div>
-          <div class="session-drive">10 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-4">4</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">The big swell arrives — D-Bah is pumping 1.8-2.4m (810kJ, 100% consistency) which is too much for Roman at Coolangatta. Currumbin Alley is the one sheltered option worth checking: it filters the 2.6m 9s primary down to chest-high and blocks the S wind. Drive over, have a look — if it's working and manageable, grab a fun sheltered session. If it's still too big or messy, no stress. Anthony Spinks says "Clean and head high to more for sheltered points and bays."</div>
-      <div class="cam-check">&#x1F4F9; Drive to Currumbin mid-morning and eyeball it. If it doesn't look fun, head home — there's zero shame in a rest day before Wed-Thu.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">D-Bah</div>
-          <div class="cond-value">1.8-2.4m</div>
-          <div class="cond-detail">TOO BIG</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">13-17 kph S</div>
-          <div class="cond-detail">33kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Currumbin</div>
-          <div class="cond-value">~chest high</div>
-          <div class="cond-detail">sheltered</div>
-        </div>
-      </div>
-      <div class="gf-tag maybe">Currumbin might be manageable — check in person</div>
-    </div>
-
-    <div class="session-card rate-border-2">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Rest of the day — Rest &amp; recharge</div>
-          <div class="session-spot">Skip — too big everywhere</div>
-          <div class="session-drive">—</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-2">2</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">D-Bah, Snapper, Rainbow Bay, Greenmount — all overhead+ and too much. Wind builds to 17-33kph gusts across the coast. Even sheltered spots get messy by afternoon. This is a smart rest day: Wednesday you're road-tripping to Byron Bay (The Pass at 1.2-1.8m with 12kph wind — perfect), and Thursday is the glass-off session of the trip (1909kJ at 5kph dawn). Fresh legs for those two days is the play.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">D-Bah</div>
-          <div class="cond-value">1.8-2.4m</div>
-          <div class="cond-detail">810-941 kJ</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">13-17 kph</div>
-          <div class="cond-detail">gusts to 33kph</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Verdict</div>
-          <div class="cond-value">Rest day</div>
-          <div class="cond-detail">save it for Wed-Thu</div>
-        </div>
-      </div>
+      <div class="gf-tag no">Roman only — wind too strong for Cato</div>
     </div>
 
     <div class="advice-card">
       <h3>Best advice for Tuesday</h3>
-      <p>Rest day. The Coolangatta breaks are all overhead+ (1.8-2.4m, up to 941kJ) — too much. Drive to Currumbin Alley in the morning for a look: it filters the swell and blocks wind, so it might be fun at chest-high. If it doesn't look right, head home guilt-free. You've got two massive days ahead: Wednesday at The Pass in Byron (1.2-1.8m, 12kph — manageable and fun) plus exploring Byron town, then Thursday 4:30am alarm for the glass-off of the trip (1909kJ at 5kph). Rest up.</p>
+      <p>Drive to Byron Bay early. The Pass is the perfect shelter from this swell — manageable waist-to-chest surf while D-Bah goes overhead+ and messy. Wind is the enemy today (25-34kph everywhere) but at least it's offshore at The Pass, keeping wave faces clean. Surf dawn if you're keen, explore Byron with Cato during the day. This is a Cato rest day — the wind makes everything uncomfortable even where the size is right. Don't exhaust yourself: Wednesday and Thursday are the main events. The Pass is going to be FIRING with 12s groundswell and much lighter wind.</p>
     </div>
   </div>
 
-  <!-- DAY 2: Wednesday 25 March — Byron Bay Road Trip -->
-  <div class="day-content" id="day2">
+  <!-- Wednesday 25 March -->
+  <div class="day-content" id="day1">
+    <div class="session-card rate-border-7">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
+          <div class="session-spot">The Pass (Byron Bay)</div>
+          <div class="session-drive">In Byron area (or 60 min from Tweed)</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">The swell peaks everywhere — D-Bah 1.8-2.4m, Cabarita 1.8-2.4m, Lennox 1.8-2.4m. All overhead+. But The Pass filters it beautifully: 1.2-1.5m with a 2.6m 10s primary — the period stepping from 9s to 10s means longer, more lined-up walls. Wind drops significantly from Tuesday: 14kph (19kph gusts) vs yesterday's 25kph+. Hugh McDowell says solid surf everywhere, most manageable for sheltered points — clean options. The Pass at dawn is pumping with proper point break walls.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.6m 10s groundswell</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14 kph</div><div class="cond-detail">19kph gusts</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1122 kJ</div><div class="cond-detail">powerful</div></div>
+      </div>
+      <div class="gf-tag no">Roman only — overhead with serious energy</div>
+    </div>
 
     <div class="session-card rate-border-7">
       <div class="session-header">
         <div>
-          <div class="session-time">Morning — 7:30am - 10:30am</div>
-          <div class="session-spot">The Pass, Byron Bay</div>
-          <div class="session-drive">55 min drive</div>
+          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
+          <div class="session-spot">The Pass</div>
+          <div class="session-drive">In Byron area</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-7">7</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Byron Bay road trip day! While the Coolangatta breaks are pumping at 2.4-3m (way too much), The Pass naturally filters the big ESE swell around Cape Byron down to a very surfable 1.2-1.5m at dawn, building to 1.2-1.8m by midday. Wind 12kph (18kph gusts) — not glass but manageable. 1161kJ available with 65% consistency. The Pass is a long peeling right — perfect for carving and working on those cutbacks. Leave Tweed at 6:30am, arrive for a 7:30-8am paddle out when conditions are cleanest.</div>
-      <div class="alternatives">&#8627; Wategos (5 min walk) — if The Pass is too crowded or the swell feels too much, Wategos is a more sheltered bay inside the cape with smaller, mellower waves</div>
-      <div class="cam-check">&#x1F4F9; Check The Pass cam before you leave — make sure it's not blown out. Wind direction is key: S wind is cross-offshore at The Pass which is ideal.</div>
+      <div class="session-why">The swell period shifts to 12 seconds midday — the groundswell arrives. The Pass jumps to 1.2-1.8m with a massive 2.8m 12s primary and 2100kJ. The 12s period means long, lined-up walls perfect for the point — waves that connect section to section. Wind 18kph (20kph gusts) — a touch windier but manageable. D-Bah pushes to 2.4-3m (2147kJ) — well overhead. This is Roman's sweet spot: proper overhead surf at a world-class point with groundswell quality. Perfect for working on snaps on long walls.</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-1.8m</div>
-          <div class="cond-detail">2.6-2.7m 10s filtered</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">12 kph</div>
-          <div class="cond-detail">18kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Energy</div>
-          <div class="cond-value">1161 kJ</div>
-          <div class="cond-detail">heaps of swell</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">2.8m 12s groundswell</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18 kph</div><div class="cond-detail">20kph gusts</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2100 kJ</div><div class="cond-detail">groundswell power</div></div>
       </div>
-      <div class="gf-tag yes">Great for Roman — manageable size with power</div>
+      <div class="gf-tag no">Roman only — overhead+ groundswell</div>
     </div>
 
     <div class="session-card rate-border-6">
       <div class="session-header">
         <div>
-          <div class="session-time">Late morning — 10:30am - 12:30pm</div>
-          <div class="session-spot">The Pass (second session)</div>
-          <div class="session-drive">Already there</div>
+          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
+          <div class="session-spot">The Pass</div>
+          <div class="session-drive">In Byron area</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-6">6</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Size builds to 1.2-1.8m at noon with 1519kJ available and 13kph wind (17kph gusts). Still very surfable but getting a touch bigger and windier. If you had a good first session, you might want a second paddle — or wrap up and dry off. The Pass tends to get more crowded as the morning goes on (it's the most popular wave in Byron). By noon the swell is properly filling in and the wave gets punchier.</div>
+      <div class="session-why">The swell keeps building. The Pass pushes toward 1.5-2.1m by 6pm with 3.1m 12s primary and 2695kJ at 90% consistency. Serious overhead surf even at sheltered The Pass. Wind eases to 14kph (16kph gusts) — actually the best wind of the day. D-Bah 2.4-3.7m (2667kJ). Cabarita same. Even Lennox 2.4-3.7m. The entire coastline is massive — The Pass is the only manageable option. If comfortable at this size, the quality is incredible.</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">1.2-1.8m</div>
-          <div class="cond-detail">2.7m 10s 1519kJ</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">13 kph</div>
-          <div class="cond-detail">17kph gusts</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Crowd</div>
-          <div class="cond-value">Building</div>
-          <div class="cond-detail">midweek manageable</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">3.1m 12s, 90%</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14 kph</div><div class="cond-detail">16kph gusts — best wind</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2695 kJ</div><div class="cond-detail">massive</div></div>
       </div>
-      <div class="gf-tag yes">Still manageable for Roman</div>
+      <div class="gf-tag no">Roman only — at his upper limit</div>
     </div>
 
     <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
-          <div class="session-time">Afternoon — Explore Byron Bay</div>
-          <div class="session-spot">Byron town</div>
-          <div class="session-drive">5 min walk from The Pass</div>
+          <div class="session-time">Evening — 4:00pm - 6:00pm</div>
+          <div class="session-spot">Rest for Thursday</div>
+          <div class="session-drive">—</div>
         </div>
-        <div class="session-rating">
-          <span class="rating-num rate-5">5</span>
-          <span class="rating-label">/10</span>
-        </div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Wrap up the surf by lunchtime and explore Byron. Walk the Cape Byron lighthouse track, grab lunch on Jonson Street, check out the shops. The swell builds to 1.5-2.1m at The Pass by evening with 14-16kph wind — getting big and textured, a good time to be on dry land. Head back to Tweed by 5-6pm and get an early night: Thursday dawn is THE session of the trip (1909kJ at 5kph glass-off, alarm at 4:30am).</div>
+      <div class="session-why">The Pass maxes at 1.5-2.1m with 2695kJ. Getting heavy. Conditions decent (14-16kph) but you've likely surfed twice already. Rest for Thursday — the wind drops to 6kph (GLASS) and the swell still pumps at The Pass. Thursday pre-lunch is going to be the best session of the trip. Fresh legs win.</div>
       <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Meanwhile at D-Bah</div>
-          <div class="cond-value">2.4-3.0m</div>
-          <div class="cond-detail">1826kJ — huge!</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">The Pass PM</div>
-          <div class="cond-value">1.5-2.1m</div>
-          <div class="cond-detail">getting big</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Plan</div>
-          <div class="cond-value">Explore town</div>
-          <div class="cond-detail">rest for Thu</div>
-        </div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">maxing out</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14 kph</div><div class="cond-detail">manageable</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2695 kJ</div><div class="cond-detail">peak swell</div></div>
       </div>
+      <div class="gf-tag no">Roman only — be selective</div>
     </div>
 
     <div class="advice-card">
       <h3>Best advice for Wednesday</h3>
-      <p>Byron Bay road trip! Leave Tweed at 6:30am, surf The Pass from 7:30-11am (1.2-1.8m, 12kph wind — perfect for Roman while D-Bah is pumping 2.4-3m). The Pass wraps the big ESE swell around Cape Byron into a manageable, peeling right — ideal for working on snaps and cutbacks. Wategos is the backup if The Pass is too crowded or too much. Explore Byron town in the afternoon: lighthouse walk, lunch, shops. Head home by 5-6pm and get to bed early — Thursday 4:30am is the session of the trip: 1909kJ at 5kph glass-off at D-Bah. Don't miss it.</p>
+      <p>Peak of the swell — D-Bah 2.4-3.7m, Lennox 2.4-3.7m, Cabarita 2.4-3.7m. Everything massive. The Pass is your sanctuary: filters the swell to overhead (1.2-1.8m) with 12-second groundswell lines wrapping perfectly. Dawn is the cleanest window (14kph). The midday session with 12s walls will be incredible for practising snaps on long, lined-up walls. Don't overdo it — save a session for Thursday when the wind drops to near-glass. Cato can enjoy Byron and watch the spectacle from the headland.</p>
+    </div>
+  </div>
+
+  <!-- Thursday 26 March — THE DAY -->
+  <div class="day-content" id="day2">
+    <div class="session-card rate-border-8">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
+          <div class="session-spot">The Pass (Byron Bay)</div>
+          <div class="session-drive">In Byron area (or 60 min from Tweed)</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-8">8</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">THE DAY. Swell still pumping (2.6m 12s primary, 1934kJ) but the wind DIES. 9kph at dawn (11kph gusts) — practically glass compared to the last 2 days. The Pass 1.2-1.8m — proper overhead right-handers with 12-second groundswell lines wrapping around the cape. 53% consistency means sets with lulls — good for positioning. Hugh McDowell says everywhere clean in AM, pumping! Meanwhile D-Bah 2.4-3m at 5kph GLASS with 1969kJ — absolute world-class. If feeling brave, Snapper/D-Bah dawn would be once-in-a-trip. But The Pass at 1.2-1.8m in near-glass is the safer, smarter call.</div>
+      <div class="alternatives">&#8627; If feeling confident: D-Bah dawn is 2.4-3m with 5kph GLASS and 1969kJ — overhead to double overhead in glass. World-class but well above your comfort zone. Your call.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">2.6m 12s groundswell</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9 kph</div><div class="cond-detail">11kph gusts — CLEAN</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1934 kJ</div><div class="cond-detail">groundswell power</div></div>
+      </div>
+      <div class="gf-tag no">Roman only — overhead groundswell</div>
+    </div>
+
+    <div class="session-card rate-border-9">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
+          <div class="session-spot">The Pass</div>
+          <div class="session-drive">In Byron area</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-9">9</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">THE SESSION OF THE TRIP. The Pass holds at 1.2-1.8m with 2.5m 12s primary — proper lined-up groundswell walls wrapping around Cape Byron. Wind drops to 6kph (7kph gusts) — that's GLASS. Real glass. The kind of conditions where you can see every ripple on the wave face, where every turn sprays clean off the lip. 1589kJ with 53% consistency — sets roll in with clean lulls. This is The Pass at its absolute best: overhead right-handers on glassy 12-second groundswell. Don't miss this session. Nothing else comes close.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">2.5m 12s GLASS</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6 kph</div><div class="cond-detail">7kph gusts — GLASS!</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1589 kJ</div><div class="cond-detail">groundswell quality</div></div>
+      </div>
+      <div class="gf-tag no">Roman only — overhead groundswell, too powerful for Cato</div>
+    </div>
+
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
+          <div class="session-spot">The Pass (easing) or head home</div>
+          <div class="session-drive">In Byron area</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">Swell easing, wind building. The Pass drops toward 0.9-1.4m by 6pm. Wind ramps to 25kph (34kph gusts) — the beautiful morning is gone. D-Bah still 2.4-3m at noon with 9kph — glass persists longer on the open coast. Lennox 2.4-3m with 6-7kph — incredible to watch. If you surfed dawn and pre-lunch, you're done. Drive back to Tweed, rest up.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">easing, 2.5m 12s</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9-25 kph</div><div class="cond-detail">building fast PM</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1589-877 kJ</div><div class="cond-detail">fading</div></div>
+      </div>
+    </div>
+
+    <div class="session-card rate-border-3">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Evening — 4:00pm - 6:00pm</div>
+          <div class="session-spot">Drive home to Tweed</div>
+          <div class="session-drive">60 min drive</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">The Pass 0.9-1.4m with 25/34kph — blown out and fading. D-Bah 1.8-2.4m with 9/16kph — still decent if you want one last session at home. Best plan: enjoy the post-surf glow from the morning epic, drive back to Tweed. Friday swell eases to 1.2-1.5m with potential offshores — could be fun for both Roman and Cato back at D-Bah.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">fading</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25 kph</div><div class="cond-detail">blown out</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">877 kJ</div><div class="cond-detail">dropping</div></div>
+      </div>
+    </div>
+
+    <div class="advice-card">
+      <h3>Best advice for Thursday — THE DAY</h3>
+      <p>This is the session you'll remember from this trip. The Pass pre-lunch: 1.2-1.8m overhead right-handers on 12-second groundswell in GLASS conditions (6kph). The kind of waves where your snaps throw spray sheets. Be in the water by 9am and don't leave until the wind picks up around noon. If you surf dawn AND pre-lunch, you'll get 4+ hours of the best point break surf of your trip. The morning glass is the whole show — once the 25kph afternoon wind arrives, it's over. Cato can watch from the headland. Friday swell eases and wind could go offshore — might finally be a Cato day again.</p>
     </div>
   </div>
 
   <!-- Days to Watch -->
   <div class="dtw-section">
     <h2>Days to Watch</h2>
-
+    <div class="dtw-card">
+      <div class="dtw-date">Friday 27 Mar — The ease-off</div>
+      <div class="dtw-detail">ESE swell eases. D-Bah 1.2-1.5m, The Pass 0.6-1.1m. Hugh McDowell says fun to good surf, could see offshores. If offshores arrive, could be the first Cato-friendly day since Sunday. Watch the wind closely.</div>
+      <div class="dtw-size">D-Bah 1.2-1.5m &bull; Wind could go offshore &bull; Potential Cato day</div>
+    </div>
+    <div class="dtw-card">
+      <div class="dtw-date">Sat 28 Mar — Clean grovel</div>
+      <div class="dtw-detail">D-Bah 0.9-1.4m with 7kph at dawn — a rare clean, light-wind grovel day. Cato-friendly if conditions hold. Both of you could surf D-Bah together in mellow conditions.</div>
+      <div class="dtw-size">D-Bah 0.9-1.4m at 7kph &bull; Cato-friendly grovel &bull; Together day</div>
+    </div>
     <div class="dtw-card big">
-      <div class="dtw-date">Thursday 26 March — THE DAY &#x1F525;</div>
-      <div class="dtw-size">D-Bah: 2.4-3m (2.7m 12s, 1909kJ, 5kph!!) | Cabarita: 2.4-3m (2.7m 12s, 1909kJ, 5kph!!) | Lennox: 2.4-3m (2.6m 12s, 1895kJ, 9kph)</div>
-      <div class="dtw-detail">GLASS-OFF. Long-period 12s groundswell with 5kph wind at dawn — essentially zero wind. MASSIVE UPGRADE from last forecast: D-Bah jumped from 1435kJ to 1909kJ (33% more power!). Both D-Bah and Cabarita now identical at 1909kJ with 5kph glass. Anthony Spinks says "Solid ESE swell likely. Light winds through the AM open up options around the region." Lennox still huge at 1895kJ but windier (9/11kph). Wind picks up by noon (9-10kph) and afternoon (9-17kph). The dawn-to-9am window in glass-off conditions with 1909kJ of 12s groundswell is the session of the trip. SET THE ALARM FOR 4:30AM.</div>
-    </div>
-
-    <div class="dtw-card">
-      <div class="dtw-date">Friday 27 March — Fading but still solid</div>
-      <div class="dtw-size">D-Bah: 1.2-2m (1.7m 11s, 489kJ, 16kph g37) | Cabarita: 1.2-2m (533kJ, 16kph g37) | Lennox: 1.5-2.1m (548kJ, 13kph g24)</div>
-      <div class="dtw-detail">Swell fading from 12s peak but residual 11s period at dawn still gives push. Wind is the problem — 16kph gusts to 37kph at D-Bah and Cabarita. Lennox has the best wind/energy ratio: 548kJ at 13kph dawn — worth the drive if you're not cooked from Wed-Thu. Anthony Spinks says "SSE swell fades. Fun/good surf expected around the region. Light AM winds."</div>
-    </div>
-
-    <div class="dtw-card">
-      <div class="dtw-date">Saturday 28 March — Clean grovel day with Cato</div>
-      <div class="dtw-size">D-Bah: 0.9-1.2m (196kJ, 6kph!) | Cabarita: 0.9-1.2m (207kJ, 6kph!) | Cato-friendly all day!</div>
-      <div class="dtw-detail">Small but the cleanest wind of the forecast period outside Thursday dawn — 6kph all day at D-Bah and Cabarita. Residual 10-11s period means the small waves still have shape and push. 290kJ at noon with 11s period at D-Bah. Perfect recovery day, mellow session with Cato. The kind of conditions she loved yesterday at D-Bah (7/10).</div>
-    </div>
-
-    <div class="dtw-card">
-      <div class="dtw-date">Tue 31 Mar — Second swell (last day of trip!)</div>
-      <div class="dtw-size">D-Bah: 0.9-1.2m (323kJ, 10kph g28) | Cabarita: 0.9-1.4m (364kJ, 10kph g28) | Lennox: 1.2-1.5m (438kJ, 17kph g26)</div>
-      <div class="dtw-detail">Second swell pulse on the last day. 10s period from the S/SE. D-Bah and Cabarita get the most energy but wind is strong (gusts to 28kph). Lennox windier still. Details will sharpen as models update closer to the date. Anthony Spinks says "Sat to Mon: Maybe a pulse coming from the S/SE."</div>
+      <div class="dtw-date">Sun 29 Mar — Second big swell</div>
+      <div class="dtw-detail">Another monster pulse. D-Bah 1.5-2.1m with 3.3m 12s primary — 2777kJ at dawn! More energy than this Wednesday. Lennox 2.4-3m (3136kJ). But 28kph wind makes it messy. Sheltered points only again.</div>
+      <div class="dtw-size">D-Bah 2777kJ at dawn &bull; Lennox 3136kJ &bull; Strong wind — sheltered spots only</div>
     </div>
   </div>
 
   <!-- Data Sources -->
-  <div class="dtw-section" style="margin-top:20px;">
-    <h2>Data Sources</h2>
+  <div style="margin-top:24px;">
+    <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:12px;padding-left:4px;">Data Sources</h2>
     <div style="display:flex;flex-direction:column;gap:6px;">
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
         <div>
           <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Gold Coast (D-Bah)</div>
-          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: D-Bah, Snapper, Kirra, Burleigh, Currumbin, Palm Beach, The Spit</div>
+          <div style="font-size:0.72rem;color:var(--text-dim);">Covers: D-Bah, Snapper, Kirra, Burleigh, Currumbin, Palm Beach</div>
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          Forecaster: Anthony Spinks
+          Forecaster: Hugh McDowell
         </div>
       </div>
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
@@ -809,7 +421,7 @@
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          Forecaster: Anthony Spinks
+          Forecaster: Hugh McDowell
         </div>
       </div>
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
@@ -819,7 +431,7 @@
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          Forecaster: Anthony Spinks
+          Forecaster: Hugh McDowell
         </div>
       </div>
       <div style="background:var(--card);border-radius:var(--radius);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
@@ -829,22 +441,20 @@
         </div>
         <div style="display:flex;align-items:center;gap:4px;background:#052e16;color:#4ade80;padding:3px 8px;border-radius:10px;font-size:0.68rem;font-weight:600;white-space:nowrap;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-          Forecaster: Anthony Spinks
+          Forecaster: Hugh McDowell
         </div>
       </div>
     </div>
-    <div style="margin-top:12px;font-size:0.78rem;color:var(--text-dim);">LOTUS model run: 22 Mar 11pm AEDT (22 Mar 12 UTC) — 6hr newer than previous &bull; 5 observations calibrated (2 from Sun 22, 3 from Fri 20) &bull; Chrome connected — fresh scrape Mon 23 3:00pm &bull; Next update: Mon 23 Mar ~5:00pm AEDT (scheduled)</div>
+    <div style="margin-top:12px;font-size:0.78rem;color:var(--text-dim);">LOTUS model run: 23 Mar 5am AEDT (22 Mar 18 UTC) &bull; 6 observations calibrated (1 from today: D-Bah 8/10 chest-head, 2 from Sun 22, 3 from Fri 20) &bull; Chrome connected — fresh scrape Mon 23 5:00pm &bull; Next update: Tue 24 Mar ~5:30am AEDT (scheduled)</div>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
     Data from Surfline Premium via Chrome automation<br>
     Spots cross-referenced against 57-spot database<br>
-    <span style="margin-top:4px;display:inline-block;">Next update: Mon 23 Mar, ~5:00pm AEDT (scheduled)</span>
+    <span style="margin-top:4px;display:inline-block;">Next update: Tue 24 Mar, ~5:30am AEDT (scheduled)</span>
   </div>
 
 </div>
-
 <script>
 function showDay(index) {
   document.querySelectorAll('.day-tab').forEach((tab, i) => {
@@ -855,6 +465,5 @@ function showDay(index) {
   });
 }
 </script>
-
 </body>
 </html>
