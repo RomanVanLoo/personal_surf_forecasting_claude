@@ -94,6 +94,9 @@
   .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
   .session-card.rate-border-6, .session-card.rate-border-7 { border-left-color: var(--green); }
   .session-card.rate-border-8, .session-card.rate-border-9 { border-left-color: #06b6d4; }
+  .rest-card { background: linear-gradient(135deg, #1a1a2e 0%, var(--card) 100%); border: 1px dashed var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 10px; text-align: center; }
+  .rest-card h3 { font-size: 1rem; color: var(--text-bright); margin-bottom: 6px; }
+  .rest-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
   .data-sources { margin-top: 24px; background: var(--card); border-radius: var(--radius); padding: 16px; }
   .data-sources h3 { font-size: 0.85rem; color: var(--text-bright); margin-bottom: 10px; }
   .source-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; }
@@ -120,25 +123,25 @@
   </div>
 
   <div class="status-bar">
-    <span class="updated">Updated: Tue 24 Mar, 5:00am AEDT</span>
+    <span class="updated">Updated: Tue 24 Mar, 10:30am AEDT</span>
     <span class="chrome-status"><span class="status-dot ok"></span>Chrome connected</span>
   </div>
 
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>LOTUS model run 23 Mar 5pm AEDT (23 Mar 06 UTC). The ex-tropical swell is HERE — D-Bah observed at 1.8-3m (head to 2x overhead) this morning. Anthony Spinks says "hit the points for the best of it" at Gold Coast, and "sheltered bays and points clean all day" for Northern NSW. Roman flagged Coolangatta as too big for him this swell after scoring D-Bah 8/10 yesterday at chest-to-head. THE PLAN: Byron Bay trip continues. The Pass filters this monster swell down to manageable chest-to-head surf with offshore SSW winds. Today is gusty but rideable. Wed evening the 12s groundswell arrives at The Pass (2763kJ, 15kph!) — could be magic. Thu pre-lunch is THE SESSION: 1.2-1.5m at The Pass with 8kph GLASS and 12s groundswell wrapping the Cape. Don't miss it.</p>
+    <p>LOTUS model run 23 Mar 5pm AEDT. Ex-tropical swell is HERE — D-Bah observed 1.8-3m but blown out (SSW wind is cross-shore on the east-facing beach). Superbank points are world-class right now — clean overhead walls connecting from Snapper to Rainbow — but crowd-locked with expert surfers (confirmed in person today). D-Bah: blown out. Superbank: crowd-locked. PLAN: Rest today (gusty everywhere, smart recovery). Wed dawn: Cabarita — right-hand point, 20min drive, 1.8-2.4m at 9kph, 100% consistency. Thu pre-lunch: The Pass — 1.2-1.5m at 8kph GLASS on 11s groundswell, the best conditions of the trip for your level. Fri shapes up as the Cato day (D-Bah easing to 1.2-1.5m, 7kph).</p>
   </div>
 
   <div class="day-tabs">
     <div class="day-tab active" onclick="showDay(0)">
       <div class="day-name">Tue</div>
       <div class="day-date">24 Mar</div>
-      <div class="day-rating">Best: <span class="rate-6">6/10</span></div>
+      <div class="day-rating"><span class="rate-3">Rest day</span></div>
     </div>
     <div class="day-tab" onclick="showDay(1)">
       <div class="day-name">Wed</div>
       <div class="day-date">25 Mar</div>
-      <div class="day-rating">Best: <span class="rate-8">8/10</span></div>
+      <div class="day-rating">Best: <span class="rate-7">7/10</span></div>
     </div>
     <div class="day-tab" onclick="showDay(2)">
       <div class="day-name">Thu</div>
@@ -149,80 +152,46 @@
 
   <!-- Tuesday 24 March -->
   <div class="day-content active" id="day0">
-    <div class="session-card rate-border-6">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
-          <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">60 min drive from Tweed Heads</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">Byron day trip starts now. The Pass filters the 2.7m 9s ESE swell down to chest-high-plus (0.9-1.5m) — Cape Byron shelters from the raw swell AND provides an offshore angle for the SSW wind. Wind is 24kph with 33kph gusts — strong but offshore, so wave faces stay clean even if sprayey. Low tide at 7am (0.4m, rising) means the inside section will be working with good shape off the banks. Consistency 69% — wait between sets but the sets will have real push from the 9s period. Observed right now: D-Bah 1.8-3m POOR TO FAIR with 17kph SSW offshore — way too big for comfort. The Pass observed at 1.2-1.5m FAIR — exactly what you want.</div>
-      <div class="alternatives">&#8627; Wategos Beach (5 min walk around headland) — even more sheltered, smaller and mellower if The Pass dawn winds are too gusty</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.5m</div><div class="cond-detail">2.7m 9s ESE filtered</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24 kph SSW</div><div class="cond-detail">33kph gusts, offshore</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">826 kJ</div><div class="cond-detail">69% consistency</div></div>
-      </div>
-      <div class="gf-tag no">Roman only — gusty offshore makes paddle-out tough for Cato</div>
-    </div>
-
-    <div class="session-card rate-border-5">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
-          <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">Already in Byron</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">The Pass holds at 1.2-1.5m as tide fills in toward 1.2m high. Wind picks up to 28kph with 35kph gusts — still offshore but getting pushy. 1196kJ energy, 68% consistency. Cape Byron's shelter keeps the faces cleaner than the wind numbers suggest. D-Bah still pumping 1.8-2.4m at 977kJ — too big. If dawn was good, stay in for a second session. If the wind is too much, explore Byron town and rest up for tomorrow.</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.7m 9s ESE</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">28 kph SSW</div><div class="cond-detail">35kph gusts, offshore</div></div>
-        <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">Rising</div><div class="cond-detail">toward 1.2m high</div></div>
-      </div>
-      <div class="gf-tag no">Too windy for Cato — explore Byron together</div>
+    <div class="rest-card">
+      <h3>Rest Day</h3>
+      <p>D-Bah blown out. Superbank world-class but crowd-locked. Wind gusty everywhere (24-30kph). Smart play: rest up, stretch, eat well. Wed and Thu are the real prizes — save your energy.</p>
     </div>
 
     <div class="session-card rate-border-3">
       <div class="session-header">
         <div>
-          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">Rest / Explore Byron</div>
-          <div class="session-drive">—</div>
+          <div class="session-time">In-person check — 9:00am - 10:00am</div>
+          <div class="session-spot">Superbank (Snapper / Rainbow)</div>
         </div>
-        <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
+        <div class="session-rating"><span class="rating-num rate-3">—</span></div>
       </div>
-      <div class="session-why">Wind gets stronger through the afternoon (28-30kph, gusts to 38kph). Even with offshore direction, the gustiness makes everything textured and tiring. High tide at 12:40pm fattens the waves. The Pass at 1.2-1.5m with 1160-1196kJ — technically rideable but not worth the battle. Save energy for Wednesday's significantly better conditions. Explore Byron, eat well, rest up.</div>
+      <div class="session-why">Confirmed in person: the full Superbank is lit up. Overhead, clean, long right-handers connecting all the way from Snapper through Rainbow to the beach. Surfers ride so far they walk back to the lineup. Wave quality is genuinely world-class. But the crowd is all expert surfers — way too competitive. When the Superbank connects like this, Rainbow is NOT a separate spot — it's all one wave. This finding is consistent across every observation this trip.</div>
       <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">fat at high tide</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">28-30 kph</div><div class="cond-detail">38kph gusts</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1160 kJ</div><div class="cond-detail">wasted on wind</div></div>
+        <div class="cond-item"><div class="cond-label">Waves</div><div class="cond-value">Overhead</div><div class="cond-detail">world-class quality</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">17 kph SSW</div><div class="cond-detail">offshore for points</div></div>
+        <div class="cond-item"><div class="cond-label">Crowd</div><div class="cond-value">Packed</div><div class="cond-detail">expert lineup, no-go</div></div>
       </div>
     </div>
 
-    <div class="session-card rate-border-3">
+    <div class="session-card rate-border-2">
       <div class="session-header">
         <div>
-          <div class="session-time">Evening — 4:00pm - 6:00pm</div>
-          <div class="session-spot">Skip</div>
-          <div class="session-drive">—</div>
+          <div class="session-time">Camera check — 8:15am</div>
+          <div class="session-spot">Duranbah (D-Bah)</div>
         </div>
-        <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
+        <div class="session-rating"><span class="rating-num rate-2">—</span></div>
       </div>
-      <div class="session-why">Strongest wind of the day — 30kph with 38kph gusts. The Pass still 1.2-1.5m but bumpy and tiring. Save legs for tomorrow. Wednesday and Thursday are the real prizes this week.</div>
+      <div class="session-why">Blown out and empty. SSW wind is offshore for the south-facing points but cross-shore for D-Bah's east-facing beach. Nobody surfing.</div>
       <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.8m 9s primary</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">30 kph SSW</div><div class="cond-detail">38kph gusts</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1160 kJ</div><div class="cond-detail">66% consistency</div></div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.8-3m</div><div class="cond-detail">messy closeouts</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18 kph SSW</div><div class="cond-detail">cross-shore, blown</div></div>
+        <div class="cond-item"><div class="cond-label">Crowd</div><div class="cond-value">Empty</div><div class="cond-detail">for good reason</div></div>
       </div>
     </div>
 
     <div class="advice-card">
-      <h3>Best Advice for Tuesday</h3>
-      <p>Hit The Pass at dawn — it's the cleanest window with the lightest winds and low tide banks. The 60-min drive from Tweed is worth it because D-Bah and surrounds are head-to-double-overhead and way above your stated comfort zone. The Pass filters it all down nicely. Cato sits out today — even chest-high with gusty offshore is uncomfortable for her. Make it a Byron Bay day trip: surf the morning, explore town with Cato in the arvo. Based on yesterday's D-Bah session (8/10 at chest-to-head, scare factor 3/10), the building swell at exposed spots is legit — but you called it right wanting sheltered breaks this week.</p>
+      <h3>Why rest today?</h3>
+      <p>You surfed a great 8/10 session yesterday at D-Bah. The swell is building — Wed and Thu have dramatically better wind (9kph down to 8kph glass) with even more energy. Resting today means you're fresh for two back-to-back surf days. Tomorrow: Cabarita dawn. Thursday: The Pass glass-off. These are the ones to be sharp for.</p>
     </div>
   </div>
 
@@ -231,78 +200,62 @@
     <div class="session-card rate-border-7">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 7:30am</div>
+          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-spot">Cabarita</div>
+          <div class="session-drive">20 min drive south</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">Right-hand point break that handles this swell well — much more organized than a beach break at this size. 1.8-2.4m on 2.7m 10s ESE with period increasing (more power, better shape). Wind 9kph with 27kph gusts — dawn is the calmest window before gusts build. 1287kJ with 100% consistency — every set delivers. Low tide means more shape off the rocks. Less famous than Snapper so crowd should be far more manageable. In good conditions Surfline says it can resemble Burleigh — long, fast right-handers. This is at the bigger end of your comfort zone (overhead to well overhead) but a point break is more predictable than D-Bah at this size. This is your first session in 2 days after resting — you'll be fresh.</div>
+      <div class="cam-check">Check Cabarita cam before leaving — confirm it's clean and the point is working</div>
+      <div class="alternatives">&#8627; Kingscliff (15 min south) — if Cabarita is too big or too crowded, smaller beach break options nearby</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.8-2.4m</div><div class="cond-detail">2.7m 10s ESE</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9 kph</div><div class="cond-detail">27kph gusts, offshore</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1287 kJ</div><div class="cond-detail">100% consistency</div></div>
+      </div>
+      <div class="gf-tag no">Roman only — overhead+ point break, above Cato's limit</div>
+    </div>
+
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
+          <div class="session-spot">Cabarita (stay or go home)</div>
+          <div class="session-drive">Already there</div>
+        </div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
+      </div>
+      <div class="session-why">Cabarita builds to 2.4-3m by noon (1947kJ) — getting big. Wind 12kph/20kph, still workable but increasing. If dawn felt great and you're confident at the size, stay for another round. If overhead+ was plenty, head home and rest. The swell builds all day — no need to push it when Thursday has better conditions at a more manageable size.</div>
+      <div class="conditions">
+        <div class="cond-item"><div class="cond-label">Cabarita</div><div class="cond-value">2.4-3m</div><div class="cond-detail">building, 1947kJ</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">12 kph</div><div class="cond-detail">20kph gusts</div></div>
+        <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">Rising</div><div class="cond-detail">toward 1.2m high</div></div>
+      </div>
+    </div>
+
+    <div class="session-card rate-border-7">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Evening — 4:00pm - 6:00pm (optional)</div>
           <div class="session-spot">The Pass (Byron Bay)</div>
           <div class="session-drive">60 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">The swell builds and the wind drops — much better than Tuesday. The Pass at 1.2-1.5m on 2.6m 10s primary — the period is increasing, meaning more power and better-shaped walls per wave. Wind drops to 9kph (gusts 27kph) — significantly lighter than yesterday's 24kph. Cape shelter keeps the faces clean. 1301kJ with 100% consistency — every set delivers. Low tide means the wave will have good shape off the banks. The groundswell transition starts today.</div>
+      <div class="session-why">Optional bonus session if you're buzzing from the morning. The 12s groundswell arrives at The Pass by evening: 1.5-2.1m with 2763kJ and 90% consistency. Wind drops to 15kph. Overhead with powerful, lined-up right-handers. Only commit if you're feeling strong — it's 60min each way. Honest call: skip this and save your legs for Thursday's glass-off, which is the better session at a more comfortable size.</div>
+      <div class="cam-check">Check The Pass cam mid-afternoon before committing to the drive</div>
       <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.6m 10s ESE</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9 kph</div><div class="cond-detail">27kph gusts, offshore</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1301 kJ</div><div class="cond-detail">100% consistency!</div></div>
+        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">3.1m 12s groundswell</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15 kph</div><div class="cond-detail">19kph gusts</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2763 kJ</div><div class="cond-detail">90% consistency</div></div>
       </div>
-      <div class="gf-tag no">Roman only — overhead with power, building all day</div>
-    </div>
-
-    <div class="session-card rate-border-7">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
-          <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">Already in Byron</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">This is when it shifts from wind swell to proper groundswell. The Pass builds to 1.2-2m on 2.8m 11s — the 11-second period means waves get more lined up, mechanical, and powerful. 1943kJ energy, 66% consistency. Wind 19kph with 22kph gusts — manageable. The Pass should be producing long, winding right-handers that peel all the way through. Meanwhile D-Bah climbs to 2.4-3m (1959kJ) — pumping but too heavy. Cabarita same story at 2.4-3m.</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-2m</div><div class="cond-detail">2.8m 11s groundswell</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">19 kph</div><div class="cond-detail">22kph gusts</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1943 kJ</div><div class="cond-detail">66% consistency</div></div>
-      </div>
-      <div class="gf-tag no">Roman only — proper overhead groundswell walls</div>
-    </div>
-
-    <div class="session-card rate-border-7">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">—</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">Swell building towards the evening peak. Wind actually drops through the afternoon — 15-19kph by late arvo, lighter than the morning. The 12s groundswell period starts filling in from the south. The Pass approaches 1.5-2.1m by late afternoon. This is getting properly overhead at The Pass — powerful, lined-up walls. Rest mid-day and get back in the water for the late arvo / evening glass-off.</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-2m</div><div class="cond-detail">building to 1.5-2.1m</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15-19 kph</div><div class="cond-detail">dropping through arvo</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">building</div><div class="cond-detail">12s period incoming</div></div>
-      </div>
-      <div class="gf-tag no">Roman only — overhead+ by late arvo</div>
-    </div>
-
-    <div class="session-card rate-border-8">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Evening Session — 4:00pm - 6:00pm</div>
-          <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">—</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-8">8</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">The magic hour. Swell peaks at The Pass: 1.5-2.1m on 3.1m 12s — proper 12-second groundswell energy (2763kJ!) wrapping around Cape Byron. Wind at its lightest: 15kph with 19kph gusts. Consistency jumps to 90%. This could be the best session of the week at The Pass — powerful, long, lined-up right-handers peeling through with light winds and dropping tide giving the wave shape and power. If Roman is here for the evening glass-off, this will be memorable. Meanwhile D-Bah goes to 2.4-3.7m (2324kJ) — world-class but way too heavy.</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">3.1m 12s groundswell!</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15 kph</div><div class="cond-detail">19kph gusts, lightest</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2763 kJ</div><div class="cond-detail">90% consistency!</div></div>
-      </div>
-      <div class="gf-tag no">Roman only — overhead+ groundswell, powerful walls</div>
+      <div class="gf-tag no">Roman only — overhead+ groundswell</div>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Wednesday</h3>
-      <p>Stay at Byron all day. The swell builds and the wind actually gets better through the afternoon — which is unusual and a gift. Surf dawn (1301kJ, light wind) then rest through midday. The evening session is the one to absolutely not miss: 12-second groundswell at 2763kJ with 90% consistency and 15kph wind at The Pass. That's powerful, long, peeling right-handers at overhead+ with light winds and dropping tide. If conditions look as good as the numbers suggest, this could be an 8/10 evening. Cato sits out — this is too much power for her. D-Bah hits 2.4-3.7m by evening — spectacular to watch from the headland if you're back at Tweed.</p>
+      <p>Cabarita dawn is the priority — close, proper point break, lightest wind at first light. Surf 5:30-8am and see how the overhead size feels on a point. If you love it, stay for more. If it's enough, go home and rest. Skip the evening Pass drive unless you're absolutely buzzing — Thursday pre-lunch at The Pass in glass conditions is the better session to save your energy for.</p>
     </div>
   </div>
 
@@ -317,14 +270,15 @@
         </div>
         <div class="session-rating"><span class="rating-num rate-8">8</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">THE SESSION everyone's been tracking. The Pass at 1.2-1.8m on 2.7m 12s groundswell — nearly 2000kJ of energy at just 10kph wind (12kph gusts). This is 12-second-period groundswell wrapping around Cape Byron and producing chest-to-overhead peeling right-handers with near-glass conditions. Low tide at 7am means the banks will be on. Consistency drops to 55% (swell wrapping the Cape loses consistency) — expect lulls between sets, but every wave that comes through will be meaty, lined up, and perfectly surfable. Meanwhile D-Bah goes to 2.4-3m at 5kph GLASS (2064kJ) — world-class but above your comfort zone. Spinks says "pumping, primo AM conditions."</div>
-      <div class="cam-check">Check The Pass cam before leaving Tweed — if it looks lined up, you'll know it's on</div>
+      <div class="session-why">THE SESSION. 12-second groundswell wrapping around Cape Byron: 1.2-1.8m at 10kph (12kph gusts). Nearly 2000kJ of energy at the exact size you rated 8/10 at D-Bah on Monday — but with near-glass conditions and proper groundswell quality instead of wind swell. Low tide at 7am, banks working. Consistency is 55% (swell wraps the Cape) so expect lulls — but every set will be meaty, lined up, and perfect. Spinks says "primo AM conditions" region-wide. Leave Tweed at 4:30am.</div>
+      <div class="cam-check">Check The Pass cam before leaving — if sets are peeling and lined up, it's on</div>
+      <div class="alternatives">&#8627; Cabarita dawn (20 min) — 2.4-3m at 5kph GLASS, 100% consistency. Bigger but closer. Only if you felt very confident at Cabarita Wed and want to push it in perfect conditions</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">2.7m 12s groundswell</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">10 kph</div><div class="cond-detail">12kph gusts — glass</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1992 kJ</div><div class="cond-detail">55% — wait for sets</div></div>
+        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1992 kJ</div><div class="cond-detail">55% — patient sets</div></div>
       </div>
-      <div class="gf-tag no">Roman only — overhead groundswell, too much power for Cato</div>
+      <div class="gf-tag no">Roman only — overhead groundswell, 60min drive</div>
     </div>
 
     <div class="session-card rate-border-8">
@@ -332,59 +286,59 @@
         <div>
           <div class="session-time">Pre-lunch — 9:00am - 12:00pm</div>
           <div class="session-spot">The Pass (Byron Bay)</div>
-          <div class="session-drive">Already in Byron</div>
+          <div class="session-drive">Already there</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-8">8</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Still firing. 1.2-1.5m on 2.4m 11s with 8kph wind (9kph gusts) — basically GLASS. 1491kJ, 54% consistency. Slightly smaller than dawn but even lighter wind. If you missed dawn, this is equally good. The low consistency means patience between sets but every wave is a gem — long, clean right-handers with 11s groundswell power. This is the morning Roman has been tracking all trip. Cabarita also firing at 1.8-2.4m and 5kph glass if you want something bigger (but a different drive).</div>
+      <div class="session-why">Still firing. 1.2-1.5m on 2.4m 11s with 8kph — GLASS. 1491kJ, 54% consistency. Slightly smaller than dawn, even lighter wind. Clean, long peeling walls perfect for working on your snaps — solid face to hit, enough speed off the bottom, not so big you're just surviving. This is the conditions where you can push your surfing forward.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">2.4m 11s groundswell</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8 kph</div><div class="cond-detail">9kph gusts — GLASS</div></div>
         <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1491 kJ</div><div class="cond-detail">54% consistency</div></div>
       </div>
-      <div class="gf-tag no">Roman only — overhead groundswell power</div>
+      <div class="gf-tag no">Roman only — groundswell power</div>
     </div>
 
     <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
-          <div class="session-time">Afternoon — 12:00pm - 4:00pm</div>
-          <div class="session-spot">The Pass — inside section</div>
+          <div class="session-time">Afternoon — 12:00pm - 2:00pm</div>
+          <div class="session-spot">The Pass — inside / Wategos</div>
           <div class="session-drive">—</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Swell easing toward 1.2-1.5m with high tide softening things up. Wind still light (8-10kph). The inside reform section at The Pass could be surfable for Cato — but the 11s period still packs a punch and the paddle-out through sets could be intimidating. Check the cam before she paddles out. Wategos (around the headland) will be smaller and mellower if The Pass looks too powerful. For Roman: still quality waves but smaller than the morning.</div>
-      <div class="alternatives">&#8627; Wategos Beach — more sheltered, smaller, potentially Cato-friendly if The Pass inside is too much</div>
-      <div class="cam-check">Check The Pass cam — if whitewater on paddle-out looks relentless, send Cato to Wategos instead</div>
+      <div class="session-why">Swell easing, high tide (1.2m) softens things. Wind still light (8-10kph). Inside reforms could work for Cato — but 11s period packs punch, so check the cam. Wategos (around the headland) is smaller and mellower — better Cato option if The Pass looks too powerful.</div>
+      <div class="alternatives">&#8627; Wategos — smaller, more sheltered, better for Cato</div>
+      <div class="cam-check">Check The Pass cam — if paddle-out whitewater looks heavy, Wategos for Cato</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">easing, high tide</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8-10 kph</div><div class="cond-detail">still light</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">1491 kJ</div><div class="cond-detail">54% consistency</div></div>
+        <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.2m high</div><div class="cond-detail">softens paddle-out</div></div>
       </div>
-      <div class="gf-tag maybe">Maybe for Cato — inside reforms only, check cam first</div>
+      <div class="gf-tag maybe">Maybe for Cato — inside reforms or Wategos, check first</div>
     </div>
 
     <div class="session-card rate-border-3">
       <div class="session-header">
         <div>
-          <div class="session-time">Evening — 4:00pm - 6:00pm</div>
-          <div class="session-spot">Skip — wind switch</div>
-          <div class="session-drive">—</div>
+          <div class="session-time">After 2:00pm</div>
+          <div class="session-spot">Head home</div>
+          <div class="session-drive">60 min back to Tweed</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Wind switch ruins the evening — jumps to 24kph SSW with 35kph gusts. Combined with easing swell (0.9-1.4m, 731kJ), the quality drops off a cliff. Be done by 2pm at the latest. Head back to Tweed in daylight.</div>
+      <div class="session-why">Wind switch at 4pm — 24kph/35kph. Done. Head home. Friday: swell eases, D-Bah 1.2-1.5m at 7kph — potential Cato day at the home break.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">easing fast</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24 kph</div><div class="cond-detail">35kph gusts — blown</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">731 kJ</div><div class="cond-detail">56% consistency</div></div>
+        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24 kph</div><div class="cond-detail">35kph gusts — over</div></div>
+        <div class="cond-item"><div class="cond-label">Plan</div><div class="cond-value">Go home</div><div class="cond-detail">rest for Fri</div></div>
       </div>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Thursday</h3>
-      <p>This is THE morning. Set the alarm. Get to The Pass at first light. The 12s groundswell at chest-to-overhead with glassy conditions (5-10kph) will produce long, perfect right-handers. Surf dawn patrol, then stay for the pre-lunch window — both are 8/10 sessions. The afternoon wind switch ruins the evening so wrap up by 2pm. For Cato: Thursday afternoon could work on the inside reforms at The Pass when the tide is high and the swell is easing — check the cam first. Or try Wategos for a mellower option. Friday looks like the proper ease-off day (D-Bah 1.2-1.5m, 7kph dawn) — that's your next Cato window at home spots.</p>
+      <p>Leave Tweed at 4:30am, be at The Pass for first light. The 12s groundswell at chest-to-overhead with glass is the best combination of size, period, and wind this trip will produce for your level. Surf dawn, rest on the beach, surf again pre-lunch — both are 8/10 windows. Bring Cato for the day: she can relax on the beach while you surf, then try the inside section or Wategos in the afternoon if conditions suit. Done by 2pm, home by 3:30pm. Friday is the Cato day at D-Bah.</p>
     </div>
   </div>
 
@@ -392,23 +346,18 @@
   <div class="dtw-section">
     <h2>Days to Watch</h2>
     <div class="dtw-card">
-      <div class="dtw-date">Friday 27 Mar — Swell Eases, Potential Cato Day</div>
-      <div class="dtw-detail">ESE swell eases. D-Bah 1.2-1.5m at dawn with 7kph wind. Spinks says "fun/good surf, could see offshores." Lennox 1.2-1.8m with 17kph dawn. This could be the clean, manageable day for Cato to finally get wet at D-Bah.</div>
-      <div class="dtw-size">D-Bah: 1.2-1.5m / 414kJ dawn — Cato-friendly if winds cooperate</div>
+      <div class="dtw-date">Friday 27 Mar — Swell Eases, Cato Day</div>
+      <div class="dtw-detail">ESE swell eases. D-Bah 1.2-1.5m at dawn with 7kph wind. Spinks: "fun/good surf, could see offshores." First real Cato session of the trip — waist-to-chest, clean, light wind, home break.</div>
+      <div class="dtw-size">D-Bah: 1.2-1.5m / 414kJ — Cato-friendly</div>
     </div>
     <div class="dtw-card big">
       <div class="dtw-date">Saturday 28 Mar — Second S/SE Pulse</div>
-      <div class="dtw-detail">A new S/SE swell pulse arrives. D-Bah goes from 1.2-1.5m dawn to 1.5-2.1m by evening (2472kJ!). Lennox 2.4-3.7m by evening (4826kJ). Could be a big day. Wind 15-19kph but direction unclear — watch for updates.</div>
-      <div class="dtw-size">Lennox: 2.4-3.7m / 4826kJ evening — MASSIVE</div>
-    </div>
-    <div class="dtw-card big">
-      <div class="dtw-date">Sunday 29 Mar — Big S Swell Continues</div>
-      <div class="dtw-detail">S swell holds. D-Bah 1.5-2.1m, Lennox 2.4-3m. Wind 8-17kph, moderate. The exposed breaks could be pumping if the wind cooperates. Watch the evening run for updates.</div>
-      <div class="dtw-size">D-Bah: 1.5-2.1m — Lennox: 2.4-3m</div>
+      <div class="dtw-detail">New swell. D-Bah 1.2-1.5m dawn building to 1.5-2.1m evening (2472kJ). Lennox 2.4-3.7m by evening (4826kJ!). Another big one incoming.</div>
+      <div class="dtw-size">Lennox: 2.4-3.7m / 4826kJ — MASSIVE</div>
     </div>
     <div class="dtw-card">
-      <div class="dtw-date">Sat-Mon Window — Spinks' Take</div>
-      <div class="dtw-detail">"Sat to Mon: Maybe a pulse coming from the S/SE, for some fun surf." More info will come in the next few forecast updates as models lock onto the swell source.</div>
+      <div class="dtw-date">Crowd Intel</div>
+      <div class="dtw-detail">Snapper/Rainbow/Greenmount: world-class but crowd-locked for visiting intermediates (confirmed 3x). D-Bah needs E/NE wind (SSW blows it out). Cabarita and The Pass are the go-to alternatives — less famous, manageable crowds, quality point break waves.</div>
     </div>
   </div>
 
@@ -417,27 +366,27 @@
     <h3>Data Sources</h3>
     <div class="source-item">
       <span>Gold Coast (D-Bah)</span>
-      <span class="source-badge verified">Forecaster: Anthony Spinks</span>
+      <span class="source-badge verified">Anthony Spinks</span>
     </div>
     <div class="source-item">
       <span>Northern NSW (The Pass)</span>
-      <span class="source-badge verified">Forecaster: Anthony Spinks</span>
+      <span class="source-badge verified">Anthony Spinks</span>
     </div>
     <div class="source-item">
       <span>Lennox-Ballina</span>
-      <span class="source-badge verified">Forecaster: Anthony Spinks</span>
+      <span class="source-badge verified">Anthony Spinks</span>
     </div>
     <div class="source-item">
       <span>Tweed Coast (Cabarita)</span>
-      <span class="source-badge numerical">Numerical data only</span>
+      <span class="source-badge numerical">Numerical only</span>
     </div>
     <div class="source-item">
-      <span>LOTUS Model Run</span>
+      <span>LOTUS Model</span>
       <span style="font-size:0.72rem; color: var(--text-dim);">23 Mar 5pm AEDT (06 UTC)</span>
     </div>
     <div class="source-item">
-      <span>Observations Calibrated</span>
-      <span style="font-size:0.72rem; color: var(--text-dim);">6 (latest: Roman D-Bah 8/10 Mon 23)</span>
+      <span>Observations</span>
+      <span style="font-size:0.72rem; color: var(--text-dim);">10 total (4 today incl. in-person Superbank)</span>
     </div>
   </div>
 
