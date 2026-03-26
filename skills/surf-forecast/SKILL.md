@@ -92,6 +92,8 @@ Each region has its own `metadata.region`, `metadata.base_location`, `metadata.c
 
 **Important: Never delete existing regions.** Old regions stay cached so they're instantly available if the surfer returns. The Gold Coast database doesn't get wiped when moving to Portugal — it's still there for the next Australia trip.
 
+**CRITICAL: Build ALL missing regions NOW, not later.** If any `surf` or `home` day in the 8-day window maps to a location without a spot database, build it during THIS forecast run — even if that day is 7 days away. The dashboard must show real forecast data for every surf day, never a "pending" placeholder. A Morocco trip starting in 6 days means the Morocco spot database gets built today, and Surfline data gets fetched today. No exceptions.
+
 If all locations already have coverage, skip to Step 3.
 
 ## Step 3: Fetch Surfline forecast data
