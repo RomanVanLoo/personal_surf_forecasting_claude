@@ -86,9 +86,8 @@ For each region to fetch:
    - The written forecaster report (by name, e.g. "Lachlan Perris") — **NOTE: Not all regions have written forecaster reports.** Some regions (e.g. Portugal, parts of Asia/Pacific) only have numerical data and no human-written analysis. If no written report is present, proceed with the numerical data only and flag this in the output.
    - Current conditions (rating, surf height, swell, wind, tide, temperature)
    - "Days to Watch" section (may also be absent in some regions)
-5. Click on "Tomorrow" and extract the same data
-6. Click on the day after tomorrow and extract the same data
-7. Also capture the hourly forecast table for all 3 days (surf height, primary swell, secondary swell, wind speed+direction, wave energy, consistency, weather, tide times)
+5. Extract the forecast data for all 7 days (today + next 6 days). The Surfline table view (`?view=table`) shows all 16 days — extract the first 7. Use JavaScript (`javascript_tool`) to pull the hourly table data (surf height, primary swell, secondary swell, wind speed+direction, wave energy, consistency, weather, tide times) for all 7 days in a single pass.
+6. Also extract the written forecaster report and "Days to Watch" section from the overview.
 
 ### 3b-ii. Data source tracking
 
@@ -161,7 +160,7 @@ Divide each day into four session windows based on sunrise/sunset times (extract
 
 ### Report structure
 
-For each day (today, tomorrow, day after):
+For each day (7-day window: today + next 6 days):
 
 ```
 ## [Day, Date]
@@ -210,9 +209,9 @@ The HTML should be a single self-contained file (no external dependencies except
 - Last updated timestamp
 - Chrome connection status (warning banner if disconnected)
 - Current location and trip dates
-- Today's forecast with session windows, spot recommendations, alternatives, and camera check suggestions
-- Tomorrow and day-after forecasts (collapsible)
-- A "days to watch" highlight section
+- 7-day forecast (today + next 6 days) with session windows, spot recommendations, alternatives, and camera check suggestions
+- Day tabs or navigation to switch between days
+- A "days to watch" highlight section for notable days beyond the 7-day window (if any)
 - **Data confidence indicators**: For each forecast region used, show whether a human forecaster's written report was available. Regions with written reports should display a small badge like "Forecaster verified — [Name]" to indicate enhanced accuracy. Regions without written reports should note "Numerical data only" so the user knows the analysis is purely algorithmic. This distinction matters because human forecasters account for local nuances (sand movement, rip patterns, local wind effects) that numerical models miss.
 
 **Housekeeping — remove past dates:** Every time the dashboard is updated, remove any day tabs and session cards for dates that are now in the past. The dashboard should only ever show today and future days. Don't accumulate stale forecasts — if it's Wednesday, Monday and Tuesday should be gone. This keeps the dashboard clean and ensures the user always sees current information first.
