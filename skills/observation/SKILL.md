@@ -102,8 +102,8 @@ Each observation is one of three types:
 
 **Field rules:**
 - `id`: Auto-generate from date + time. Format: `obs_YYYYMMDD_HHMMSS` using the `logged_at` timestamp.
-- `spot_name`: Match to the exact name used in `best_conditions_for_surf_spots.json` if possible. If the user says "D-Bah", map it to "Duranbah (D-Bah)".
-- `forecast_region`: Look up which region this spot belongs to in the JSON. This is critical for the forecast skill's cross-referencing.
+- `spot_name`: Match to the exact name used in `best_conditions_for_surf_spots.json` if possible. If the user says "D-Bah", map it to "Duranbah (D-Bah)". The JSON uses a multi-region format (schema_version 2) — search across all regions in `regions.*` to find the spot.
+- `forecast_region`: Look up which region this spot belongs to in the JSON. Search across all `regions.*` entries. This is critical for the forecast skill's cross-referencing.
 - `rating`: Use the same 1-10 scale as the forecast skill. If the user says "3 out of 5", convert to the 10-point scale (so 3/5 = 6/10). If they say "3 out of 10", use 3. Use context to figure out which scale they mean. If genuinely ambiguous, ask.
 - `observer`: Which surfer from `current_situation.md` made this observation. Usually Roman, but could be Cato or anyone else in the crew.
 - `vs_forecast`: This is gold for calibration. If the user mentions the forecast was off, capture it. If they don't mention it, set to null — don't ask unless it comes up naturally.
@@ -117,7 +117,7 @@ This is the key step that builds the ground-truth database. For every observatio
 
 **How to scrape:**
 
-1. **Look up the spot's Surfline ID** from `best_conditions_for_surf_spots.json`. Find which `forecast_region` the spot belongs to, then get the `reference_surfline_id` and `reference_surfline_url`. If the spot IS the reference spot, use it directly. If not, check Surfline's nearby spots for a direct URL — or fall back to the region's reference spot (note this in the snapshot).
+1. **Look up the spot's Surfline ID** from `best_conditions_for_surf_spots.json` (multi-region format — search across all `regions.*` entries). Find which `forecast_region` the spot belongs to, then get the `reference_surfline_id` and `reference_surfline_url`. If the spot IS the reference spot, use it directly. If not, check Surfline's nearby spots for a direct URL — or fall back to the region's reference spot (note this in the snapshot).
 
 2. **Navigate to the Surfline spot page** using Chrome browser automation:
    - URL: `https://www.surfline.com/surf-report/{spot-slug}/{spot-id}?view=table`
