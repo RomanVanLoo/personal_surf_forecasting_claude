@@ -13,7 +13,7 @@ You are a personal surf forecaster. Your job is to produce an accurate, actionab
 - **Read/write all files using normal working folder paths** — `current_situation.md`, `best_conditions_for_surf_spots.json`, `index.html`, skill files, etc. These are all accessible via the mounted workspace folders. Use the Read, Edit, and Write tools directly.
 - **ONLY use Desktop Commander for git operations** — `git add`, `git commit`, `git push`. Nothing else. Do not use Desktop Commander to read, write, or list files.
 
-## Step 1: Read the current situation and build the 7-day location map
+## Step 1: Read the current situation and build the 8-day location map
 
 Read `current_situation.md` from the user's `surf_forecasting/` workspace folder. Extract:
 - The `## Itinerary` section (if present) — date ranges mapped to locations and types
@@ -26,9 +26,9 @@ Read `current_situation.md` from the user's `surf_forecasting/` workspace folder
 
 If the file doesn't exist or is empty, ask the user where they are and what they're looking for. Use the `update-situation` skill pattern to create it.
 
-### 1b. Build the 7-day location map
+### 1b. Build the 8-day location map
 
-For each of the 7 days (today + next 6 days), determine which location and type applies:
+For each of the 8 days (today + next 7 days), determine which location and type applies:
 
 1. Check the `## Itinerary` section for a matching date range
 2. If no itinerary entry covers that date, fall back to the `## Location` default/home base (type: `surf`)
@@ -42,6 +42,7 @@ Day 4 (Sun 29 Mar): Melbourne → type: wave-pool
 Day 5 (Mon 30 Mar): In transit → type: travel
 Day 6 (Tue 31 Mar): In transit → type: travel
 Day 7 (Wed 1 Apr): In transit → type: travel
+Day 8 (Thu 2 Apr): Linda a Velha, Lisbon → type: home
 ```
 
 **Day types and how to handle them:**
@@ -53,7 +54,7 @@ Day 7 (Wed 1 Apr): In transit → type: travel
 
 Extract the list of **unique surf locations** (types `surf` or `home` only) — these are the locations that need spot database coverage and Surfline data fetching.
 
-## Step 2: Check spot database coverage for all locations in the 7-day window
+## Step 2: Check spot database coverage for all locations in the 8-day window
 
 Read `best_conditions_for_surf_spots.json` from the same folder. This file uses a **multi-region format** (schema_version 2):
 
@@ -71,7 +72,7 @@ Each region has its own `metadata.region`, `metadata.base_location`, `metadata.c
 
 **If you encounter schema_version 1 (or no schema_version):** The file is in the old single-region format. Migrate it by wrapping the existing content: `{ "schema_version": 2, "regions": { "[region-slug]": <old content> } }`.
 
-### 2a. For each unique surf location in the 7-day location map:
+### 2a. For each unique surf location in the 8-day location map:
 
 1. **Check if a matching region exists** in the JSON. Match by comparing the location name/area against `metadata.base_location` and `metadata.region` for each region in the file.
 
@@ -105,13 +106,13 @@ This step requires Chrome browser automation via Claude in Chrome.
 
 ### 3a. Determine which regions to fetch
 
-For each unique surf location in the 7-day window, read the `forecast_regions` from that location's region entry in the JSON. The strategy field tells you which regions to always fetch and which are conditional.
+For each unique surf location in the 8-day window, read the `forecast_regions` from that location's region entry in the JSON. The strategy field tells you which regions to always fetch and which are conditional.
 
 For each location, evaluate:
 - **Always fetch**: Core regions near the base location
 - **Conditionally fetch**: Distant regions (2hr+ drive) — only if the general swell pattern suggests exceptional conditions there
 
-**Efficiency note:** If a location only appears for 1-2 days in the 7-day window (e.g. last day before a trip), you may only need the core region — skip conditional distant regions to save time.
+**Efficiency note:** If a location only appears for 1-2 days in the 8-day window (e.g. last day before a trip), you may only need the core region — skip conditional distant regions to save time.
 
 ### 3b. Navigate to each reference spot on Surfline
 
@@ -124,7 +125,7 @@ For each region to fetch:
    - The written forecaster report (by name, e.g. "Lachlan Perris") — **NOTE: Not all regions have written forecaster reports.** Some regions (e.g. Portugal, parts of Asia/Pacific) only have numerical data and no human-written analysis. If no written report is present, proceed with the numerical data only and flag this in the output.
    - Current conditions (rating, surf height, swell, wind, tide, temperature)
    - "Days to Watch" section (may also be absent in some regions)
-5. Extract the forecast data for all 7 days (today + next 6 days). The Surfline table view (`?view=table`) shows all 16 days — extract the first 7. Use JavaScript (`javascript_tool`) to pull the hourly table data (surf height, primary swell, secondary swell, wind speed+direction, wave energy, consistency, weather, tide times) for all 7 days in a single pass.
+5. Extract the forecast data for all 8 days (today + next 7 days). The Surfline table view (`?view=table`) shows all 16 days — extract the first 8. Use JavaScript (`javascript_tool`) to pull the hourly table data (surf height, primary swell, secondary swell, wind speed+direction, wave energy, consistency, weather, tide times) for all 8 days in a single pass.
 6. Also extract the written forecaster report and "Days to Watch" section from the overview.
 
 ### 3b-ii. Data source tracking
@@ -150,7 +151,7 @@ Do NOT save the Surfline data to a file. Keep it in your working context for the
 
 ## Step 3e: Load recent observations
 
-Read `observations.json` from the workspace folder. Filter for observations that are relevant to the current forecast period — observations from the **last 3 days** at locations that appear in the 7-day location map.
+Read `observations.json` from the workspace folder. Filter for observations that are relevant to the current forecast period — observations from the **last 3 days** at locations that appear in the 8-day location map.
 
 For each recent observation, check:
 
@@ -198,7 +199,7 @@ Divide each day into four session windows based on sunrise/sunset times (extract
 
 ### Report structure
 
-For each day (7-day window: today + next 6 days), use the **day type** from the location map to determine the format:
+For each day (8-day window: today + next 7 days), use the **day type** from the location map to determine the format:
 
 #### For `surf` / `home` days — full forecast:
 
@@ -277,12 +278,12 @@ This pushes directly to GitHub Pages via the user's local git credentials. Deskt
 The HTML should be a single self-contained file (no external dependencies except CDN-hosted CSS/fonts) that works as a mobile-friendly dashboard showing:
 - Last updated timestamp
 - Chrome connection status (warning banner if disconnected)
-- Current location and trip context (may show multiple locations if the 7-day window spans a transition)
-- 7-day forecast (today + next 6 days) with session windows, spot recommendations, alternatives, and camera check suggestions
+- Current location and trip context (may show multiple locations if the 8-day window spans a transition)
+- 8-day forecast (today + next 7 days) with session windows, spot recommendations, alternatives, and camera check suggestions
 - **Multi-location awareness in day chips/tabs**: Each day chip should show the location name if it differs from the previous day (e.g. "THU 26 — Gold Coast" → "SAT 28 — Melbourne" → "THU 2 — Lisbon"). Same-location consecutive days can omit the label after the first. Travel/rest days should show a distinct muted style with "Travelling" or "Rest" label.
 - Day tabs or navigation to switch between days
 - **Day type-specific cards**: `surf`/`home` days get full session cards. `wave-pool` days get a simple info card with session times. `travel`/`rest` days get a minimal rest card.
-- A "days to watch" highlight section for notable days beyond the 7-day window (if any)
+- A "days to watch" highlight section for notable days beyond the 8-day window (if any)
 - **Data confidence indicators**: For each forecast region used, show whether a human forecaster's written report was available. Regions with written reports should display a small badge like "Forecaster verified — [Name]" to indicate enhanced accuracy. Regions without written reports should note "Numerical data only" so the user knows the analysis is purely algorithmic. This distinction matters because human forecasters account for local nuances (sand movement, rip patterns, local wind effects) that numerical models miss.
 
 **Housekeeping — remove past dates:** Every time the dashboard is updated, remove any day tabs and session cards for dates that are now in the past. The dashboard should only ever show today and future days. Don't accumulate stale forecasts — if it's Wednesday, Monday and Tuesday should be gone. This keeps the dashboard clean and ensures the user always sees current information first.
