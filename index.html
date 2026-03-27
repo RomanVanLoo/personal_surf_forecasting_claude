@@ -29,7 +29,6 @@
     min-height: 100vh; -webkit-font-smoothing: antialiased;
   }
   .container { max-width: 680px; margin: 0 auto; padding: 16px; }
-
   /* Header */
   .header { text-align: center; padding: 24px 0 16px; }
   .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--text-bright); letter-spacing: -0.02em; }
@@ -50,13 +49,12 @@
   .overview h2 { font-size: 1rem; color: var(--text-bright); margin-bottom: 8px; }
   .overview p { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
 
-  /* 7-day strip */
+  /* 8-day strip */
   .day-strip { display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 2px; }
   .day-strip::-webkit-scrollbar { display: none; }
   .day-chip { flex: 0 0 auto; min-width: 72px; padding: 8px 6px; background: var(--card); border: 2px solid transparent; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; position: relative; }
   .day-chip:hover { background: var(--card-hover); }
-  .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }
-  .day-chip .chip-day { font-size: 0.65rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+  .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }  .day-chip .chip-day { font-size: 0.65rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
   .day-chip.active .chip-day { color: var(--accent); }
   .day-chip .chip-date { font-size: 0.8rem; font-weight: 700; color: var(--text-bright); margin-top: 1px; }
   .day-chip .chip-rating { font-size: 0.65rem; margin-top: 3px; font-weight: 700; }
@@ -84,7 +82,6 @@
   .session-why { font-size: 0.85rem; color: var(--text); line-height: 1.55; margin-bottom: 12px; }
   .alternatives { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 4px; }
   .cam-check { font-size: 0.75rem; color: var(--accent); font-style: italic; margin-bottom: 8px; }
-
   /* Conditions grid */
   .conditions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .cond-item { background: var(--bg); border-radius: 8px; padding: 8px 10px; text-align: center; }
@@ -109,6 +106,13 @@
 
   /* Location transition label */
   .location-label { font-size: 0.78rem; color: var(--accent); font-weight: 600; margin-bottom: 8px; padding: 4px 10px; background: var(--accent-dim); border-radius: 6px; display: inline-block; }
+  /* Days to watch */
+  .days-to-watch { margin-top: 16px; margin-bottom: 16px; }
+  .days-to-watch h3 { font-size: 0.95rem; color: var(--text-bright); margin-bottom: 10px; }
+  .dtw-card { background: var(--card); border-left: 3px solid var(--red); border-radius: var(--radius); padding: 14px; margin-bottom: 8px; }
+  .dtw-card.medium { border-left-color: var(--orange); }
+  .dtw-card .dtw-day { font-size: 0.78rem; font-weight: 700; color: var(--text-bright); }
+  .dtw-card .dtw-detail { font-size: 0.8rem; color: var(--text); margin-top: 4px; line-height: 1.5; }
 
   /* Data sources */
   .data-sources { margin-top: 24px; background: var(--card); border-radius: var(--radius); padding: 16px; }
@@ -130,8 +134,7 @@
   .rate-6, .rate-7 { color: var(--green); }
   .rate-8, .rate-9, .rate-10 { color: var(--cyan); }
   .session-card.rate-border-2 { border-left-color: var(--red); }
-  .session-card.rate-border-3 { border-left-color: var(--orange); }
-  .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
+  .session-card.rate-border-3 { border-left-color: var(--orange); }  .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
   .session-card.rate-border-6, .session-card.rate-border-7 { border-left-color: var(--green); }
   .session-card.rate-border-8, .session-card.rate-border-9 { border-left-color: var(--cyan); }
 
@@ -162,244 +165,302 @@
       Gold Coast → Melbourne → Portugal
     </div>
   </div>
-
   <div class="status-bar">
-    <span class="updated">Updated: Thu 26 Mar, 8:35pm AEDT</span>
+    <span class="updated">Updated: Fri 27 Mar, 5:11pm AEDT</span>
     <span class="chrome-status"><span class="status-dot ok"></span>Chrome connected</span>
   </div>
 
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>Last 2 days in Australia. The epic ex-tropical swell is easing — today was the peak (The Pass dawn 1.2-2m on 12s groundswell, primo glass). Friday dawn at D-Bah is your last real surf: 1.2-1.5m on 11s with 4-5kph wind. Then it's wave pool in Melbourne for the weekend, travel Mon-Wed, and home to Portugal from Thursday. New chapter begins.</p>
+    <p>Evening update — farewell Gold Coast. The ESE swell has faded to waist-high at D-Bah with offshore WNW winds. A fun little sunset paddle if you want one last wave before Melbourne. Perris says wind may switch SW and clean things up coast-wide. Then it's wave pool in Melbourne, three days of travel, and home to Lisbon from Thursday. Portugal is looking flat for your first days back — Ericeira has a dying 12s groundswell remnant giving waist-high walls Thu morning, but Fri is a write-off. The real action starts Sat 4 Apr when a proper NW swell builds, peaking Sun-Mon at 2.4-3m. Mark Tue 7 Apr in red — massive W swell, Ericeira 3-4.5m, Carcavelos overhead+.</p>
   </div>
 
-  <!-- 7-day strip -->
+  <!-- 8-day strip -->
   <div class="day-strip">
     <div class="day-chip active" onclick="showDay(0)">
-      <div class="chip-day">Thu</div>
-      <div class="chip-date">26 Mar</div>
-      <div class="chip-rating rate-9">9/10</div>
-      <div class="chip-size">1.2-2m</div>
+      <div class="chip-day">Fri</div>
+      <div class="chip-date">27</div>
+      <div class="chip-rating rate-3">3/10</div>
+      <div class="chip-size">0.6-1.1m</div>
       <div class="chip-location">Gold Coast</div>
     </div>
-    <div class="day-chip" onclick="showDay(1)">
-      <div class="chip-day">Fri</div>
-      <div class="chip-date">27 Mar</div>
-      <div class="chip-rating rate-6">6/10</div>
-      <div class="chip-size">1.2-1.5m</div>
-      <div class="chip-location">Gold Coast</div>
+    <div class="day-chip wave-pool" onclick="showDay(1)">
+      <div class="chip-day">Sat</div>
+      <div class="chip-date">28</div>
+      <div class="chip-type">Wave Pool</div>
+      <div class="chip-location">Melbourne</div>
     </div>
     <div class="day-chip wave-pool" onclick="showDay(2)">
-      <div class="chip-day">Sat</div>
-      <div class="chip-date">28 Mar</div>
-      <div class="chip-type">Wave Pool</div>
-      <div class="chip-location">Melbourne</div>
-    </div>
-    <div class="day-chip wave-pool" onclick="showDay(3)">
       <div class="chip-day">Sun</div>
-      <div class="chip-date">29 Mar</div>
+      <div class="chip-date">29</div>
       <div class="chip-type">Wave Pool</div>
       <div class="chip-location">Melbourne</div>
+    </div>    <div class="day-chip travel" onclick="showDay(3)">
+      <div class="chip-day">Mon</div>
+      <div class="chip-date">30</div>
+      <div class="chip-type">Travel</div>
     </div>
     <div class="day-chip travel" onclick="showDay(4)">
-      <div class="chip-day">Mon</div>
-      <div class="chip-date">30 Mar</div>
+      <div class="chip-day">Tue</div>
+      <div class="chip-date">31</div>
       <div class="chip-type">Travel</div>
     </div>
     <div class="day-chip travel" onclick="showDay(5)">
-      <div class="chip-day">Tue</div>
-      <div class="chip-date">31 Mar</div>
+      <div class="chip-day">Wed</div>
+      <div class="chip-date">1</div>
       <div class="chip-type">Travel</div>
     </div>
-    <div class="day-chip travel" onclick="showDay(6)">
-      <div class="chip-day">Wed</div>
-      <div class="chip-date">1 Apr</div>
-      <div class="chip-type">Travel</div>
+    <div class="day-chip" onclick="showDay(6)">
+      <div class="chip-day">Thu</div>
+      <div class="chip-date">2</div>
+      <div class="chip-rating rate-4">4/10</div>
+      <div class="chip-size">0.6-1.1m</div>
+      <div class="chip-location">Lisbon</div>
     </div>
     <div class="day-chip" onclick="showDay(7)">
-      <div class="chip-day">Thu</div>
-      <div class="chip-date">2 Apr</div>
-      <div class="chip-rating rate-2">2/10</div>
-      <div class="chip-size">0.3-0.6m</div>
-      <div class="chip-location">Portugal</div>
+      <div class="chip-day">Fri</div>
+      <div class="chip-date">3</div>
+      <div class="chip-rating rate-1">1/10</div>
+      <div class="chip-size">0.6-0.9m</div>
+      <div class="chip-location">Lisbon</div>
     </div>
   </div>
+  <!-- ===== DAY 0: FRI 27 MAR — GOLD COAST ===== -->
+  <div class="day-content active" id="day-0">
+    <div class="location-label">Last day — Gold Coast, QLD</div>
 
-  <!-- Day 1: Thursday 26 Mar — Gold Coast (retrospective) -->
-  <div class="day-content active" id="day0">
-    <div class="location-label">Gold Coast, QLD — Last days at Tweed Heads</div>
-
-    <div class="session-card rate-border-9">
+    <!-- Evening Session -->
+    <div class="session-card rate-border-3">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 8:30am (done)</div>
-          <div class="session-spot">The Pass, Byron Bay</div>
-          <div class="session-drive">45 min drive</div>
-        </div>
-        <div class="session-rating"><span class="rating-num rate-9">9</span><span class="rating-label">/10</span></div>
-      </div>
-      <div class="session-why">THE SESSION. 12s ESE groundswell wrapping into the bay — 1.2-2m with 2.8m primary at 12s period. Light offshore at dawn. Perris called it: "One of the best days we've seen for many months." D-Bah and Cabarita were 2.4-3.7m (too big) — The Pass filtered the swell to head-high perfection. This was the session the whole trip built towards.</div>
-      <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-2.0m</div><div class="cond-detail">2.8m 12s ESE</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">13 kph</div><div class="cond-detail">Light offshore dawn</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">2,096 kJ</div><div class="cond-detail">72% consistency</div></div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <h3>Evening — Done for the day</h3>
-      <p>Wind picked up to 26kph N cross-shore by 6pm. Swell easing through 1.2-2m at D-Bah. Tomorrow dawn is the last session — savour it.</p>
-    </div>
-
-    <div class="advice-card">
-      <h3>Thursday Summary</h3>
-      <p>Hopefully you got in at The Pass this morning — it was as good as every model predicted all week. The ESE swell is easing now. Get an early night — tomorrow's dawn at D-Bah is your farewell session.</p>
-    </div>
-  </div>
-
-  <!-- Day 2: Friday 27 Mar — Gold Coast (LAST DAY) -->
-  <div class="day-content" id="day1">
-    <div class="location-label">Gold Coast, QLD — Last surf before Melbourne</div>
-
-    <div class="session-card rate-border-6">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Dawn Patrol — 5:30am - 8:00am</div>
+          <div class="session-time">Evening Session · 4:30pm – 6:30pm</div>
           <div class="session-spot">Duranbah (D-Bah)</div>
-          <div class="session-drive">Walk / 5 min</div>
+          <div class="session-drive">Walk from accommodation</div>
         </div>
-        <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
+        <div class="session-rating">
+          <span class="rating-num rate-3">3</span>
+          <span class="rating-label">/10</span>
+        </div>
       </div>
-      <div class="session-why">Farewell session. ESE swell easing to 1.2-1.5m but still has 11s period — the leftover groundswell gives proper walls despite the smaller size. Wind at dawn: 4-5kph. Near glass. D-Bah's easterly aspect picks up every last bit of this swell. The Xero Cruz will paddle into everything. Spinks says "cleaning up with fun to decent surf." Enjoy the last Australian surf.</div>
-      <div class="alternatives">Also worth checking: Snapper Rocks (2 min walk) — same swell, might have more shape if the bank is connecting. But Snapper crowd is relentless (observation confirmed x5).</div>
-      <div class="cam-check">Check the D-Bah cam at first light — if it looks fat, Greenmount might have more shape on the dropping tide.</div>
+      <div class="session-why">Farewell paddle. The ESE swell has faded to waist-high and the energy is dropping fast (162kJ by 6pm). But the WNW wind is offshore, and the dropping tide should sharpen up the banks. Perris reckons the wind may switch to a light SW later, cleaning up the coast. It's small but it's your last Gold Coast wave — get in for the sunset.</div>
       <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">1.6m 11s ESE</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">4-5 kph</div><div class="cond-detail">Near glass</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">412 kJ</div><div class="cond-detail">64% consistency</div></div>
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.6-1.1m</div>
+          <div class="cond-detail">1.1m 10s SE</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">16kph WNW</div>
+          <div class="cond-detail">Gusts 27kph · Offshore</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">1.1m → 0.5m</div>
+          <div class="cond-detail">Dropping</div>
+        </div>
       </div>
     </div>
-
-    <div class="rest-card">
-      <h3>Afternoon — Skip (blown out)</h3>
-      <p>Wind ramps to 16-34kph from noon. Swell drops to 0.9-1.2m. Not worth it. Pack your bags for Melbourne.</p>
-    </div>
-
     <div class="advice-card">
-      <h3>Best Advice for Friday</h3>
-      <p>Get to D-Bah at first light for a clean farewell session. 11s period still means proper walls — the Xero Cruz will shine in this. Don't bother after 9am, the wind switches hard. After your session, pack up and fly to Melbourne for the wave pool. Last one in the ocean for a week.</p>
+      <h3>Best Advice for the Day</h3>
+      <p>It's 5pm and the swell is fading. If you want one last Gold Coast wave, walk down to D-Bah now — the wind's offshore and the dropping tide will help the banks. Don't expect much size-wise, but it's a symbolic farewell paddle. Tomorrow you're Melbourne-bound. The Gold Coast chapter of this trip is done — and what a chapter it was.</p>
     </div>
   </div>
 
-  <!-- Day 3: Saturday 28 Mar — Melbourne Wave Pool -->
-  <div class="day-content" id="day2">
-    <div class="location-label">Melbourne — URBNSURF Wave Pool</div>
+  <!-- ===== DAY 1: SAT 28 MAR — MELBOURNE WAVE POOL ===== -->
+  <div class="day-content" id="day-1">
+    <div class="location-label">Melbourne — URBNSURF</div>
 
     <div class="wave-pool-card">
-      <div class="wp-icon">🏊‍♂️</div>
+      <div class="wp-icon">🏊</div>
       <h3>URBNSURF Melbourne</h3>
-      <div class="wp-sessions">Evening session booked</div>
-      <div class="wp-detail">Controlled conditions — no forecast needed. Focus on technique: snaps practice on the perfectly shaped walls. The pool generates consistent 1m rights and lefts — great for repetition and progression.</div>
-      <div class="wp-detail" style="margin-top: 8px; color: var(--text-dim);">Meanwhile in the ocean: new S swell arrives at Gold Coast by evening (D-Bah 1.2-1.5m, 933kJ) — you'll be missing it, but Portugal's waiting.</div>
+      <div class="wp-sessions">Saturday evening session</div>
+      <div class="wp-detail">Guaranteed waves after two weeks of chasing swell. Enjoy the consistency — no wind, no tide, no crowd lottery. A great way to work on those snaps in controlled conditions.</div>
     </div>
   </div>
 
-  <!-- Day 4: Sunday 29 Mar — Melbourne Wave Pool -->
-  <div class="day-content" id="day3">
-    <div class="location-label">Melbourne — URBNSURF Wave Pool</div>
+  <!-- ===== DAY 2: SUN 29 MAR — MELBOURNE WAVE POOL ===== -->
+  <div class="day-content" id="day-2">
+    <div class="location-label">Melbourne — URBNSURF</div>
 
     <div class="wave-pool-card">
-      <div class="wp-icon">🏊‍♂️</div>
+      <div class="wp-icon">🏊</div>
       <h3>URBNSURF Melbourne</h3>
-      <div class="wp-sessions">3:00pm session booked</div>
-      <div class="wp-detail">Second wave pool session. Make the most of the repetitions — work on those frontside snaps in the pocket. Consistent walls, no crowd pressure, perfect practice environment before the long flight home.</div>
-      <div class="wp-detail" style="margin-top: 8px; color: var(--text-dim);">Ocean update: S swell peaking on the Gold Coast (D-Bah 1.2-2m, 1503kJ at noon, but 13-27kph wind). Points fun-sized, exposed breaks challenging.</div>
+      <div class="wp-sessions">Sunday 3pm session</div>
+      <div class="wp-detail">Last surf session before the long haul home. Make it count — dial in the snap technique on perfect walls before the travel break.</div>
     </div>
   </div>
-
-  <!-- Day 5: Monday 30 Mar — Travelling -->
-  <div class="day-content" id="day4">
+  <!-- ===== DAY 3: MON 30 MAR — TRAVEL ===== -->
+  <div class="day-content" id="day-3">
     <div class="rest-card">
-      <h3>Monday — Travelling</h3>
-      <p>Melbourne → Portugal. Long haul. Rest up, stretch on the plane, hydrate. The next time you paddle out will be in the Atlantic.</p>
+      <h3>Travelling — Melbourne → Portugal</h3>
+      <p>Long haul home. Rest up. The next paddle-out is Thursday in Lisbon.</p>
     </div>
   </div>
 
-  <!-- Day 6: Tuesday 31 Mar — Travelling -->
-  <div class="day-content" id="day5">
+  <!-- ===== DAY 4: TUE 31 MAR — TRAVEL ===== -->
+  <div class="day-content" id="day-4">
     <div class="rest-card">
-      <h3>Tuesday — In Transit</h3>
-      <p>Still travelling. Jet lag incoming. Start shifting your body clock to WET (UTC+0, currently 11hrs behind AEDT). Early nights, early mornings — you'll want dawn patrols from Thursday.</p>
+      <h3>Travelling</h3>
+      <p>In transit. Nearly there.</p>
     </div>
   </div>
 
-  <!-- Day 7: Wednesday 1 Apr — Travelling / Arriving -->
-  <div class="day-content" id="day6">
+  <!-- ===== DAY 5: WED 1 APR — TRAVEL ===== -->
+  <div class="day-content" id="day-5">
     <div class="rest-card">
-      <h3>Wednesday — Arriving in Portugal</h3>
-      <p>Landing day. Get settled at Linda a Velha. Unpack the boards, check the Surfline cams for the Lisbon coast. Thursday's your first Portuguese dawn patrol — the forecast skill will build the local spot database and have a full 7-day Lisbon forecast ready.</p>
+      <h3>Travelling</h3>
+      <p>Last travel day. Home tomorrow. Stretch, hydrate, reset the body clock.</p>
     </div>
   </div>
+  <!-- ===== DAY 6: THU 2 APR — LISBON ===== -->
+  <div class="day-content" id="day-6">
+    <div class="location-label">Welcome home — Linda a Velha, Lisbon</div>
 
-  <!-- Day 8: Thursday 2 Apr — Portugal (real data) -->
-  <div class="day-content" id="day7">
-    <div class="location-label">Linda a Velha, Lisbon — Home base</div>
-
-    <div class="session-card rate-border-2">
+    <!-- Dawn Patrol -->
+    <div class="session-card rate-border-4">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol — 7:00am - 9:30am</div>
-          <div class="session-spot">Skip — Flat</div>
+          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WET</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
         </div>
-        <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
+        <div class="session-rating">
+          <span class="rating-num rate-4">4</span>
+          <span class="rating-label">/10</span>
+        </div>
       </div>
-      <div class="session-why">Welcome home to a flat Atlantic. Carcavelos showing 0.3-0.6m on a fading 13s WSW swell — just 68kJ energy at dawn with only 15% consistency. Not worth the paddle. The swell window is completely dead between two pulses. Use the day to shake off jet lag, unpack the boards, and scope out your local spots.</div>
+      <div class="session-why">Welcome-home paddle. A dying NW groundswell remnant is still pushing through at 12s period — longer than the height suggests, so the walls should have more quality and push than you'd expect from waist-high surf. Light 8kph wind at dawn means near-glassy conditions on the point. Ribeira d'Ilhas is the only Lisbon-area spot with surfable size — Carcavelos and Caparica are basically flat. The 50-min drive is worth it for your first European waves after two weeks in Aus.</div>
+      <div class="alternatives">Also nearby: Foz do Lizandro (beach break, same area) — if Ribeira d'Ilhas looks too small on the point, the beach break peaks might have more punch on the banks.</div>
       <div class="conditions">
-        <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">0.6m 13s WSW</div></div>
-        <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">12-30 kph</div><div class="cond-detail">Onshore through the day</div></div>
-        <div class="cond-item"><div class="cond-label">Energy</div><div class="cond-value">68 kJ</div><div class="cond-detail">15% consistency</div></div>
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.6-1.1m</div>
+          <div class="cond-detail">1.1m 12s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">8kph</div>
+          <div class="cond-detail">Light · Near-glassy</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Rising</div>
+          <div class="cond-detail">226kJ · 50%</div>
+        </div>
+      </div>
+    </div>
+    <!-- Pre-lunch -->
+    <div class="session-card rate-border-3">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch · 10:00am – 12:00pm WET</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-3">3</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">If you're already at Ericeira from dawn patrol, you can stretch it into pre-lunch. Wind picks up to 12-13kph and the swell drops slightly (1m 12s, 172kJ). Still surfable but losing the glass. Only worth staying if the dawn session was fun and you're not too jet-lagged.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.6-1.1m</div>
+          <div class="cond-detail">1m 12s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">12kph</div>
+          <div class="cond-detail">Gusts 13kph</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Mid</div>
+          <div class="cond-detail">172kJ · 54%</div>
+        </div>
       </div>
     </div>
 
     <div class="advice-card">
-      <h3>Best Advice for Thursday</h3>
-      <p>Don't even think about it — knee-high mush with 15% consistency. Rest day. But check the long-range charts: a massive WNW swell is building for Mon 6 – Tue 7 Apr. Carcavelos showing 2.4-3.7m at 17s period, 5310kJ at dawn on Tuesday. That's your welcome-home session — not today.</p>
+      <h3>Best Advice for the Day</h3>
+      <p>You'll be jet-lagged but the dawn patrol at Ribeira d'Ilhas is the best window. The 12s period groundswell remnant will produce better walls than the size suggests — think mellow, peeling right-handers on the point. Carcavelos and Caparica are flat, so it's Ericeira or nothing. If you're too wrecked from travel, skip it guilt-free — a proper swell is building for Saturday.</p>
     </div>
   </div>
+  <!-- ===== DAY 7: FRI 3 APR — LISBON ===== -->
+  <div class="day-content" id="day-7">
+    <div class="location-label">Linda a Velha, Lisbon</div>
 
+    <div class="rest-card">
+      <h3>Skip Day — Nothing Worth Paddling Out For</h3>
+      <p>Ericeira drops to 0.6-0.9m with 19-27kph wind all day — messy and gutless. Carcavelos and Caparica are flat (0-0.3m). Stay on the couch, recover from jet lag, and save your energy. A proper NW swell starts building tomorrow — Saturday afternoon sees Ericeira jump to 1.5-2.1m on a fresh 13s period. The real surf starts this weekend.</p>
+    </div>
+  </div>
+  <!-- Days to Watch -->
+  <div class="days-to-watch">
+    <h3>Days to Watch</h3>
+
+    <div class="dtw-card medium">
+      <div class="dtw-day">Sat 4 Apr — New NW Swell Arrives</div>
+      <div class="dtw-detail">Ericeira building from 0.9-1.4m morning to 1.5-2.1m by noon (2.7m 13s groundswell). Caparica 0.9-1.2m. Wind is the issue: 36-42kph at Ericeira. Sheltered spots or Caparica beach breaks may be the play. <strong>First proper Portugal surf — mark it.</strong></div>
+    </div>
+
+    <div class="dtw-card">
+      <div class="dtw-day">Sun 5 Apr — PUMPING</div>
+      <div class="dtw-detail">NW swell peaks. Ericeira 2.4-3m (2.8m 13s, 2742kJ). Carcavelos 0.9-1.4m. Caparica 0.9-1.4m building to 1.2-1.8m. Wind eases to 19-25kph — much cleaner than Saturday. <strong>Ericeira afternoon could be epic if the wind cooperates.</strong> Ribeira d'Ilhas at 2.8m 13s is proper overhead+ on the point.</div>
+    </div>
+
+    <div class="dtw-card medium">
+      <div class="dtw-day">Mon 6 Apr — Swell Holds</div>
+      <div class="dtw-detail">Ericeira 1.8-2.4m. Still overhead, still rideable. Wind 17-38kph — dawn cleanest. Weekday = fewer crowds. Could be the sweet spot between size and conditions.</div>
+    </div>
+
+    <div class="dtw-card">
+      <div class="dtw-day">Tue 7 – Wed 8 Apr — MASSIVE W Swell</div>
+      <div class="dtw-detail">Second, bigger pulse. Ericeira 3-4.5m Tue (3.5m 17s rising to 4m 17s — double overhead+). <strong>Too big for exposed Ericeira spots.</strong> Carcavelos 1.8-2.4m rising to 2.4-3m (15 min from home, handles size well). Caparica 2.4-3m. This is the big one — Carcavelos dawn on Tue 7 could be the session. Wed still large but easing.</div>
+    </div>
+  </div>
   <!-- Data Sources -->
   <div class="data-sources">
     <h3>Data Sources</h3>
     <div class="source-item">
       <span>Gold Coast (D-Bah)</span>
-      <span class="source-badge verified">Anthony Spinks</span>
+      <span class="source-badge verified">Forecaster: Lachlan Perris</span>
     </div>
     <div class="source-item">
-      <span>Byron Bay (The Pass)</span>
-      <span class="source-badge verified">Lachlan Perris</span>
+      <span>Ericeira (Ribeira d'Ilhas)</span>
+      <span class="source-badge numerical">Numerical data only</span>
     </div>
     <div class="source-item">
-      <span>LOTUS Model</span>
-      <span class="source-badge numerical">Run: 26 Mar 5am AEDT</span>
+      <span>Carcavelos</span>
+      <span class="source-badge numerical">Numerical data only</span>
     </div>
     <div class="source-item">
-      <span>Observations</span>
-      <span class="source-badge numerical">14 logged — calibrated</span>
+      <span>Costa da Caparica</span>
+      <span class="source-badge numerical">Numerical data only</span>
+    </div>
+    <div class="source-item">
+      <span style="color:var(--text-dim)">LOTUS model: GC 27 Mar 5am AEDT · PT 26 Mar 6pm WET (26 Mar 18 UTC)</span>
+      <span></span>
     </div>
   </div>
 
   <div class="footer">
-    <p>LOTUS model run: 26 Mar 5am AEDT (25 Mar 18 UTC)</p>
-    <p style="margin-top: 4px;">Sunrise ~5:45am AEDT / Sunset ~5:55pm AEDT</p>
-    <p style="margin-top: 8px;">Built by <a href="https://claude.ai">Claude</a> for Roman</p>
+    <p>Built with Claude · Data from <a href="https://www.surfline.com" target="_blank">Surfline</a> LOTUS</p>
+    <p style="margin-top:4px;">Personal use only · Not for redistribution</p>
   </div>
 
 </div>
 
 <script>
 function showDay(idx) {
-  document.querySelectorAll('.day-chip').forEach((t, i) => t.classList.toggle('active', i === idx));
-  document.querySelectorAll('.day-content').forEach((c, i) => c.classList.toggle('active', i === idx));
+  document.querySelectorAll('.day-chip').forEach((c,i) => {
+    c.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.day-content').forEach((c,i) => {
+    c.classList.toggle('active', i === idx);
+  });
 }
 </script>
 </body>
