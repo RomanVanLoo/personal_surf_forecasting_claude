@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surf Forecast — Multi-Location</title>
+<title>Surf Forecast — Lisbon Coast</title>
 <style>
   :root {
     --bg: #0a0f1a;
@@ -54,7 +54,8 @@
   .day-strip::-webkit-scrollbar { display: none; }
   .day-chip { flex: 0 0 auto; min-width: 72px; padding: 8px 6px; background: var(--card); border: 2px solid transparent; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; position: relative; }
   .day-chip:hover { background: var(--card-hover); }
-  .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }  .day-chip .chip-day { font-size: 0.65rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+  .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }
+  .day-chip .chip-day { font-size: 0.65rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
   .day-chip.active .chip-day { color: var(--accent); }
   .day-chip .chip-date { font-size: 0.8rem; font-weight: 700; color: var(--text-bright); margin-top: 1px; }
   .day-chip .chip-rating { font-size: 0.65rem; margin-top: 3px; font-weight: 700; }
@@ -133,8 +134,9 @@
   .rate-4, .rate-5 { color: var(--yellow); }
   .rate-6, .rate-7 { color: var(--green); }
   .rate-8, .rate-9, .rate-10 { color: var(--cyan); }
-  .session-card.rate-border-2 { border-left-color: var(--red); }
-  .session-card.rate-border-3 { border-left-color: var(--orange); }  .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
+  .session-card.rate-border-1, .session-card.rate-border-2 { border-left-color: var(--red); }
+  .session-card.rate-border-3 { border-left-color: var(--orange); }
+  .session-card.rate-border-4, .session-card.rate-border-5 { border-left-color: var(--yellow); }
   .session-card.rate-border-6, .session-card.rate-border-7 { border-left-color: var(--green); }
   .session-card.rate-border-8, .session-card.rate-border-9 { border-left-color: var(--cyan); }
 
@@ -162,272 +164,447 @@
     <div class="subtitle">Personal forecast — Roman only</div>
     <div class="location-badge">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Gold Coast → Melbourne → Portugal
+      Linda a Velha, Lisbon — Home Base
     </div>
   </div>
+
   <div class="status-bar">
-    <span class="updated">Updated: Fri 27 Mar, 5:11pm AEDT</span>
+    <span class="updated">Updated: Wed 1 Apr, 7:25pm WEST</span>
     <span class="chrome-status"><span class="status-dot ok"></span>Chrome connected</span>
   </div>
 
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>Evening update — farewell Gold Coast. The ESE swell has faded to waist-high at D-Bah with offshore WNW winds. A fun little sunset paddle if you want one last wave before Melbourne. Perris says wind may switch SW and clean things up coast-wide. Then it's wave pool in Melbourne, three days of travel, and home to Lisbon from Thursday. Portugal is looking flat for your first days back — Ericeira has a dying 12s groundswell remnant giving waist-high walls Thu morning, but Fri is a write-off. The real action starts Sat 4 Apr when a proper NW swell builds, peaking Sun-Mon at 2.4-3m. Mark Tue 7 Apr in red — massive W swell, Ericeira 3-4.5m, Carcavelos overhead+.</p>
+    <p>Welcome home to Portugal. You're still in transit today but from tomorrow you're back on the Lisbon coast. Bad news first: Thu-Fri are essentially flat — the swell window is empty and you'll be recovering from jet lag anyway. Good news: a solid NW groundswell fills in Saturday, peaking Sunday with Ericeira hitting 1.5-2.4m on a 14s period with near-glassy 2kph wind at pre-lunch. That's proper overhead walls on the point in glass-off conditions — your welcome-home session. Monday is dawn-only before the wind kills it. Then mark Tue 7 Apr in red: a MASSIVE long-period W swell (19-21s!) sends Ericeira to 4.5-6m and Carcavelos to 3-4.5m. That's spectator territory for now — well above your comfort zone. It eases Wed but stays big and windy. The weekend is your window. Don't waste it.</p>
   </div>
 
   <!-- 8-day strip -->
   <div class="day-strip">
-    <div class="day-chip active" onclick="showDay(0)">
-      <div class="chip-day">Fri</div>
-      <div class="chip-date">27</div>
-      <div class="chip-rating rate-3">3/10</div>
-      <div class="chip-size">0.6-1.1m</div>
-      <div class="chip-location">Gold Coast</div>
-    </div>
-    <div class="day-chip wave-pool" onclick="showDay(1)">
-      <div class="chip-day">Sat</div>
-      <div class="chip-date">28</div>
-      <div class="chip-type">Wave Pool</div>
-      <div class="chip-location">Melbourne</div>
-    </div>
-    <div class="day-chip wave-pool" onclick="showDay(2)">
-      <div class="chip-day">Sun</div>
-      <div class="chip-date">29</div>
-      <div class="chip-type">Wave Pool</div>
-      <div class="chip-location">Melbourne</div>
-    </div>    <div class="day-chip travel" onclick="showDay(3)">
-      <div class="chip-day">Mon</div>
-      <div class="chip-date">30</div>
-      <div class="chip-type">Travel</div>
-    </div>
-    <div class="day-chip travel" onclick="showDay(4)">
-      <div class="chip-day">Tue</div>
-      <div class="chip-date">31</div>
-      <div class="chip-type">Travel</div>
-    </div>
-    <div class="day-chip travel" onclick="showDay(5)">
+    <div class="day-chip travel active" onclick="showDay(0)">
       <div class="chip-day">Wed</div>
       <div class="chip-date">1</div>
       <div class="chip-type">Travel</div>
     </div>
-    <div class="day-chip" onclick="showDay(6)">
+    <div class="day-chip" onclick="showDay(1)">
       <div class="chip-day">Thu</div>
       <div class="chip-date">2</div>
-      <div class="chip-rating rate-4">4/10</div>
+      <div class="chip-rating rate-2">2/10</div>
       <div class="chip-size">0.6-1.1m</div>
       <div class="chip-location">Lisbon</div>
     </div>
-    <div class="day-chip" onclick="showDay(7)">
+    <div class="day-chip" onclick="showDay(2)">
       <div class="chip-day">Fri</div>
       <div class="chip-date">3</div>
       <div class="chip-rating rate-1">1/10</div>
-      <div class="chip-size">0.6-0.9m</div>
+      <div class="chip-size">Flat</div>
       <div class="chip-location">Lisbon</div>
     </div>
+    <div class="day-chip" onclick="showDay(3)">
+      <div class="chip-day">Sat</div>
+      <div class="chip-date">4</div>
+      <div class="chip-rating rate-7">7/10</div>
+      <div class="chip-size">1.2-2m</div>
+      <div class="chip-location">Ericeira</div>
+    </div>
+    <div class="day-chip" onclick="showDay(4)">
+      <div class="chip-day">Sun</div>
+      <div class="chip-date">5</div>
+      <div class="chip-rating rate-8">8/10</div>
+      <div class="chip-size">1.5-2.4m</div>
+      <div class="chip-location">Ericeira</div>
+    </div>
+    <div class="day-chip" onclick="showDay(5)">
+      <div class="chip-day">Mon</div>
+      <div class="chip-date">6</div>
+      <div class="chip-rating rate-5">5/10</div>
+      <div class="chip-size">1.2-2.1m</div>
+      <div class="chip-location">Ericeira</div>
+    </div>
+    <div class="day-chip" onclick="showDay(6)">
+      <div class="chip-day">Tue</div>
+      <div class="chip-date">7</div>
+      <div class="chip-rating rate-2">2/10</div>
+      <div class="chip-size">4.5-6.1m</div>
+      <div class="chip-location">TOO BIG</div>
+    </div>
+    <div class="day-chip" onclick="showDay(7)">
+      <div class="chip-day">Wed</div>
+      <div class="chip-date">8</div>
+      <div class="chip-rating rate-2">2/10</div>
+      <div class="chip-size">3-4.5m</div>
+      <div class="chip-location">TOO BIG</div>
+    </div>
   </div>
-  <!-- ===== DAY 0: FRI 27 MAR — GOLD COAST ===== -->
+
+  <!-- ===== DAY 0: WED 1 APR — TRAVEL ===== -->
   <div class="day-content active" id="day-0">
-    <div class="location-label">Last day — Gold Coast, QLD</div>
-
-    <!-- Evening Session -->
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Evening Session · 4:30pm – 6:30pm</div>
-          <div class="session-spot">Duranbah (D-Bah)</div>
-          <div class="session-drive">Walk from accommodation</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">Farewell paddle. The ESE swell has faded to waist-high and the energy is dropping fast (162kJ by 6pm). But the WNW wind is offshore, and the dropping tide should sharpen up the banks. Perris reckons the wind may switch to a light SW later, cleaning up the coast. It's small but it's your last Gold Coast wave — get in for the sunset.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-1.1m</div>
-          <div class="cond-detail">1.1m 10s SE</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">16kph WNW</div>
-          <div class="cond-detail">Gusts 27kph · Offshore</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">1.1m → 0.5m</div>
-          <div class="cond-detail">Dropping</div>
-        </div>
-      </div>
-    </div>
-    <div class="advice-card">
-      <h3>Best Advice for the Day</h3>
-      <p>It's 5pm and the swell is fading. If you want one last Gold Coast wave, walk down to D-Bah now — the wind's offshore and the dropping tide will help the banks. Don't expect much size-wise, but it's a symbolic farewell paddle. Tomorrow you're Melbourne-bound. The Gold Coast chapter of this trip is done — and what a chapter it was.</p>
+    <div class="rest-card">
+      <h3>Travelling — Last Day in Transit</h3>
+      <p>Nearly home. Landing in Lisbon tonight. Get some rest — there's nothing worth surfing tomorrow anyway, so take your time settling back in. The real surf starts Saturday.</p>
     </div>
   </div>
 
-  <!-- ===== DAY 1: SAT 28 MAR — MELBOURNE WAVE POOL ===== -->
+  <!-- ===== DAY 1: THU 2 APR — LISBON ===== -->
   <div class="day-content" id="day-1">
-    <div class="location-label">Melbourne — URBNSURF</div>
-
-    <div class="wave-pool-card">
-      <div class="wp-icon">🏊</div>
-      <h3>URBNSURF Melbourne</h3>
-      <div class="wp-sessions">Saturday evening session</div>
-      <div class="wp-detail">Guaranteed waves after two weeks of chasing swell. Enjoy the consistency — no wind, no tide, no crowd lottery. A great way to work on those snaps in controlled conditions.</div>
-    </div>
-  </div>
-
-  <!-- ===== DAY 2: SUN 29 MAR — MELBOURNE WAVE POOL ===== -->
-  <div class="day-content" id="day-2">
-    <div class="location-label">Melbourne — URBNSURF</div>
-
-    <div class="wave-pool-card">
-      <div class="wp-icon">🏊</div>
-      <h3>URBNSURF Melbourne</h3>
-      <div class="wp-sessions">Sunday 3pm session</div>
-      <div class="wp-detail">Last surf session before the long haul home. Make it count — dial in the snap technique on perfect walls before the travel break.</div>
-    </div>
-  </div>
-  <!-- ===== DAY 3: MON 30 MAR — TRAVEL ===== -->
-  <div class="day-content" id="day-3">
-    <div class="rest-card">
-      <h3>Travelling — Melbourne → Portugal</h3>
-      <p>Long haul home. Rest up. The next paddle-out is Thursday in Lisbon.</p>
-    </div>
-  </div>
-
-  <!-- ===== DAY 4: TUE 31 MAR — TRAVEL ===== -->
-  <div class="day-content" id="day-4">
-    <div class="rest-card">
-      <h3>Travelling</h3>
-      <p>In transit. Nearly there.</p>
-    </div>
-  </div>
-
-  <!-- ===== DAY 5: WED 1 APR — TRAVEL ===== -->
-  <div class="day-content" id="day-5">
-    <div class="rest-card">
-      <h3>Travelling</h3>
-      <p>Last travel day. Home tomorrow. Stretch, hydrate, reset the body clock.</p>
-    </div>
-  </div>
-  <!-- ===== DAY 6: THU 2 APR — LISBON ===== -->
-  <div class="day-content" id="day-6">
     <div class="location-label">Welcome home — Linda a Velha, Lisbon</div>
 
     <!-- Dawn Patrol -->
-    <div class="session-card rate-border-4">
+    <div class="session-card rate-border-2">
       <div class="session-header">
         <div>
-          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WET</div>
+          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WEST</div>
           <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
           <div class="session-drive">50 min drive</div>
         </div>
         <div class="session-rating">
-          <span class="rating-num rate-4">4</span>
+          <span class="rating-num rate-2">2</span>
           <span class="rating-label">/10</span>
         </div>
       </div>
-      <div class="session-why">Welcome-home paddle. A dying NW groundswell remnant is still pushing through at 12s period — longer than the height suggests, so the walls should have more quality and push than you'd expect from waist-high surf. Light 8kph wind at dawn means near-glassy conditions on the point. Ribeira d'Ilhas is the only Lisbon-area spot with surfable size — Carcavelos and Caparica are basically flat. The 50-min drive is worth it for your first European waves after two weeks in Aus.</div>
-      <div class="alternatives">Also nearby: Foz do Lizandro (beach break, same area) — if Ribeira d'Ilhas looks too small on the point, the beach break peaks might have more punch on the banks.</div>
+      <div class="session-why">Barely worth the drive. A dying NW swell gives 0.6-1.1m (1m at 13s) at Ericeira, but the wind is already 22kph N with 29kph gusts — technically offshore on the NW-facing point but strong enough to make things bumpy and hard to line up. Only 189kJ of wave energy with 52% consistency. Carcavelos and Caparica are flat (0-0.3m). If you're desperate for a paddle after two weeks of Aus waves, Ericeira is the only option, but honestly you'd be fighting the wind for gutless knee-high waves.</div>
       <div class="conditions">
         <div class="cond-item">
           <div class="cond-label">Surf</div>
           <div class="cond-value">0.6-1.1m</div>
-          <div class="cond-detail">1.1m 12s NW</div>
+          <div class="cond-detail">1m 13s NW</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Wind</div>
-          <div class="cond-value">8kph</div>
-          <div class="cond-detail">Light · Near-glassy</div>
+          <div class="cond-value">22kph N</div>
+          <div class="cond-detail">29kph gusts · Offshore</div>
         </div>
         <div class="cond-item">
           <div class="cond-label">Tide</div>
           <div class="cond-value">Rising</div>
-          <div class="cond-detail">226kJ · 50%</div>
-        </div>
-      </div>
-    </div>
-    <!-- Pre-lunch -->
-    <div class="session-card rate-border-3">
-      <div class="session-header">
-        <div>
-          <div class="session-time">Pre-lunch · 10:00am – 12:00pm WET</div>
-          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
-          <div class="session-drive">50 min drive</div>
-        </div>
-        <div class="session-rating">
-          <span class="rating-num rate-3">3</span>
-          <span class="rating-label">/10</span>
-        </div>
-      </div>
-      <div class="session-why">If you're already at Ericeira from dawn patrol, you can stretch it into pre-lunch. Wind picks up to 12-13kph and the swell drops slightly (1m 12s, 172kJ). Still surfable but losing the glass. Only worth staying if the dawn session was fun and you're not too jet-lagged.</div>
-      <div class="conditions">
-        <div class="cond-item">
-          <div class="cond-label">Surf</div>
-          <div class="cond-value">0.6-1.1m</div>
-          <div class="cond-detail">1m 12s NW</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Wind</div>
-          <div class="cond-value">12kph</div>
-          <div class="cond-detail">Gusts 13kph</div>
-        </div>
-        <div class="cond-item">
-          <div class="cond-label">Tide</div>
-          <div class="cond-value">Mid</div>
-          <div class="cond-detail">172kJ · 54%</div>
+          <div class="cond-detail">189kJ · 52%</div>
         </div>
       </div>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for the Day</h3>
-      <p>You'll be jet-lagged but the dawn patrol at Ribeira d'Ilhas is the best window. The 12s period groundswell remnant will produce better walls than the size suggests — think mellow, peeling right-handers on the point. Carcavelos and Caparica are flat, so it's Ericeira or nothing. If you're too wrecked from travel, skip it guilt-free — a proper swell is building for Saturday.</p>
+      <p>Skip it. You've just landed from a 30+ hour journey and the conditions are poor everywhere. Ericeira has some residual swell but 22kph+ wind all day makes it messy and not worth the 50-minute drive. Stay home, beat the jet lag, unpack the boards. Tomorrow is flat too. Save your energy for Saturday — a proper NW groundswell is building and Ericeira will be firing with light winds.</p>
     </div>
   </div>
-  <!-- ===== DAY 7: FRI 3 APR — LISBON ===== -->
+
+  <!-- ===== DAY 2: FRI 3 APR — LISBON ===== -->
+  <div class="day-content" id="day-2">
+    <div class="location-label">Linda a Velha, Lisbon</div>
+
+    <div class="rest-card">
+      <h3>Skip Day — Flat Everywhere</h3>
+      <p>The swell window is empty. Ericeira drops to 0.6-1.1m on short-period leftovers (1m at 11s, mixed with 1.4m at 8s wind chop) and 18-29kph wind. Carcavelos and Caparica are flat at 0-0.3m. There is literally nothing worth surfing on the entire Lisbon coast today. Use the day to recover from jet lag, get your boards waxed for the Portuguese water (cooler — 15°C, you'll want a 3/2 or 4/3), and sort your wetsuit situation. Tomorrow is the day. A new NW groundswell starts filling in Saturday morning and Ericeira hits 1.2-2m with 4-9kph wind by pre-lunch.</p>
+    </div>
+  </div>
+
+  <!-- ===== DAY 3: SAT 4 APR — ERICEIRA ===== -->
+  <div class="day-content" id="day-3">
+    <div class="location-label">Weekend — Ericeira + Peniche range</div>
+
+    <!-- Dawn Patrol -->
+    <div class="session-card rate-border-6">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-6">6</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Welcome-home session. A fresh NW groundswell (1.4m at 13s primary + 1m at 9s secondary) fills the point with proper walls. Wind is light at 8-9kph — not glass but clean enough for the point to line up nicely. 467kJ of energy with 51% consistency means regular sets. The 13s period will produce quality walls with push on the right-hand point. After two flat days this will feel amazing.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.2-1.5m</div>
+          <div class="cond-detail">1.4m 13s NW + 1m 9s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">8kph</div>
+          <div class="cond-detail">9kph gusts · Light</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Rising</div>
+          <div class="cond-detail">467kJ · 51%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pre-lunch — THE SESSION -->
+    <div class="session-card rate-border-7">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch · 10:00am – 12:30pm WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-7">7</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">This is the session. Wind drops to 4kph — near glass on the point. The swell builds to 1.7m at 12s (656kJ), pumping out proper chest-to-head-high walls on the Ribeira d'Ilhas right-hander. The 12-13s period means real groundswell quality — clean faces, good push through sections, and those long winding rides the spot is famous for. 51% consistency means sets every few minutes. First proper session back in Portugal — make it count.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.2-1.8m</div>
+          <div class="cond-detail">1.7m 12s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">4kph</div>
+          <div class="cond-detail">Glass</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Mid</div>
+          <div class="cond-detail">656kJ · 51%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Afternoon -->
+    <div class="session-card rate-border-7">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Afternoon · 12:30pm – 5:00pm WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-7">7</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Swell keeps building through the afternoon. 1.9m at 12s (708kJ) with only 5kph wind — still glassy. The waves gain a touch more size and power. If you surfed the pre-lunch session, your arms will be tired, but the conditions are essentially identical. This is a marathon day at Ericeira if you have the stamina.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.2-2m</div>
+          <div class="cond-detail">1.9m 12s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">5kph</div>
+          <div class="cond-detail">Glass</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Dropping</div>
+          <div class="cond-detail">708kJ · 50%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advice-card">
+      <h3>Best Advice for the Day</h3>
+      <p>Drive to Ericeira early and stay all day. Dawn is good, pre-lunch is the peak (4kph glass), and the afternoon keeps delivering. You could easily squeeze in two sessions with a break for coffee in Ericeira village. The JS Xero Cruz is perfect for this — chest-to-head-high walls on a world-class point with 12-13s period groundswell. This is what you moved to Portugal for. Supertubos is also showing 0.9-1.4m (8kph, 304-590kJ) if you fancy the 90-min drive, but Ericeira is the better call — more size, lighter wind, better wave quality on the point.</p>
+    </div>
+  </div>
+
+  <!-- ===== DAY 4: SUN 5 APR — ERICEIRA ===== -->
+  <div class="day-content" id="day-4">
+    <div class="location-label">Weekend — Ericeira + Peniche range</div>
+
+    <!-- Dawn Patrol -->
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-5">5</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Dawn is uncertain. The swell reads 1.2-2m (1.6m at 12s + 1.1m at 16s) with 700kJ, but probability is only 50% — meaning there's a coin-flip chance the new pulse hasn't fully arrived yet. Wind is 10kph, still manageable. The 16s secondary swell is the new long-period NW pulse arriving — if it lands by dawn, the walls will have serious push and quality. If it hasn't arrived, you'll be surfing the 12s residual from Saturday at reduced size. Worth the drive if you're already awake, but the pre-lunch window is the guaranteed bet.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.2-2m</div>
+          <div class="cond-detail">1.6m 12s + 1.1m 16s</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">10kph</div>
+          <div class="cond-detail">Light · Clean</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Rising</div>
+          <div class="cond-detail">700kJ · 45% · 50% prob</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pre-lunch — THE SESSION OF THE WEEK -->
+    <div class="session-card rate-border-8">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Pre-lunch · 10:00am – 12:30pm WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-8">8</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">THE session of the week. The NW groundswell peaks at 2.1m on a 14-second period — that's proper overhead+ walls on the Ribeira d'Ilhas point — and the wind drops to 2kph. Two kilometres per hour. That's dead glass. 1561kJ of wave energy at 95% probability. The 14s period means long, powerful, clean walls peeling down the point. On a world-class right-hander in glassy conditions, this is as good as it gets for your level. Consistency is 36% — sets will be spaced out — but when they come, they'll be lined up and powerful. Bring the JS Xero Cruz. This is the session you've been waiting for since leaving the Gold Coast.</div>
+      <div class="cam-check">Check the Ribeira d'Ilhas cam before you leave — confirm the swell has arrived and the wind is as light as forecast.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.5-2.1m</div>
+          <div class="cond-detail">2.1m 14s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">2kph</div>
+          <div class="cond-detail">GLASS</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Mid-High</div>
+          <div class="cond-detail">1561kJ · 36% · 95% prob</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Afternoon/Evening -->
+    <div class="session-card rate-border-7">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Afternoon · 12:30pm – 5:00pm WEST</div>
+          <div class="session-spot">Ribeira d'Ilhas, Ericeira</div>
+          <div class="session-drive">50 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-7">7</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Swell keeps building — 2.4m at 14s by late afternoon (2154kJ). Wind picks up slightly to 5-8kph but still very clean. This is approaching the top of your comfort zone on the point — overhead+ faces with serious power. The energy is higher but so is the wave size. If the pre-lunch session went well and you're feeling confident, this afternoon session could be incredible. If you're tired, don't push it — you've already had the best window.</div>
+      <div class="alternatives">Also worth noting: Carcavelos picks up to 0.9-1.2m (590kJ, 8kph) by evening — if you want a second session closer to home, it's an option. 15 min drive.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">1.8-2.4m</div>
+          <div class="cond-detail">2.4m 14s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">5-8kph</div>
+          <div class="cond-detail">Light</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Dropping</div>
+          <div class="cond-detail">2154kJ · 39% · 95% prob</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advice-card">
+      <h3>Best Advice for the Day</h3>
+      <p>This is the day. Drive to Ericeira for the pre-lunch window — 2.1m at 14s in 2kph glass on a world-class point break. This is the best conditions-to-size ratio you'll see all week. After this, Monday is dawn-only and then a massive swell arrives Tuesday that's too big for you. If you can only surf once this week, this is the session. Bring the JS Xero Cruz for pre-lunch. If the afternoon pushes to 2.4m and you're feeling it, consider the Red Tiger for a bit more hold. Supertubos is also pumping (1.2-1.5m, 1.6m 14s, 7-11kph, 1081kJ) if you fancy the drive — it'll be powerful beachbreak barrels, but Ericeira's point is the smarter call for this swell direction and your level.</p>
+    </div>
+  </div>
+
+  <!-- ===== DAY 5: MON 6 APR — LISBON ===== -->
+  <div class="day-content" id="day-5">
+    <div class="location-label">Linda a Velha, Lisbon — Weekday</div>
+
+    <!-- Dawn Patrol -->
+    <div class="session-card rate-border-5">
+      <div class="session-header">
+        <div>
+          <div class="session-time">Dawn Patrol · 7:15am – 9:30am WEST</div>
+          <div class="session-spot">Costa da Caparica</div>
+          <div class="session-drive">25 min drive</div>
+        </div>
+        <div class="session-rating">
+          <span class="rating-num rate-5">5</span>
+          <span class="rating-label">/10</span>
+        </div>
+      </div>
+      <div class="session-why">Dawn is the only clean window today — wind goes nuclear by mid-morning (18-31kph by noon, 28-40kph+ by evening). Caparica dawn gives 0.9-1.4m (1.1m at 12s, 379kJ, 49%) in only 6kph of wind. It's a mellow, accessible session 25 minutes from home. Not the quality of yesterday's Ericeira session but a fun weekday dawn paddle before the wind trashes everything.</div>
+      <div class="alternatives">Also worth checking: Carcavelos (15 min, 0.6-1.1m, 6kph, 308kJ) — closer to home and similar conditions. If you want to avoid crowds, Caparica's wide beach spreads people out. Ericeira (50 min, 1.5-2.1m, 13kph, 1603kJ) has more size but wind is already 13kph at dawn — messy on the exposed point.</div>
+      <div class="cam-check">Check the Carcavelos and Caparica cams at 7am — whichever looks cleaner, head there. If Ericeira cam shows light wind, it's worth the longer drive for the extra size.</div>
+      <div class="conditions">
+        <div class="cond-item">
+          <div class="cond-label">Surf</div>
+          <div class="cond-value">0.9-1.4m</div>
+          <div class="cond-detail">1.1m 12s NW</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Wind</div>
+          <div class="cond-value">6kph</div>
+          <div class="cond-detail">Light · Clean</div>
+        </div>
+        <div class="cond-item">
+          <div class="cond-label">Tide</div>
+          <div class="cond-value">Low-Rising</div>
+          <div class="cond-detail">379kJ · 49%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advice-card">
+      <h3>Best Advice for the Day</h3>
+      <p>Dawn only. Wind is forecast to blow 18-40kph+ from mid-morning onwards, making everything unsurfable by 10am. Your best bet is a quick dawn session at Caparica or Carcavelos — 25 min max drive, light wind, waist-to-chest-high. Be in the water by 7:30am and aim to be out by 9:30am before the wind arrives. Ericeira has more size (1.5-2.1m) but wind is already 13kph at dawn — not ideal for the exposed NW-facing point. Stick close to home and save the big drives for better conditions.</p>
+    </div>
+  </div>
+
+  <!-- ===== DAY 6: TUE 7 APR — MASSIVE SWELL ===== -->
+  <div class="day-content" id="day-6">
+    <div class="location-label">Linda a Velha, Lisbon — Massive Swell</div>
+
+    <div class="rest-card">
+      <h3>Spectator Day — Massive W Swell Arrives</h3>
+      <p>A long-period W swell (19-21s period!) hits the Portuguese coast today. This is big. Ericeira hits 4.5-6.1m by noon (13,142kJ, 100% consistency). Carcavelos 3-4.5m. Supertubos 4.5-5.5m. Even Caparica sees 3-4.5m. The swell has only 40% probability at dawn — it may not fully arrive until midday — but when it lands, it's the biggest swell of the spring. Wind is strong all day (18-41kph). This is well above your comfort zone at every exposed spot. Worth driving to Ericeira or Nazare to watch from the cliffs though — it'll be spectacular. Maybe check if any sheltered spots (Estoril reef) are filtering the swell to manageable size, but even sheltered breaks will be handling serious energy. Rest the arms and watch the show.</p>
+    </div>
+  </div>
+
+  <!-- ===== DAY 7: WED 8 APR — STILL BIG ===== -->
   <div class="day-content" id="day-7">
     <div class="location-label">Linda a Velha, Lisbon</div>
 
     <div class="rest-card">
-      <h3>Skip Day — Nothing Worth Paddling Out For</h3>
-      <p>Ericeira drops to 0.6-0.9m with 19-27kph wind all day — messy and gutless. Carcavelos and Caparica are flat (0-0.3m). Stay on the couch, recover from jet lag, and save your energy. A proper NW swell starts building tomorrow — Saturday afternoon sees Ericeira jump to 1.5-2.1m on a fresh 13s period. The real surf starts this weekend.</p>
+      <h3>Still Too Big — Easing But Massive</h3>
+      <p>The swell eases slightly but Ericeira is still 3-4.5m (4.8m 16s at dawn, 12,025kJ) with 37-43kph wind. Carcavelos 2.4-3m with 13-34kph wind — 69% consistency at dawn which means some sets, but it's overhead+ and windy. Caparica 2.4-3.7m. Everything is still too big and too windy for a productive session. The swell should ease further into Thursday (Ericeira 1.8-2.4m) but wind stays strong (36-50kph). This big swell event needs a few more days to settle before conditions become surfable again. Keep watching the forecasts — the post-swell clean-up window often produces the best sessions.</p>
     </div>
   </div>
+
   <!-- Days to Watch -->
   <div class="days-to-watch">
     <h3>Days to Watch</h3>
 
-    <div class="dtw-card medium">
-      <div class="dtw-day">Sat 4 Apr — New NW Swell Arrives</div>
-      <div class="dtw-detail">Ericeira building from 0.9-1.4m morning to 1.5-2.1m by noon (2.7m 13s groundswell). Caparica 0.9-1.2m. Wind is the issue: 36-42kph at Ericeira. Sheltered spots or Caparica beach breaks may be the play. <strong>First proper Portugal surf — mark it.</strong></div>
-    </div>
-
     <div class="dtw-card">
-      <div class="dtw-day">Sun 5 Apr — PUMPING</div>
-      <div class="dtw-detail">NW swell peaks. Ericeira 2.4-3m (2.8m 13s, 2742kJ). Carcavelos 0.9-1.4m. Caparica 0.9-1.4m building to 1.2-1.8m. Wind eases to 19-25kph — much cleaner than Saturday. <strong>Ericeira afternoon could be epic if the wind cooperates.</strong> Ribeira d'Ilhas at 2.8m 13s is proper overhead+ on the point.</div>
+      <div class="dtw-day">Thu 9 – Fri 10 Apr — Post-Swell Clean-Up?</div>
+      <div class="dtw-detail">Ericeira eases to 1.8-2.4m Thu (3.2m 14s, 3699kJ at dawn) but wind is still hammering at 36-50kph. Fri 10 similar: 1.8-2.4m, 40-54kph wind. The size is back in range but the wind is brutal. <strong>Watch for a wind shift — if the models update to show lighter wind on either day, it could be an exceptional post-swell session with plenty of residual groundswell energy.</strong></div>
     </div>
 
     <div class="dtw-card medium">
-      <div class="dtw-day">Mon 6 Apr — Swell Holds</div>
-      <div class="dtw-detail">Ericeira 1.8-2.4m. Still overhead, still rideable. Wind 17-38kph — dawn cleanest. Weekday = fewer crowds. Could be the sweet spot between size and conditions.</div>
+      <div class="dtw-day">Sat 11 Apr — Possible Grovel</div>
+      <div class="dtw-detail">Ericeira drops to 1.2-1.5m with 22-29kph wind. Getting smaller but still windy. Carcavelos 0.3-0.6m. The swell energy is fading fast. Could work if wind eases — check updates closer to the day.</div>
     </div>
 
-    <div class="dtw-card">
-      <div class="dtw-day">Tue 7 – Wed 8 Apr — MASSIVE W Swell</div>
-      <div class="dtw-detail">Second, bigger pulse. Ericeira 3-4.5m Tue (3.5m 17s rising to 4m 17s — double overhead+). <strong>Too big for exposed Ericeira spots.</strong> Carcavelos 1.8-2.4m rising to 2.4-3m (15 min from home, handles size well). Caparica 2.4-3m. This is the big one — Carcavelos dawn on Tue 7 could be the session. Wed still large but easing.</div>
+    <div class="dtw-card medium">
+      <div class="dtw-day">Sun 12 – Mon 13 Apr — New Pulse Brewing</div>
+      <div class="dtw-detail">Another swell appears: Ericeira 2.4-3m Sun (2.5m 13s, 1538kJ dawn rising to 2017kJ evening), Carcavelos 1.2-2m. Probability data not yet available but the models are showing it consistently. Could be the next proper session window if wind cooperates.</div>
     </div>
   </div>
+
   <!-- Data Sources -->
   <div class="data-sources">
     <h3>Data Sources</h3>
-    <div class="source-item">
-      <span>Gold Coast (D-Bah)</span>
-      <span class="source-badge verified">Forecaster: Lachlan Perris</span>
-    </div>
     <div class="source-item">
       <span>Ericeira (Ribeira d'Ilhas)</span>
       <span class="source-badge numerical">Numerical data only</span>
@@ -441,7 +618,11 @@
       <span class="source-badge numerical">Numerical data only</span>
     </div>
     <div class="source-item">
-      <span style="color:var(--text-dim)">LOTUS model: GC 27 Mar 5am AEDT · PT 26 Mar 6pm WET (26 Mar 18 UTC)</span>
+      <span>Peniche (Supertubos)</span>
+      <span class="source-badge numerical">Numerical data only</span>
+    </div>
+    <div class="source-item">
+      <span style="color:var(--text-dim)">LOTUS model: 1 Apr 7am WEST (1 Apr 06 UTC)</span>
       <span></span>
     </div>
   </div>
