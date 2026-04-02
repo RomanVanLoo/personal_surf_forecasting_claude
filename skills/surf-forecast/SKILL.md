@@ -272,10 +272,18 @@ Write like a knowledgeable local surf forecaster talking to a mate. Be direct, h
 
 Read the current `index.html` from the GitHub Pages repo. The local repo path is stored in `current_situation.md` under System Notes (currently `~/code/personal_surf_forecasting_claude`, mounted in Cowork at `/sessions/.../mnt/personal_surf_forecasting_claude`). **Read and write `index.html` using the normal mounted folder path** — do NOT use Desktop Commander for file operations.
 
-**After writing the file, commit and push using Desktop Commander (git only):**
-Use `mcp__Desktop_Commander__start_process` with `timeout_ms: 30000` to run:
-`cd /Users/romanvanloo/code/personal_surf_forecasting_claude && git add -A && git commit -m "Forecast update: [DATE]" && git push`
-This pushes directly to GitHub Pages via the user's local git credentials. Desktop Commander is ONLY used for this git step — not for reading or writing files.
+**After writing the file, commit and push using the GitHub token (git only):**
+Run the following in Bash from the mounted workspace folder:
+```bash
+cd /sessions/.../mnt/personal_surf_forecasting_claude && \
+  git config user.email "rvanloo@hexarad.com" && \
+  git config user.name "Roman Van Loo" && \
+  git add -A && \
+  git commit -m "Forecast update: [DATE]" && \
+  GITHUB_TOKEN=$(cat .github_token | tr -d '[:space:]') && \
+  git push https://${GITHUB_TOKEN}@github.com/RomanVanLoo/personal_surf_forecasting_claude.git HEAD:master
+```
+The `.github_token` file contains a fine-grained personal access token scoped to this repo only (Contents: read/write). It's already in `.gitignore` and will never be committed. This replaces the old Desktop Commander approach — no host-level tool needed.
 
 The HTML should be a single self-contained file (no external dependencies except CDN-hosted CSS/fonts) that works as a mobile-friendly dashboard showing:
 - Last updated timestamp
