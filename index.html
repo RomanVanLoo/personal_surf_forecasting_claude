@@ -37,15 +37,13 @@
   .status-bar .updated { color: var(--text-dim); }
   .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
   .status-dot.ok { background: var(--green); }
-  .status-dot.warn { background: var(--yellow); }
-  .status-dot.error { background: var(--red); }
   .chrome-status { display: flex; align-items: center; font-weight: 500; }
   .overview { background: var(--card); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
   .overview h2 { font-size: 1rem; color: var(--text-bright); margin-bottom: 8px; }
   .overview p { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
   .day-strip { display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 2px; }
   .day-strip::-webkit-scrollbar { display: none; }
-  .day-chip { flex: 0 0 auto; min-width: 72px; padding: 8px 6px; background: var(--card); border: 2px solid transparent; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; position: relative; }
+  .day-chip { flex: 0 0 auto; min-width: 72px; padding: 8px 6px; background: var(--card); border: 2px solid transparent; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
   .day-chip:hover { background: var(--card-hover); }
   .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }
   .day-chip .chip-day { font-size: 0.65rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -130,13 +128,13 @@
   </div>
 
   <div class="status-bar">
-    <span class="updated">Updated: Sat 4 Apr, 5:00am WEST</span>
+    <span class="updated">Updated: Sat 4 Apr, 6:15am WEST</span>
     <span class="chrome-status"><span class="status-dot ok"></span>Chrome connected</span>
   </div>
 
   <div class="overview">
     <h2>The Big Picture</h2>
-    <p>A small NW swell is building today and peaks properly tomorrow (Sunday) when a 14-second groundswell fills in at Ericeira — 1.5-2.1m with 1849kJ at pre-lunch and only 10kph wind. <strong>Sunday pre-lunch at Ericeira is THE SESSION this week.</strong> Monday is dawn-only before gale-force winds hit. Then a MASSIVE 16-19s W swell sends Ericeira to 4.5-5.5m Tuesday evening — pure spectator territory. It stays huge and blown out through Thursday (52-61kph wind). Friday offers a slim chance of a noon glass-off at Caparica/Carcavelos (2-5kph!) but only 35% probability. Saturday is another windy mess. Your surfable window is today through Monday dawn — Sunday pre-lunch is the one you cannot miss.</p>
+    <p>A small NW swell is building today and peaks properly tomorrow (Sunday) when a 14-second groundswell fills in — 1.5-2.1m with 1849kJ at pre-lunch and 10kph wind. <strong>Sunday pre-lunch at Matadouro is THE SESSION this week</strong> — the size (2.2m 14s) exceeds what São Sebastião can handle but sits perfectly in Matadouro's range, with cleaner waves and less crowd than Ribeira. Today is a São Sebastião afternoon — small, chill, uncrowded, light wind. Monday is dawn-only before gale-force winds. Then a MASSIVE 16-19s W swell sends Ericeira to 4.5-5.5m Tuesday — spectator only. Huge and blown out through Thursday. Friday offers a slim noon glass-off at Caparica/Carcavelos (35% prob). Your surfable window is today through Monday dawn.</p>
   </div>
 
   <!-- 8-day strip -->
@@ -197,12 +195,12 @@
       <div class="session-header">
         <div>
           <div class="session-time">Dawn Patrol · 7:15am – 9:15am</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Sebastião</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Small and barely worth the drive. Multiple swells combining (1m 13s NW + 0.8m 9s) give Ericeira 0.6-1.1m with 9kph cross-shore wind. The Lisbon spots are essentially flat at 0.3-0.6m. Only go if you're desperate for a paddle.</div>
+      <div class="session-why">Small everywhere. The NW swell is only 1m 13s at dawn — São Sebastião will have 0.6-1.1m with 9kph W cross-shore. Barely rideable. The reef handles small surf well on mid-high tide, and you'll have it to yourself, but there's just not much energy in the water (217kJ). Caparica and Carcavelos are essentially flat (0.3-0.6m).</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">1m 13s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9 kph</div><div class="cond-detail">W · Cross-shore</div></div>
@@ -214,13 +212,13 @@
       <div class="session-header">
         <div>
           <div class="session-time">Pre-lunch · 9:30am – 12:30pm</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Sebastião</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Building nicely. Primary swell lifts to 1.5m 12s and wind drops to just 5-6kph — nearly glassy. 447kJ with 51% consistency. Starting to get fun.</div>
-      <div class="alternatives">Also worth checking: Supertubos (Peniche, ~1.5hr) — 0.6-1.1m but DEAD CALM (0-2kph). Smaller but glass conditions. Weekend range makes it an option.</div>
+      <div class="session-why">Building nicely. Primary swell lifts to 1.5m 12s and wind drops to just 5-6kph — nearly glassy. 447kJ with 51% consistency. São Sebastião's mellow right-hander near the rock will be fun at this size, and it's basically empty. Starting to get properly fun.</div>
+      <div class="alternatives">Also worth checking: Supertubos (Peniche, ~1.5hr) — 0.6-1.1m but DEAD CALM (0-2kph). Smaller but mirror-glass. Weekend range makes it an option.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">1.5m 12s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">5 kph</div><div class="cond-detail">W · Light onshore</div></div>
@@ -232,12 +230,14 @@
       <div class="session-header">
         <div>
           <div class="session-time">Afternoon · 12:30pm – 6:00pm</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Sebastião</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">The best window today. Swell builds to 1.2-1.8m on a 1.8m 12s primary with only 6kph wind. 756kJ is proper energy — enough for fun rides on the Xero Cruz. This is when you want to be in the water if you're going at all.</div>
+      <div class="session-why">The best window today. Swell builds to 1.2-1.8m (1.8m 12s primary) with only 6kph wind. 756kJ is proper energy — enough for fun rides on the Xero Cruz. São Sebastião handles this size comfortably (max 2.0m) and the reef produces clean walls on mid-high tide. Chill, uncrowded, your kind of session.</div>
+      <div class="alternatives">Also worth checking: Matadouro (2 min walk) — cleaner waves on the reef, slightly more crowd but still manageable. If São Sebastião looks flat, Matadouro's reef may be focusing the swell better.</div>
+      <div class="cam-check">Walk between São Sebastião and Matadouro when you arrive — they're right next to each other. Surf whichever looks better.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">1.8m 12s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6 kph</div><div class="cond-detail">W · Light onshore</div></div>
@@ -249,12 +249,12 @@
       <div class="session-header">
         <div>
           <div class="session-time">Evening · 6:00pm – 8:00pm</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Sebastião</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Swell holds at 1.2-1.8m into the evening with similar light wind. Good sunset session option if you missed the afternoon. Long daylight (sunset ~8pm) gives you plenty of time.</div>
+      <div class="session-why">Swell holds at 1.2-1.8m with similar light wind. Good sunset session if you missed the afternoon. Long daylight (sunset ~8pm) gives you plenty of time. São Sebastião at sunset with nobody out — hard to beat.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">1.8m 12s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6 kph</div><div class="cond-detail">W · Light</div></div>
@@ -264,7 +264,7 @@
 
     <div class="advice-card">
       <h3>Best Advice for Saturday</h3>
-      <p>A slow-building day. If you're keen, head to Ericeira for the afternoon/evening — the swell peaks late with 6kph wind and 756kJ of energy. Caparica and Carcavelos are too small. Save your main energy for tomorrow — Sunday is significantly better. Today is a pleasant 5/10 afternoon session at best.</p>
+      <p>A slow-building day. Head to São Sebastião for the afternoon/evening — 1.2-1.8m with 6kph wind, uncrowded reef, your favourite chill spot. Walk past Matadouro on the way and check both. Save your energy for tomorrow — Sunday is significantly better. Today is a pleasant 5/10 warm-up.</p>
     </div>
   </div>
 
@@ -274,14 +274,14 @@
       <div class="session-header">
         <div>
           <div class="session-time">Dawn Patrol · 7:15am – 9:15am</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Sebastião / Matadouro</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">The 14-second groundswell is arriving. Ericeira already 1.2-2m at dawn with dual swells (1.7m 12s + 1m 16s). Wind is 11kph NNW — cross-shore, a bit textured but manageable. 645kJ. Only 80% probability though — could still be slightly smaller.</div>
-      <div class="alternatives">Also worth checking: Supertubos (Peniche) — 1.2-1.5m at only 5kph GLASS. Less size but mirror-calm conditions.</div>
-      <div class="cam-check">Check the Ribeira d'Ilhas and Supertubos cams before heading out — if Ericeira looks textured from the NNW, Supertubos will be glassy.</div>
+      <div class="session-why">The 14-second groundswell is arriving. Ericeira 1.2-2m at dawn (1.7m 12s + 1m 16s). São Sebastião is borderline at its 2.0m max — if the swell is on the bigger end, it may be too much for this mellow reef. Matadouro handles 2.0m comfortably and produces cleaner walls. Wind is 11kph NNW, cross-shore but manageable. 645kJ with 47% consistency.</div>
+      <div class="alternatives">Also worth checking: Supertubos (Peniche) — 1.2-1.5m at only 5kph GLASS. Less size but mirror-calm. If you want the cleanest dawn, Peniche wins.</div>
+      <div class="cam-check">Check São Sebastião first — if the sets look manageable, surf there (emptier). If it's clearly maxing out, walk to Matadouro.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-2m</div><div class="cond-detail">1.7m 12s + 1m 16s</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">11 kph</div><div class="cond-detail">NNW · Cross-shore</div></div>
@@ -293,12 +293,14 @@
       <div class="session-header">
         <div>
           <div class="session-time">Pre-lunch · 9:30am – 12:30pm — THE SESSION</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">Matadouro</div>
+          <div class="session-drive">~50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">This is it. The 14-second NW groundswell fills in properly — 1.5-2.1m at Ericeira with 2.2m 14s primary and 1849kJ of energy. Wind is 10kph W, manageable cross-shore. The 14s period means real walls with push — proper power for working on those snaps. Best session of the entire 8-day window. Get there by 10am.</div>
+      <div class="session-why">This is it. The 14-second NW groundswell fills in properly — 1.5-2.1m with 2.2m 14s primary swell and 1849kJ. The 2.2m swell exceeds São Sebastião's 2.0m comfort zone, but sits perfectly in Matadouro's range (up to 2.5m). Matadouro's reef produces cleaner, more defined walls than Ribeira, with less crowd. Wind is 10kph W — manageable cross-shore. The 14s period means real walls with push. Get there by 10am and aim for mid tide.</div>
+      <div class="alternatives">Also worth checking: São Julião (beach break, 5 min drive south) — the swell magnet will be catching loads, multiple peaks, lefts and rights. Sandy bottom, no crowd stress. If Matadouro's reef feels too much, São Julião is the mellow fallback.</div>
+      <div class="cam-check">Check the Ribeira d'Ilhas cam for a size reference (same swell), then head to Matadouro. If Matadouro looks borderline big, São Julião's beach break will be friendlier.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">2.2m 14s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">10 kph</div><div class="cond-detail">W · Cross-shore</div></div>
@@ -306,17 +308,16 @@
       </div>
     </div>
 
-    <div class="session-card rate-border-6">
+    <div class="session-card rate-border-5">
       <div class="session-header">
         <div>
           <div class="session-time">Afternoon · 12:30pm – 6:00pm</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">São Julião / Foz do Lizandro</div>
+          <div class="session-drive">~45-50 min drive</div>
         </div>
-        <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
+        <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Swell keeps building to 1.8-2.4m (2.4m 14s, 2228kJ) but wind ramps to 15-17kph NW — getting onshore and choppy. Still surfable with serious power, but quality drops off. If you surfed pre-lunch, you've already had the best of it.</div>
-      <div class="alternatives">Also worth checking: Supertubos (1.2-1.5m, 10-11kph) or Caparica (1.2-1.5m, 8-13kph) — smaller but potentially cleaner if Ericeira is too textured.</div>
+      <div class="session-why">Swell builds to 1.8-2.4m (2.4m 14s, 2228kJ) — now too big for São Sebastião (2.0m max) and pushing Matadouro's limit (2.5m). Wind ramps to 15-17kph NW onshore. The reef breaks get messy. São Julião's beach break handles the size and the wind better — multiple peaks spread the crowd, sandy bottom is forgiving. Foz do Lizandro (river mouth) is another option with shifting peaks. Quality drops from the pre-lunch session though.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.8-2.4m</div><div class="cond-detail">2.4m 14s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15 kph</div><div class="cond-detail">NW · Onshore</div></div>
@@ -333,7 +334,7 @@
         </div>
         <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Ericeira will be too windy by evening. Caparica picks up 1.2-1.5m (1.2m 14s, 540kJ) with slightly more manageable 8-13kph cross-shore wind. Shorter drive too. Fun sunset paddle if you want a second session.</div>
+      <div class="session-why">Ericeira will be too windy by evening. Caparica picks up 1.2-1.5m (1.2m 14s, 540kJ) with more manageable 8-13kph cross-shore wind. Shorter drive home too. Fun sunset paddle if you want a second session closer to home.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">1.2m 14s W</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8 kph</div><div class="cond-detail">SE · Cross-shore</div></div>
@@ -343,7 +344,7 @@
 
     <div class="advice-card">
       <h3>Best Advice for Sunday</h3>
-      <p>Don't miss the pre-lunch session at Ericeira. The 14s groundswell with 1849kJ is the most power you'll see all week in surfable conditions. Get there by 10am and surf until the wind picks up around 1pm. If you want a dawn patrol, Supertubos has glassier conditions (5kph) but less size. This is the session of the week — be in the water.</p>
+      <p>Don't miss the pre-lunch session. Matadouro is the pick — the 2.2m 14s swell exceeds São Sebastião's range but sits perfectly in Matadouro's, and you get cleaner walls without Ribeira's crowds. Get there by 10am, aim for mid tide. If it's bigger than expected or the reef feels heavy, São Julião's beach break (5 min drive) handles the same swell with a sandy bottom and multiple peaks. This is the session of the week.</p>
     </div>
   </div>
 
@@ -353,12 +354,12 @@
       <div class="session-header">
         <div>
           <div class="session-time">Dawn Patrol · 7:15am – 9:15am</div>
-          <div class="session-spot">Ribeira d'Ilhas (Ericeira)</div>
-          <div class="session-drive">~40 min drive</div>
+          <div class="session-spot">Matadouro / São Julião</div>
+          <div class="session-drive">~45-50 min drive</div>
         </div>
         <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Size is solid — 1.5-2.1m (2.3m 13s, 1759kJ). But wind is already 19-28kph at dawn from the N. Cross-shore at Ericeira — bumpy faces. Enough power to push through the chop but quality will be rough. Only go if you really want to squeeze another session out of this swell.</div>
+      <div class="session-why">Size is solid — 1.5-2.1m (2.3m 13s, 1759kJ). But wind is already 19-28kph N at dawn. Too much for São Sebastião (both size and wind). Matadouro's reef can handle the size but the wind will texture the faces. São Julião might be the better bet — the beach break is more forgiving in chop and the shifting peaks mean you can find a sheltered corner. Marginal either way.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">2.3m 13s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">19 kph</div><div class="cond-detail">N · 28kph gusts</div></div>
@@ -368,12 +369,12 @@
 
     <div class="skip-card">
       <h3>Pre-lunch onwards — Gale force, skip</h3>
-      <p>Wind explodes to 32-48kph at Ericeira by noon and 23-42kph at Caparica. The storm pushing the massive Tuesday swell is already here. Stay dry from noon.</p>
+      <p>Wind explodes to 32-48kph everywhere by noon. The storm pushing the massive Tuesday swell is here. Stay dry from noon.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Monday</h3>
-      <p>If you surfed well on Sunday and still want more, a very early dawn at Ericeira is possible — 1.5-2.1m with 1759kJ is proper power, but 19kph at first light is rough. Honest call: save yourself. The swell eats itself under gale-force wind from here until Thursday.</p>
+      <p>If you surfed well on Sunday and still want more, a very early dawn at São Julião or Matadouro is possible — 1.5-2.1m with 1759kJ is serious power, but 19kph at first light is rough. Honest call: save yourself. The swell eats itself under gale-force wind from here until Thursday.</p>
     </div>
   </div>
 
@@ -381,14 +382,13 @@
   <div class="day-content" id="day-3">
     <div class="skip-card">
       <h3>MASSIVE W Swell — Spectator Day Only</h3>
-      <p>A huge 16-19s W swell arrives. Ericeira goes from 1.8-2.4m at dawn to <strong>4.5-5.5m by evening</strong> (9927kJ, 100% consistency). Supertubos reaches 4.5-5.5m (6886kJ). Caparica 3-4.5m. Carcavelos 2.4-3.7m. Wind is 18-43kph all day — big and blown out.</p>
-      <p style="margin-top: 8px;">This is pure spectator territory. Way above Roman's comfort zone. Go watch the big wave surfers if you want.</p>
-      <p style="margin-top: 8px; color: var(--text-dim); font-size: 0.78rem;">Probability: 50-60% dawn (swell filling in), 95-100% evening (locked in).</p>
+      <p>A huge 16-19s W swell arrives. Ericeira goes from 1.8-2.4m at dawn to <strong>4.5-5.5m by evening</strong> (9927kJ, 100% consistency). Supertubos 4.5-5.5m (6886kJ). Caparica 3-4.5m. All way above every Ericeira spot's range except Ribeira (which handles 3.5m) and Coxos (expert only). Wind is 18-43kph all day.</p>
+      <p style="margin-top: 8px;">Pure spectator territory. Go watch from the cliffs if you fancy it.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Tuesday</h3>
-      <p>Stay on the couch or grab a coffee and watch from the cliff. The swell is XXL and the wind is howling. Don't even think about paddling out.</p>
+      <p>Stay dry. The swell is XXL and the wind is howling. Don't even think about paddling out.</p>
     </div>
   </div>
 
@@ -396,12 +396,12 @@
   <div class="day-content" id="day-4">
     <div class="skip-card">
       <h3>Still Huge + Gale Force Wind</h3>
-      <p>Swell holds at 3-4.5m at Ericeira all day (7038kJ dawn, 6256kJ noon). Wind is 34-55kph — absolute gale. Supertubos 2.4-3.7m (4513kJ). Caparica 2.4-3m (2962kJ). Everything is maxed out and blown apart.</p>
+      <p>Swell holds at 3-4.5m at Ericeira (7038kJ dawn). Wind 34-55kph. Supertubos 2.4-3.7m (4513kJ). Caparica 2.4-3m. Everything maxed out and blown apart.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Wednesday</h3>
-      <p>Another rest day. The swell is easing from Tuesday's peak but still massive, and the wind is even stronger at some spots. Do something indoors.</p>
+      <p>Another rest day. Swell easing from Tuesday's peak but still massive, and the wind is worse.</p>
     </div>
   </div>
 
@@ -409,12 +409,12 @@
   <div class="day-content" id="day-5">
     <div class="skip-card">
       <h3>Easing But Gale-Force Wind Continues</h3>
-      <p>Swell eases to 2.4-3m at Ericeira dawn (4683kJ) dropping to 1.5-2.1m evening. Surfable size — but wind is 52-61kph. Near-hurricane force. Completely unsurfable everywhere. Caparica 1.2-1.8m at 30-49kph. The storm refuses to quit.</p>
+      <p>Swell eases to 2.4-3m at Ericeira dawn (4683kJ) dropping to 1.5-2.1m evening. Surfable size for Matadouro and São Julião — but wind is 52-61kph. Near-hurricane force. Completely unsurfable everywhere.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Thursday</h3>
-      <p>Third straight skip day. The swell is easing into the surfable range but 52kph wind makes it impossible. There's a hint of hope for tomorrow — the wind may finally drop.</p>
+      <p>Third straight skip day. The swell is easing into Matadouro's range but 52kph wind makes it impossible. Hope for Friday.</p>
     </div>
   </div>
 
@@ -429,7 +429,7 @@
         </div>
         <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">Wind starts at 7-18kph — variable and uncertain. Swell has eased to 0.9-1.2m (1.1m 12s, 341kJ). Small and inconsistent. Ericeira is still too windy (32-36kph). Only 45% probability at Caparica — check conditions before committing.</div>
+      <div class="session-why">Wind starts at 7-18kph — variable and uncertain. Swell has eased to 0.9-1.2m (1.1m 12s, 341kJ). Ericeira is still too windy (32-36kph). Only 45% probability at Caparica — check conditions before committing.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">1.1m 12s NW</div></div>
         <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">7 kph</div><div class="cond-detail">Variable · 18kph gusts</div></div>
@@ -446,8 +446,8 @@
         </div>
         <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
       </div>
-      <div class="session-why">The potential gem in a terrible week. Wind drops to 2-5kph around noon — GLASSY at both Caparica (0.9-1.4m, 449kJ) and Carcavelos (0.6-1.1m, 459kJ). Small but clean. Only 35% probability — check conditions at 10am. If the wind is calm, drop everything and go.</div>
-      <div class="alternatives">Also worth checking: Carcavelos (0.6-1.1m, 459kJ, 2-5kph GLASS) — smaller but the reef creates more defined waves.</div>
+      <div class="session-why">The potential gem in a terrible week. Wind drops to 2-5kph around noon — GLASSY at both Caparica (0.9-1.4m, 449kJ) and Carcavelos (0.6-1.1m, 459kJ). Small but clean. Only 35% probability. Check conditions at 10am — if it's calm, go. Carcavelos' reef creates more defined waves in small surf.</div>
+      <div class="alternatives">Also worth checking: Carcavelos (0.6-1.1m, 459kJ, 2-5kph GLASS) — smaller but the reef produces nicer shape than Caparica's beach break.</div>
       <div class="cam-check">Check the Carcavelos cam at 10am — if it's glassy, this is your last surf before next week.</div>
       <div class="conditions">
         <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1.2m 13s NW</div></div>
@@ -458,12 +458,12 @@
 
     <div class="skip-card">
       <h3>Afternoon onwards — Wind Returns</h3>
-      <p>Wind explodes back to 32-53kph by evening across all spots. The glass-off window is narrow — noon only.</p>
+      <p>Wind explodes back to 32-53kph by evening. The glass-off is a narrow noon window only.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Friday</h3>
-      <p>Conditional day. Check conditions at 10am: if the wind has dropped (2-5kph), head to Caparica or Carcavelos for a clean noon session. If it hasn't dropped, skip it — only 35% probability. The noon glass-off is a narrow window before 32kph wind returns.</p>
+      <p>Conditional day. Check conditions at 10am: if the wind has dropped (2-5kph), head to Caparica or Carcavelos for a clean noon session. Only 35% probability though. The noon glass-off is a narrow window before 32kph wind returns.</p>
     </div>
   </div>
 
@@ -471,12 +471,12 @@
   <div class="day-content" id="day-7">
     <div class="skip-card">
       <h3>Windy Mess — Skip</h3>
-      <p>Wind is 24-63kph all day everywhere. Ericeira has swell (1.2-2m dawn building to 2.4-3.7m evening as a new pulse arrives) but 47-62kph wind makes it completely unsurfable. Caparica 0.6-1.5m at 24-48kph. Not a surf day.</p>
+      <p>Wind 24-63kph all day everywhere. Ericeira has swell (1.2-2m dawn building to 2.4-3.7m evening) but 47-62kph wind makes it completely unsurfable. Not a surf day.</p>
     </div>
 
     <div class="advice-card">
       <h3>Best Advice for Saturday</h3>
-      <p>Four consecutive skip days (Thu-Sat) with no relief. The wind pattern is stuck. A new swell arrives but the gale won't quit. Wait it out — Monday 13th shows potential.</p>
+      <p>Four consecutive skip days. The wind pattern is stuck. Wait it out — Monday 13th shows potential as the first post-storm window.</p>
     </div>
   </div>
 
@@ -485,15 +485,15 @@
     <h3>Days to Watch</h3>
     <div class="dtw-card potential">
       <div class="dtw-day">Mon 13 Apr — Post-Storm Window</div>
-      <div class="dtw-detail">Ericeira 1.2-2m (2.6m 13s, 2125kJ dawn) with wind finally dropping to 5-22kph. First properly surfable day after a week of gales. Pre-lunch: 1.2-2m at 8-10kph (1518kJ). Mark this one.</div>
+      <div class="dtw-detail">Ericeira 1.2-2m (2.6m 13s, 2125kJ dawn) with wind finally dropping to 5-22kph. First properly surfable day after a week of gales. Pre-lunch: 1.2-2m at 8-10kph (1518kJ). São Sebastião or Matadouro should both work at this size. Mark this one.</div>
     </div>
     <div class="dtw-card medium">
       <div class="dtw-day">Sun 12 Apr — Easing Swell, Still Windy</div>
-      <div class="dtw-detail">Ericeira 2.4-3.7m dawn easing to 2.4-3m (5247kJ dawn). Still windy (36-45kph) but the swell is there if conditions improve faster than forecast.</div>
+      <div class="dtw-detail">Ericeira 2.4-3.7m dawn easing to 2.4-3m. Still windy (36-45kph) but the swell is there if conditions improve faster than forecast.</div>
     </div>
     <div class="dtw-card medium">
       <div class="dtw-day">Sat 18 Apr — Big NW Swell</div>
-      <div class="dtw-detail">Ericeira 2.4-3m all day (3m 14s, 2798-3657kJ). Serious power. Wind 25-40kph though — needs monitoring. If it cleans up, could be a big session.</div>
+      <div class="dtw-detail">Ericeira 2.4-3m (3m 14s, 2798-3657kJ). Serious power — too much for São Sebastião, borderline Matadouro, São Julião beach break could handle it. Wind 25-40kph though — needs monitoring.</div>
     </div>
   </div>
 
@@ -517,13 +517,13 @@
       <span class="source-badge numerical">Numerical only</span>
     </div>
     <div class="source-item" style="padding-top: 10px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.72rem;">
-      <span>LOTUS model run: 4 Apr 1am WEST (4 Apr 00 UTC)</span>
+      <span>LOTUS model run: 4 Apr 1am WEST (4 Apr 00 UTC) · Spots: São Sebastião, Matadouro, São Julião, Pedra Branca, Foz do Lizandro, Ribeira d'Ilhas, Coxos</span>
     </div>
   </div>
 
   <div class="footer">
     <p>Built with Claude · Data from <a href="https://www.surfline.com" target="_blank">Surfline</a></p>
-    <p style="margin-top: 4px;">No human forecaster reports available for Portugal — analysis is purely algorithmic based on LOTUS numerical data.</p>
+    <p style="margin-top: 4px;">No human forecaster reports for Portugal — analysis based on LOTUS numerical data cross-referenced against 18 spots across 4 regions.</p>
   </div>
 
 </div>
