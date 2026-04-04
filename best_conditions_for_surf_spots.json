@@ -1,0 +1,3238 @@
+{
+  "schema_version": 2,
+  "description": "Multi-region surf spot database. Each region is built on-demand when the forecast skill encounters a new location. Regions persist across trips for reuse.",
+  "regions": {
+    "gold-coast-qld": {
+      "metadata": {
+        "region": "Gold Coast QLD \u00b1 2hr drive radius",
+        "base_location": "Gold Coast, QLD, Australia",
+        "created_at": "2026-03-16T18:00:00+10:00",
+        "last_updated": "2026-03-16",
+        "total_spots": 57,
+        "notes": "Drive times calculated from Surfers Paradise. Ferry required for Stradbroke Islands. 4WD required for Double Island Point.",
+        "forecast_regions": {
+          "gold_coast": {
+            "name": "Gold Coast",
+            "description": "Snapper to Surfers Paradise. E-SE facing coastline. Picks up most swell directions well.",
+            "reference_surfline_spot": "Duranbah",
+            "reference_surfline_id": "5842041f4e65fad6a7708c11",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/duranbah/5842041f4e65fad6a7708c11",
+            "why_this_reference": "D-Bah is the most consistent swell magnet on the Gold Coast. It faces ESE and picks up S, SE, and E swells. Its forecast data accurately represents what all Gold Coast south spots are receiving. Wind and tide data applies to the entire Coolangatta-to-Burleigh stretch.",
+            "covers_spots": [
+              "Snapper Rocks",
+              "Kirra",
+              "Burleigh Heads",
+              "Currumbin Alley",
+              "Palm Beach",
+              "The Spit",
+              "Duranbah (D-Bah)"
+            ]
+          },
+          "tweed_coast": {
+            "name": "Tweed Coast (NSW)",
+            "description": "Fingal Head to Cabarita/Hastings Point. Similar swell window to Gold Coast but slightly more S exposure. Wind can differ.",
+            "reference_surfline_spot": "Cabarita",
+            "reference_surfline_id": "5842041f4e65fad6a7708be3",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/cabarita/5842041f4e65fad6a7708be3",
+            "why_this_reference": "Cabarita faces SE and is the most notable break on the Tweed Coast. It captures the S/SE swell window that differs from Gold Coast proper. Wind data here represents the Tweed coastal stretch from Fingal to Hastings Point.",
+            "covers_spots": [
+              "Fingal Head",
+              "Cabarita Beach",
+              "Hastings Point",
+              "Kingscliff",
+              "Casuarina Beach",
+              "Salt Beach"
+            ]
+          },
+          "byron_bay": {
+            "name": "Byron Bay",
+            "description": "Cape Byron area. Unique E/NE facing orientation means very different swell window. Cape creates wind shadow effects.",
+            "reference_surfline_spot": "The Pass (Byron Bay)",
+            "reference_surfline_id": "5842041f4e65fad6a7708bef",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/the-pass-byron-bay/5842041f4e65fad6a7708bef",
+            "why_this_reference": "The Pass is the most monitored spot in Byron with detailed forecaster reports. Cape Byron's E/NE orientation is fundamentally different from the Gold Coast. The Pass forecast captures what E and NE swells are doing, and the wind data represents the Byron microclimate (which can be very different from GC on the same day).",
+            "covers_spots": [
+              "Brunswick Heads",
+              "The Pass (Byron Bay)",
+              "Wategos Beach",
+              "Tallows Beach",
+              "The Wreck (Belongil)",
+              "Broken Head"
+            ]
+          },
+          "ballina_lennox": {
+            "name": "Ballina / Lennox Head",
+            "description": "Lennox to Ballina. SE-facing coastline, strong S swell exposure. Different wind patterns than Byron (no cape shelter).",
+            "reference_surfline_spot": "Lennox Head",
+            "reference_surfline_id": "5842041f4e65fad6a7708bf2",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/lennox-head/5842041f4e65fad6a7708bf2",
+            "why_this_reference": "Lennox Head is the premier spot in this stretch and has detailed Surfline forecaster coverage. It faces SSE and picks up the S swells that define this region. Wind and tide data here covers the Lennox-Ballina-Skennars corridor accurately.",
+            "covers_spots": [
+              "Lennox Head Point",
+              "Lennox Head Beach (Seven Mile)",
+              "Skennars Head",
+              "Shelly Beach (Ballina)",
+              "Lighthouse Beach (Ballina)",
+              "Sharpes Beach (Ballina)",
+              "Flat Rock (Ballina)"
+            ]
+          },
+          "far_south": {
+            "name": "Evans Head / Yamba / Angourie",
+            "description": "Southern extreme of range. E-SE facing. Significantly different wind and swell from Gold Coast. Only fetch if conditions look exceptional.",
+            "reference_surfline_spot": "Angourie",
+            "reference_surfline_id": "5842041f4e65fad6a7708bf9",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/angourie/5842041f4e65fad6a7708bf9",
+            "why_this_reference": "Angourie is the world-class anchor spot for this region and has Surfline forecaster reports. It represents the southern swell window well. Evans Head, Yamba, and surrounding spots share similar swell exposure. This region is 2+ hours from Gold Coast so only worth checking when a big S/SE swell is running.",
+            "covers_spots": [
+              "Evans Head Main Beach",
+              "Chinamans Beach (Evans Head)",
+              "Turners Beach (Yamba)",
+              "Pippi Beach (Yamba)",
+              "Angourie Point",
+              "Angourie Back Beach",
+              "Spookys (Angourie)"
+            ]
+          },
+          "sunshine_coast": {
+            "name": "Sunshine Coast",
+            "description": "Caloundra to Coolum. E-SE facing, more sheltered from S swells than Gold Coast. Different wind corridor.",
+            "reference_surfline_spot": "Mooloolaba",
+            "reference_surfline_id": "5842041f4e65fad6a7708bec",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/mooloolaba/5842041f4e65fad6a7708bec",
+            "why_this_reference": "Mooloolaba is centrally located on the Sunshine Coast with good Surfline coverage. It represents the E/SE swell window that the Sunshine Coast receives. Wind data here is distinct from Gold Coast \u2014 the Sunshine Coast often gets different wind patterns due to the coastal geography north of Moreton Bay.",
+            "covers_spots": [
+              "Kings Beach",
+              "Moffat Beach",
+              "Dicky Beach",
+              "Maroochydore",
+              "Mooloolaba",
+              "Alexandra Headland",
+              "Coolum Beach",
+              "Peregian Beach",
+              "Marcus Beach / Castaways",
+              "Sunshine Beach"
+            ]
+          },
+          "noosa": {
+            "name": "Noosa / Rainbow Beach",
+            "description": "NE-facing points and beaches. Completely different swell window \u2014 needs E/NE swell. S swells barely register here.",
+            "reference_surfline_spot": "Noosa Heads",
+            "reference_surfline_id": "5842041f4e65fad6a7708bee",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/noosa-heads/5842041f4e65fad6a7708bee",
+            "why_this_reference": "Noosa is THE reference for the NE-facing coastline. It has excellent Surfline forecaster reports and its NE orientation makes it a completely different swell window from anything south. When E/NE swells hit, Noosa can be pumping while the Gold Coast is flat, and vice versa. This is why a separate fetch is essential.",
+            "covers_spots": [
+              "Noosa First Point",
+              "Noosa Tea Tree Bay",
+              "Noosa Granite Bay",
+              "Double Island Point",
+              "Rainbow Beach"
+            ]
+          },
+          "stradbroke_islands": {
+            "name": "Stradbroke Islands",
+            "description": "Offshore islands. E-SE exposure, but different wind and swell refraction due to island geography.",
+            "reference_surfline_spot": "South Stradbroke Island",
+            "reference_surfline_id": "584204204e65fad6a77092ca",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/south-stradbroke-island/584204204e65fad6a77092ca",
+            "why_this_reference": "South Straddie has a Surfline page and represents the island swell window. The islands sit offshore and get unobstructed swell but different wind effects than the mainland. Ferry access means this region is only worth recommending on exceptional days.",
+            "covers_spots": [
+              "South Stradbroke Island",
+              "Cylinder Beach",
+              "North Stradbroke Main Beach",
+              "Point Lookout",
+              "Deadmans Beach"
+            ]
+          }
+        },
+        "total_forecast_regions": 8,
+        "surfline_fetches_required": 8,
+        "fetch_strategy": "Fetch the reference spot for each region. For the far_south and stradbroke_islands regions, only fetch if the general swell forecast suggests conditions worth the drive (big S/SE swell for far_south, clean E swell for stradbroke). The core 4 regions (gold_coast, tweed_coast, byron_bay, sunshine_coast/noosa) should always be fetched."
+      },
+      "spots": [
+        {
+          "name": "Snapper Rocks",
+          "surfline_name": "Snapper Rocks",
+          "surfline_id": "5842041f4e65fad6a7708be5",
+          "region": "Gold Coast South",
+          "state": "QLD",
+          "latitude": -28.1694,
+          "longitude": 153.5503,
+          "drive_time_minutes": 26,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/man-made",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            145
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SE",
+          "wind_notes": "Any S component works as offshore",
+          "best_tide": "mid",
+          "tide_notes": "All tides workable depending on sand quality",
+          "crowd_level": 10,
+          "skill_level": "advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Too crowded, too fast, too competitive",
+          "character": "Perfect barreling right-hander, freight-train speed, hollow tubes, 100m+ rides. The legendary Superbank connects to Kirra.",
+          "hazards": [
+            "extreme crowds",
+            "fast wave",
+            "rocks",
+            "rips",
+            "sharks"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "Kirra",
+          "surfline_name": "Kirra",
+          "surfline_id": "5842041f4e65fad6a7708be9",
+          "region": "Gold Coast South",
+          "state": "QLD",
+          "latitude": -28.1647,
+          "longitude": 153.5386,
+          "drive_time_minutes": 28,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sandbar",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            45,
+            90
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SSW",
+          "wind_notes": "S to SSW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide preferred",
+          "crowd_level": 9,
+          "skill_level": "advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Too crowded and heavy",
+          "character": "Legendary tubes, fickle \u2014 doesn't break often but when it does, it's world-class. Sandbar dependent.",
+          "hazards": [
+            "heavy crowds",
+            "rocks",
+            "rips",
+            "sharks",
+            "sandbar dependent"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "Burleigh Heads",
+          "surfline_name": "Burleigh Heads",
+          "surfline_id": "5842041f4e65fad6a7708be8",
+          "region": "Gold Coast Central",
+          "state": "QLD",
+          "latitude": -28.0883,
+          "longitude": 153.4542,
+          "drive_time_minutes": 18,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "SE",
+            "S"
+          ],
+          "swell_direction_range_degrees": [
+            135,
+            200
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide best",
+          "crowd_level": 7,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Heavy takeoff, steep, can be powerful and crowded",
+          "character": "Iconic freight-train barrel machine. Four sections rarely linking. Sand dependent from Tallebudgera River.",
+          "hazards": [
+            "rocks",
+            "rips",
+            "sharks",
+            "sand dependency",
+            "steep takeoffs"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "Currumbin Alley",
+          "surfline_name": "Currumbin Alley",
+          "surfline_id": "5842041f4e65fad6a7708c2e",
+          "region": "Gold Coast South",
+          "state": "QLD",
+          "latitude": -28.1356,
+          "longitude": 153.4878,
+          "drive_time_minutes": 15,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SSW to SW offshore",
+          "best_tide": "all",
+          "tide_notes": "Works on all tides",
+          "crowd_level": 6,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun walls, manageable size, not too heavy",
+          "character": "Quality walls and occasional barrels. Good angles from E/NE swells. Reliable and fun.",
+          "hazards": [
+            "rips",
+            "rocks at Currumbin"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "Palm Beach",
+          "surfline_name": "Palm Beach",
+          "surfline_id": "584204204e65fad6a77092d6",
+          "region": "Gold Coast South",
+          "state": "QLD",
+          "latitude": -28.1178,
+          "longitude": 153.4711,
+          "drive_time_minutes": 15,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            60,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SSW",
+          "wind_notes": "SSW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 6,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Beach break, manageable, good for cruisy sessions",
+          "character": "Exposed beach break with consistent surf. Multiple peaks along the beach.",
+          "hazards": [
+            "rips",
+            "exposed to NE winds"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "The Spit",
+          "surfline_name": "The Spit",
+          "surfline_id": null,
+          "region": "Gold Coast Central",
+          "state": "QLD",
+          "latitude": -27.9564,
+          "longitude": 153.4264,
+          "drive_time_minutes": 5,
+          "drive_notes": null,
+          "wave_type": "river break left-hander",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "NW",
+          "wind_notes": "NW to W offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 8,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Crowd level 8 \u2014 too competitive and hectic for Cato. River currents and rips add paddle-out stress. Not worth it when quieter options exist nearby.",
+          "character": "Consistent exposed river break, left-hand wave, accessible for various skill levels.",
+          "hazards": [
+            "sharks",
+            "rips",
+            "rocks",
+            "river currents"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "South Stradbroke Island",
+          "surfline_name": "South Stradbroke Island",
+          "surfline_id": "584204204e65fad6a77092ca",
+          "region": "Stradbroke Islands",
+          "state": "QLD",
+          "latitude": -27.8667,
+          "longitude": 153.4333,
+          "drive_time_minutes": 35,
+          "drive_notes": "Boat access required",
+          "wave_type": "A-frame beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            7,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Medium to high tide",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Uncrowded, mellow A-frames, sand bottom, forgiving",
+          "character": "Peak after peak of hollow A-frame perfection. 500m stretch of quality. Deep outside sandbars. Collects small S swells.",
+          "hazards": [
+            "boat access only",
+            "strong offshore current",
+            "sandbar dependent"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "stradbroke_islands"
+        },
+        {
+          "name": "Cylinder Beach",
+          "surfline_name": "North Stradbroke Island (Cylinder Beach)",
+          "surfline_id": null,
+          "region": "Stradbroke Islands",
+          "state": "QLD",
+          "latitude": -27.4267,
+          "longitude": 153.5433,
+          "drive_time_minutes": 50,
+          "drive_notes": "Ferry from Cleveland + drive",
+          "wave_type": "beach break (sheltered bay)",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            70
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            1.0
+          ],
+          "ideal_swell_period_s": [
+            6,
+            10
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 3,
+          "skill_level": "beginner",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Gentle waves, sheltered, patrolled, ideal for mellow sessions",
+          "character": "Sheltered bay with gentle waves. Ideal learning spot. Patrolled year-round.",
+          "hazards": [
+            "limited swell exposure"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "stradbroke_islands"
+        },
+        {
+          "name": "North Stradbroke Main Beach",
+          "surfline_name": "North Stradbroke Island (Main Beach)",
+          "surfline_id": null,
+          "region": "Stradbroke Islands",
+          "state": "QLD",
+          "latitude": -27.45,
+          "longitude": 153.55,
+          "drive_time_minutes": 50,
+          "drive_notes": "Ferry from Cleveland + drive",
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE",
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 5,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Heavy and hollow, powerful conditions",
+          "character": "Longest beach on Straddie (32km). Very heavy and hollow at times. Multiple peaks and sandbands.",
+          "hazards": [
+            "strong rips",
+            "currents",
+            "sharks",
+            "heavy waves"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "stradbroke_islands"
+        },
+        {
+          "name": "Point Lookout",
+          "surfline_name": "Point Lookout (North Stradbroke)",
+          "surfline_id": null,
+          "region": "Stradbroke Islands",
+          "state": "QLD",
+          "latitude": -27.4333,
+          "longitude": 153.55,
+          "drive_time_minutes": 55,
+          "drive_notes": "Ferry from Cleveland + drive",
+          "wave_type": "point break",
+          "bottom": "rocky headland",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S to SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 6,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Rocky, fast, hollow \u2014 not mellow enough",
+          "character": "Surfing mecca of Stradbroke. World-class breaks (South Gorge, Deadmans, Frenchmans). Fast hollow tubes, long peeling walls.",
+          "hazards": [
+            "rocks",
+            "rips",
+            "sharp takeoffs"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "stradbroke_islands"
+        },
+        {
+          "name": "Deadmans Beach",
+          "surfline_name": "Deadmans Beach (North Stradbroke)",
+          "surfline_id": null,
+          "region": "Stradbroke Islands",
+          "state": "QLD",
+          "latitude": -27.435,
+          "longitude": 153.548,
+          "drive_time_minutes": 55,
+          "drive_notes": "Ferry from Cleveland + drive",
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S to SW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 4,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Not patrolled, strong currents and rips \u2014 Cato would panic if caught in a current with no lifeguards. Too risky for an upper beginner.",
+          "character": "Popular alternative for locals. Open exposure but less powerful than Main Beach.",
+          "hazards": [
+            "not patrolled",
+            "strong currents",
+            "rips"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "stradbroke_islands"
+        },
+        {
+          "name": "Kings Beach",
+          "surfline_name": "Kings Beach",
+          "surfline_id": null,
+          "region": "Caloundra",
+          "state": "QLD",
+          "latitude": -26.8,
+          "longitude": 153.1333,
+          "drive_time_minutes": 50,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            0.4,
+            1.2
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "NW",
+          "wind_notes": "NW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 6,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun, consistent, patrolled, family-friendly",
+          "character": "Fun and consistent beach breaks. Soft rolling waves. Highly patrolled, family-friendly.",
+          "hazards": [
+            "blown out in onshore winds"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Moffat Beach",
+          "surfline_name": "Moffat Beach",
+          "surfline_id": null,
+          "region": "Caloundra",
+          "state": "QLD",
+          "latitude": -26.79,
+          "longitude": 153.13,
+          "drive_time_minutes": 52,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S to SW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 5,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun right-hander, manageable, good vibe",
+          "character": "North-facing beach. Famous right-hand point break. Australia's longest running surf comp venue (Pa & Ma Bendall).",
+          "hazards": [
+            "not patrolled"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Dicky Beach",
+          "surfline_name": "Dicky Beach",
+          "surfline_id": null,
+          "region": "Caloundra",
+          "state": "QLD",
+          "latitude": -26.78,
+          "longitude": 153.13,
+          "drive_time_minutes": 54,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S to SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Quieter than Kings Beach, fun beach break",
+          "character": "Combination of fun beach breaks and powerful waves. Quieter than Kings Beach, mainly locals.",
+          "hazards": [
+            "can get powerful in larger swells"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Maroochydore",
+          "surfline_name": "Maroochydore",
+          "surfline_id": null,
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.65,
+          "longitude": 153.1,
+          "drive_time_minutes": 55,
+          "drive_notes": null,
+          "wave_type": "river mouth left / beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            45,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.4,
+            1.2
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Soft, beginner-friendly, mellow rivermouth left",
+          "character": "Cool rivermouth left off Pincushion Island sandbar. Softer beaches. Perfect for beginners.",
+          "hazards": [
+            "rips at river mouth"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Mooloolaba",
+          "surfline_name": "Mooloolaba",
+          "surfline_id": "5842041f4e65fad6a7708bec",
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.6833,
+          "longitude": 153.1167,
+          "drive_time_minutes": 60,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "NE",
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.4,
+            1.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SSW",
+          "wind_notes": "SSW to W offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 5,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Mellow, sheltered, sandy, very forgiving",
+          "character": "Mellow beach break with left & right-handers. Protected by Point Cartwright. Sheltered and manageable.",
+          "hazards": [
+            "rocks",
+            "rips",
+            "limited swell"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Alexandra Headland",
+          "surfline_name": "Alexandra Headland",
+          "surfline_id": null,
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.67,
+          "longitude": 153.11,
+          "drive_time_minutes": 57,
+          "drive_notes": null,
+          "wave_type": "right reef point break",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 5,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Cruisy longboard wave, sand-bottom peelers, mellow",
+          "character": "Mellow right reef with sand-bottom peelers. Cruisy longboard wave. Year-round lifeguards.",
+          "hazards": [
+            "crowds when swell >2.5ft"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Coolum Beach",
+          "surfline_name": "Coolum",
+          "surfline_id": null,
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.5333,
+          "longitude": 153.0833,
+          "drive_time_minutes": 65,
+          "drive_notes": null,
+          "wave_type": "beach break with reef sections",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            0.6,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 5,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Multiple peaks, consistent, good for all levels",
+          "character": "Exposed beach and reef break with consistent surf. Groundswell dominant. Open beach with multiple peaks.",
+          "hazards": [
+            "exposed to onshore winds",
+            "can get big"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Peregian Beach",
+          "surfline_name": "Peregian",
+          "surfline_id": null,
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.4833,
+          "longitude": 153.0833,
+          "drive_time_minutes": 70,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            10,
+            12
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun, playful, less crowded than nearby tourist spots",
+          "character": "Open beach break with plenty of swell exposure. Fun and playful. Less crowded than nearby tourist spots.",
+          "hazards": [
+            "can get overpowering in big swells"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Marcus Beach / Castaways",
+          "surfline_name": "Marcus Beach",
+          "surfline_id": null,
+          "region": "Sunshine Coast",
+          "state": "QLD",
+          "latitude": -26.4667,
+          "longitude": 153.0833,
+          "drive_time_minutes": 72,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            10,
+            12
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Uncrowded, consistent, relaxed vibe",
+          "character": "Consistent good quality waves. Easy access. Popular with locals. Less crowded alternative.",
+          "hazards": [
+            "limited patrol"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Noosa First Point",
+          "surfline_name": "Noosa Heads",
+          "surfline_id": "5842041f4e65fad6a7708bee",
+          "region": "Noosa",
+          "state": "QLD",
+          "latitude": -26.3833,
+          "longitude": 153.0833,
+          "drive_time_minutes": 110,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/rock",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.2
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 7,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Perfect peeling rights, mellow, longboard heaven \u2014 but crowd level 7 means competitive drops and snaking. Cato would enjoy the wave itself but may get frustrated by crowds. Best very early or midweek.",
+          "character": "Premier QLD longboard wave. Perfectly peeling right-handers. 100m+ rides. World-famous longboarding mecca.",
+          "hazards": [
+            "massive crowds",
+            "parking issues",
+            "March = Noosa Festival of Surfing"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "noosa"
+        },
+        {
+          "name": "Noosa Tea Tree Bay",
+          "surfline_name": "Tea Tree Bay",
+          "surfline_id": null,
+          "region": "Noosa",
+          "state": "QLD",
+          "latitude": -26.385,
+          "longitude": 153.085,
+          "drive_time_minutes": 110,
+          "drive_notes": null,
+          "wave_type": "reef right-hander",
+          "bottom": "reef",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 6,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Quality walls, longer rides than Granite Bay, needs a bit more swell",
+          "character": "Jewel in Noosa's crown. Outside reef section with moving takeoff. World-class right-hander with good barrels.",
+          "hazards": [
+            "reef",
+            "rocks",
+            "currents"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "noosa"
+        },
+        {
+          "name": "Noosa Granite Bay",
+          "surfline_name": "Granite Bay",
+          "surfline_id": null,
+          "region": "Noosa",
+          "state": "QLD",
+          "latitude": -26.386,
+          "longitude": 153.087,
+          "drive_time_minutes": 110,
+          "drive_notes": null,
+          "wave_type": "reef right-hander",
+          "bottom": "reef",
+          "best_swell_direction": [
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            70
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 6,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Mellow, well-suited for longboarders, marching rows of rights",
+          "character": "Easternmost of major Noosa points. Fairy Pools reef cluster. Marching rows of rights. Mellow and well-suited for longboarders.",
+          "hazards": [
+            "reef",
+            "wind sensitive"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "noosa"
+        },
+        {
+          "name": "Sunshine Beach",
+          "surfline_name": "Sunshine Beach",
+          "surfline_id": null,
+          "region": "Noosa",
+          "state": "QLD",
+          "latitude": -26.4,
+          "longitude": 153.1,
+          "drive_time_minutes": 105,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore, SW in winter",
+          "best_tide": "low-mid",
+          "tide_notes": "Low to mid tide",
+          "crowd_level": 6,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Peaky beach break, more size than points \u2014 good when chest high and clean",
+          "character": "Peaky open beach break with more size than the point breaks. Consistent winter option.",
+          "hazards": [
+            "exposed",
+            "can get very large"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "forecast_region": "sunshine_coast"
+        },
+        {
+          "name": "Double Island Point",
+          "surfline_name": "Double Island Point",
+          "surfline_id": null,
+          "region": "Rainbow Beach",
+          "state": "QLD",
+          "latitude": -25.9333,
+          "longitude": 153.2,
+          "drive_time_minutes": 110,
+          "drive_notes": "4WD required from Rainbow Beach via beach drive. Check tide times \u2014 high tide impassable.",
+          "wave_type": "long right-hand point break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "SE",
+          "wind_notes": "SE to E \u2014 unusual, onshores are actually offshore here",
+          "best_tide": "all",
+          "tide_notes": "All tides work, but low tide needed for beach access drive",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "300m+ rides, mellow even when small, uncrowded paradise \u2014 but requires 4WD commitment",
+          "character": "Australia's longest and safest beginner wave. 300m+ rides in ideal conditions. Remote in Great Sandy National Park. Perfect for longboarders.",
+          "hazards": [
+            "4WD required",
+            "remote",
+            "limited facilities",
+            "tide-dependent access"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "noosa"
+        },
+        {
+          "name": "Rainbow Beach",
+          "surfline_name": "Rainbow Beach",
+          "surfline_id": null,
+          "region": "Rainbow Beach",
+          "state": "QLD",
+          "latitude": -25.9,
+          "longitude": 153.0833,
+          "drive_time_minutes": 110,
+          "drive_notes": "4WD helpful for beach access",
+          "wave_type": "point break / beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.8,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "low",
+          "tide_notes": "Low tide for beach driving access",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Mellow, uncrowded, scenic \u2014 adventure day trip",
+          "character": "Gateway to Double Island Point. Sand point breaks. Mellow beginner-friendly. Scenic coloured sand cliffs.",
+          "hazards": [
+            "4WD access permit",
+            "tide-dependent beach driving",
+            "remote"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "noosa"
+        },
+        {
+          "name": "Duranbah (D-Bah)",
+          "surfline_name": "Duranbah",
+          "surfline_id": "5842041f4e65fad6a7708c11",
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.1714,
+          "longitude": 153.5536,
+          "drive_time_minutes": 33,
+          "drive_notes": null,
+          "wave_type": "beach break / river break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "S",
+            "SE",
+            "ESE"
+          ],
+          "swell_direction_range_degrees": [
+            100,
+            200
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            12
+          ],
+          "best_wind_direction": "WSW",
+          "wind_notes": "WSW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 7,
+          "skill_level": "beginner-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Punchy A-frame wedges with river currents \u2014 the combination of fast-breaking waves and strong currents makes the paddle-out stressful. Crowd level 7 adds pressure. Cato would not enjoy this spot even on small days.",
+          "character": "Punchy A-frame wedges. Barrel opportunities. Reliable swell magnet. HPC training spot.",
+          "hazards": [
+            "river break characteristics",
+            "strong currents"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "gold_coast"
+        },
+        {
+          "name": "Fingal Head",
+          "surfline_name": "Fingal Head",
+          "surfline_id": "584204204e65fad6a77092e0",
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.2,
+          "longitude": 153.5667,
+          "drive_time_minutes": 33,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            70
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "varies",
+          "tide_notes": "Sandbar dependent",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Uncrowded, calm, but fickle and inconsistent",
+          "character": "Exposed beach with headland. Fickle and inconsistent. Sandbar-dependent quality.",
+          "hazards": [
+            "rocks",
+            "sharks",
+            "currents",
+            "unreliable"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Cabarita Beach",
+          "surfline_name": "Cabarita",
+          "surfline_id": "5842041f4e65fad6a7708be3",
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.3333,
+          "longitude": 153.5667,
+          "drive_time_minutes": 40,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE",
+            "NE",
+            "S"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            200
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "WSW",
+          "wind_notes": "WSW offshore",
+          "best_tide": "mid",
+          "tide_notes": "Mid tide best",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Long sectioned right, manageable when clean, not too crowded",
+          "character": "Long sectioned right-hander. Highly sand-dependent. Can resemble Burleigh on good days. Fast and hollow sections.",
+          "hazards": [
+            "sandbars shift dramatically",
+            "locals"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Hastings Point",
+          "surfline_name": "Hastings Point",
+          "surfline_id": null,
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.3667,
+          "longitude": 153.5667,
+          "drive_time_minutes": 42,
+          "drive_notes": null,
+          "wave_type": "right-hand point break / beach break",
+          "bottom": "reef/sand",
+          "best_swell_direction": [
+            "SE",
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "WSW",
+          "wind_notes": "WSW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high for point",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Uncrowded, rivermouth break, good even on smaller days",
+          "character": "Rivermouth break. Good even on smaller days. Uncrowded alternative. Deep nearshore gutters create quality peaks.",
+          "hazards": [
+            "rivermouth dynamics",
+            "occasional strong currents"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Kingscliff",
+          "surfline_name": "Kingscliff",
+          "surfline_id": "584204204e65fad6a77092e4",
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.25,
+          "longitude": 153.5667,
+          "drive_time_minutes": 38,
+          "drive_notes": null,
+          "wave_type": "beach break + right-hand reef break",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "NE",
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to NW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high for reef section",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun beach break peaks, mellow, beginner-friendly, not crowded",
+          "character": "Fun beach break peaks. Mellow waves. Beginner-friendly. Year-round possibility.",
+          "hazards": [
+            "rips",
+            "reef awareness needed"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Casuarina Beach",
+          "surfline_name": "Casuarina",
+          "surfline_id": null,
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.2833,
+          "longitude": 153.5667,
+          "drive_time_minutes": 35,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            70,
+            110
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "WNW",
+          "wind_notes": "WNW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Very uncrowded, consistent, good for learning/cruising",
+          "character": "Exposed sandbar. Fairly consistent. Left and right waves. Great for avoiding crowds.",
+          "hazards": [
+            "standard beach break hazards"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            6,
+            7,
+            8
+          ],
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Salt Beach",
+          "surfline_name": "Salt Beach",
+          "surfline_id": null,
+          "region": "Tweed Coast",
+          "state": "NSW",
+          "latitude": -28.2667,
+          "longitude": 153.5667,
+          "drive_time_minutes": 38,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "NE",
+            "E"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to NW offshore",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Quiet alternative to Kingscliff, accessible",
+          "character": "Alternative to main Kingscliff. Quieter option. Accessible beach break.",
+          "hazards": [
+            "standard beach break risks"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "tweed_coast"
+        },
+        {
+          "name": "Brunswick Heads",
+          "surfline_name": "Brunswick Heads",
+          "surfline_id": null,
+          "region": "Byron Bay Area",
+          "state": "NSW",
+          "latitude": -28.5333,
+          "longitude": 153.55,
+          "drive_time_minutes": 60,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.6,
+            4.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "S",
+          "wind_notes": "S to SSW offshore",
+          "best_tide": "varies",
+          "tide_notes": "Variable by sandbar",
+          "crowd_level": 4,
+          "skill_level": "beginner-advanced",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun on smaller days, but needs decent swell to work well",
+          "character": "Long arc of golden sand. Refracted sets in SE channel. Sandbars. Winter-focused.",
+          "hazards": [
+            "rips in bigger swell"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            6,
+            7,
+            8
+          ],
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "The Pass (Byron Bay)",
+          "surfline_name": "The Pass (Byron Bay)",
+          "surfline_id": "5842041f4e65fad6a7708bef",
+          "region": "Byron Bay",
+          "state": "NSW",
+          "latitude": -28.6333,
+          "longitude": 153.6333,
+          "drive_time_minutes": 69,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/rock",
+          "best_swell_direction": [
+            "E",
+            "ENE"
+          ],
+          "swell_direction_range_degrees": [
+            50,
+            100
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            12
+          ],
+          "best_wind_direction": "SE",
+          "wind_notes": "SE offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 9,
+          "skill_level": "beginner-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Crowd level 9 \u2014 the most competitive lineup in the region. Extreme crowds, aggressive locals, constant drop-ins. Cato would barely catch a wave and the stress of the lineup would ruin the session. The wave itself is perfect for her level, but the crowd makes it a no-go.",
+          "character": "Iconic long right-hand point. Long peeling walls. Occasional hollow sections. Extended rides.",
+          "hazards": [
+            "extreme crowds",
+            "strong local presence",
+            "competitive lineup"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "Wategos Beach",
+          "surfline_name": "Wategos",
+          "surfline_id": null,
+          "region": "Byron Bay",
+          "state": "NSW",
+          "latitude": -28.6333,
+          "longitude": 153.64,
+          "drive_time_minutes": 69,
+          "drive_notes": null,
+          "wave_type": "right-hand point break / beach break",
+          "bottom": "sand/reef",
+          "best_swell_direction": [
+            "E",
+            "ENE"
+          ],
+          "swell_direction_range_degrees": [
+            50,
+            90
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "SE",
+          "wind_notes": "SE offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 5,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Long slow fat waves, perfect for longboards, gentle rolling breaks",
+          "character": "Long, slow, fat waves. Perfect for longboards. Gentle rolling breaks. Sheltered by Cape Byron.",
+          "hazards": [
+            "can get full at high tide"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "Tallows Beach",
+          "surfline_name": "Tallows",
+          "surfline_id": "5842041f4e65fad6a7708c09",
+          "region": "Byron Bay",
+          "state": "NSW",
+          "latitude": -28.65,
+          "longitude": 153.6167,
+          "drive_time_minutes": 70,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "S",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            135,
+            200
+          ],
+          "ideal_swell_size_m": [
+            1.5,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "NW",
+          "wind_notes": "NW offshore",
+          "best_tide": "low-mid",
+          "tide_notes": "Mid to low",
+          "crowd_level": 4,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Powerful beach break, strong rips, not beginner-friendly",
+          "character": "Long clean sand beach. Consistent winter breaks. Powerful beach break. Exposed to everything S-NE. 'Cosy Corner' for best wedges.",
+          "hazards": [
+            "strong rips",
+            "powerful waves",
+            "not recommended for beginners"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "The Wreck (Belongil)",
+          "surfline_name": "The Wreck",
+          "surfline_id": null,
+          "region": "Byron Bay",
+          "state": "NSW",
+          "latitude": -28.6333,
+          "longitude": 153.6,
+          "drive_time_minutes": 69,
+          "drive_notes": null,
+          "wave_type": "reef break / beach break",
+          "bottom": "sand/wreck remnants",
+          "best_swell_direction": [
+            "SE",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SE range",
+          "best_tide": "mid-high",
+          "tide_notes": "Mid to high tide",
+          "crowd_level": 6,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Fast, hollow, powerful \u2014 technical takeoff",
+          "character": "Fast, hollow, powerful right-hander on sand in front of shipwreck. Sheltered. Technical take-off.",
+          "hazards": [
+            "wreck",
+            "rips",
+            "rocks",
+            "shark-protected zone"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            6
+          ],
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "Broken Head",
+          "surfline_name": "Broken Head",
+          "surfline_id": "5842041f4e65fad6a7708bf3",
+          "region": "Byron Bay",
+          "state": "NSW",
+          "latitude": -28.6833,
+          "longitude": 153.6167,
+          "drive_time_minutes": 70,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "sand/rock",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore, variable",
+          "best_tide": "varies",
+          "tide_notes": "Variable",
+          "crowd_level": 6,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Sand-dependent quality, occasionally hollow \u2014 inconsistent for mellow sessions",
+          "character": "Real gem of Byron Bay. Occasionally hollow. Sand-dependent. Room to wander beach if point isn't on.",
+          "hazards": [
+            "sand dependency",
+            "crowds on good days"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            4
+          ],
+          "forecast_region": "byron_bay"
+        },
+        {
+          "name": "Lennox Head Point",
+          "surfline_name": "Lennox Head",
+          "surfline_id": "5842041f4e65fad6a7708bf2",
+          "region": "Lennox Head",
+          "state": "NSW",
+          "latitude": -28.7833,
+          "longitude": 153.5833,
+          "drive_time_minutes": 90,
+          "drive_notes": null,
+          "wave_type": "right-hand point break",
+          "bottom": "rock",
+          "best_swell_direction": [
+            "SE",
+            "SSE"
+          ],
+          "swell_direction_range_degrees": [
+            140,
+            200
+          ],
+          "ideal_swell_size_m": [
+            2.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            10,
+            14
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "mid",
+          "tide_notes": "Mid tide, rising best",
+          "crowd_level": 8,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "World-class point but heavy, rocky, crowded, needs bigger swell",
+          "character": "World-class right point. Quality long green walls. Hollow sections. Rocky reef base. 0.8 mile long.",
+          "hazards": [
+            "crowded",
+            "heavy local presence",
+            "rocky entry"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Lennox Head Beach (Seven Mile)",
+          "surfline_name": "Lennox Head Beach",
+          "surfline_id": null,
+          "region": "Lennox Head",
+          "state": "NSW",
+          "latitude": -28.79,
+          "longitude": 153.58,
+          "drive_time_minutes": 90,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Gentle beach breaks, less crowded alternative to the point",
+          "character": "Wide unprotected sandy beach. Gentle beach breaks. Surf school frequent. Alternative to crowded point.",
+          "hazards": [
+            "rip currents in bigger swell"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Skennars Head",
+          "surfline_name": "Skennars Head",
+          "surfline_id": null,
+          "region": "Lennox Head",
+          "state": "NSW",
+          "latitude": -28.8,
+          "longitude": 153.5833,
+          "drive_time_minutes": 90,
+          "drive_notes": null,
+          "wave_type": "reef break / beach break",
+          "bottom": "rock/sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.5,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "NW",
+          "wind_notes": "NW offshore",
+          "best_tide": "varies",
+          "tide_notes": "Variable",
+          "crowd_level": 3,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Reef break, needs decent size, not mellow",
+          "character": "Reef break in small bay. Exposed to SE swells. A-frame beach breaks nearby. Less crowded than Lennox.",
+          "hazards": [
+            "reef",
+            "rocks"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Shelly Beach (Ballina)",
+          "surfline_name": "Shelly Beach",
+          "surfline_id": "584204204e65fad6a77092fd",
+          "region": "Ballina",
+          "state": "NSW",
+          "latitude": -28.85,
+          "longitude": 153.5833,
+          "drive_time_minutes": 77,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "varies",
+          "tide_notes": "Left off north rocks, right off south rocks",
+          "crowd_level": 4,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Gentle waves, soft sand, family-friendly",
+          "character": "Gentle waves ideal for beginners/kids. Soft white sand. Gentle slope. Family-friendly.",
+          "hazards": [
+            "rocks at low tide"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Lighthouse Beach (Ballina)",
+          "surfline_name": "Ballina Lighthouse Beach",
+          "surfline_id": null,
+          "region": "Ballina",
+          "state": "NSW",
+          "latitude": -28.8667,
+          "longitude": 153.5833,
+          "drive_time_minutes": 77,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "WSW",
+          "wind_notes": "WSW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 5,
+          "skill_level": "intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Northern end gentle, good intermediate playground",
+          "character": "Reliable surf breaks. Northern end gentle, southern end challenging near North Wall.",
+          "hazards": [
+            "current near break walls"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Sharpes Beach (Ballina)",
+          "surfline_name": "Sharpes Beach",
+          "surfline_id": null,
+          "region": "Ballina",
+          "state": "NSW",
+          "latitude": -28.81,
+          "longitude": 153.5833,
+          "drive_time_minutes": 77,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to NW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Family-friendly, uncrowded, good beginner option",
+          "character": "Well-loved by locals. Patrolled in school holidays. Family-friendly. Good beginner option.",
+          "hazards": [
+            "standard beach break"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Flat Rock (Ballina)",
+          "surfline_name": "Flat Rock Beach",
+          "surfline_id": "584204204e65fad6a77092fc",
+          "region": "Ballina",
+          "state": "NSW",
+          "latitude": -28.83,
+          "longitude": 153.5833,
+          "drive_time_minutes": 77,
+          "drive_notes": null,
+          "wave_type": "reef/point break (left-hander)",
+          "bottom": "rock/sand",
+          "best_swell_direction": [
+            "E",
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            160
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W offshore",
+          "best_tide": "varies",
+          "tide_notes": "Variable",
+          "crowd_level": 5,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Fun left and right waves, low crowds \u2014 but well-known shark zone (Ballina area). Wave itself is fine for Cato. Shark risk is the main concern; judge based on recent sightings.",
+          "character": "Rocky outcrop creates break. Left and right waves. Mix of rock ledge and sand bottom. Consistent.",
+          "hazards": [
+            "sharks (well-known)",
+            "rocks"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            6
+          ],
+          "forecast_region": "ballina_lennox"
+        },
+        {
+          "name": "Evans Head Main Beach",
+          "surfline_name": "Evans Head",
+          "surfline_id": "584204204e65fad6a77092ff",
+          "region": "Evans Head",
+          "state": "NSW",
+          "latitude": -29.1167,
+          "longitude": 153.4333,
+          "drive_time_minutes": 100,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "W",
+          "wind_notes": "W to SW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Protected, beginner-friendly, uncrowded quiet town",
+          "character": "Protected from big SE swells. Right and left fun beach breaks. Beginner-friendly. Only patrolled beach in Evans Head.",
+          "hazards": [
+            "standard beach break"
+          ],
+          "best_season": "year-round",
+          "best_months": null,
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Chinamans Beach (Evans Head)",
+          "surfline_name": "Chinamans",
+          "surfline_id": null,
+          "region": "Evans Head",
+          "state": "NSW",
+          "latitude": -29.12,
+          "longitude": 153.44,
+          "drive_time_minutes": 100,
+          "drive_notes": null,
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "ENE"
+          ],
+          "swell_direction_range_degrees": [
+            50,
+            100
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "varies",
+          "tide_notes": "Variable",
+          "crowd_level": 2,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Exposed, dangerous in easterly swell, for more experienced surfers",
+          "character": "Serene escape. Bigger than Main Beach on small days. Particularly dangerous in easterly swell (exposed).",
+          "hazards": [
+            "dangerous in easterly swell",
+            "rips"
+          ],
+          "best_season": "autumn",
+          "best_months": [
+            4
+          ],
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Turners Beach (Yamba)",
+          "surfline_name": "Turners Beach",
+          "surfline_id": "584204204e65fad6a7709304",
+          "region": "Yamba/Angourie",
+          "state": "NSW",
+          "latitude": -29.4333,
+          "longitude": 153.35,
+          "drive_time_minutes": 142,
+          "drive_notes": "At the edge of 2hr radius",
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "SE"
+          ],
+          "swell_direction_range_degrees": [
+            120,
+            170
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.8
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "WSW",
+          "wind_notes": "WSW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 3,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Soft manageable beach break, slow-peeling, great for longboarders, uncrowded",
+          "character": "Soft, manageable beach break. Slow-peeling waves. Great intermediate playground. Perfect for longboarders/beginners.",
+          "hazards": [
+            "river mouth dynamics"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            7
+          ],
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Pippi Beach (Yamba)",
+          "surfline_name": "Pippies Yamba",
+          "surfline_id": "5842041f4e65fad6a7708bf4",
+          "region": "Yamba/Angourie",
+          "state": "NSW",
+          "latitude": -29.44,
+          "longitude": 153.36,
+          "drive_time_minutes": 142,
+          "drive_notes": "At the edge of 2hr radius",
+          "wave_type": "beach break (bowly shorebreak)",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "ESE"
+          ],
+          "swell_direction_range_degrees": [
+            90,
+            130
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            2.5
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "WNW",
+          "wind_notes": "WNW offshore",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 4,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "Bowly shorebreak, can be heavy",
+          "character": "Throws bowly shorebreaks. Works best with N winds. Exposed to SE/NE swell channels.",
+          "hazards": [
+            "heavy shorebreak",
+            "strong winds can ruin conditions"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            7
+          ],
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Angourie Point",
+          "surfline_name": "Angourie",
+          "surfline_id": "5842041f4e65fad6a7708bf9",
+          "region": "Yamba/Angourie",
+          "state": "NSW",
+          "latitude": -29.4667,
+          "longitude": 153.35,
+          "drive_time_minutes": 142,
+          "drive_notes": "At the edge of 2hr radius \u2014 only go if conditions are firing",
+          "wave_type": "right-hand point break",
+          "bottom": "reef/rock",
+          "best_swell_direction": [
+            "SE",
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            170
+          ],
+          "ideal_swell_size_m": [
+            2.0,
+            4.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            14
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "varies",
+          "tide_notes": "Variable by section",
+          "crowd_level": 8,
+          "skill_level": "intermediate-advanced",
+          "girlfriend_friendly": false,
+          "girlfriend_notes": "World-class but heavy, crowded, rocky, needs decent size",
+          "character": "One of world's best point breaks. SE produces fatter sets, E-NE more hollow/barreling. Incredibly versatile.",
+          "hazards": [
+            "crowds",
+            "rocks",
+            "sharks",
+            "strong locals"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Angourie Back Beach",
+          "surfline_name": "Angourie Back Beach",
+          "surfline_id": null,
+          "region": "Yamba/Angourie",
+          "state": "NSW",
+          "latitude": -29.47,
+          "longitude": 153.348,
+          "drive_time_minutes": 142,
+          "drive_notes": "At the edge of 2hr radius",
+          "wave_type": "beach break",
+          "bottom": "sand",
+          "best_swell_direction": [
+            "E",
+            "NE"
+          ],
+          "swell_direction_range_degrees": [
+            30,
+            110
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_swell_period_s": [
+            8,
+            10
+          ],
+          "best_wind_direction": "NE",
+          "wind_notes": "Sheltered from northerly winds",
+          "best_tide": "all",
+          "tide_notes": "All tides",
+          "crowd_level": 2,
+          "skill_level": "beginner-intermediate",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Sheltered, uncrowded, great for beginners/longboarders",
+          "character": "Sheltered from northerly winds. Local favourite. Great for swimming and beginner surfers/longboarders. Uncrowded.",
+          "hazards": [
+            "rip currents"
+          ],
+          "best_season": "spring",
+          "best_months": [
+            9,
+            10,
+            11
+          ],
+          "forecast_region": "far_south"
+        },
+        {
+          "name": "Spookys (Angourie)",
+          "surfline_name": "Spookys",
+          "surfline_id": null,
+          "region": "Yamba/Angourie",
+          "state": "NSW",
+          "latitude": -29.468,
+          "longitude": 153.352,
+          "drive_time_minutes": 142,
+          "drive_notes": "At the edge of 2hr radius",
+          "wave_type": "reef break / beach break",
+          "bottom": "cobblestone reef/sand",
+          "best_swell_direction": [
+            "E",
+            "ENE"
+          ],
+          "swell_direction_range_degrees": [
+            50,
+            100
+          ],
+          "ideal_swell_size_m": [
+            0.3,
+            3.0
+          ],
+          "ideal_swell_period_s": [
+            9,
+            10
+          ],
+          "best_wind_direction": "SW",
+          "wind_notes": "SW offshore",
+          "best_tide": "high",
+          "tide_notes": "High tide best",
+          "crowd_level": 5,
+          "skill_level": "beginner-expert",
+          "girlfriend_friendly": true,
+          "girlfriend_notes": "Only Cato-friendly on small swell days (knee-high learner waves on inside). On bigger swells this becomes an expert-only heavy reef break \u2014 do NOT send Cato here on anything above waist-high. Rocks and sharks are additional concerns.",
+          "character": "Two faces \u2014 small swell: knee-high learner waves. Big swell: cobblestone reef ferocious A-frames 50m off rocks.",
+          "hazards": [
+            "heavy surf in big swells",
+            "rocks",
+            "sharks"
+          ],
+          "best_season": "winter",
+          "best_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "forecast_region": "far_south"
+        }
+      ]
+    },
+    "lisbon-coast": {
+      "metadata": {
+        "region": "Lisbon Coast + Peniche \u2014 Fonte da Telha to Peniche",
+        "base_location": "Linda a Velha, Lisbon, Portugal",
+        "created_at": "2026-04-04T06:00:00+01:00",
+        "last_updated": "2026-04-04",
+        "total_spots": 18,
+        "notes": "Drive times from Linda a Velha. Daily range: Fonte da Telha to Ericeira (~45min). Weekend range: extends to Peniche (~1.5hr). All spots accessible year-round.",
+        "forecast_regions": {
+          "lisbon_south": {
+            "name": "Lisbon South (Costa da Caparica)",
+            "description": "Fonte da Telha to S\u00e3o Jo\u00e3o da Caparica. SW-facing beach breaks. Consistent, beginner-friendly, wide sandy coast.",
+            "reference_surfline_spot": "Costa da Caparica",
+            "reference_surfline_id": "5842041f4e65fad6a7708e65",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/costa-da-caparica/5842041f4e65fad6a7708e65",
+            "why_this_reference": "Central to the Caparica strip, good data coverage, represents the W-SW swell window for the entire south bank. Wind and tide data applies from Fonte da Telha to S\u00e3o Jo\u00e3o.",
+            "covers_spots": [
+              "Fonte da Telha",
+              "Costa da Caparica",
+              "S\u00e3o Jo\u00e3o da Caparica"
+            ],
+            "strategy": "always"
+          },
+          "lisbon_central": {
+            "name": "Lisbon Central (Carcavelos-Estoril)",
+            "description": "Carcavelos to S\u00e3o Pedro do Estoril. Mix of beach breaks and reef/point breaks. Best barrel potential at Carcavelos.",
+            "reference_surfline_spot": "Carcavelos",
+            "reference_surfline_id": "5842041f4e65fad6a7708bc0",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/carcavelos/5842041f4e65fad6a7708bc0",
+            "why_this_reference": "Highest data density in Portugal, most visited spot near Lisbon. Represents the W-SW swell window for the Cascais coast. Wind data covers Carcavelos to S\u00e3o Pedro.",
+            "covers_spots": [
+              "Carcavelos",
+              "Estoril",
+              "S\u00e3o Pedro do Estoril"
+            ],
+            "strategy": "always"
+          },
+          "ericeira": {
+            "name": "Ericeira (World Surfing Reserve)",
+            "description": "Full Ericeira stretch from São Julião to Coxos. NW-facing reefs, points and beach breaks. Premier wave quality, World Surfing Reserve. Multiple spots for all conditions and crowd preferences.",
+            "reference_surfline_spot": "Ribeira d'Ilhas",
+            "reference_surfline_id": "5842041f4e65fad6a7708bc2",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2",
+            "why_this_reference": "Most iconic Ericeira spot, consistent data, World Surfing Reserve. Represents the NW swell window. Wind data applies to the Ericeira stretch. NOTE: Ribeira is the data reference only — Roman prefers less crowded spots for actual sessions. Cross-reference conditions against all Ericeira spots before recommending.",
+            "covers_spots": [
+              "São Julião",
+              "Foz do Lizandro",
+              "São Sebastião",
+              "Matadouro",
+              "Pedra Branca",
+              "Ribeira d'Ilhas",
+              "Coxos"
+            ],
+            "strategy": "always"
+          },
+          "peniche": {
+            "name": "Peniche (Supertubos, Baleal, Lagide)",
+            "description": "Peninsula with 270\u00b0 swell exposure. WSL competition venue. Advanced beach breaks and reef breaks. Weekend range only.",
+            "reference_surfline_spot": "Supertubos",
+            "reference_surfline_id": "5842041f4e65fad6a7708bc3",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/supertubos/5842041f4e65fad6a7708bc3",
+            "why_this_reference": "WSL competition venue, maximum data density. Represents the W-SW swell window for Peniche south. Baleal/Lagide on the north side catch different angles.",
+            "covers_spots": [
+              "Supertubos",
+              "Lagide",
+              "Baleal",
+              "Consola\u00e7\u00e3o",
+              "Meio da Ba\u00eda"
+            ],
+            "strategy": "conditional_weekend"
+          }
+        }
+      },
+      "spots": [
+        {
+          "name": "Fonte da Telha",
+          "surfline_id": "584204204e65fad6a77099d5",
+          "surfline_url": "https://www.surfline.com/surf-report/fonte-da-telha/584204204e65fad6a77099d5",
+          "ideal_swell_direction": [
+            "W",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "NE"
+          ],
+          "ideal_tide": "all_tides_low_to_mid_preferred",
+          "wave_type": "beach_break",
+          "crowd_level": "high",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 30,
+          "character": "Wide sandy beach with groynes creating consistent sandbars. Mellower alternative to main Caparica. Multiple peaks spread crowds. Good for progression.",
+          "forecast_region": "lisbon_south"
+        },
+        {
+          "name": "Costa da Caparica",
+          "surfline_id": "5842041f4e65fad6a7708e65",
+          "surfline_url": "https://www.surfline.com/surf-report/costa-da-caparica/5842041f4e65fad6a7708e65",
+          "ideal_swell_direction": [
+            "W",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "NE"
+          ],
+          "ideal_tide": "all_tides_low_to_mid_for_barrels",
+          "wave_type": "beach_break",
+          "crowd_level": "medium_to_high",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 25,
+          "character": "Huge sandy expanse with shifting banks. 20 min from Lisbon. Handles wide swell/tide range. Excellent for developing surfers. Fewer crowds than Carcavelos on weekdays.",
+          "forecast_region": "lisbon_south"
+        },
+        {
+          "name": "S\u00e3o Jo\u00e3o da Caparica",
+          "surfline_id": "5dbb587ff387900001fee288",
+          "surfline_url": "https://www.surfline.com/surf-report/s-o-jo-o-da-caparica/5dbb587ff387900001fee288",
+          "ideal_swell_direction": [
+            "W",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            1.5
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "NE"
+          ],
+          "ideal_tide": "mid",
+          "wave_type": "beach_break",
+          "crowd_level": "low_to_medium",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 30,
+          "character": "Northern Caparica stretch. Fewer groynes, unpredictable sandbars. Lower crowds than main Caparica. Good for exploring variety.",
+          "forecast_region": "lisbon_south"
+        },
+        {
+          "name": "Carcavelos",
+          "surfline_id": "5842041f4e65fad6a7708bc0",
+          "surfline_url": "https://www.surfline.com/surf-report/carcavelos/5842041f4e65fad6a7708bc0",
+          "ideal_swell_direction": [
+            "W",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            3.5
+          ],
+          "ideal_wind_direction": [
+            "NE"
+          ],
+          "ideal_tide": "low_to_mid",
+          "wave_type": "beach_break",
+          "crowd_level": "high",
+          "skill_level": "beginner_to_advanced",
+          "drive_time_min": 15,
+          "character": "Best beach break in Portugal for barrels. 15 min from Lisbon. Sand-bottom tubes on low tide. Heavy winter barrels. Popular with schools. Best Sep-May for consistency.",
+          "forecast_region": "lisbon_central"
+        },
+        {
+          "name": "Estoril",
+          "surfline_id": "5842041f4e65fad6a7708e66",
+          "surfline_url": "https://www.surfline.com/surf-report/estoril/5842041f4e65fad6a7708e66",
+          "ideal_swell_direction": [
+            "NW",
+            "W"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "N",
+            "NE"
+          ],
+          "ideal_tide": "mid_to_high",
+          "wave_type": "reef_break",
+          "crowd_level": "medium",
+          "skill_level": "intermediate_to_advanced",
+          "drive_time_min": 22,
+          "character": "Sheltered right-hand reef break. Mellow peeling walls up to 100m rides. Rock and sand bottom. Fewer waves than exposed breaks. Good when main breaks are too big.",
+          "forecast_region": "lisbon_central"
+        },
+        {
+          "name": "S\u00e3o Pedro do Estoril",
+          "surfline_id": "640b9d679b6fab7dac307b39",
+          "surfline_url": "https://www.surfline.com/surf-report/s-o-pedro-do-estoril/640b9d679b6fab7dac307b39",
+          "ideal_swell_direction": [
+            "W",
+            "NW",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "N",
+            "NE"
+          ],
+          "ideal_tide": "mid_to_high",
+          "wave_type": "point_break",
+          "crowd_level": "medium",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 25,
+          "character": "Sheltered point break. Mellow peeling right-handers. Longboarder favourite. Good when other spots are too crowded or too big. Oct-Mar best.",
+          "forecast_region": "lisbon_central"
+        },
+        {
+          "name": "Ribeira d'Ilhas",
+          "surfline_id": "5842041f4e65fad6a7708bc2",
+          "surfline_url": "https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2",
+          "ideal_swell_direction": [
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            3.5
+          ],
+          "ideal_wind_direction": [
+            "SE",
+            "E",
+            "NE"
+          ],
+          "ideal_tide": "all_tides",
+          "wave_type": "point_break",
+          "crowd_level": "high",
+          "skill_level": "beginner_to_advanced",
+          "drive_time_min": 50,
+          "character": "Ultimate European point break. Long winding right-handers 200+ yards. World Surfing Reserve. Works all tides. Reform break for beginners on north side. Sep-May best. Crowded — Roman has coaching here ~once/week. For free surfs, prefer less crowded alternatives when conditions are comparable, but Ribeira is still the go-to when it's clearly the best wave on offer.",
+          "roman_notes": "Coaching spot (weekly). Crowded, so prefer other Ericeira spots when conditions are comparable — but absolutely recommend Ribeira if it's clearly the best option (e.g. cleanest, best size, or other spots are flat/blown).",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "Coxos",
+          "surfline_id": "5842041f4e65fad6a7708bc4",
+          "surfline_url": "https://www.surfline.com/surf-report/coxos/5842041f4e65fad6a7708bc4",
+          "ideal_swell_direction": [
+            "NW",
+            "N"
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            6.0
+          ],
+          "ideal_wind_direction": [
+            "SE"
+          ],
+          "ideal_tide": "mid_to_low",
+          "wave_type": "reef_break",
+          "crowd_level": "high",
+          "skill_level": "advanced_to_professional",
+          "drive_time_min": 55,
+          "character": "Powerful exposed reef break. 150m+ rides. Amazing barrels. Expert only. Sea urchins and tricky entry/exit. Crowded with experienced locals.",
+          "roman_notes": "Roman acknowledges great waves and amazing barrels but has NEVER surfed it — too intimidating. Do NOT recommend unless Roman explicitly asks. Aspiration spot, not a current option.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "São Julião",
+          "surfline_id": "640b9cda4878ebfad81e2b72",
+          "surfline_url": "https://www.surfline.com/surf-report/s-o-juli-o/640b9cda4878ebfad81e2b72",
+          "ideal_swell_direction": [
+            "NW",
+            "W"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "SE"
+          ],
+          "ideal_tide": "low_to_mid",
+          "wave_type": "beach_break",
+          "crowd_level": "low_to_medium",
+          "skill_level": "beginner_to_advanced",
+          "drive_time_min": 45,
+          "character": "Ericeira's swell magnet — catches more swell than almost anywhere in the region. Big open beach, multiple shifting peaks, lefts and rights. Sandy bottom. Can barrel on bigger days at low tide. Powerful and rippy when big. Wind sensitive. Easily maxed out over 2.5m. Good when other spots are too small.",
+          "roman_notes": "Roman has surfed here and liked it. Beach break — good option when points are too crowded or too small. Less intimidating than reef breaks.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "São Sebastião",
+          "surfline_id": null,
+          "surfline_url": null,
+          "ideal_swell_direction": [
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "SE"
+          ],
+          "ideal_tide": "mid_to_high",
+          "wave_type": "reef_break",
+          "crowd_level": "low",
+          "skill_level": "intermediate",
+          "drive_time_min": 50,
+          "character": "Mellow reef break north of the iconic chapel. Right-hander near exposed rock formation, plus a powerful left (Esquerda dos Surfistas) at the south end. Rock bottom — watch rocks on paddle out. Works mid to high tide. Strong currents. Super chill vibe, almost never crowded. The right near the rock is accessible and mellow.",
+          "roman_notes": "ROMAN'S FAVOURITE for chill sessions. Super chill, not scary, almost never any crowds. Prioritise this spot when conditions suit it — Roman explicitly prefers it.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "Matadouro",
+          "surfline_id": "64bbfc3868c6112c8d112deb",
+          "surfline_url": "https://www.surfline.com/surf-report/matadouro/64bbfc3868c6112c8d112deb",
+          "ideal_swell_direction": [
+            "NW",
+            "W"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "SE"
+          ],
+          "ideal_tide": "mid",
+          "wave_type": "reef_break",
+          "crowd_level": "medium",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 50,
+          "character": "Reef-meets-point setup just north of Ericeira centre (by the skatepark/Quiksilver). Right-hand reef breaks primarily, with one left. Mellow sections mixed with faster walls. Cleaner waves than nearby spots. Watch rocks at low tide — reef too exposed. High tide too deep, waves don't break. Best around mid tide. Can hold up to 2.5m.",
+          "roman_notes": "Roman has surfed here and liked it. Really great waves, cleaner than Ribeira. A bit more crowd than São Sebastião but still manageable. Good option when you want quality reef waves without Ribeira's crowd.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "Pedra Branca",
+          "surfline_id": null,
+          "surfline_url": null,
+          "ideal_swell_direction": [
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "SE"
+          ],
+          "ideal_tide": "mid",
+          "wave_type": "reef_break",
+          "crowd_level": "low_to_medium",
+          "skill_level": "intermediate",
+          "drive_time_min": 50,
+          "character": "Small reef break between Matadouro and Ribeira d'Ilhas. Less known, less crowded. Rocky reef bottom. Works in similar conditions to Matadouro. Worth checking when neighbouring spots are too busy.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "Foz do Lizandro",
+          "surfline_id": "5842041f4e65fad6a7708bbd",
+          "surfline_url": "https://www.surfline.com/surf-report/foz-de-lizandro/5842041f4e65fad6a7708bbd",
+          "ideal_swell_direction": [
+            "SW",
+            "W"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "E"
+          ],
+          "ideal_tide": "all_tides",
+          "wave_type": "beach_break",
+          "crowd_level": "low_to_medium",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 50,
+          "character": "River mouth beach break. Very consistent. Multiple peaks. Left on south side, a-frame centre. Sandy bottom, beginner-friendly. Popular with surf schools. Good facilities.",
+          "forecast_region": "ericeira"
+        },
+        {
+          "name": "Supertubos",
+          "surfline_id": "5842041f4e65fad6a7708bc3",
+          "surfline_url": "https://www.surfline.com/surf-report/supertubos/5842041f4e65fad6a7708bc3",
+          "ideal_swell_direction": [
+            "SW",
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            4.0
+          ],
+          "ideal_wind_direction": [
+            "NE",
+            "E"
+          ],
+          "ideal_tide": "mid_to_high",
+          "wave_type": "beach_break",
+          "crowd_level": "high",
+          "skill_level": "advanced_to_professional",
+          "drive_time_min": 90,
+          "character": "Europe's answer to Pipeline. Fast hollow tubes. WSL competition venue. Not true Supertubos unless head-high+. Shallow, powerful. Above Roman's level when firing.",
+          "forecast_region": "peniche"
+        },
+        {
+          "name": "Lagide",
+          "surfline_id": "58bdf3a70cec4200133464f2",
+          "surfline_url": "https://www.surfline.com/surf-report/lagide/58bdf3a70cec4200133464f2",
+          "ideal_swell_direction": [
+            "SW",
+            "W",
+            "N"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            3.0
+          ],
+          "ideal_wind_direction": [
+            "S"
+          ],
+          "ideal_tide": "mid",
+          "wave_type": "reef_break",
+          "crowd_level": "high",
+          "skill_level": "intermediate_to_advanced",
+          "drive_time_min": 90,
+          "character": "Mellow left reef break. Long peeling top-to-bottom lefts. Flat reef with mellow takeoff. Crowded. Fat on high tide, better mid. Oct-May best.",
+          "forecast_region": "peniche"
+        },
+        {
+          "name": "Baleal",
+          "surfline_id": "5842041f4e65fad6a7708bc6",
+          "surfline_url": "https://www.surfline.com/surf-report/baleal/5842041f4e65fad6a7708bc6",
+          "ideal_swell_direction": [
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "S",
+            "SE"
+          ],
+          "ideal_tide": "low_to_mid",
+          "wave_type": "beach_break",
+          "crowd_level": "high",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 90,
+          "character": "Miles of open beachbreak. Beginner hub. Multiple camps. Good variety of breaks in area. Winter best. Nearby Lagide reef for intermediate progression.",
+          "forecast_region": "peniche"
+        },
+        {
+          "name": "Consola\u00e7\u00e3o",
+          "surfline_id": "5a53f6e5a8b6a9001b017369",
+          "surfline_url": "https://www.surfline.com/surf-report/consolacao/5a53f6e5a8b6a9001b017369",
+          "ideal_swell_direction": [
+            "W",
+            "NW"
+          ],
+          "ideal_swell_size_m": [
+            1.0,
+            4.0
+          ],
+          "ideal_wind_direction": [
+            "E",
+            "NE"
+          ],
+          "ideal_tide": "mid",
+          "wave_type": "reef_break",
+          "crowd_level": "medium",
+          "skill_level": "intermediate_to_advanced",
+          "drive_time_min": 95,
+          "character": "Fortress headland reef. Dual-personality break: right-hand reef pointbreak (holds triple overhead), left-hand sandbottom (needs huge swells). Unique geography.",
+          "forecast_region": "peniche"
+        },
+        {
+          "name": "Meio da Ba\u00eda",
+          "surfline_id": "63a4374bb5c53b335b3eada7",
+          "surfline_url": "https://www.surfline.com/surf-report/meio-da-baia/63a4374bb5c53b335b3eada7",
+          "ideal_swell_direction": [
+            "W",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.5
+          ],
+          "ideal_wind_direction": [
+            "N"
+          ],
+          "ideal_tide": "all_tides",
+          "wave_type": "beach_break",
+          "crowd_level": "low_to_medium",
+          "skill_level": "beginner_to_intermediate",
+          "drive_time_min": 90,
+          "character": "Central Peniche North Bay. Sandy bottom, multiple peaks. Beginner-to-intermediate friendly. Good south wind alternative. Year-round, Oct-May best.",
+          "forecast_region": "peniche"
+        }
+      ]
+    }
+  }
+}
