@@ -41,8 +41,13 @@
     .overview { background: var(--card); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
     .overview h2 { font-size: 1rem; color: var(--text-bright); margin-bottom: 8px; }
     .overview p { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
-    .day-strip { display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 2px; }
+    .day-strip-wrapper { position: relative; margin-bottom: 16px; }
+    .day-strip { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 2px; scroll-behavior: smooth; }
     .day-strip::-webkit-scrollbar { display: none; }
+    .day-arrow { display: none; position: absolute; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: var(--card); border: 1px solid var(--border); color: var(--text-dim); font-size: 0.85rem; cursor: pointer; z-index: 2; align-items: center; justify-content: center; transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
+    .day-arrow:hover { background: var(--card-hover); color: var(--text-bright); border-color: var(--accent); }
+    .day-arrow.left { left: -6px; }
+    .day-arrow.right { right: -6px; }
     .day-chip { flex: 0 0 auto; min-width: 72px; padding: 8px 6px; background: var(--card); border: 2px solid transparent; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
     .day-chip:hover { background: var(--card-hover); }
     .day-chip.active { border-color: var(--accent); background: var(--accent-dim); }
@@ -129,7 +134,8 @@
       .day-chip .chip-date { font-size: 0.75rem; }
     }
     @media (min-width: 500px) {
-      .day-strip { justify-content: center; overflow-x: visible; }
+      .day-arrow { display: flex; }
+      .day-strip-wrapper { padding: 0 20px; }
       .day-chip { min-width: 78px; }
     }
   </style>
@@ -158,6 +164,9 @@
     </div>
 
     <!-- Day Strip -->
+    <div class="day-strip-wrapper">
+    <button class="day-arrow left" onclick="scrollStrip(-1)" aria-label="Previous days">&#8249;</button>
+    <button class="day-arrow right" onclick="scrollStrip(1)" aria-label="Next days">&#8250;</button>
     <div class="day-strip">
       <div class="day-chip active" onclick="showDay(0)">
         <div class="chip-day">WED</div>
@@ -231,6 +240,7 @@
         <div class="chip-day">Tue</div><div class="chip-date">21</div>
         <div class="chip-rating rate-5">5/10</div><div class="chip-size">1.2-2m</div>
       </div>
+    </div>
     </div>
 
     <!-- DAY 0: WED 8 APR -->
@@ -982,7 +992,33 @@
     function showDay(idx) {
       document.querySelectorAll('.day-chip').forEach((c,i) => c.classList.toggle('active', i===idx));
       document.querySelectorAll('.day-content').forEach((c,i) => c.classList.toggle('active', i===idx));
+      // Scroll active chip into view
+      const chip = document.querySelectorAll('.day-chip')[idx];
+      if (chip) chip.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      updateArrows();
     }
+
+    function scrollStrip(dir) {
+      const strip = document.querySelector('.day-strip');
+      strip.scrollBy({ left: dir * 260, behavior: 'smooth' });
+      setTimeout(updateArrows, 350);
+    }
+
+    function updateArrows() {
+      const strip = document.querySelector('.day-strip');
+      const leftBtn = document.querySelector('.day-arrow.left');
+      const rightBtn = document.querySelector('.day-arrow.right');
+      if (!strip || !leftBtn || !rightBtn) return;
+      leftBtn.style.opacity = strip.scrollLeft <= 4 ? '0.3' : '1';
+      leftBtn.style.pointerEvents = strip.scrollLeft <= 4 ? 'none' : 'auto';
+      const atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4;
+      rightBtn.style.opacity = atEnd ? '0.3' : '1';
+      rightBtn.style.pointerEvents = atEnd ? 'none' : 'auto';
+    }
+
+    // Init arrow visibility on load
+    document.addEventListener('DOMContentLoaded', updateArrows);
+    document.querySelector('.day-strip')?.addEventListener('scroll', updateArrows);
   </script>
 </body>
 </html>
