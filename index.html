@@ -103,6 +103,25 @@
     .session-card.rate-border-6, .session-card.rate-border-7 { border-left-color: var(--green); }
     .session-card.rate-border-8, .session-card.rate-border-9 { border-left-color: var(--cyan); }
     .current-tag { display: inline-block; background: var(--green); color: #000; font-size: 0.6rem; font-weight: 800; padding: 1px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: middle; }
+    .extended-divider { text-align:center; padding:20px 0 12px; font-size:0.78rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.08em; font-weight:600; border-top:1px dashed var(--border); margin-top:8px; }
+    .extended-card { background:var(--card); border-radius:var(--radius); padding:14px 16px; margin-bottom:8px; border-left:3px dashed var(--border); }
+    .extended-card .ext-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+    .extended-card .ext-day { font-size:0.82rem; font-weight:700; color:var(--text-bright); }
+    .extended-card .ext-confidence { font-size:0.6rem; padding:2px 8px; border-radius:10px; font-weight:600; background:#1e293b; color:var(--text-dim); }
+    .extended-card .ext-confidence.medium { background:#2d2006; color:var(--yellow); }
+    .extended-card .ext-spot { font-size:0.88rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+    .extended-card .ext-conditions { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-bottom:6px; }
+    .extended-card .ext-cond { background:var(--bg); border-radius:6px; padding:5px 8px; text-align:center; }
+    .extended-card .ext-label { font-size:0.6rem; color:var(--text-dim); text-transform:uppercase; }
+    .extended-card .ext-val { font-size:0.75rem; font-weight:600; color:var(--text-bright); }
+    .extended-card .ext-summary { font-size:0.8rem; color:var(--text-dim); line-height:1.5; }
+    .extended-card .ext-rating { font-size:1rem; font-weight:800; }
+    .day-chip.extended { opacity:0.7; }
+    .day-chip.extended .chip-day { font-size:0.6rem; }
+    .extended-card.rate-border-2 { border-left-color:var(--red); }
+    .extended-card.rate-border-3 { border-left-color:var(--orange); }
+    .extended-card.rate-border-4,.extended-card.rate-border-5 { border-left-color:var(--yellow); }
+    .extended-card.rate-border-6,.extended-card.rate-border-7 { border-left-color:var(--green); }
     @media (max-width: 400px) {
       .conditions { gap: 4px; }
       .cond-item { padding: 6px; }
@@ -187,6 +206,30 @@
         <div class="chip-date">15 APR</div>
         <div class="chip-rating rate-4">4/10</div>
         <div class="chip-size">1.2-1.8m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(8)">
+        <div class="chip-day">Thu</div><div class="chip-date">16</div>
+        <div class="chip-rating rate-4">4/10</div><div class="chip-size">1.2-1.8m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(9)">
+        <div class="chip-day">Fri</div><div class="chip-date">17</div>
+        <div class="chip-rating rate-6">★ 6/10</div><div class="chip-size">1.5-2.1m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(10)">
+        <div class="chip-day">Sat</div><div class="chip-date">18</div>
+        <div class="chip-rating rate-3">3/10</div><div class="chip-size">0.9-1.4m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(11)">
+        <div class="chip-day">Sun</div><div class="chip-date">19</div>
+        <div class="chip-rating rate-2">2/10</div><div class="chip-size">0.9-1.2m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(12)">
+        <div class="chip-day">Mon</div><div class="chip-date">20</div>
+        <div class="chip-rating rate-5">5/10</div><div class="chip-size">1.5-2.1m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(13)">
+        <div class="chip-day">Tue</div><div class="chip-date">21</div>
+        <div class="chip-rating rate-5">5/10</div><div class="chip-size">1.2-2m</div>
       </div>
     </div>
 
@@ -347,126 +390,13 @@
       <!-- Advice Card -->
       <div class="advice-card">
         <h3>This is the best day of the week</h3>
-        <p>Don't miss the dawn or pre-lunch sessions. Matadouro at dawn for the bigger post-swell energy, then transition to São Sebastião by mid-morning as the swell drops into its range. The morning offshore winds are textbook.</p>
+        <p>Matadouro at dawn for power, or São Sebastião mid-morning for a chill session in good swell. You're spoilt for choice on Thursday. Don't miss it.</p>
       </div>
     </div>
 
     <!-- DAY 2: FRI 10 APR -->
     <div class="day-content">
-      <!-- Dawn Patrol Session -->
-      <div class="session-card rate-border-5">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Dawn Patrol</div>
-            <div class="session-time">6:45am - 9:00am</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-5">5</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-spot">São Sebastião</div>
-        <div class="session-drive">~40 min drive</div>
-        <div class="session-why">Light residual swell — 1.2-1.8m on the Ericeira coast with 1250kJ, just enough for fun small waves at São Sebastião. Cross-shore wind at 9kph is manageable. Not epic, but a decent paddle if you're keen.</div>
-        <div class="conditions">
-          <div class="cond-item">
-            <div class="cond-label">Surf</div>
-            <div class="cond-value">1.2-1.8m</div>
-            <div class="cond-detail">Mixed swell</div>
-          </div>
-          <div class="cond-item">
-            <div class="cond-label">Wind</div>
-            <div class="cond-value">9kph SE</div>
-            <div class="cond-detail">Cross-shore (10kph gusts)</div>
-          </div>
-          <div class="cond-item">
-            <div class="cond-label">Tide</div>
-            <div class="cond-value">Rising</div>
-            <div class="cond-detail">→ high 2.2m at 11:08am</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pre-lunch: Skip -->
-      <div class="skip-card">
-        <h3>Skip pre-lunch</h3>
-        <p>Energy drops to 556kJ with 6kph onshore. Mushy and weak. Not worth the drive.</p>
-      </div>
-
-      <!-- Afternoon/Evening Session -->
-      <div class="session-card rate-border-4">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Afternoon/Evening</div>
-            <div class="session-time">12:00pm - 8:00pm</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-4">4</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-spot">São Julião</div>
-        <div class="session-drive">~35 min drive (if new swell arrives)</div>
-        <div class="session-why">New WSW swell begins arriving — Ericeira builds to 1.8-2.4m by evening with 2170kJ. But the wind is onshore at 6-7kph which will make it messy. São Julião as a beach break handles onshore conditions better than the reefs. Worth a look if you see the new swell filling in on the cams.</div>
-        <div class="conditions">
-          <div class="cond-item">
-            <div class="cond-label">Surf</div>
-            <div class="cond-value">1.8-2.4m</div>
-            <div class="cond-detail">New swell (building)</div>
-          </div>
-          <div class="cond-item">
-            <div class="cond-label">Wind</div>
-            <div class="cond-value">6-7kph W</div>
-            <div class="cond-detail">Onshore</div>
-          </div>
-          <div class="cond-item">
-            <div class="cond-label">Tide</div>
-            <div class="cond-value">Dropping</div>
-            <div class="cond-detail">From 2.2m at 11:08am</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Advice Card -->
-      <div class="advice-card">
-        <h3>Light day — rest or sneaky dawn</h3>
-        <p>If you surfed hard Thursday, rest up. The dawn has a sneaky session at São Sebastião on residual swell. Skip the middle of the day. The new WSW swell starts showing in the evening but conditions won't be clean — that swell comes with gale-force winds Saturday.</p>
-      </div>
-    </div>
-
-    <!-- DAY 3: SAT 11 APR -->
-    <div class="day-content">
-      <!-- Skip Card -->
-      <div class="skip-card">
-        <h3>Gale building all day</h3>
-        <p>Ericeira 1.5-2.1m dawn building to 2.4-3m by evening, but winds are 24-36kph offshore with gusts to 41kph. Even though technically offshore at Ericeira, the sheer wind speed will shred the faces and make conditions messy and uncomfortable. Caparica and Carcavelos tiny (0.6-1.4m) and also wind-affected. Not worth it anywhere.</p>
-      </div>
-
-      <!-- Advice Card -->
-      <div class="advice-card">
-        <h3>Rest day — nuclear wind</h3>
-        <p>The wind is 36kph by evening with 41kph gusts. Even though it's offshore at Ericeira, nobody wants to paddle out in a gale. Sunday is worse, so enjoy the day off.</p>
-      </div>
-    </div>
-
-    <!-- DAY 4: SUN 12 APR -->
-    <div class="day-content">
-      <!-- Skip Card -->
-      <div class="skip-card">
-        <h3>Big swell + gale — skip</h3>
-        <p>Powerful WSW swell peaks — Ericeira 2.4-3.7m all day with massive energy (4282-9555kJ). But gale-force offshore winds continue at 27-34kph with gusts to 41kph. Too big and too windy. Impressive to watch from the cliffs but not surfable in any practical sense.</p>
-      </div>
-
-      <!-- Advice Card -->
-      <div class="advice-card">
-        <h3>Spectator day</h3>
-        <p>If you want to see some serious ocean power, drive up to Ericeira and watch from the cliffs. Ribeira d'Ilhas and Coxos will be putting on a show. Otherwise, rest day number two.</p>
-      </div>
-    </div>
-
-    <!-- DAY 5: MON 13 APR -->
-    <div class="day-content">
-      <!-- Dawn Patrol Session -->
+      <!-- Dawn Session -->
       <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
@@ -480,22 +410,159 @@
         </div>
         <div class="session-spot">Matadouro</div>
         <div class="session-drive">~40 min drive</div>
-        <div class="session-why">Swell easing from the weekend storm — Ericeira 2.4-3m at dawn on decaying WSW swell. Wind still strong at 20kph offshore (21kph gusts). Matadouro handles the size but the wind will add chop. Borderline session — manageable if you're keen, but not clean.</div>
+        <div class="session-why">Swell easing further — Matadouro still at 1.2-2m on a 2.1m 13s swell. The good news: winds turn ESE at 8kph (11kph gusts) — much cleaner than Thursday. Bad news: the swell has a lot less weight. 1188kJ is respectable but not exciting. Better-than-average but below Thursday's level.</div>
+        <div class="alternatives"><strong>Also worth checking:</strong> Supertubos — might pop in the light conditions at 1.2-1.8m.</div>
         <div class="conditions">
           <div class="cond-item">
             <div class="cond-label">Surf</div>
-            <div class="cond-value">2.4-3m</div>
-            <div class="cond-detail">Decaying WSW</div>
+            <div class="cond-value">1.2-2m</div>
+            <div class="cond-detail">2.1m 13s WNW</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Wind</div>
-            <div class="cond-value">20kph ESE</div>
-            <div class="cond-detail">Offshore (21kph gusts)</div>
+            <div class="cond-value">8kph ESE</div>
+            <div class="cond-detail">Offshore (11kph gusts)</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Tide</div>
-            <div class="cond-value">Check local</div>
-            <div class="cond-detail">Ericeira</div>
+            <div class="cond-value">Rising</div>
+            <div class="cond-detail">Low 1.2m 1:26am → High 2.4m 7:31am</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Late Morning Session -->
+      <div class="session-card rate-border-4">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Late Morning</div>
+            <div class="session-time">8:30am - 11:30am</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-4">4</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-spot">Ribeira d'Ilhas</div>
+        <div class="session-drive">~45 min drive</div>
+        <div class="session-why">Ericeira 1.8-2.4m at Ribeira — solid size, cleaner offshore 9kph ESE, good period. Ribeira will have proper waves at this height with 1188kJ pushing through. Expect peaky conditions but workable. Offshore stays light through mid-morning.</div>
+        <div class="cam-check">Check Ribeira cam at first light to confirm size — should be shoulder-to-head-high with defined peaks.</div>
+        <div class="conditions">
+          <div class="cond-item">
+            <div class="cond-label">Surf</div>
+            <div class="cond-value">1.8-2.4m</div>
+            <div class="cond-detail">Ericeira coast</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Wind</div>
+            <div class="cond-value">9kph ESE</div>
+            <div class="cond-detail">Offshore (12kph gusts)</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Tide</div>
+            <div class="cond-value">Falling</div>
+            <div class="cond-detail">High 2.4m 7:31am → Low 1.2m 1:26pm</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Afternoon Session -->
+      <div class="session-card rate-border-3">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Afternoon</div>
+            <div class="session-time">12:00pm - 3:00pm</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-3">3</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-spot">São Sebastião</div>
+        <div class="session-why">Swell easing rapidly — 1.2-1.5m at Ericeira. Wind freshens to 15kph SE (19kph gusts) which goes onshore at Ericeira but is still okay offshore at south-facing spots. Energy dropping to 1049kJ — losing push. Smaller, windier, less fun.</div>
+        <div class="conditions">
+          <div class="cond-item">
+            <div class="cond-label">Surf</div>
+            <div class="cond-value">1.2-1.5m</div>
+            <div class="cond-detail">Easing swell</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Wind</div>
+            <div class="cond-value">15kph SE</div>
+            <div class="cond-detail">Cross-shore (19kph gusts)</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Tide</div>
+            <div class="cond-value">Rising</div>
+            <div class="cond-detail">Low 1.2m 1:26pm → High 2.4m 7:50pm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3: SAT 11 APR -->
+    <div class="day-content">
+      <!-- Skip Card -->
+      <div class="skip-card">
+        <h3>Saturday is a rest day</h3>
+        <p>A gale builds from the south — wind jumps to 28-32kph SE with 34-38kph gusts all day. Swell easing to 1.8-2.4m but getting battered by wind. Chaotic, blown-out, not fun. Caparica might be semi-sheltered but still gnarly. Take the day off.</p>
+      </div>
+
+      <!-- Advice Card -->
+      <div class="advice-card">
+        <h3>Gale-force winds inbound</h3>
+        <p>Don't waste energy fighting the chop. Sunday's worse. Monday looks cleaner again.</p>
+      </div>
+    </div>
+
+    <!-- DAY 4: SUN 12 APR -->
+    <div class="day-content">
+      <!-- Skip Card -->
+      <div class="skip-card">
+        <h3>Skip Sunday — peak gale day</h3>
+        <p>Wind peaks at 30-36kph SE with 38-44kph gusts — the worst day of the week. Swell has dropped to 2.4-3.7m but it's all choppy and unrideable. Even Caparica will look a mess. Absolutely no point paddling out.</p>
+      </div>
+
+      <!-- Advice Card -->
+      <div class="advice-card">
+        <h3>Gale continues through Sunday</h3>
+        <p>The wind won't ease until evening. The swell starts cleaning up Monday morning when wind drops to 12-16kph.</p>
+      </div>
+    </div>
+
+    <!-- DAY 5: MON 13 APR -->
+    <div class="day-content">
+      <!-- Dawn Session -->
+      <div class="session-card rate-border-4">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn Patrol</div>
+            <div class="session-time">6:45am - 9:00am</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-4">4</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-spot">Matadouro</div>
+        <div class="session-drive">~40 min drive</div>
+        <div class="session-why">The gale clears overnight — wind drops to 12kph ESE (16kph gusts), much better. Swell still elevated at 2.1m 13s WNW, producing 1.8-2.4m at Matadouro. Energy good at 1299kJ. Cleanup from Sunday's chaos, size still respectable, wind manageable. Worth the drive.</div>
+        <div class="alternatives"><strong>Also worth checking:</strong> Ribeira d'Ilhas — should be clean and head-high with better organized swell.</div>
+        <div class="conditions">
+          <div class="cond-item">
+            <div class="cond-label">Surf</div>
+            <div class="cond-value">1.8-2.4m</div>
+            <div class="cond-detail">2.1m 13s WNW</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Wind</div>
+            <div class="cond-value">12kph ESE</div>
+            <div class="cond-detail">Offshore (16kph gusts)</div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-label">Tide</div>
+            <div class="cond-value">Rising</div>
+            <div class="cond-detail">Low 1.1m 2:09am → High 2.2m 8:14am</div>
           </div>
         </div>
       </div>
@@ -513,69 +580,70 @@
           </div>
         </div>
         <div class="session-spot">São Sebastião</div>
-        <div class="session-why">Easing to 1.8-2.4m by noon with 18kph cross-shore wind. Getting into São Sebastião territory for size, but the wind is the problem. Textured faces, not ideal.</div>
+        <div class="session-why">Swell easing to 1.5-2m, wind stays light offshore at 11kph ESE (13kph gusts). São Sebastião territory, not big enough to push Matadouro. Steady session, good cleanup window if you missed dawn.</div>
         <div class="conditions">
           <div class="cond-item">
             <div class="cond-label">Surf</div>
-            <div class="cond-value">1.8-2.4m</div>
-            <div class="cond-detail">Easing</div>
+            <div class="cond-value">1.5-2m</div>
+            <div class="cond-detail">Clean swell</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Wind</div>
-            <div class="cond-value">18kph E</div>
-            <div class="cond-detail">Cross-shore (19kph gusts)</div>
+            <div class="cond-value">11kph ESE</div>
+            <div class="cond-detail">Offshore (13kph gusts)</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Tide</div>
-            <div class="cond-value">Midday</div>
-            <div class="cond-detail">Dropping</div>
+            <div class="cond-value">Falling</div>
+            <div class="cond-detail">High 2.2m 8:14am → Low 1.1m 2:09pm</div>
           </div>
         </div>
       </div>
 
-      <!-- Evening Session -->
+      <!-- Afternoon Session -->
       <div class="session-card rate-border-3">
         <div class="session-header">
           <div>
-            <div class="session-time">Evening</div>
-            <div class="session-time">4:00pm - 8:00pm</div>
+            <div class="session-time">Afternoon</div>
+            <div class="session-time">2:00pm - 5:00pm</div>
           </div>
           <div class="session-rating">
             <span class="rating-num rate-3">3</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-spot">São Sebastião</div>
-        <div class="session-why">1.5-2.1m with 16kph cross-shore. Fading swell, persistent wind. Meh.</div>
+        <div class="session-spot">Caparica</div>
+        <div class="session-drive">~20 min drive</div>
+        <div class="session-why">1.2-1.8m Caparica reference, Ericeira still 1.5-2m but easing. Wind picks up to 13kph SE (17kph gusts) — still offshore but adding texture. Energy dropping to 1049kJ. Smaller waves, busyness returns. Twilight check for something last minute.</div>
         <div class="conditions">
           <div class="cond-item">
             <div class="cond-label">Surf</div>
-            <div class="cond-value">1.5-2.1m</div>
-            <div class="cond-detail">Fading</div>
+            <div class="cond-value">1.2-1.8m</div>
+            <div class="cond-detail">Caparica ref</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Wind</div>
-            <div class="cond-value">16kph E</div>
-            <div class="cond-detail">Cross-shore</div>
+            <div class="cond-value">13kph SE</div>
+            <div class="cond-detail">Offshore (17kph gusts)</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Tide</div>
-            <div class="cond-value">Evening</div>
-            <div class="cond-detail">Rising</div>
+            <div class="cond-value">Rising</div>
+            <div class="cond-detail">Low 1.1m 2:09pm → High 2.3m 8:33pm</div>
           </div>
         </div>
       </div>
 
       <!-- Advice Card -->
       <div class="advice-card">
-        <h3>Monday is borderline</h3>
-        <p>If you're itching to surf after two days off, the dawn at Matadouro has the most potential — decent size with offshore wind, just gusty. Otherwise, hold out for Tuesday when the wind should ease.</p>
+        <h3>Monday morning is the cleanup window</h3>
+        <p>After Sunday's gale, the swell reorders and wind drops. Dawn patrol is your best bet if you missed the weekend action.</p>
       </div>
     </div>
 
     <!-- DAY 6: TUE 14 APR -->
     <div class="day-content">
-      <!-- Dawn Patrol Session -->
+      <!-- Dawn Session -->
       <div class="session-card rate-border-5">
         <div class="session-header">
           <div>
@@ -587,24 +655,26 @@
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-spot">São Sebastião</div>
-        <div class="session-drive">~40 min drive</div>
-        <div class="session-why">1.2-1.5m at dawn with 13kph cross-shore wind (17kph gusts). Modest but surfable. São Sebastião should have clean enough faces for some fun turns. Not a big day, but after three days out of the water you'll enjoy the paddle.</div>
+        <div class="session-spot">Ribeira d'Ilhas</div>
+        <div class="session-drive">~45 min drive</div>
+        <div class="session-why">Swell easing to 1.9m 13s WNW. Ericeira still has 1.5-2m at dawn with offshore 9kph N — clean walls, light conditions. Ribeira will be solid at this height, not epic but well-organized. Energy at 1188kJ. Tuesday's the second-best day this week in terms of conditions.</div>
+        <div class="alternatives"><strong>Also worth checking:</strong> Supertubos — at 1.2-1.8m, might be less crowded than Ribeira with shape for tubes.</div>
+        <div class="cam-check">Check Ribeira cam at dawn — should show organized shoulder-to-head-high waves with defined sets.</div>
         <div class="conditions">
           <div class="cond-item">
             <div class="cond-label">Surf</div>
-            <div class="cond-value">1.2-1.5m</div>
-            <div class="cond-detail">Modest swell</div>
+            <div class="cond-value">1.5-2m</div>
+            <div class="cond-detail">1.9m 13s WNW</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Wind</div>
-            <div class="cond-value">13kph SE</div>
-            <div class="cond-detail">Cross-shore (17kph gusts)</div>
+            <div class="cond-value">9kph N</div>
+            <div class="cond-detail">Offshore (12kph gusts)</div>
           </div>
           <div class="cond-item">
             <div class="cond-label">Tide</div>
-            <div class="cond-value">Morning</div>
-            <div class="cond-detail">Rising</div>
+            <div class="cond-value">Rising</div>
+            <div class="cond-detail">Low 1.2m 2:52am → High 2.1m 8:57am</div>
           </div>
         </div>
       </div>
@@ -759,12 +829,123 @@
       </div>
     </div>
 
+    <!-- Extended Outlook Divider -->
+    <div class="extended-divider">Extended Outlook · Lower Confidence</div>
+
+    <!-- DAY 8: THU 16 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-4">
+        <div class="ext-header">
+          <div class="ext-day">Thu 16 Apr — Lisbon Coast</div>
+          <div><span class="ext-rating rate-4">4</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence medium">Medium confidence — forecast may change</div>
+        <div class="ext-spot" style="margin-top:8px">Best window: Afternoon · São Sebastião</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">1.2-1.8m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">19-21kph</div><div class="ext-label">Offshore</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">Building WSW</div></div>
+        </div>
+        <div class="ext-summary">Swell rebuilding through the day (1.2m dawn → 1.8m evening) on a new WSW pulse. Winds remain strong at 19-21kph offshore with 23-28kph gusts — persistent and annoying even though it's offshore. Afternoon has the best size but the wind won't quit. São Sebastião if you're keen, but don't expect clean faces.</div>
+      </div>
+    </div>
+
+    <!-- DAY 9: FRI 17 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-6">
+        <div class="ext-header">
+          <div class="ext-day">Fri 17 Apr — Lisbon Coast ★</div>
+          <div><span class="ext-rating rate-6">6</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence medium">Medium confidence — forecast may change</div>
+        <div class="ext-spot" style="margin-top:8px">Best window: Dawn–Prelunch · Supertubos or Matadouro</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">1.5-2.1m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">5-15kph</div><div class="ext-label">Offshore</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">1.8m 14s WSW</div></div>
+        </div>
+        <div class="ext-summary">This looks like the best day beyond the first week. Ericeira 1.8-2.4m at dawn easing to 1.5-2.1m midday, with wind dropping to 10-15kph — the lightest in days. Supertubos even better: 1.2-2m at dawn with just 5kph offshore — near glass! Worth the weekend drive to Peniche if conditions hold. Pre-lunch at Matadouro as backup with 10kph offshore. If this forecast holds, don't miss it.</div>
+      </div>
+    </div>
+
+    <!-- DAY 10: SAT 18 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-3">
+        <div class="ext-header">
+          <div class="ext-day">Sat 18 Apr — Lisbon Coast</div>
+          <div><span class="ext-rating rate-3">3</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence">Low confidence — will change</div>
+        <div class="ext-spot" style="margin-top:8px">Best window: Dawn · São Sebastião (if anything)</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.9-1.4m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">TBC</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">Fading</div></div>
+        </div>
+        <div class="ext-summary">Swell fading to 0.9-1.4m at Ericeira — small and dropping. Barely worth the drive unless you're desperate for a paddle. Caparica and Carcavelos essentially flat (0.3-0.6m). Rest day or find something else to do.</div>
+      </div>
+    </div>
+
+    <!-- DAY 11: SUN 19 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-2">
+        <div class="ext-header">
+          <div class="ext-day">Sun 19 Apr — Lisbon Coast</div>
+          <div><span class="ext-rating rate-2">2</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence">Low confidence — will change</div>
+        <div class="ext-spot" style="margin-top:8px">Skip day</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.9-1.2m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">TBC</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">Flat</div></div>
+        </div>
+        <div class="ext-summary">Continued flat spell. Ericeira 0.9-1.2m, Carcavelos 0.3-0.6m. Not worth paddling out anywhere. New swell expected Monday.</div>
+      </div>
+    </div>
+
+    <!-- DAY 12: MON 20 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-5">
+        <div class="ext-header">
+          <div class="ext-day">Mon 20 Apr — Lisbon Coast</div>
+          <div><span class="ext-rating rate-5">5</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence">Low confidence — will change</div>
+        <div class="ext-spot" style="margin-top:8px">Best window: TBC · Matadouro or São Sebastião</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">1.5-2.1m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">TBC</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">New pulse</div></div>
+        </div>
+        <div class="ext-summary">New swell arrives — Ericeira jumps back to 1.5-2.1m, Caparica 1.2-1.5m. Could be a good day if wind cooperates. Two weeks out so this WILL change, but the pattern suggests a new NW/W pulse filling in. Worth watching as it gets closer.</div>
+      </div>
+    </div>
+
+    <!-- DAY 13: TUE 21 APR -->
+    <div class="day-content">
+      <div class="extended-card rate-border-5">
+        <div class="ext-header">
+          <div class="ext-day">Tue 21 Apr — Lisbon Coast</div>
+          <div><span class="ext-rating rate-5">5</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="ext-confidence">Low confidence — will change</div>
+        <div class="ext-spot" style="margin-top:8px">Best window: TBC · São Sebastião</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">1.2-2m</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">TBC</div></div>
+          <div class="ext-cond"><div class="ext-label">Swell</div><div class="ext-val">Easing NW</div></div>
+        </div>
+        <div class="ext-summary">Monday's swell easing slightly — Ericeira 1.2-2m, São Sebastião territory. Far out in the forecast window so expect this to change significantly. The general trend suggests surfable conditions continuing from Monday.</div>
+      </div>
+    </div>
+
     <!-- Days to Watch -->
     <div class="days-to-watch">
-      <h3>Days to Watch</h3>
+      <h3>Days to Watch (Beyond Day 14)</h3>
       <div class="dtw-card potential">
-        <div class="dtw-day">Thu 16+ Apr</div>
-        <div class="dtw-detail">Watch for new swell pulse. The post-storm period should produce cleaning conditions with lighter winds and potential new NW/WSW swell filling in mid-to-late week.</div>
+        <div class="dtw-day">Wed 22 – Thu 23 Apr</div>
+        <div class="dtw-detail">Ericeira shows 1.2-1.5m easing to 0.6-1.1m — the tail end of the Mon 20 swell. Likely fading out. Watch for a new system in the Atlantic.</div>
       </div>
     </div>
 
@@ -772,8 +953,12 @@
     <div class="data-sources">
       <h3>Data Sources</h3>
       <div class="source-item">
-        <span>All Regions (Ericeira, Carcavelos, Caparica, Supertubos)</span>
+        <span>All Regions (API days 1-10)</span>
         <span class="source-badge numerical">7 Apr 7pm WEST</span>
+      </div>
+      <div class="source-item">
+        <span>Extended Outlook (page data days 11-14)</span>
+        <span class="source-badge numerical">Daily ranges only</span>
       </div>
       <div class="source-item">
         <span>Forecast Type</span>
@@ -787,7 +972,7 @@
 
     <!-- Footer -->
     <div class="footer">
-      <p>Automated morning run · Roman's Lisbon Surf Dashboard</p>
+      <p>Automated morning run · 14-day forecast · Roman's Lisbon Surf Dashboard</p>
       <p><a href="#">Report issue</a> · Last updated 8 Apr 5:15 AM WEST</p>
     </div>
 
