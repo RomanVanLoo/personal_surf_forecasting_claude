@@ -323,7 +323,14 @@ The HTML should be a single self-contained file (no external dependencies except
 
 **Housekeeping — remove past dates:** Every time the dashboard is updated, remove any day tabs and session cards for dates that are now in the past. The dashboard should only ever show today and future days. Don't accumulate stale forecasts — if it's Wednesday, Monday and Tuesday should be gone. This keeps the dashboard clean and ensures the user always sees current information first.
 
-**Dashboard design reference:** The approved HTML design uses a dark theme (bg: #0a0f1a, cards: #141b2d, accent: #3b82f6), mobile-first layout (max-width 680px), day tabs that switch content, session cards with colour-coded left borders (red=1-2, orange=3, yellow=4-5, green=6-7, cyan=8+), a conditions grid (surf/wind/tide) inside each session, girlfriend/partner-friendly tags, an advice card per day, a "Days to Watch" section with red-bordered cards for big swells, and a Data Sources section showing forecaster names. Read the existing `index.html` before regenerating — preserve the design unless the user requests changes.
+**CRITICAL — Preserve the existing UI layout:** Do NOT rewrite or regenerate the entire `index.html` from scratch. The CSS, HTML structure, class names, JavaScript, and overall design are LOCKED. On each forecast run you MUST:
+1. Read the existing `index.html` first
+2. Use the Edit tool to update ONLY the data content within the existing structure (day chips, session cards, overview text, status bar timestamp, extended outlook cards, days-to-watch, data sources)
+3. Add or remove day panels as needed (remove past dates, shift days forward) but always using the same card patterns and class names already in the file
+4. NEVER regenerate the CSS or JavaScript — copy them exactly
+5. If new UI features are needed (e.g. a new card type), add them by extending the existing patterns, not by rewriting everything
+
+The approved HTML design uses a dark theme (bg: #0a0f1a, cards: #141b2d, accent: #3b82f6), mobile-first layout (max-width 680px), day tabs that switch content, session cards with colour-coded left borders (red=1-2, orange=3, yellow=4-5, green=6-7, cyan=8+), a conditions grid (surf/wind/tide) inside each session, an advice card per day, a "Days to Watch" section with red-bordered cards for big swells, and a Data Sources section showing forecaster names.
 
 If no GitHub repo exists yet, generate the HTML file and save it to the workspace for the user to set up.
 
