@@ -151,7 +151,7 @@
     </div>
 
     <div class="status-bar">
-      <div class="updated">Updated: Fri 24 Apr 1:00 PM WEST</div>
+      <div class="updated">Updated: Sun 26 Apr 10:17 AM WEST</div>
       <div class="chrome-status">
         <span class="status-dot ok"></span> Chrome Connected
       </div>
@@ -159,181 +159,148 @@
 
     <div class="overview">
       <h2>This Week &amp; Beyond</h2>
-      <p><strong>Clean tail of the big block today &mdash; then six quiet days before a modest mid-week pulse returns.</strong> Current obs (12:55pm WEST): Costa FAIR 0.9-1.4m at 9kph NW cross-shore, Carcavelos FAIR 0.9-1.2m, Ribeira d&rsquo;Ilhas FAIR 0.6-1.1m via Smart Cam (1.8m 10s W), Peniche FAIR 1.2-1.5m at 9kph NNW offshore. Morning glass window has already passed &mdash; today&rsquo;s remaining usable session is a windier Peniche / Ericeira pre-sunset paddle. <strong>Sat 25 &ndash; Mon 27 written off</strong> (strong NNE, size collapses). <strong>Wed 29 is the next clean window</strong> (light wind + 12-13s swell, 310-332kJ at Ribeira), <strong>Thu 30 &ndash; Fri 1 May build a 16s groundswell</strong> into the block but with moderate wind. Beyond that, <strong>Mon 4 May&rsquo;s previously-flagged major swell has collapsed</strong> in the new LOTUS run (now 0.6-0.9m at 30-51kph N) &mdash; replaced by a gale-dominated week 3-7 May. No Roman observations since 14 Apr (Costa da Caparica 6/10) primes Costa as the reliable fallback whenever the south coast picks up.</p>
+      <p><strong>Today&rsquo;s done &mdash; sunset has passed.</strong> Today&rsquo;s 9:44pm Surfline read: Costa POOR TO FAIR 0.6-0.9m at 16kph N offshore (44kph gusts), Carcavelos similar, Ribeira FAIR 1.1m 9s W with 33kph N gusting 44 (basically unsurfable evening), Peniche 1.0m 9s W at 24kph N. Morning glass got a brief window 6-9am at 8kph N offshore but that&rsquo;s the past now. <strong>Sun 26 &ndash; Mon 27 written off</strong> (small + N wind, Carcavelos drops to 0-0.3m). <strong>Tue 28 evening + Wed 29 dawn = first real session</strong> (12-13s WNW groundswell finally arriving; Wed 29 dawn at Ribeira 0.9-1.4m at 8.8kph WSW = the first clean day, 191kJ). <strong>FRI 1 MAY IS THE DAY</strong> &mdash; 14-15s NW groundswell with <strong>dead glass</strong> (3.5kph at Ribeira prelunch, 409kJ, 1.2-1.8m) &mdash; biggest power reading in the 14-day window combined with the cleanest wind. Sat 2 May solid 6/10 tail with N offshore wind. Sun 3 &ndash; Wed 6 May flat zone (down to 0-0.3m and onshore). Thu 7 / Fri 8 May new pulse arrives but extended-range confidence. Two recent Ribeira/Bafureira observations (23-24 Apr) calibrated &mdash; Ribeira high-tide bumpiness factored into Wed 29 timing (mid-tide rising).</p>
     </div>
     <div class="day-strip-wrapper">
     <button class="day-arrow left" onclick="scrollStrip(-1)" aria-label="Previous days">&#8249;</button>
     <button class="day-arrow right" onclick="scrollStrip(1)" aria-label="Next days">&#8250;</button>
     <div class="day-strip">
-      <div class="day-chip active" onclick="showDay(0)">
-        <div class="chip-day">FRI</div>
-        <div class="chip-date">24 APR</div>
-        <div class="chip-rating rate-5">5/10</div>
-        <div class="chip-size">0.6-1.8m</div>
-      </div>
-      <div class="day-chip rest" onclick="showDay(1)">
-        <div class="chip-day">SAT</div>
-        <div class="chip-date">25 APR</div>
-        <div class="chip-rating rate-3">3/10</div>
-        <div class="chip-size">0.6-1.4m</div>
-      </div>
-      <div class="day-chip rest" onclick="showDay(2)">
+      <div class="day-chip active rest" onclick="showDay(0)">
         <div class="chip-day">SUN</div>
         <div class="chip-date">26 APR</div>
-        <div class="chip-rating rate-2">2/10</div>
+        <div class="chip-rating rate-3">3/10</div>
         <div class="chip-size">0.3-0.9m</div>
       </div>
-      <div class="day-chip rest" onclick="showDay(3)">
+      <div class="day-chip rest" onclick="showDay(1)">
         <div class="chip-day">MON</div>
         <div class="chip-date">27 APR</div>
         <div class="chip-rating rate-2">2/10</div>
         <div class="chip-size">0-0.9m</div>
       </div>
-      <div class="day-chip" onclick="showDay(4)">
+      <div class="day-chip" onclick="showDay(2)">
         <div class="chip-day">TUE</div>
         <div class="chip-date">28 APR</div>
-        <div class="chip-rating rate-4">4/10</div>
+        <div class="chip-rating rate-5">5/10</div>
         <div class="chip-size">0.3-1.4m</div>
       </div>
-      <div class="day-chip" onclick="showDay(5)">
+      <div class="day-chip" onclick="showDay(3)">
         <div class="chip-day">WED</div>
         <div class="chip-date">29 APR</div>
         <div class="chip-rating rate-6">6/10</div>
         <div class="chip-size">0.6-1.4m</div>
       </div>
-      <div class="day-chip" onclick="showDay(6)">
+      <div class="day-chip" onclick="showDay(4)">
         <div class="chip-day">THU</div>
         <div class="chip-date">30 APR</div>
-        <div class="chip-rating rate-6">6/10</div>
-        <div class="chip-size">0.6-1.8m</div>
+        <div class="chip-rating rate-4">4/10</div>
+        <div class="chip-size">0.6-1.4m</div>
       </div>
-      <div class="day-chip" onclick="showDay(7)">
+      <div class="day-chip" onclick="showDay(5)">
         <div class="chip-day">FRI</div>
         <div class="chip-date">1 MAY</div>
-        <div class="chip-rating rate-5">5/10</div>
-        <div class="chip-size">0.6-1.8m</div>
+        <div class="chip-rating rate-8">8/10</div>
+        <div class="chip-size">1.2-1.8m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(8)">
+      <div class="day-chip" onclick="showDay(6)">
         <div class="chip-day">SAT</div>
         <div class="chip-date">2 MAY</div>
-        <div class="chip-rating rate-3">3/10</div>
-        <div class="chip-size">0.3-1.4m</div>
+        <div class="chip-rating rate-6">6/10</div>
+        <div class="chip-size">0.6-1.4m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(9)">
+      <div class="day-chip extended rest" onclick="showDay(7)">
         <div class="chip-day">SUN</div>
         <div class="chip-date">3 MAY</div>
-        <div class="chip-rating rate-2">2/10</div>
-        <div class="chip-size">0-0.9m</div>
+        <div class="chip-rating rate-3">3/10</div>
+        <div class="chip-size">0-0.6m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(10)">
+      <div class="day-chip extended rest" onclick="showDay(8)">
         <div class="chip-day">MON</div>
         <div class="chip-date">4 MAY</div>
-        <div class="chip-rating rate-2">2/10</div>
-        <div class="chip-size">0-0.9m</div>
+        <div class="chip-rating rate-1">1/10</div>
+        <div class="chip-size">0-0.3m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(11)">
+      <div class="day-chip extended rest" onclick="showDay(9)">
         <div class="chip-day">TUE</div>
         <div class="chip-date">5 MAY</div>
-        <div class="chip-rating rate-2">2/10</div>
-        <div class="chip-size">0.3-1.1m</div>
+        <div class="chip-rating rate-1">1/10</div>
+        <div class="chip-size">0-0.3m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(12)">
+      <div class="day-chip extended rest" onclick="showDay(10)">
         <div class="chip-day">WED</div>
         <div class="chip-date">6 MAY</div>
         <div class="chip-rating rate-1">1/10</div>
-        <div class="chip-size">0-0.9m</div>
+        <div class="chip-size">0-0.3m</div>
       </div>
-      <div class="day-chip extended rest" onclick="showDay(13)">
+      <div class="day-chip extended" onclick="showDay(11)">
         <div class="chip-day">THU</div>
         <div class="chip-date">7 MAY</div>
-        <div class="chip-rating rate-2">2/10</div>
-        <div class="chip-size">0-0.9m</div>
+        <div class="chip-rating rate-5">5/10</div>
+        <div class="chip-size">0.6-1.1m</div>
+      </div>
+      <div class="day-chip extended" onclick="showDay(12)">
+        <div class="chip-day">FRI</div>
+        <div class="chip-date">8 MAY</div>
+        <div class="chip-rating rate-6">6/10</div>
+        <div class="chip-size">0.9-1.4m</div>
+      </div>
+      <div class="day-chip extended rest" onclick="showDay(13)">
+        <div class="chip-day">SAT</div>
+        <div class="chip-date">9 MAY</div>
+        <div class="chip-rating rate-4">4/10</div>
+        <div class="chip-size">0.6-0.9m</div>
       </div>
     </div>
     </div>
 
-    <!-- DAY 0: FRI 24 APR — TODAY -->
+    <!-- DAY 0: SUN 26 APR — TODAY -->
     <div class="day-content active" id="day0">
-      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Fri 24 Apr<span class="current-tag">Today</span></h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Clean tail. Dawn was the call &mdash; you already know.</strong> Observed at 12:55pm: Costa FAIR 0.9-1.4m at 9kph NW cross-shore (11kph gusts), Carcavelos FAIR 0.9-1.2m same wind, Ribeira FAIR 0.6-1.1m via Smart Cam on 1.8m 10s W with 8kph NNW, Peniche FAIR 1.2-1.5m at 9kph NNW offshore (14kph gusts). Tide: already off the 8am high, low 1.1m at 3:13pm, back up to 2.6m at 9:41pm. Afternoon wind builds to 18-20kph by 6pm. Evening session only if you&rsquo;ve got legs &mdash; Peniche has the best energy-to-wind ratio.</p>
-      <div class="session-card rate-border-5">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Afternoon &middot; 2:00&ndash;5:00 PM</div>
-            <div class="session-spot">Peniche (Supertubos or Meio da Baía)</div>
-            <div class="session-drive">1h 15min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-5">5</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">Peniche holds the best residual energy of the south/central coast. Supertubos dropping from 590kJ dawn to 475kJ by 6pm on 1.7m 10s W with 7-16kph NNW dawn-to-afternoon (offshore to cross-shore). Tide rising off the 3:13pm low &mdash; Supertubos wakes up on a pushing tide. The wind station confirms Peniche is offshore right now (better than the models suggested in last runs). Only worth the 1h 15min drive if you haven&rsquo;t surfed today and want a proper farewell to the block. Pyzel Red Tiger is overkill; Xero Cruz handles this cleanly. If Supertubos looks too punchy, <strong>Meio da Baía</strong> (low-crowd alternative on the same peninsula) will be a clean 0.6-1.1m at the same light wind &mdash; 5 min between the two.</div>
-        <div class="alternatives">Also worth checking: Lagide / Baleal on the north side if wind has rotated more northerly &mdash; those spots pick up the wind-protected peninsula shape. Consolação is a 4/10 fallback if the whole Peniche peninsula looks sharky with wind.</div>
-        <div class="cam-check">Check Supertubos and Baleal cams before committing &mdash; it&rsquo;s 75 minutes either way. If the wind has tipped onshore on the Baleal cam (sign the seabreeze has turned), skip the drive entirely and take the Carcavelos evening option below.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.5m</div><div class="cond-detail">1.6m 10s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">7-16kph NNW</div><div class="cond-detail">Offshore, building</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.1m &uarr;</div><div class="cond-detail">Low 3:13pm, rising</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-4">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Evening &middot; 5:00&ndash;7:30 PM</div>
-            <div class="session-spot">Carcavelos (short local paddle)</div>
-            <div class="session-drive">15 min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-4">4</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">If the Peniche drive isn&rsquo;t happening, Carcavelos is the sane local option. 0.6-1.1m by 6pm on 1.4m 10s W with 20-23kph NW cross-shore (15kph gusts from the wind station) &mdash; bumpy but rideable. 357kJ is decent for the reef shape. Tide filling hard off the low &mdash; by 6-7pm it&rsquo;s mid-and-pushing, which is when Carcavelos reef wakes up. Short paddle, minimal commitment. Xero Cruz.</div>
-        <div class="alternatives">Also worth checking: Costa da Caparica for 0.6-1.1m beach break in the same NW cross-shore. Your April 14 session here was a 6/10 in messier conditions &mdash; tonight will be similar or slightly better. 20 min drive.</div>
-        <div class="cam-check">Carcavelos cam at 5pm. If the reef looks crumbly or the wind has kicked onshore, bail &mdash; it&rsquo;s not worth forcing an evening session when tomorrow is washed out anyway and Wed 29 is the real next target.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">1.4m 10s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">20-23kph NW</div><div class="cond-detail">Cross-shore, bumpy</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.4m &uarr;</div><div class="cond-detail">Pushing to 2.6m 9:41pm</div></div>
-        </div>
-      </div>
-      <div class="advice-card">
-        <h3>Best Advice for the Day</h3>
-        <p>Honest read: the glass window was this morning &mdash; if you surfed dawn at Ribeira or Peniche, you banked the best of Friday. If you haven&rsquo;t yet and you&rsquo;ve got fuel in the tank, Peniche afternoon is the highest-quality remaining session (5/10 with offshore wind confirmed at the wind station). If the 75-minute drive feels wrong, Carcavelos evening on the pushing tide is a 4/10 short paddle and a clean way to end the week. Sat-Mon is a total write-off &mdash; rest, board maintenance, or whatever else. The next meaningful window is <strong>Wed 29</strong>.</p>
-      </div>
-    </div>
-
-    <!-- DAY 1: SAT 25 APR -->
-    <div class="day-content" id="day1">
-      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Sat 25 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Wind shutdown + weekend crowd.</strong> Size drops fast &mdash; Costa 0.6-0.9m dawn collapsing to 0.3-0.6m by afternoon, Carcavelos 0.6-0.9m dawn dropping to 0.3-0.6m, Ribeira 0.9-1.4m dawn with heavy NNE wind arriving (25-40kph cross-shore by 9am), Peniche 0.6-0.9m all day with 11-33kph NNE. Weekend crowd on top of the windy mess. Tide: high ~9:50am, low ~4:00pm, high ~10:20pm.</p>
+      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Sun 26 Apr<span class="current-tag">Today</span></h2>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>10:17am NOW &mdash; dawn passed, prelunch glass window is immediate.</strong> Today is small + still windy at Ericeira, but the south-coast dawn-into-prelunch window is currently in its cleanest hour. Caparica 0.3-0.6m, Carcavelos 0-0.6m, Ribeira 0.6-0.9m on a fading 8s W (but with 21-25kph NNW / 30+kph gusts at Ericeira). Wind at Costa/Carcavelos is light <strong>4.7kph ENE offshore</strong> right now (heads up &mdash; gusts 8.3kph). Tide pushing off 5:37am low to 11:50am high. <strong>If you&rsquo;re moving fast, the next 90 minutes (10:30 AM &ndash; 12:00 PM) is the only usable window of the day</strong> &mdash; afternoon wind ramps back to 18.7kph NNW by 6pm.</p>
       <div class="session-card rate-border-3">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn &middot; 7:15&ndash;9:00 AM</div>
-            <div class="session-spot">Carcavelos (short window)</div>
-            <div class="session-drive">15 min drive</div>
+            <div class="session-time">Dawn / Pre-lunch &middot; 7:00&ndash;11:00 AM</div>
+            <div class="session-spot">Costa da Caparica (groveller window)</div>
+            <div class="session-drive">20 min drive</div>
           </div>
           <div class="session-rating">
             <span class="rating-num rate-3">3</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">Only clean window anywhere today. 0.6-0.9m on 1.1m 9s W at 8kph NE offshore (dawn-only) &mdash; 199kJ, 68/100 consistency. Tide dropping off the 9:50am high toward mid, which suits Carcavelos reef. Wind lifts to 13-15kph by 9am then 25-32kph NNE by noon, so you&rsquo;ve got a 90-minute window max. Xero Cruz. Short paddle before the weekend crowd arrives. Avoid Ericeira entirely today &mdash; 25-40kph cross-shore makes it a washing machine.</div>
-        <div class="alternatives">Also worth checking: Costa da Caparica for more wave choice on the groyne banks (similar dawn wind, 0.6-1.1m). If Carcavelos is already packed at 7:15am, Costa will be less competitive.</div>
-        <div class="cam-check">Carcavelos cam at 6:45am. If it already looks bumpy or crowded, don&rsquo;t force it &mdash; Sun 26 and Mon 27 are also skip days, so you&rsquo;re not chasing a unique window.</div>
+        <div class="session-why">Best of a small day. 0.3-0.6m on a fading 0.8m 8s WSW with <strong>4.7-6kph N/ENE offshore</strong> across the morning &mdash; basically dead glass through pre-lunch (gust 8-9kph). Power 60-77kJ. Xero Cruz on a small-wave board day. Tide pushing off the 5:37am low into 11:50am high &mdash; the rising tide is when the groynes funnel waves cleanly into the sandbars. Your April 14 obs at Costa primes this spot as the reliable small-day fallback. Short paddle, low commitment, fun if you&rsquo;re keen for water.</div>
+        <div class="alternatives">Also worth checking: Carcavelos for the same wind but smaller size (0-0.6m, basically tiny). Costa is the better call when size is borderline. If you want to escape the weekend beach crowd entirely, drive 30 min south to Fonte da Telha for empty sandbars on the same swell.</div>
+        <div class="cam-check">Costa cam at 6:45am. If the groynes look like they&rsquo;re holding any size at all (anything in the 0.4-0.6m range with a clean line), go. If completely flat, don&rsquo;t bother.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">1.1m 9s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8-13kph NE</div><div class="cond-detail">Offshore, brief</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.5m &darr;</div><div class="cond-detail">High 9:50am</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">0.8m 8s WSW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">4-6kph N/ENE</div><div class="cond-detail">Offshore, glass-like</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.8m &uarr;</div><div class="cond-detail">Low 5:37am, rising</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-3">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn Alt &middot; 7:00&ndash;9:30 AM</div>
+            <div class="session-spot">Peniche (Supertubos / Meio da Baía)</div>
+            <div class="session-drive">1h 15min drive</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-3">3</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Peniche dawn has a touch more size and the same offshore N wind. 0.3-0.6m on 0.9m 8s W with <strong>9kph N offshore</strong> (gust 23kph &mdash; lumpy gusts). Power 76kJ. Same drive as a normal Peniche trip but for a small grovel only worth it if you specifically want long-period setup before next week. Skip if Costa cam looks similar size &mdash; the drive isn&rsquo;t justified for 0.3-0.6m.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">0.9m 8s W</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9kph N</div><div class="cond-detail">Offshore, gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.9m &uarr;</div><div class="cond-detail">Pushing to noon high</div></div>
         </div>
       </div>
       <div class="session-card rate-border-2">
         <div class="session-header">
           <div>
-            <div class="session-time">Rest of Day &middot; 10 AM&ndash;8 PM</div>
-            <div class="session-spot">Anywhere (wind + weekend crowd)</div>
+            <div class="session-time">Afternoon onwards &middot; 12 PM&ndash;sunset</div>
+            <div class="session-spot">Skip &mdash; wind builds back to 18-25kph</div>
             <div class="session-drive">&mdash;</div>
           </div>
           <div class="session-rating">
@@ -341,106 +308,94 @@
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">Wind 25-40kph NNE for the rest of the day. Ericeira is cross-onshore mess, south coast small and chopped, Peniche bumpy. Nothing worth paddling for.</div>
+        <div class="session-why">Wind ramps back through afternoon: 18.7kph NNW at 6pm everywhere (28kph gusts). Size already collapsing. Weekend crowd peaks. Nothing worth paddling.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-1.1m</div><div class="cond-detail">degrading fast</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25-40kph NNE</div><div class="cond-detail">Fresh, choppy</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">varies</div><div class="cond-detail">Low 4:00pm</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.9m</div><div class="cond-detail">degrading</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18-25kph NNW</div><div class="cond-detail">Cross-shore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">varies</div><div class="cond-detail">Low 5:53pm</div></div>
         </div>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>Short Carcavelos dawn or nothing. Weekend crowd, heavy wind, small. If you rally for dawn be out by 8:45am sharp &mdash; the wind kicks hard after that. Otherwise rest day. Tue 28 starts to show the next pulse. Wed 29 is the first proper session.</p>
+        <p>Costa dawn or nothing. 90-minute window of glass-and-tiny &mdash; only worth paddling if you specifically want water time after yesterday&rsquo;s rest day. Avoid Ericeira entirely (25-35kph cross). Save legs for Wed 29 (first clean groundswell day) and especially Fri 1 May (the peak). Mon 27 is also a skip day &mdash; if you grovel today and rest tomorrow, you&rsquo;re fresh for the back-half-of-the-week build.</p>
       </div>
     </div>
 
-    <!-- DAY 2: SUN 26 APR -->
+    <!-- DAY 2: MON 27 APR -->
     <div class="day-content" id="day2">
-      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Sun 26 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Flat and windy.</strong> Costa 0.3-0.6m, Carcavelos 0-0.6m, Ribeira 0.6-0.9m on a fading 8s W. Peniche 0.3-0.6m. Wind 8-33kph NNE all day (lightest around noon at 6-12kph south coast but nothing to groom). Weekend crowd on top. Tide: high ~10:45am, low ~5:00pm.</p>
-      <div class="skip-card">
-        <h3>Skip it &mdash; small, windy, crowded</h3>
-        <p>0.3-0.6m on the south coast all day, Ericeira 0.6-0.9m with 20-33kph NNE cross-onshore. No usable window anywhere. Next meaningful pulse is Wed 29.</p>
-      </div>
-      <div class="advice-card">
-        <h3>Best Advice for the Day</h3>
-        <p>Rest day. Check any dings on the Pyzel and Xero Cruz from the big-swell week. Long run or gym. The extended outlook now has Wed 29 as the first clean day and <strong>Thu 30 &ndash; Fri 1 May building a proper 14-16s groundswell</strong> &mdash; plan the week accordingly.</p>
-      </div>
-    </div>
-
-    <!-- DAY 3: MON 27 APR -->
-    <div class="day-content" id="day3">
       <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Mon 27 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Flat. Wind easing.</strong> Carcavelos 0-0.3m, Costa 0.3-0.6m, Ribeira 0.6-0.9m at 8s W with a 13s secondary hint. Wind 6-15kph NE &mdash; finally calmer but nothing to groom. Tide: high ~11:40am, low ~5:55pm.</p>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Flat zone &mdash; Carcavelos 0-0.3m, Ericeira still windy.</strong> Caparica 0.3-0.6m all day on 0.6m 8s W, Carcavelos 0-0.3m, Ribeira 0.6-0.9m at 22-25kph N (gusts 35), Peniche 0.3-0.6m at 8-16kph N offshore. Wind is finally lighter on the south coast (5-9kph dawn) but there&rsquo;s simply no swell. Tide: high 12:45pm, low 6:49pm.</p>
       <div class="skip-card">
-        <h3>Skip it &mdash; still no swell</h3>
-        <p>Fresh swell pulse doesn&rsquo;t arrive until Tue 28 evening. Today is genuinely flat on the south coast and barely rideable on the west. Wind is finally light but there&rsquo;s nothing to work with.</p>
+        <h3>Skip day &mdash; truly flat south coast</h3>
+        <p>0.3-0.6m on Caparica with 5-7kph dawn wind &mdash; cleanest skip day all year, but Carcavelos has dropped to ankle-high. Ribeira would be the only spot with size, but 22-25kph N kills it. No reason to drive anywhere. Tue 28 evening fills in the next pulse.</p>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>Admin day. Restock wax, clean Ericeira sand out of the car, review GoPro from Wed-Fri sessions. Tomorrow (Tue 28) evening the new 13-15s W swell begins to fill in &mdash; you&rsquo;ll want legs fresh for Wed 29 dawn.</p>
+        <p>Admin day. Wax the boards, check fins, restock zinc, plan Wed 29 dawn logistics (40 min drive to Ericeira or 1h15 to Peniche &mdash; pick before going to bed Tue night). The week ahead is one of the better forecasts in a fortnight: <strong>Wed 29 dawn, Fri 1 May glass</strong>. Get the body fresh.</p>
       </div>
     </div>
 
-    <!-- DAY 4: TUE 28 APR -->
-    <div class="day-content" id="day4">
+    <!-- DAY 3: TUE 28 APR -->
+    <div class="day-content" id="day3">
       <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Tue 28 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Rebuild day &mdash; long-period signs appearing.</strong> Ribeira 0.6-1.4m at 10-13s W (mixed with 15s secondary in morning then 9s primary), Costa 0.3-0.6m dawn building to 0.6-0.9m by evening, Carcavelos 0.3-0.6m, Peniche 0.3-1.1m building strongly by evening. Wind 3-22kph NE &mdash; dawn and mid-morning lightest (3-9kph). Tide: high ~12:25pm, low ~6:45pm. Evening at Ericeira is the window if you want water time before Wed&rsquo;s main event.</p>
-      <div class="session-card rate-border-4">
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Long-period signs &mdash; sneaky pre-lunch glass on 14-16s WSW, then evening size builds.</strong> Pre-lunch the new long-period swell starts wrapping in: Carcavelos 0.3-0.6m at <strong>14s WSW</strong> with 2.4kph WSW (dead glass!), Caparica same period and wind. Ribeira holds 0.6-1.1m at 9s WNW transitioning into 13s by evening (afternoon 0.9-1.4m at 16.6kph W onshore). Peniche prelunch 0.6-0.9m glass, evening 0.6-1.1m at 13s W. Wind: dawn cross 7-9kph, prelunch glass at south coast, afternoon onshore W/SW builds. Tide: low 7:22am, high 1:31pm. The 14s period is the tell &mdash; this is groundswell sneaking in even though size is small.</p>
+      <div class="session-card rate-border-5">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Pre-lunch &middot; 10:30 AM&ndash;12:30 PM</div>
+            <div class="session-spot">Carcavelos / Bafureira (14s glass sneaker)</div>
+            <div class="session-drive">15 min drive</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-5">5</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Sneaky session of the week. 0.3-0.6m doesn&rsquo;t sound like much, but with <strong>14s WSW period and 2.4kph wind (dead glass)</strong> at Carcavelos, the long-period swell will wedge into the reef sandbar in a way short-period swell never does. Power is 77kJ &mdash; modest but the period multiplier means waves with proper push. Tide rising off 7:22am low into 1:31pm high &mdash; mid-tide-rising is Carcavelos&rsquo; sweet spot. Xero Cruz. <strong>Roman&rsquo;s 23-24 Apr observations confirmed Bafureira / São Pedro run bigger than the model on long-period swells</strong> &mdash; if you fancy the drive, Bafureira A-frame on this 14s could absolutely deliver bigger sets than the forecast suggests, with rocks well covered at high tide (1:31pm).</div>
+        <div class="alternatives">Also worth checking: Costa da Caparica for groyne-trapped 14s lines on glass &mdash; same wind, slightly more size on the right banks (your April 14 calibration). Bafureira (5 min east of Carcavelos) on the rising-into-high tide for the A-frame &mdash; rocks safely covered.</div>
+        <div class="cam-check">Carcavelos cam at 10am. If the 14s swell is showing as defined lines (not just surface ripple), commit. If looks like minor period showing, drift down to Bafureira and check the A-frame &mdash; long-period at high tide is when it shows its best face.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">0.5m 14s WSW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">2.4kph WSW</div><div class="cond-detail">Dead glass</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.3m &uarr;</div><div class="cond-detail">High 1:31pm</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-5">
         <div class="session-header">
           <div>
             <div class="session-time">Evening &middot; 5:00&ndash;7:30 PM</div>
-            <div class="session-spot">Ribeira d&rsquo;Ilhas</div>
+            <div class="session-spot">Ribeira d&rsquo;Ilhas (13s WNW arrives)</div>
             <div class="session-drive">40 min drive</div>
           </div>
           <div class="session-rating">
-            <span class="rating-num rate-4">4</span>
+            <span class="rating-num rate-5">5</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">Fresh 13s W swell arriving fills Ribeira to 0.9-1.4m by 6pm with 14-19kph NE cross-shore (164kJ, 53/100). Not pristine but the 1m@13s primary + 0.7m@9s secondary gives genuine energy. Pre-warm-up for the Wed session. Xero Cruz. Tide dropping off the noon high into the 6:45pm low &mdash; the lower end of the tide is when Ribeira&rsquo;s reef bowl switches on.</div>
-        <div class="alternatives">Also worth checking: São Sebastião (your favourite &mdash; 3 min south of Ribeira) for the same swell at lower crowd. São Julião if the secondary swell is lighting up the beach-break &mdash; 10 min south of Ribeira.</div>
-        <div class="cam-check">Ribeira cam at 4:30pm. If it looks bumpy in the 14-19kph NE, swing down to São Sebastião first &mdash; the sheltered northern corner handles cross-shore wind better than the main peak.</div>
+        <div class="session-why">Fresh 13s WNW pulse fills Ribeira to 0.9-1.4m by 6pm with 16.6kph W onshore (179kJ). Not pristine but the long-period punch on the set waves is the warm-up for Wed&rsquo;s clean session. Tide dropping off 1:31pm high toward 7:46pm low &mdash; mid-to-low tide which is when Ribeira&rsquo;s reef bowl switches on. <strong>Note from Roman&rsquo;s 23 Apr obs: Ribeira high-tide is bumpy even with calm wind &mdash; today&rsquo;s evening session lands at low-mid tide, which suits the reef better.</strong> Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: Matadouro for cleaner shoulders on the same swell &mdash; 5 min north, the bay tucks W onshore better than Ribeira&rsquo;s open reef. São Sebastião as the low-crowd option &mdash; 3 min south, ideal range for this size.</div>
+        <div class="cam-check">Ribeira cam at 4:30pm. If it looks crumbly in the 16kph onshore, swing to Matadouro &mdash; same swell, cleaner face. São Sebastião also worth a check if the crowd at Ribeira is heavy on the first clean evening of the block.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1m 13s + 0.7m 9s</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14-19kph NE</div><div class="cond-detail">Cross-shore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.0m &darr;</div><div class="cond-detail">Low 6:45pm</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-3">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Dawn &middot; 7:00&ndash;9:30 AM</div>
-            <div class="session-spot">Costa da Caparica (small-day option)</div>
-            <div class="session-drive">20 min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-3">3</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">If you can&rsquo;t do the evening Ericeira drive, dawn at Costa is the local option. 0.3-0.6m on a 10s W primary with a 15s secondary filling (33kJ, 58/100). Wind 3-6kph NE near-calm. Small but clean &mdash; your April 14 obs says Costa handles small-and-messy fine; a small-and-clean dawn should be a tidy sparring session. Xero Cruz.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">0.5m 10s + 0.3m 15s</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">3-6kph NE</div><div class="cond-detail">Near-calm</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.6m &uarr;</div><div class="cond-detail">Filling to noon high</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">0.9m 13s WNW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">16.6kph W</div><div class="cond-detail">Onshore, light-mod</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.5m &darr;</div><div class="cond-detail">Low 7:46pm</div></div>
         </div>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>One session only. Evening Ericeira is the better call if you want proper energy in the water &mdash; the 13s primary arrives by 4-5pm and Ribeira goes 0.9-1.4m. Dawn Costa is a small local paddle if you want clean water with minimal commitment. Either way, save the legs for Wed 29 &mdash; that&rsquo;s the 6/10 glass-and-size combo and the first clean proper session since today.</p>
+        <p>Two genuine options. Pre-lunch Carcavelos (or Bafureira if the A-frame calls you) on 14s glass is the fun, low-commitment session &mdash; small but the long-period adds real punch. Evening Ericeira has size (0.9-1.4m at 13s) but with 16kph onshore. <strong>If you can only do one, pick prelunch Carcavelos</strong> &mdash; the glass-on-14s is rare and saves the legs for Wed 29 dawn. Wed 29 is the proper first clean day of the block.</p>
       </div>
     </div>
 
-    <!-- DAY 5: WED 29 APR -->
-    <div class="day-content" id="day5">
+    <!-- DAY 4: WED 29 APR -->
+    <div class="day-content" id="day4">
       <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Wed 29 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>First clean window since Fri &mdash; light wind + 12-13s swell.</strong> Ribeira 0.9-1.4m all day at 12-13s W with 10-15kph NE-NW (cross-offshore dawn), <strong>332kJ at 6am, 310kJ noon</strong>. Costa 0.6-1.1m at 5-13kph NE with 156-256kJ. Carcavelos 0.3-0.9m, Peniche 0.6-1.2m at 2-15kph NNE (dawn near-calm). Multiple usable windows. Tide: high ~7:40am, low ~1:50pm, high ~8:10pm.</p>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>First proper clean groundswell day &mdash; dawn is the window everywhere.</strong> Ribeira 0.9-1.4m all day at 12s WNW with 8.8kph WSW dawn (191kJ, the highest dawn power of the week so far) building to 17-20kph SSW by mid-morning. Caparica 0.6-0.9m at 7.7kph W onshore dawn into 9.2kph SW prelunch. Carcavelos 0.3-0.6m. Supertubos 0.6-1.1m at 6.2kph SSW dawn (148kJ). Wind universally onshore but light pre-9am, gets heavier as day progresses. Tide: low 8:01am Caparica / 8:05am Ericeira, high 14:11. Mid-tide-rising at 11am suits Ribeira reef; dawn = end of low at Ericeira (workable, swell fills the slot).</p>
       <div class="session-card rate-border-6">
         <div class="session-header">
           <div>
             <div class="session-time">Dawn Patrol &middot; 6:45&ndash;9:00 AM</div>
-            <div class="session-spot">Ribeira d&rsquo;Ilhas</div>
+            <div class="session-spot">Ribeira d&rsquo;Ilhas / Matadouro / São Sebastião</div>
             <div class="session-drive">40 min drive &middot; leave 5:45am</div>
           </div>
           <div class="session-rating">
@@ -448,20 +403,20 @@
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">First clean Ericeira session in six days. 0.9-1.4m on a 1.3m 13s W groundswell with 10-11kph NE cross-offshore, <strong>332kJ</strong> at 6am. Tide dropping off the 7:40am high into the 1:50pm low &mdash; classic Ericeira reef window on a pushing-down tide. Xero Cruz. The 13s period means waves with proper punch even at moderate size. Session of the week so far.</div>
-        <div class="alternatives">Also worth checking: São Sebastião (your favourite) for the same swell at low crowd &mdash; 3 min south. Matadouro for cleaner shoulders if Ribeira looks busy &mdash; 5 min north. All within 10 minutes of each other so pivot freely.</div>
-        <div class="cam-check">Ribeira cam from home before the drive. If it looks crowded already at first light (Wed morning could pull the Lisbon faithful out for the first clean day), roll to São Sebastião or Matadouro on arrival.</div>
+        <div class="session-why">First clean Ericeira session in nearly two weeks. 0.9-1.4m on a 1.0m <strong>12s WNW</strong> groundswell with <strong>8.8kph WSW</strong> dawn &mdash; light enough that the long-period punch comes through clean. <strong>191kJ</strong> at 6am, well above this week&rsquo;s baseline. <strong>Roman&rsquo;s 23 Apr Ribeira observation: the reef is bumpy at high tide even with calm wind &mdash; today&rsquo;s tide schedule is in your favour</strong> (low 8:05am, mid-rising at 11am). Dawn lands at low to early-rising = workable. Aim to be in by 6:45am and out by 9am before wind builds to 17kph SSW. The 12s period (vs the recent 10s mush at Ribeira) means defined waves rather than fat-and-bumpy. Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: São Sebastião (Roman&rsquo;s favourite) &mdash; ideal range for 1.2-1.4m, low crowd, 3 min south of Ribeira. Matadouro (5 min north) for cleaner bay-tucked shoulders if WSW wind starts curling onshore at Ribeira. All within 10 min of each other &mdash; pivot freely on arrival.</div>
+        <div class="cam-check">Pull Ribeira and São Sebastião cams before driving (5:30am). If Ribeira looks defined, commit; if it looks fat (10s residual contaminating), São Sebastião sheltered cove holds shape better in the same swell. Wed dawn after a flat week will draw Lisbon faithful &mdash; if Ribeira&rsquo;s already busy at 6:45, São Sebastião gives you the same wave with no crowd.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1.3m 13s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">10-11kph NE</div><div class="cond-detail">Cross-offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.4m &darr;</div><div class="cond-detail">High 7:40am, dropping</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1.0m 12s WNW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8.8kph WSW</div><div class="cond-detail">Cross-onshore, light</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.5m &uarr;</div><div class="cond-detail">Low 8:05am, rising</div></div>
         </div>
       </div>
       <div class="session-card rate-border-5">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn Alt &middot; 6:45&ndash;9:00 AM</div>
-            <div class="session-spot">Peniche (Supertubos)</div>
+            <div class="session-time">Dawn Alt &middot; 6:45&ndash;9:30 AM</div>
+            <div class="session-spot">Peniche (Supertubos / Meio da Baía)</div>
             <div class="session-drive">1h 15min drive</div>
           </div>
           <div class="session-rating">
@@ -469,305 +424,384 @@
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">Peniche dawn is a genuine second option: 0.9-1.2m at 13s W with <strong>2kph NE near-calm dawn</strong> (234kJ, 42/100). If you want crowd-free and don&rsquo;t mind the drive, Supertubos-Meio da Baía on dead-glass dawn is exactly the sort of session nobody else is committing to on a Wednesday. Pyzel or Xero Cruz both work.</div>
+        <div class="session-why">Peniche dawn is genuinely competitive with Ericeira today. 0.6-1.1m at <strong>12s W</strong> with <strong>6.2kph SSW</strong> (gust 8.7kph) &mdash; the lightest wind of the morning at any major region. <strong>148kJ</strong> at 6am. Long drive but if you fancy crowd-free and don&rsquo;t want the Lisbon Wed-rush at Ericeira, Meio da Baía or Supertubos on a glass-dawn 12s is a proper option. Tide off the 6:46am low at Supertubos pushing up &mdash; Supertubos wakes up on rising tide. Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: Lagide / Baleal as fallback if Supertubos cam shows it too punchy in the bigger sets. Meio da Baía has the most wind protection on the peninsula and is the Pyzel-or-Xero call for clean 1m walls.</div>
+        <div class="cam-check">Baleal cam tells you peninsula wind. If you see anything cross-onshore on Baleal, drop down to Meio da Baía which tucks in. Supertubos cam at 6:30 &mdash; if defined sets are showing, that&rsquo;s the call.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">1.1m 13s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">2kph NE</div><div class="cond-detail">Dead glass</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.8m &darr;</div><div class="cond-detail">Pushing off high</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">0.9m 12s W</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6.2kph SSW</div><div class="cond-detail">Light onshore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.7m &uarr;</div><div class="cond-detail">Low 6:46am, rising</div></div>
         </div>
       </div>
-      <div class="session-card rate-border-5">
+      <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
-            <div class="session-time">Pre-lunch / Noon &middot; 10:00 AM&ndash;12:30 PM</div>
-            <div class="session-spot">Costa da Caparica</div>
+            <div class="session-time">Pre-lunch &middot; 10:00 AM&ndash;12:00 PM</div>
+            <div class="session-spot">Costa da Caparica (local fallback)</div>
             <div class="session-drive">20 min drive</div>
           </div>
           <div class="session-rating">
-            <span class="rating-num rate-5">5</span>
+            <span class="rating-num rate-4">4</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">If Ericeira is done and you want round two without the drive. Costa noon runs 0.6-1.1m on a 0.9m 12s W with <strong>2-5kph light NE</strong>, 256kJ energy. Tide filling after low-ish into the afternoon &mdash; Costa banks like a dropping-to-mid tide, so the noon window is workable but not peak. Your April 14 obs confirms Costa handles small-and-clean fine. Xero Cruz.</div>
-        <div class="alternatives">Also worth checking: Carcavelos for 0.6-0.9m reef shape at the same light wind &mdash; 15 min drive. Smaller but often more shape per wave on a pushing tide.</div>
-        <div class="cam-check">Costa cam at 9:30am. If the dawn crowd has thinned and the swell is actually showing on the groynes, go. If looks fat on the high-fill tide, try Carcavelos.</div>
+        <div class="session-why">If you can&rsquo;t commit to the early Ericeira/Peniche drives, Caparica prelunch is the sane local option. 0.6-0.9m on 0.8m 12s WSW with 9.2kph SW onshore (100kJ). Tide rising off 7:22am low into 1:31pm high &mdash; clean filling tide for the groynes. Wind is starting to ramp by then but still workable for an hour. Your April 14 calibration: Costa handles 0.9-1.4m at 9kph cross at 6/10, so this lighter day will rate slightly lower but be cleaner. Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: Carcavelos for whatever the 12s is doing on the reef &mdash; smaller (0.3-0.6m) but the long-period swell can stack on the right sandbar.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">0.9m 12s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">2-5kph NE</div><div class="cond-detail">Near-calm</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.4m &darr;&uarr;</div><div class="cond-detail">Low 1:50pm</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">0.8m 12s WSW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9.2kph SW</div><div class="cond-detail">Onshore, light-mod</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.6m &uarr;</div><div class="cond-detail">High 1:31pm</div></div>
         </div>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>Ribeira dawn, then decide. The 6/10 Ericeira session is the clear call and the first clean day of the block. If you have stamina for a second paddle and aren&rsquo;t exhausted, Costa noon at 2-5kph is a 5/10 bonus on your way home. If the dawn got you, home by 9:30 and save legs for Thu (building swell) and Fri (peak of the modest mid-week pulse).</p>
+        <p>Ribeira/São Sebastião dawn is the call. First proper clean session after 11 days of either onshore mess or no swell &mdash; this is where the block starts paying off. If you can&rsquo;t make the drive, Peniche dawn at 6kph wind is the second-best. Keep the session tight (90 min) &mdash; wind ramps to 17kph by 9:30am everywhere. Save the legs and stoke for Fri 1 May which is the peak of the block.</p>
       </div>
     </div>
 
-    <!-- DAY 6: THU 30 APR -->
-    <div class="day-content" id="day6">
+    <!-- DAY 5: THU 30 APR -->
+    <div class="day-content" id="day5">
       <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Thu 30 Apr</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Building 16-17s groundswell &mdash; size up, wind also up.</strong> Ribeira 0.9-1.8m building through the day (dawn 1.1m 11s + 0.6m 17s, evening 1.3m 16s with <strong>459kJ</strong>). Costa 0.6-1.2m, Carcavelos 0.3-1.1m, Peniche 0.6-1.4m. Wind 6-23kph NE-ENE &mdash; moderate all day, ramps up toward evening. Tide: high ~8:30am, low ~2:40pm, high ~9:00pm. Dawn is the calmest window.</p>
-      <div class="session-card rate-border-6">
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Onshore mess in the middle, but a tight dawn window holds.</strong> Ribeira 0.9-1.4m at 11s W dropping to 0.83m 16s WNW by evening with <strong>21-28kph SW onshore</strong> all day. Caparica 0.6-1.1m at 13-16kph SW onshore. Carcavelos 0.6-0.9m peaking overnight at 429kJ but with 15kph SW onshore. Supertubos 0.6-1.2m at 8-17kph S onshore. Wind dawn is the lightest (12-15kph SW) but it&rsquo;s already onshore. Tide: low 8:36am, high 14:47. Day mostly burns out into Fri 1 May which is THE day &mdash; rest if Wed got you.</p>
+      <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn Patrol &middot; 7:00&ndash;9:30 AM</div>
-            <div class="session-spot">Ribeira d&rsquo;Ilhas</div>
-            <div class="session-drive">40 min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-6">6</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">16-17s groundswell filling in on top of the residual 11s primary. Ribeira 0.9-1.4m at dawn with 15-18kph NE (224kJ) &mdash; not as clean as Wed but with proper long-period punch on the set waves. Tide dropping off 8:30am high into mid-morning &mdash; the reef gets more defined as it exposes. Xero Cruz or Pyzel depending on whether the set waves start popping 1.6m+. Keep the session tight &mdash; by 10am wind is 18-21kph.</div>
-        <div class="alternatives">Also worth checking: Matadouro for cleaner shoulders on the same swell &mdash; the Matadouro bay wind-sheltered effect handles NE better than Ribeira&rsquo;s open reef. 5 min between them. São Sebastião still the sneaker low-crowd option.</div>
-        <div class="cam-check">Ribeira cam first. If it looks bumpy in the NE cross-shore, pivot to Matadouro &mdash; the bay there tucks in from NE chop noticeably better.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1.1m 11s + 0.6m 17s</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15-18kph NE</div><div class="cond-detail">Cross-shore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.4m &darr;</div><div class="cond-detail">High 8:30am</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-5">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Dawn Alt &middot; 7:00&ndash;9:30 AM</div>
-            <div class="session-spot">Costa da Caparica / Carcavelos</div>
+            <div class="session-time">Dawn &middot; 6:45&ndash;8:30 AM</div>
+            <div class="session-spot">Carcavelos / Costa (early offshore window)</div>
             <div class="session-drive">15-20 min drive</div>
           </div>
           <div class="session-rating">
-            <span class="rating-num rate-5">5</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">South coast is cleaner in the NE wind than Ericeira today. Costa 0.6-0.9m at 7-12kph NE (offshore, 100kJ). Carcavelos 0.3-0.6m at the same wind &mdash; small but offshore-groomed reef shape. If you don&rsquo;t want the Ericeira drive two days running, this is the logical local session. Xero Cruz. Tide pushing off high into mid &mdash; Carcavelos on a dropping tide is its sweet spot.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.9m</div><div class="cond-detail">0.8m 11s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">7-12kph NE</div><div class="cond-detail">Offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.4m &darr;</div><div class="cond-detail">High 8:30am</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-4">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Evening &middot; 5:00&ndash;7:30 PM</div>
-            <div class="session-spot">Ribeira / Matadouro (size peaks)</div>
-            <div class="session-drive">40 min drive</div>
-          </div>
-          <div class="session-rating">
             <span class="rating-num rate-4">4</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">16s groundswell peaks for the afternoon/evening: Ribeira 1.2-1.8m at <strong>459kJ</strong> with 21-23kph NE cross-shore. Proper long-period punch but bumpy surface. Tide pushing off low-to-mid &mdash; rideable but not clean. Only worth the drive if you missed the dawn. Pyzel Red Tiger at this size.</div>
+        <div class="session-why">South coast holds the lightest wind early. Caparica 0.6-1.1m on 1.1m 6s WSW + filling 16s W trace, Carcavelos 0.6-0.9m at 11s WSW. Wind 13.5kph SW onshore at Caparica dawn, 78kJ. Not pristine but the 11s primary keeps shape. Bigger sets from the long-period component will break properly. Tide off 8:36am low pushing up &mdash; Carcavelos reef wakes up. Xero Cruz. Tight window before wind builds to 15-21kph SW by 10am.</div>
+        <div class="alternatives">Also worth checking: Bafureira A-frame (Roman&rsquo;s 24 Apr obs: rocks covered above mid-tide) for the 11s long-period stacking on the rocks &mdash; high tide at 14:47 means dawn-to-prelunch is on the rising tide, mid-to-high range.</div>
+        <div class="cam-check">Carcavelos and Costa cams at 6:30am. Whichever shows defined lines is the call &mdash; both same wind. If both look bumpy in the 11s onshore, skip and rest for Fri 1 May.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">1.3m 16s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">21-23kph NE</div><div class="cond-detail">Cross-shore, fresh</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.5m &uarr;</div><div class="cond-detail">Filling to 9:00pm high</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">1.1m 6s + 0.5m 16s</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">13.5kph SW</div><div class="cond-detail">Onshore, light-mod</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.5m &uarr;</div><div class="cond-detail">Low 8:36am, rising</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-3">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Mid-morning to evening &middot; 9 AM&ndash;sunset</div>
+            <div class="session-spot">Skip &mdash; onshore SW builds</div>
+            <div class="session-drive">&mdash;</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-3">3</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Wind builds to 15-22kph SW onshore at south coast, 21-30kph SSW onshore at Ericeira. Size is there but ruined by direction. Ribeira evening 0.9-1.4m at 16s WNW with <strong>176kJ</strong> arriving but 14kph SW onshore = surface chop on long-period swell. Skip and save legs.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.4m</div><div class="cond-detail">11-16s W transition</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15-22kph SW</div><div class="cond-detail">Onshore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">varies</div><div class="cond-detail">High 14:47</div></div>
         </div>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>Dawn window only &mdash; Ribeira if you want the proper size and energy, or Costa/Carcavelos if you&rsquo;re saving legs and want cleaner wind. Evening at Ribeira will have the most size but the wind makes it a bumpy 4/10. Fri 1 May has the cleanest mid-period window at Ribeira so don&rsquo;t burn everything here.</p>
+        <p>Tight dawn at Carcavelos or Costa, or rest. The 16s WNW groundswell is filling but wind direction is wrong for the whole region. Better to bank legs for tomorrow &mdash; Fri 1 May is the headline session of the block (1.2-1.8m at 14-15s W with 3-4kph wind, dead glass at Ribeira and Peniche). Sleep early Thu so you can hit Fri dawn fresh.</p>
       </div>
     </div>
 
-    <!-- DAY 7: FRI 1 MAY -->
-    <div class="day-content" id="day7">
-      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Fri 1 May</h2>
-      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Peak of the modest mid-week pulse &mdash; Ribeira size up, wind moderate.</strong> Ribeira 1.2-1.8m all day on a 1.5m 14s W groundswell. Dawn <strong>614kJ</strong>, noon 512kJ, evening 412kJ. Costa 0.6-1.2m, Carcavelos 0.3-0.9m, Peniche 0.6-1.2m. Wind 6-26kph NE-N &mdash; dawn Peniche is the lightest window (8kph). Tide: high ~9:20am, low ~3:30pm, high ~9:45pm. Multiple options, all with some wind compromise.</p>
+    <!-- DAY 6: FRI 1 MAY — THE DAY -->
+    <div class="day-content" id="day6">
+      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Fri 1 May<span class="current-tag">THE DAY</span></h2>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Peak of the block &mdash; 14-15s NW groundswell with DEAD GLASS dawn-to-prelunch.</strong> Ribeira 1.2-1.8m on a 1.1m 15s NW with <strong>325kJ at 6am rising to 409kJ at noon</strong> on <strong>3.5kph S</strong> wind &mdash; biggest power reading and lightest wind of the entire 14-day window. Caparica 0.9-1.2m at 14s WSW (207kJ) on 2.9kph SSW. Carcavelos 0.6-0.9m at 14s WSW (235kJ at noon, the highest Carcavelos power in the period). Supertubos 0.9-1.4m at 15s WNW with 2.3kph S dawn (gust 2.3kph!) &mdash; impossibly light. Tide at Caparica/Carcavelos: low 9:50am, high 16:00. At Ericeira similar. Mid-tide rising in the prelunch window = exactly when Ribeira reef wants to be hit. <strong>This is the session of the fortnight.</strong></p>
+      <div class="session-card rate-border-8">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Pre-lunch &middot; 10:00 AM&ndash;12:30 PM</div>
+            <div class="session-spot">Matadouro / Ribeira d&rsquo;Ilhas (15s NW glass)</div>
+            <div class="session-drive">40 min drive &middot; leave 8:45am</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-8">8</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">The cleanest combination of size + period + wind in two weeks. Ribeira 1.2-1.8m on a 1.1m <strong>15s NW</strong> groundswell with <strong>3.5kph S wind</strong> at noon &mdash; that&rsquo;s 409kJ on dead glass. <strong>Roman&rsquo;s 23 Apr Ribeira obs (high-tide bumpy)</strong> rules out the morning&rsquo;s low-tide window for Ribeira itself, but prelunch lands at low-9:50am pushing into mid-rising tide which is the sweet spot. The 15s long-period swell will throw properly at Ribeira&rsquo;s reef &mdash; this is exactly what was missing from last week&rsquo;s 10s mush sessions. <strong>Matadouro is the better starting call</strong> &mdash; max 2.5m range fits today&rsquo;s 1.5m sets, cleaner shoulders, less crowd than Ribeira on the season&rsquo;s first proper glass-and-size day. <strong>Pyzel Red Tiger</strong> for the 1.5-1.8m sets, Xero Cruz if it&rsquo;s sitting more 1.2-1.5m. This is the day to push the Pyzel.</div>
+        <div class="alternatives">Also worth checking: Ribeira d&rsquo;Ilhas itself if Matadouro looks crowded &mdash; the 15s will throw cleaner there on dropping-into-mid-rising tide, despite the high-tide-bumpy intel from 23 Apr (today&rsquo;s tide schedule keeps you out of high). São Sebastião (favourite low-crowd) is borderline at 1.2-1.8m &mdash; the bigger sets exceed its 2.0m comfortable range, so if you see São Sebastião looking maxed-out, drift north to Matadouro.</div>
+        <div class="cam-check">Pull all three Ericeira cams before leaving (8:30am): Ribeira, Matadouro, São Sebastião. The 3.5kph wind reading should make all three glass &mdash; pick by crowd. If you see anyone else has called it for Matadouro, head straight to Ribeira and use the long-period bigger gaps for fewer crowd-conflicts.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">1.1m 15s NW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">3.5kph S</div><div class="cond-detail">Dead glass</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.0m &uarr;</div><div class="cond-detail">Low 10:00am, rising</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-8">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn Patrol &middot; 6:45&ndash;9:00 AM</div>
+            <div class="session-spot">Ribeira d&rsquo;Ilhas (early window)</div>
+            <div class="session-drive">40 min drive &middot; leave 5:45am</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-8">8</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">If you want to bank the entire day, dawn at Ribeira is also 8/10. 1.2-1.5m on the same 15s NW with <strong>4.4kph WNW</strong> wind (325kJ). Tide is dropping off the overnight high into 10am low &mdash; mid-tide-dropping which suits Ribeira reef before the bumpy high-tide thing kicks in. The dawn rush will draw the Lisbon Friday-faithful but the 15s period will spread waves out enough that the lineup feels civil. <strong>Pyzel Red Tiger</strong>. Two sessions today is on if the legs hold &mdash; dawn 1.5h, prelunch 2h, total 3.5h water time which is heavy but this is the fortnight&rsquo;s best window.</div>
+        <div class="alternatives">Also worth checking: Matadouro for less crowd (5 min north). São Sebastião if it&rsquo;s under 1.5m on arrival (Roman&rsquo;s favourite at the right size).</div>
+        <div class="cam-check">Ribeira cam at 5:30am from home before driving. If size looks already 1.5m+ on the cam in dawn light, expect proper sets &mdash; Pyzel Red Tiger. Otherwise Xero Cruz handles 1.2-1.5m fine.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.5m</div><div class="cond-detail">1.2m 15s NW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">4.4kph WNW</div><div class="cond-detail">Glass-like</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.0m &darr;</div><div class="cond-detail">Dropping to 10am low</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-7">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn Alt &middot; 6:45&ndash;9:30 AM</div>
+            <div class="session-spot">Peniche (Supertubos / Meio da Baía)</div>
+            <div class="session-drive">1h 15min drive</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-7">7</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Peniche on this same day is also pumping. 0.9-1.4m at 15s WNW with <strong>2.3kph S</strong> wind dawn (gust 2.3kph &mdash; absolutely impossible-glass) &mdash; 207kJ. Prelunch climbs to 1.2-1.5m at <strong>3.2kph WSW</strong> with 209kJ. Smaller than Ericeira but on glass. Worth the drive only if you specifically want crowd-free 15s &mdash; the Friday Lisbon crew will be at Ericeira so Peniche stays civil. Pyzel or Xero Cruz both work. Tide off 6:46am low pushing up.</div>
+        <div class="alternatives">Also worth checking: Lagide if Supertubos looks heavy on a 15s set; Meio da Baía for max wind-shelter even though wind is already minimal.</div>
+        <div class="cam-check">Supertubos cam at 6:30am. The 2.3kph wind should produce mirror-glass &mdash; that&rsquo;s a tell that the cam confirms what the model says. Commit to the drive only if confirming dead glass.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">1.0m 15s WNW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">2.3kph S</div><div class="cond-detail">Dead glass</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.7m &uarr;</div><div class="cond-detail">Low 6:46am, rising</div></div>
+        </div>
+      </div>
       <div class="session-card rate-border-6">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn Patrol &middot; 7:15&ndash;9:30 AM</div>
-            <div class="session-spot">Peniche (Meio da Baía / Supertubos)</div>
-            <div class="session-drive">1h 15min drive</div>
+            <div class="session-time">Pre-lunch local &middot; 10:00 AM&ndash;12:30 PM</div>
+            <div class="session-spot">Carcavelos / Costa da Caparica (sneaky 14s)</div>
+            <div class="session-drive">15-20 min drive</div>
           </div>
           <div class="session-rating">
             <span class="rating-num rate-6">6</span>
             <span class="rating-label">/10</span>
           </div>
         </div>
-        <div class="session-why">Peniche wins on wind today. 0.9-1.2m at 14s W with <strong>8kph N offshore-ish dawn</strong> (332kJ) &mdash; the lightest wind at any of the main regions. If you want clean mid-period punch and don&rsquo;t mind the drive, Meio da Baía&rsquo;s wind-protected bay is the crowd-free long-period session of the morning. Xero Cruz. Tide off the high pushing down &mdash; Supertubos wakes up on dropping tide.</div>
-        <div class="alternatives">Also worth checking: Supertubos directly if the sets look clean on the arrival cam &mdash; same swell, slightly heavier shape. Consolação as a 5/10 fallback if both Baleal cam and Supertubos look wind-affected.</div>
-        <div class="cam-check">Baleal cam before leaving &mdash; it reads the north side of the peninsula. If wind has rotated NNE (makes Supertubos cross-shore), Meio da Baía will still be clean. If wind is due N, Supertubos is your move.</div>
+        <div class="session-why">If you can&rsquo;t do the Ericeira drive, the south coast prelunch is genuinely good today. Carcavelos 0.6-0.9m at <strong>14s WSW</strong> with <strong>2.9kph SSW</strong> (235kJ) &mdash; that&rsquo;s the highest Carcavelos noon power reading in the 14-day window with dead-glass conditions. The 14s primary will stack on the reef shape. Caparica same wind at 0.9-1.2m, 207kJ &mdash; bigger if you prefer beach break to reef. Tide pushing off 9:50am low into 1:31pm high &mdash; mid-rising suits both spots. Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: Bafureira A-frame on 14s glass at mid-to-high tide &mdash; rocks fully covered, exact conditions where Roman&rsquo;s 24 Apr session rated 6/10 in messier swell. Today&rsquo;s 14s NW is the better swell for the spot.</div>
+        <div class="cam-check">Carcavelos cam at 10am. If you see clear 14s lines and any size at all, go &mdash; the period multiplier means the 0.6-0.9m forecast will surf bigger.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">1.1m 14s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">8kph N</div><div class="cond-detail">Near-offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.5m &darr;</div><div class="cond-detail">High 9:20am</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-5">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Dawn Alt &middot; 7:15&ndash;9:30 AM</div>
-            <div class="session-spot">Ribeira d&rsquo;Ilhas (size but wind)</div>
-            <div class="session-drive">40 min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-5">5</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">Ribeira has the size today &mdash; 1.2-1.8m at 14s W with <strong>614kJ dawn</strong> &mdash; but wind is 22-26kph NE cross-shore. Genuinely heavy energy on the sets but surface bumpy. If you want the long-period punch and don&rsquo;t mind the chop, this is the biggest forecast of the day. Pyzel Red Tiger. Watch for clean-up sets &mdash; the 14s means bigger gaps and bigger waves.</div>
-        <div class="alternatives">Also worth checking: Matadouro or São Sebastião &mdash; both tuck from NE cross-shore better than Ribeira&rsquo;s open reef. Same swell, cleaner surface.</div>
-        <div class="cam-check">Ribeira cam at dawn. If it looks too bumpy for 14s barrels, drive the extra 3-5 min to São Sebastião or Matadouro &mdash; same size, cleaner shape.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">1.5m 14s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">22-26kph NE</div><div class="cond-detail">Cross-shore, fresh</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.5m &darr;</div><div class="cond-detail">High 9:20am</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-4">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Pre-lunch &middot; 10:00 AM&ndash;12:30 PM</div>
-            <div class="session-spot">Costa da Caparica</div>
-            <div class="session-drive">20 min drive</div>
-          </div>
-          <div class="session-rating">
-            <span class="rating-num rate-4">4</span>
-            <span class="rating-label">/10</span>
-          </div>
-        </div>
-        <div class="session-why">Local option. Costa 0.6-1.1m on 0.7m 14s W with 6-11kph NE offshore (155kJ). Clean shape but small. Tide pushing off high into low &mdash; workable window. If you don&rsquo;t want the Peniche or Ericeira drives, this is the sensible local paddle. Xero Cruz.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">0.7m 14s W</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6-11kph NE</div><div class="cond-detail">Light offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.8m &darr;</div><div class="cond-detail">Dropping to low</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">1.0m 14s WSW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">2.9kph SSW</div><div class="cond-detail">Dead glass</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.0m &uarr;</div><div class="cond-detail">Low 9:50am, rising</div></div>
         </div>
       </div>
       <div class="advice-card">
         <h3>Best Advice for the Day</h3>
-        <p>Dawn window, one pick. If you have the time and legs for the Peniche commitment, Meio da Baía at 8kph N is the cleanest 14s session anywhere in the region today &mdash; 6/10. If the drive is too much, Ribeira dawn has the size but with 22-26kph cross-shore it&rsquo;s a windy 5/10. Costa pre-lunch is a calm 4/10 local fallback. Avoid the afternoon &mdash; wind ramps to 18-22kph everywhere.</p>
+        <p><strong>This is the day.</strong> Matadouro or Ribeira prelunch on 15s NW glass is the call. If the legs hold, dawn Ribeira + prelunch Matadouro = full coast banks. Pyzel Red Tiger is the right board for the 1.5-1.8m sets. <strong>Don&rsquo;t skip this one</strong> &mdash; the next clean glass-and-size day is potentially Thu 7 May (extended outlook, medium confidence). Take the Friday off work if you have to, this combination doesn&rsquo;t come twice in a fortnight in late April. Photo / GoPro day too &mdash; the 15s on glass at Matadouro is the kind of session worth documenting.</p>
       </div>
     </div>
 
-    <!-- DAY 8: SAT 2 MAY — Extended -->
+    <!-- DAY 7: SAT 2 MAY -->
+    <div class="day-content" id="day7">
+      <h2 style="font-size:1.1rem;color:var(--text-bright);margin-bottom:4px;">Sat 2 May</h2>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:14px;"><strong>Solid tail of the block &mdash; size easing, wind clean offshore N.</strong> Caparica 0.6-0.9m on 0.9m 11s WSW with 6-8kph N offshore prelunch (146-77kJ). Carcavelos 0.6-0.9m, similar. Ribeira 0.9-1.2m at 13s NW with 14-20kph N offshore (215-185kJ). Supertubos 0.6-1.1m at 11s W with 6-7kph N offshore (179-147kJ). Wind is <strong>universally clean offshore N</strong> &mdash; the cleanest direction of the whole period after Fri&rsquo;s glass. Tide low 10:38am Caparica, high 16:42. Mid-rising prelunch suits all spots.</p>
+      <div class="session-card rate-border-6">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn / Pre-lunch &middot; 7:00&ndash;10:30 AM</div>
+            <div class="session-spot">Costa da Caparica or Carcavelos</div>
+            <div class="session-drive">15-20 min drive</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-6">6</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Clean tail session, low commitment. Caparica 0.6-0.9m at 11s WSW with <strong>6kph N offshore</strong> (77kJ) &mdash; classic groomed beach break window on the rising tide. Carcavelos 0.3-0.6m at the same wind (74kJ) reef shape. Tide rising off 10:38am low &mdash; the prelunch window catches the cleanest mid-rising. <strong>Saturday weekend crowd will be at both spots</strong> after Fri&rsquo;s pumping conditions; expect Costa to be the lower-crowd option (sandbars spread the lineup). Xero Cruz.</div>
+        <div class="alternatives">Also worth checking: Bafureira on rising tide for the 11s WSW stacking on the rocks (mid-rising tide = rocks covered, ideal). Fonte da Telha (south of Caparica, 30 min drive) for empty banks if Caparica is rammed.</div>
+        <div class="cam-check">Costa and Carcavelos cams at 6:45am. If both look defined and clean, pick whichever has the lower crowd. Bafureira cam too &mdash; the A-frame on 11s rising tide is a sneaker.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">0.9m 11s WSW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6kph N</div><div class="cond-detail">Clean offshore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">1.2m &uarr;</div><div class="cond-detail">Low 10:38am, rising</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-6">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn Alt &middot; 7:00&ndash;9:30 AM</div>
+            <div class="session-spot">Ribeira d&rsquo;Ilhas / Matadouro (size tail)</div>
+            <div class="session-drive">40 min drive</div>
+          </div>
+          <div class="session-rating">
+            <span class="rating-num rate-6">6</span>
+            <span class="rating-label">/10</span>
+          </div>
+        </div>
+        <div class="session-why">Ericeira holds size off the Fri peak. 0.9-1.2m at 13s NW with <strong>14kph N offshore</strong> dawn (215kJ). Mid-tide-dropping window before wind builds &mdash; tide high 03:18 dropping to low 09:09 (estimated). Matadouro will be cleaner offshore N than Ribeira&rsquo;s open reef. Pyzel possibly overkill at this size; Xero Cruz fine. Saturday crowd will land here too &mdash; São Sebastião remains the low-crowd alternative at 0.9-1.2m which fits its range exactly.</div>
+        <div class="alternatives">Also worth checking: São Sebastião (favourite, ideal range), Foz do Lizandro (south of São Sebastião) for the 13s wrapping into the river-mouth bank.</div>
+        <div class="cam-check">São Sebastião cam first &mdash; if it looks 1m clean and uncrowded, that&rsquo;s the call over Ribeira on a Saturday.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">0.9m 13s NW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14-20kph N</div><div class="cond-detail">Offshore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">varies</div><div class="cond-detail">Mid-dropping dawn</div></div>
+        </div>
+      </div>
+      <div class="advice-card">
+        <h3>Best Advice for the Day</h3>
+        <p>Solid 6/10 either way. South coast wins on commitment (15-20 min drive, clean offshore, smaller size = perfect for Xero Cruz progression). Ericeira wins on size + period (40 min, same offshore, 0.9-1.2m at 13s). Pick by appetite. Avoid afternoon &mdash; size collapses fast and after the Fri peak the Sat afternoon Lisbon crowd is heavy. Sun 3 May onwards the block ends &mdash; 4-day flat zone follows.</p>
+      </div>
+    </div>
+
+    <!-- DAY 8: SUN 3 MAY — Extended -->
     <div class="day-content" id="day8">
       <div class="extended-divider">Extended Outlook</div>
       <div class="extended-card rate-border-3">
         <div class="ext-header">
-          <div class="ext-day">Sat 2 May</div>
-          <div class="ext-confidence medium">Medium Confidence</div>
-        </div>
-        <div class="ext-spot">Best: Ribeira d&rsquo;Ilhas (easing)</div>
-        <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.6-1.4m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">13s W</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">17-32kph NE</div></div>
-        </div>
-        <div class="ext-summary"><span class="ext-rating rate-3">3/10</span> &middot; Swell easing, wind building. Ribeira dawn 0.9-1.4m at 13s with 20kph NE (559kJ but bumpy). Peniche 0.6-0.9m. Costa 0.3-0.6m. Weekend crowd lands on a wind-shaded day &mdash; not worth chasing. Re-check this one in next run, wind can change.</div>
-      </div>
-    </div>
-
-    <!-- DAY 9: SUN 3 MAY — Extended -->
-    <div class="day-content" id="day9">
-      <div class="extended-divider">Extended Outlook</div>
-      <div class="extended-card rate-border-2">
-        <div class="ext-header">
           <div class="ext-day">Sun 3 May</div>
           <div class="ext-confidence medium">Medium Confidence</div>
         </div>
-        <div class="ext-spot">Best: Ribeira d&rsquo;Ilhas (windy)</div>
+        <div class="ext-spot">Best: Costa da Caparica (small clean dawn)</div>
         <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.3-0.9m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">11s W</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">21-43kph N</div></div>
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.3-0.6m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">9s W</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">6kph NW dawn</div></div>
         </div>
-        <div class="ext-summary"><span class="ext-rating rate-2">2/10</span> &middot; <strong>Gale arrives.</strong> N winds 21-43kph everywhere, size dropping fast. Ribeira 0.6-0.9m but blown out, Costa 0-0.3m. Skip day.</div>
+        <div class="ext-summary"><span class="ext-rating rate-3">3/10</span> &middot; Swell collapsing. Caparica 0.3-0.6m on 0.6m 9s W with 6kph NW dawn (44kJ) &mdash; small and clean fallback only. Ribeira 0.6-0.9m but 27kph N. Block ends here. Sunday weekend crowd will land on a small day. Re-check next run for new pulse arrival timing.</div>
       </div>
     </div>
 
-    <!-- DAY 10: MON 4 MAY — Extended -->
-    <div class="day-content" id="day10">
+    <!-- DAY 9: MON 4 MAY — Extended -->
+    <div class="day-content" id="day9">
       <div class="extended-divider">Extended Outlook</div>
-      <div class="extended-card rate-border-2">
+      <div class="extended-card rate-border-1">
         <div class="ext-header">
           <div class="ext-day">Mon 4 May</div>
           <div class="ext-confidence medium">Medium Confidence</div>
         </div>
-        <div class="ext-spot">Best: Nowhere (gale)</div>
+        <div class="ext-spot">Best: Nowhere &mdash; flat</div>
         <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0-0.9m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">6-9s NW</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">30-51kph N</div></div>
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0-0.3m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">7-10s NW</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">10-23kph NNW</div></div>
         </div>
-        <div class="ext-summary"><span class="ext-rating rate-2">2/10</span> &middot; <strong>Major downgrade vs last run &mdash; the &ldquo;7/10 major second swell&rdquo; has collapsed.</strong> New LOTUS run now shows 30-51kph N gale and short-period 6-9s NW windswell. Ribeira 0.6-0.9m but mashed. No usable session anywhere &mdash; total write-off. Keep monitoring: this is the kind of downgrade that could partially reverse in the next 2-3 runs but not back to a proper clean day.</div>
+        <div class="ext-summary"><span class="ext-rating rate-1">1/10</span> &middot; <strong>Flat zone begins.</strong> Caparica 0-0.3m, Carcavelos 0-0.3m, Ribeira drops to 0.3-0.6m at 23kph N. No usable session anywhere. The previously-flagged Mon 4 May major swell has stayed cancelled.</div>
       </div>
     </div>
 
-    <!-- DAY 11: TUE 5 MAY — Extended -->
-    <div class="day-content" id="day11">
+    <!-- DAY 10: TUE 5 MAY — Extended -->
+    <div class="day-content" id="day10">
       <div class="extended-divider">Extended Outlook</div>
-      <div class="extended-card rate-border-2">
+      <div class="extended-card rate-border-1">
         <div class="ext-header">
           <div class="ext-day">Tue 5 May</div>
           <div class="ext-confidence medium">Medium Confidence</div>
         </div>
-        <div class="ext-spot">Best: Ribeira d&rsquo;Ilhas (gale)</div>
+        <div class="ext-spot">Best: Nowhere &mdash; flat</div>
         <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.3-1.1m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">8-11s W</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">32-43kph N</div></div>
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0-0.3m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">8-10s</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">8-22kph NNW</div></div>
         </div>
-        <div class="ext-summary"><span class="ext-rating rate-2">2/10</span> &middot; Gale continues. Ribeira 0.6-1.1m but 32-43kph N makes it a washing machine. Evening 842kJ reading looks big on paper but with 33-37kph wind it&rsquo;s unreadable. Skip.</div>
+        <div class="ext-summary"><span class="ext-rating rate-1">1/10</span> &middot; Flat continues. Ribeira 0.3-0.6m at 18-22kph N. Caparica 0-0.3m. Skip.</div>
       </div>
     </div>
 
-    <!-- DAY 12: WED 6 MAY — Extended -->
-    <div class="day-content" id="day12">
+    <!-- DAY 11: WED 6 MAY — Extended -->
+    <div class="day-content" id="day11">
       <div class="extended-divider">Extended Outlook</div>
       <div class="extended-card rate-border-1">
         <div class="ext-header">
           <div class="ext-day">Wed 6 May</div>
-          <div class="ext-confidence medium">Medium Confidence</div>
+          <div class="ext-confidence low">Low Confidence</div>
         </div>
-        <div class="ext-spot">Best: Nowhere</div>
+        <div class="ext-spot">Best: Nowhere &mdash; flat</div>
         <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0-0.9m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">9-10s W</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">25-36kph N</div></div>
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0-0.3m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">7-10s</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">8-17kph NNW</div></div>
         </div>
-        <div class="ext-summary"><span class="ext-rating rate-1">1/10</span> &middot; Flat south coast, windy west coast, nothing worth checking. Low point of the extended outlook.</div>
+        <div class="ext-summary"><span class="ext-rating rate-1">1/10</span> &middot; Lowest point of the outlook. Page&rsquo;s 16-day extended view confirms the same numbers. No swell anywhere. Bottom of the cycle.</div>
       </div>
     </div>
 
-    <!-- DAY 13: THU 7 MAY — Extended -->
-    <div class="day-content" id="day13">
+    <!-- DAY 12: THU 7 MAY — Extended -->
+    <div class="day-content" id="day12">
       <div class="extended-divider">Extended Outlook</div>
-      <div class="extended-card rate-border-2">
+      <div class="extended-card rate-border-5">
         <div class="ext-header">
           <div class="ext-day">Thu 7 May</div>
-          <div class="ext-confidence medium">Medium Confidence</div>
+          <div class="ext-confidence low">Low Confidence</div>
         </div>
-        <div class="ext-spot">Best: Ribeira d&rsquo;Ilhas (windy tail)</div>
+        <div class="ext-spot">Best: Costa / Carcavelos (new pulse arrives)</div>
         <div class="ext-conditions">
-          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.3-1.1m</div></div>
-          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">13-14s W</div></div>
-          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">28-37kph N</div></div>
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.6-1.1m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">12-14s W</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">light variable</div></div>
         </div>
-        <div class="ext-summary"><span class="ext-rating rate-2">2/10</span> &middot; A 13-14s W pulse tries to arrive but wind remains 28-37kph N. Ribeira 0.6-1.1m evening at 397kJ but heavily wind-affected. Watch next runs &mdash; if wind backs off this is the first candidate for a clean day in the week 5-11 May.</div>
+        <div class="ext-summary"><span class="ext-rating rate-5">5/10</span> &middot; <strong>New pulse arrives.</strong> Caparica 0.6-1.1m on the 16-day extended view. Period and wind both improving. Low confidence at 13 days out &mdash; details will firm up across next 3-4 runs. <strong>Watch list: first candidate clean day after the Sat 2 May tail.</strong></div>
+      </div>
+    </div>
+
+    <!-- DAY 12: FRI 8 MAY — Extended -->
+    <div class="day-content" id="day12_actual">
+      <div class="extended-divider">Extended Outlook</div>
+      <div class="extended-card rate-border-6">
+        <div class="ext-header">
+          <div class="ext-day">Fri 8 May</div>
+          <div class="ext-confidence low">Low Confidence</div>
+        </div>
+        <div class="ext-spot">Best: Costa / Ericeira (pulse builds)</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.9-1.4m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">12-14s W</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">unconfirmed</div></div>
+        </div>
+        <div class="ext-summary"><span class="ext-rating rate-6">6/10</span> &middot; <strong>Pulse continues building.</strong> Caparica 0.9-1.4m per 16-day extended view, Ribeira would be 1.2-1.8m by extension. Could be the next 7+/10 day if wind stays clean &mdash; needs 3-4 more LOTUS runs to confirm. <strong>This is the post-Fri-1-May watch day.</strong></div>
+      </div>
+    </div>
+
+    <!-- DAY 13: SAT 9 MAY — Extended -->
+    <div class="day-content" id="day13">
+      <div class="extended-divider">Extended Outlook</div>
+      <div class="extended-card rate-border-4">
+        <div class="ext-header">
+          <div class="ext-day">Sat 9 May</div>
+          <div class="ext-confidence low">Low Confidence</div>
+        </div>
+        <div class="ext-spot">Best: TBC &mdash; pulse easing</div>
+        <div class="ext-conditions">
+          <div class="ext-cond"><div class="ext-label">Surf</div><div class="ext-val">0.6-0.9m</div></div>
+          <div class="ext-cond"><div class="ext-label">Period</div><div class="ext-val">11-12s</div></div>
+          <div class="ext-cond"><div class="ext-label">Wind</div><div class="ext-val">unconfirmed</div></div>
+        </div>
+        <div class="ext-summary"><span class="ext-rating rate-4">4/10</span> &middot; Tail of the Thu 7 / Fri 8 pulse. Caparica 0.6-0.9m per 16-day view. 13 days out &mdash; will firm up across the week. Saturday weekend factor. Watch for upgrades in next runs.</div>
       </div>
     </div>
 
     <div class="days-to-watch">
       <h3>Days to Watch</h3>
       <div class="dtw-card potential">
-        <div class="dtw-day">Wed 29 Apr &mdash; First Clean Window</div>
-        <div class="dtw-detail">Ribeira d&rsquo;Ilhas 0.9-1.4m on a 12-13s W groundswell with <strong>332kJ at 6am, 10-11kph NE cross-offshore</strong>. First clean Ericeira session since last Friday. São Sebastião and Matadouro both in the same 1.2-1.4m range &mdash; pivot freely between them.</div>
+        <div class="dtw-day">FRI 1 MAY &mdash; THE DAY (8/10, glass + 15s NW)</div>
+        <div class="dtw-detail">Ribeira 1.2-1.8m on 1.1m <strong>15s NW</strong> groundswell with <strong>3.5kph S wind</strong> at noon &mdash; 409kJ on dead glass, biggest power-on-glass combination in the 14-day window. Matadouro is the prelunch call (Roman&rsquo;s 23 Apr Ribeira high-tide-bump intel keeps you out of the worst tide window). Pyzel Red Tiger day. Don&rsquo;t miss this one.</div>
       </div>
       <div class="dtw-card medium">
-        <div class="dtw-day">Thu 30 Apr &mdash; 16-17s Groundswell Builds</div>
-        <div class="dtw-detail">Long-period 16-17s W groundswell filling in. Ribeira dawn 0.9-1.4m at 224kJ (11s primary + 17s secondary), evening peaks at 1.2-1.8m / <strong>459kJ on the 16s</strong>. Wind moderate (15-23kph NE). Dawn is the clean window; evening has size but bump.</div>
+        <div class="dtw-day">Wed 29 Apr &mdash; First Clean Day of the Block</div>
+        <div class="dtw-detail">Ribeira d&rsquo;Ilhas dawn 0.9-1.4m on 1.0m <strong>12s WNW</strong> with 8.8kph WSW &mdash; 191kJ. First proper clean groundswell window after a 12-day onshore-or-flat dry spell. Tight session (90 min before wind builds to 17kph SSW) but the 12s period (vs the recent 10s) means defined waves not fat mush. São Sebastião and Matadouro alternate options.</div>
       </div>
       <div class="dtw-card medium">
-        <div class="dtw-day">Fri 1 May &mdash; Mid-period Peak</div>
-        <div class="dtw-detail">Ribeira 1.2-1.8m on a 14s W groundswell with <strong>614kJ dawn</strong> &mdash; biggest forecast power in the 14-day window, but 22-26kph NE wind. Peniche dawn at 8kph N is the <strong>cleaner-wind alternative</strong> (0.9-1.2m at 14s, 332kJ). Meio da Baía for crowd-free.</div>
+        <div class="dtw-day">Sat 2 May &mdash; Solid Tail (6/10 offshore N)</div>
+        <div class="dtw-detail">Block&rsquo;s tail. Caparica 0.6-0.9m at 11s WSW with 6kph N offshore &mdash; classic groomed beach break. Ribeira 0.9-1.2m at 13s NW with clean 14kph N offshore. Saturday crowd factor but the offshore N keeps everywhere clean. Last 6/10 day until the new pulse arriving Thu 7 / Fri 8 May.</div>
+      </div>
+      <div class="dtw-card medium">
+        <div class="dtw-day">Tue 28 Apr Pre-lunch &mdash; Sneaky 14s Glass</div>
+        <div class="dtw-detail">Carcavelos 0.3-0.6m on a <strong>14s WSW</strong> primary at <strong>2.4kph dead glass</strong> (77kJ). Small but the long-period-on-glass is exactly the conditions where Roman&rsquo;s 23-24 Apr Ribeira/Bafureira observations confirm the south-coast spots run bigger than the model. Bafureira A-frame at high tide (1:31pm) is the sneaker call.</div>
       </div>
       <div class="dtw-card">
-        <div class="dtw-day">Mon 4 May &mdash; PREVIOUSLY-FLAGGED SWELL CANCELLED</div>
-        <div class="dtw-detail">Last run flagged this as a &ldquo;7/10 major second swell&rdquo; event. <strong>New LOTUS has collapsed it</strong> &mdash; 30-51kph N gale with 6-9s short-period windswell. 0.6-0.9m but mashed. No longer a target day; week 3-7 May is wind-dominated across the board.</div>
+        <div class="dtw-day">Thu 7 / Fri 8 May &mdash; New Pulse Arrives (low confidence)</div>
+        <div class="dtw-detail">After 4 flat days (Sun 3 &ndash; Wed 6 May), a fresh pulse arrives by Thu 7 May (0.6-1.1m at 12-14s W) building to 0.9-1.4m on Fri 8 May. Wind direction TBC. Watch next 3-4 LOTUS runs &mdash; if wind stays light this becomes the post-Fri-1-May headline day.</div>
       </div>
     </div>
 
@@ -790,11 +824,11 @@
         <span class="source-badge numerical">Numerical</span>
       </div>
       <div class="source-item">
-        <span>LOTUS Model Run: 23 Apr 7pm WEST (23 Apr 18 UTC)</span>
+        <span>LOTUS Model Run: 25 Apr 3am WEST (25 Apr 02 UTC)</span>
         <span class="source-badge numerical">Model</span>
       </div>
       <div class="source-item">
-        <span>Observations calibrated: 4 Portugal obs (last 14 Apr)</span>
+        <span>Observations calibrated: 6 Portugal obs (latest 24 Apr Bafureira)</span>
         <span class="source-badge numerical">Calibrated</span>
       </div>
     </div>
