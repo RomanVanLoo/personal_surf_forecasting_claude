@@ -4,7 +4,7 @@
   "regions": {
     "gold-coast-qld": {
       "metadata": {
-        "region": "Gold Coast QLD \u00b1 2hr drive radius",
+        "region": "Gold Coast QLD ± 2hr drive radius",
         "base_location": "Gold Coast, QLD, Australia",
         "created_at": "2026-03-16T18:00:00+10:00",
         "last_updated": "2026-03-16",
@@ -100,7 +100,7 @@
             "reference_surfline_spot": "Mooloolaba",
             "reference_surfline_id": "5842041f4e65fad6a7708bec",
             "reference_surfline_url": "https://www.surfline.com/surf-report/mooloolaba/5842041f4e65fad6a7708bec",
-            "why_this_reference": "Mooloolaba is centrally located on the Sunshine Coast with good Surfline coverage. It represents the E/SE swell window that the Sunshine Coast receives. Wind data here is distinct from Gold Coast \u2014 the Sunshine Coast often gets different wind patterns due to the coastal geography north of Moreton Bay.",
+            "why_this_reference": "Mooloolaba is centrally located on the Sunshine Coast with good Surfline coverage. It represents the E/SE swell window that the Sunshine Coast receives. Wind data here is distinct from Gold Coast — the Sunshine Coast often gets different wind patterns due to the coastal geography north of Moreton Bay.",
             "covers_spots": [
               "Kings Beach",
               "Moffat Beach",
@@ -116,7 +116,7 @@
           },
           "noosa": {
             "name": "Noosa / Rainbow Beach",
-            "description": "NE-facing points and beaches. Completely different swell window \u2014 needs E/NE swell. S swells barely register here.",
+            "description": "NE-facing points and beaches. Completely different swell window — needs E/NE swell. S swells barely register here.",
             "reference_surfline_spot": "Noosa Heads",
             "reference_surfline_id": "5842041f4e65fad6a7708bee",
             "reference_surfline_url": "https://www.surfline.com/surf-report/noosa-heads/5842041f4e65fad6a7708bee",
@@ -234,7 +234,7 @@
           "skill_level": "advanced",
           "girlfriend_friendly": false,
           "girlfriend_notes": "Too crowded and heavy",
-          "character": "Legendary tubes, fickle \u2014 doesn't break often but when it does, it's world-class. Sandbar dependent.",
+          "character": "Legendary tubes, fickle — doesn't break often but when it does, it's world-class. Sandbar dependent.",
           "hazards": [
             "heavy crowds",
             "rocks",
@@ -416,7 +416,7 @@
           "crowd_level": 8,
           "skill_level": "beginner-intermediate",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Crowd level 8 \u2014 too competitive and hectic for Cato. River currents and rips add paddle-out stress. Not worth it when quieter options exist nearby.",
+          "girlfriend_notes": "Crowd level 8 — too competitive and hectic for Cato. River currents and rips add paddle-out stress. Not worth it when quieter options exist nearby.",
           "character": "Consistent exposed river break, left-hand wave, accessible for various skill levels.",
           "hazards": [
             "sharks",
@@ -607,7 +607,7 @@
           "crowd_level": 6,
           "skill_level": "intermediate-advanced",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Rocky, fast, hollow \u2014 not mellow enough",
+          "girlfriend_notes": "Rocky, fast, hollow — not mellow enough",
           "character": "Surfing mecca of Stradbroke. World-class breaks (South Gorge, Deadmans, Frenchmans). Fast hollow tubes, long peeling walls.",
           "hazards": [
             "rocks",
@@ -661,7 +661,7 @@
           "crowd_level": 4,
           "skill_level": "intermediate",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Not patrolled, strong currents and rips \u2014 Cato would panic if caught in a current with no lifeguards. Too risky for an upper beginner.",
+          "girlfriend_notes": "Not patrolled, strong currents and rips — Cato would panic if caught in a current with no lifeguards. Too risky for an upper beginner.",
           "character": "Popular alternative for locals. Open exposure but less powerful than Main Beach.",
           "hazards": [
             "not patrolled",
@@ -1141,7 +1141,7 @@
           "crowd_level": 7,
           "skill_level": "beginner-intermediate",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "Perfect peeling rights, mellow, longboard heaven \u2014 but crowd level 7 means competitive drops and snaking. Cato would enjoy the wave itself but may get frustrated by crowds. Best very early or midweek.",
+          "girlfriend_notes": "Perfect peeling rights, mellow, longboard heaven — but crowd level 7 means competitive drops and snaking. Cato would enjoy the wave itself but may get frustrated by crowds. Best very early or midweek.",
           "character": "Premier QLD longboard wave. Perfectly peeling right-handers. 100m+ rides. World-famous longboarding mecca.",
           "hazards": [
             "massive crowds",
@@ -1277,7 +1277,7 @@
           "crowd_level": 6,
           "skill_level": "intermediate",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "Peaky beach break, more size than points \u2014 good when chest high and clean",
+          "girlfriend_notes": "Peaky beach break, more size than points — good when chest high and clean",
           "character": "Peaky open beach break with more size than the point breaks. Consistent winter option.",
           "hazards": [
             "exposed",
@@ -1304,7 +1304,7 @@
           "latitude": -25.9333,
           "longitude": 153.2,
           "drive_time_minutes": 110,
-          "drive_notes": "4WD required from Rainbow Beach via beach drive. Check tide times \u2014 high tide impassable.",
+          "drive_notes": "4WD required from Rainbow Beach via beach drive. Check tide times — high tide impassable.",
           "wave_type": "long right-hand point break",
           "bottom": "sand",
           "best_swell_direction": [
@@ -1324,13 +1324,13 @@
             14
           ],
           "best_wind_direction": "SE",
-          "wind_notes": "SE to E \u2014 unusual, onshores are actually offshore here",
+          "wind_notes": "SE to E — unusual, onshores are actually offshore here",
           "best_tide": "all",
           "tide_notes": "All tides work, but low tide needed for beach access drive",
           "crowd_level": 2,
           "skill_level": "beginner-intermediate",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "300m+ rides, mellow even when small, uncrowded paradise \u2014 but requires 4WD commitment",
+          "girlfriend_notes": "300m+ rides, mellow even when small, uncrowded paradise — but requires 4WD commitment",
           "character": "Australia's longest and safest beginner wave. 300m+ rides in ideal conditions. Remote in Great Sandy National Park. Perfect for longboarders.",
           "hazards": [
             "4WD required",
@@ -1377,7 +1377,7 @@
           "crowd_level": 2,
           "skill_level": "beginner-intermediate",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "Mellow, uncrowded, scenic \u2014 adventure day trip",
+          "girlfriend_notes": "Mellow, uncrowded, scenic — adventure day trip",
           "character": "Gateway to Double Island Point. Sand point breaks. Mellow beginner-friendly. Scenic coloured sand cliffs.",
           "hazards": [
             "4WD access permit",
@@ -1424,7 +1424,7 @@
           "crowd_level": 7,
           "skill_level": "beginner-advanced",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Punchy A-frame wedges with river currents \u2014 the combination of fast-breaking waves and strong currents makes the paddle-out stressful. Crowd level 7 adds pressure. Cato would not enjoy this spot even on small days.",
+          "girlfriend_notes": "Punchy A-frame wedges with river currents — the combination of fast-breaking waves and strong currents makes the paddle-out stressful. Crowd level 7 adds pressure. Cato would not enjoy this spot even on small days.",
           "character": "Punchy A-frame wedges. Barrel opportunities. Reliable swell magnet. HPC training spot.",
           "hazards": [
             "river break characteristics",
@@ -1807,7 +1807,7 @@
           "crowd_level": 9,
           "skill_level": "beginner-advanced",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Crowd level 9 \u2014 the most competitive lineup in the region. Extreme crowds, aggressive locals, constant drop-ins. Cato would barely catch a wave and the stress of the lineup would ruin the session. The wave itself is perfect for her level, but the crowd makes it a no-go.",
+          "girlfriend_notes": "Crowd level 9 — the most competitive lineup in the region. Extreme crowds, aggressive locals, constant drop-ins. Cato would barely catch a wave and the stress of the lineup would ruin the session. The wave itself is perfect for her level, but the crowd makes it a no-go.",
           "character": "Iconic long right-hand point. Long peeling walls. Occasional hollow sections. Extended rides.",
           "hazards": [
             "extreme crowds",
@@ -1952,7 +1952,7 @@
           "crowd_level": 6,
           "skill_level": "intermediate-advanced",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Fast, hollow, powerful \u2014 technical takeoff",
+          "girlfriend_notes": "Fast, hollow, powerful — technical takeoff",
           "character": "Fast, hollow, powerful right-hander on sand in front of shipwreck. Sheltered. Technical take-off.",
           "hazards": [
             "wreck",
@@ -2001,7 +2001,7 @@
           "crowd_level": 6,
           "skill_level": "intermediate-advanced",
           "girlfriend_friendly": false,
-          "girlfriend_notes": "Sand-dependent quality, occasionally hollow \u2014 inconsistent for mellow sessions",
+          "girlfriend_notes": "Sand-dependent quality, occasionally hollow — inconsistent for mellow sessions",
           "character": "Real gem of Byron Bay. Occasionally hollow. Sand-dependent. Room to wander beach if point isn't on.",
           "hazards": [
             "sand dependency",
@@ -2365,7 +2365,7 @@
           "crowd_level": 5,
           "skill_level": "beginner-intermediate",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "Fun left and right waves, low crowds \u2014 but well-known shark zone (Ballina area). Wave itself is fine for Cato. Shark risk is the main concern; judge based on recent sightings.",
+          "girlfriend_notes": "Fun left and right waves, low crowds — but well-known shark zone (Ballina area). Wave itself is fine for Cato. Shark risk is the main concern; judge based on recent sightings.",
           "character": "Rocky outcrop creates break. Left and right waves. Mix of rock ledge and sand bottom. Consistent.",
           "hazards": [
             "sharks (well-known)",
@@ -2569,7 +2569,7 @@
           "latitude": -29.4667,
           "longitude": 153.35,
           "drive_time_minutes": 142,
-          "drive_notes": "At the edge of 2hr radius \u2014 only go if conditions are firing",
+          "drive_notes": "At the edge of 2hr radius — only go if conditions are firing",
           "wave_type": "right-hand point break",
           "bottom": "reef/rock",
           "best_swell_direction": [
@@ -2700,8 +2700,8 @@
           "crowd_level": 5,
           "skill_level": "beginner-expert",
           "girlfriend_friendly": true,
-          "girlfriend_notes": "Only Cato-friendly on small swell days (knee-high learner waves on inside). On bigger swells this becomes an expert-only heavy reef break \u2014 do NOT send Cato here on anything above waist-high. Rocks and sharks are additional concerns.",
-          "character": "Two faces \u2014 small swell: knee-high learner waves. Big swell: cobblestone reef ferocious A-frames 50m off rocks.",
+          "girlfriend_notes": "Only Cato-friendly on small swell days (knee-high learner waves on inside). On bigger swells this becomes an expert-only heavy reef break — do NOT send Cato here on anything above waist-high. Rocks and sharks are additional concerns.",
+          "character": "Two faces — small swell: knee-high learner waves. Big swell: cobblestone reef ferocious A-frames 50m off rocks.",
           "hazards": [
             "heavy surf in big swells",
             "rocks",
@@ -2724,7 +2724,7 @@
     },
     "lisbon-coast": {
       "metadata": {
-        "region": "Lisbon Coast + Peniche \u2014 Fonte da Telha to Peniche",
+        "region": "Lisbon Coast + Peniche — Fonte da Telha to Peniche",
         "base_location": "Linda a Velha, Lisbon, Portugal",
         "created_at": "2026-04-04T06:00:00+01:00",
         "last_updated": "2026-04-04",
@@ -2733,29 +2733,29 @@
         "forecast_regions": {
           "lisbon_south": {
             "name": "Lisbon South (Costa da Caparica)",
-            "description": "Fonte da Telha to S\u00e3o Jo\u00e3o da Caparica. SW-facing beach breaks. Consistent, beginner-friendly, wide sandy coast.",
+            "description": "Fonte da Telha to São João da Caparica. SW-facing beach breaks. Consistent, beginner-friendly, wide sandy coast.",
             "reference_surfline_spot": "Costa da Caparica",
             "reference_surfline_id": "5842041f4e65fad6a7708e65",
             "reference_surfline_url": "https://www.surfline.com/surf-report/costa-da-caparica/5842041f4e65fad6a7708e65",
-            "why_this_reference": "Central to the Caparica strip, good data coverage, represents the W-SW swell window for the entire south bank. Wind and tide data applies from Fonte da Telha to S\u00e3o Jo\u00e3o.",
+            "why_this_reference": "Central to the Caparica strip, good data coverage, represents the W-SW swell window for the entire south bank. Wind and tide data applies from Fonte da Telha to São João.",
             "covers_spots": [
               "Fonte da Telha",
               "Costa da Caparica",
-              "S\u00e3o Jo\u00e3o da Caparica"
+              "São João da Caparica"
             ],
             "strategy": "always"
           },
           "lisbon_central": {
             "name": "Lisbon Central (Carcavelos-Estoril)",
-            "description": "Carcavelos to S\u00e3o Pedro do Estoril. Mix of beach breaks and reef/point breaks. Best barrel potential at Carcavelos.",
+            "description": "Carcavelos to São Pedro do Estoril. Mix of beach breaks and reef/point breaks. Best barrel potential at Carcavelos.",
             "reference_surfline_spot": "Carcavelos",
             "reference_surfline_id": "5842041f4e65fad6a7708bc0",
             "reference_surfline_url": "https://www.surfline.com/surf-report/carcavelos/5842041f4e65fad6a7708bc0",
-            "why_this_reference": "Highest data density in Portugal, most visited spot near Lisbon. Represents the W-SW swell window for the Cascais coast. Wind data covers Carcavelos to S\u00e3o Pedro.",
+            "why_this_reference": "Highest data density in Portugal, most visited spot near Lisbon. Represents the W-SW swell window for the Cascais coast. Wind data covers Carcavelos to São Pedro.",
             "covers_spots": [
               "Carcavelos",
               "Estoril",
-              "S\u00e3o Pedro do Estoril"
+              "São Pedro do Estoril"
             ],
             "strategy": "always"
           },
@@ -2779,7 +2779,7 @@
           },
           "peniche": {
             "name": "Peniche (Supertubos, Baleal, Lagide)",
-            "description": "Peninsula with 270\u00b0 swell exposure. WSL competition venue. Advanced beach breaks and reef breaks. Weekend range only.",
+            "description": "Peninsula with 270° swell exposure. WSL competition venue. Advanced beach breaks and reef breaks. Weekend range only.",
             "reference_surfline_spot": "Supertubos",
             "reference_surfline_id": "5842041f4e65fad6a7708bc3",
             "reference_surfline_url": "https://www.surfline.com/surf-report/supertubos/5842041f4e65fad6a7708bc3",
@@ -2788,8 +2788,8 @@
               "Supertubos",
               "Lagide",
               "Baleal",
-              "Consola\u00e7\u00e3o",
-              "Meio da Ba\u00eda"
+              "Consolação",
+              "Meio da Baía"
             ],
             "strategy": "conditional_weekend"
           }
@@ -2845,7 +2845,7 @@
           "forecast_region": "lisbon_south"
         },
         {
-          "name": "S\u00e3o Jo\u00e3o da Caparica",
+          "name": "São João da Caparica",
           "surfline_id": "5dbb587ff387900001fee288",
           "surfline_url": "https://www.surfline.com/surf-report/s-o-jo-o-da-caparica/5dbb587ff387900001fee288",
           "ideal_swell_direction": [
@@ -2916,7 +2916,7 @@
           "forecast_region": "lisbon_central"
         },
         {
-          "name": "S\u00e3o Pedro do Estoril",
+          "name": "São Pedro do Estoril",
           "surfline_id": "640b9d679b6fab7dac307b39",
           "surfline_url": "https://www.surfline.com/surf-report/s-o-pedro-do-estoril/640b9d679b6fab7dac307b39",
           "ideal_swell_direction": [
@@ -3037,8 +3037,15 @@
           "skill_level": "intermediate",
           "drive_time_min": 50,
           "character": "Mellow reef break north of the iconic chapel. Right-hander near exposed rock formation, plus a powerful left (Esquerda dos Surfistas) at the south end. Rock bottom — watch rocks on paddle out. Works mid to high tide. Strong currents. Super chill vibe, almost never crowded. The right near the rock is accessible and mellow.",
-          "roman_notes": "ROMAN'S FAVOURITE for chill sessions. Super chill, not scary, almost never any crowds. Prioritise this spot when conditions suit it — Roman explicitly prefers it.",
-          "forecast_region": "ericeira"
+          "roman_notes": "ROMAN'S FAVOURITE for chill sessions. Super chill, not scary, almost never any crowds. Prioritise this spot when conditions suit it — Roman explicitly prefers it. || NO SURFLINE CAM AND NO INDIVIDUAL FORECAST PAGE — confirmed Sat 2 May 2026. Use Matadouro + Foz do Lizandro cams as proxies. If those look textured/bad, assume Sebastião too and skip the drive. Numerical forecast must be inferred from Ribeira d'Ilhas reference spot.",
+          "forecast_region": "ericeira",
+          "has_surfline_cam": false,
+          "has_surfline_forecast_page": false,
+          "cam_check_proxies": [
+            "Matadouro",
+            "Foz do Lizandro",
+            "Ribeira d'Ilhas"
+          ]
         },
         {
           "name": "Matadouro",
@@ -3186,7 +3193,7 @@
           "forecast_region": "peniche"
         },
         {
-          "name": "Consola\u00e7\u00e3o",
+          "name": "Consolação",
           "surfline_id": "5a53f6e5a8b6a9001b017369",
           "surfline_url": "https://www.surfline.com/surf-report/consolacao/5a53f6e5a8b6a9001b017369",
           "ideal_swell_direction": [
@@ -3210,7 +3217,7 @@
           "forecast_region": "peniche"
         },
         {
-          "name": "Meio da Ba\u00eda",
+          "name": "Meio da Baía",
           "surfline_id": "63a4374bb5c53b335b3eada7",
           "surfline_url": "https://www.surfline.com/surf-report/meio-da-baia/63a4374bb5c53b335b3eada7",
           "ideal_swell_direction": [
