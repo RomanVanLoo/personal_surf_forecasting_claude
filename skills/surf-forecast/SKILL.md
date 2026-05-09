@@ -212,18 +212,21 @@ For each day (14-day window: today + next 13 days), use the **day type** from th
 
 ### Compact format for ALL days
 
-The dashboard is the deliverable, not a written report. Use the existing HTML card patterns. **Every session card is just five things, in this order:**
+The dashboard is the deliverable, not a written report. Use the existing HTML card patterns. **Every session card is six things, in this order:**
 
 1. **Time window** (e.g. "Dawn · 6:30–9:30 AM")
 2. **Spot name + drive time** (e.g. "Supertubos / Lagide · 1hr 15 drive"). For skip sessions: "Skip — [one-clause reason]" with no spot.
 3. **Rating** (1-10 number with /10 label)
-4. **Optional one-line cam-check note** — only when the call genuinely depends on a cam. Maximum one sentence. Skip entirely otherwise.
-5. **Conditions grid** (Surf / Wind / Tide) — three boxes only, ~6 words each:
+4. **Session summary — `.session-summary` block, MAX 100 WORDS.** A short prose line(s) explaining *why* this is the call: dominant swell character, why this spot beats nearby alternatives, any context the conditions grid can't convey (long-period overlay quality, wind shadow effect, crowd intel, observation calibration). For skip sessions, ONE sentence is enough — explain in a clause why everything's blown. **Never exceed 100 words. Count if you're unsure.** Quality of insight over volume.
+5. **Optional one-line cam-check note** (`.cam-note`) — only when the call genuinely depends on a cam. Maximum one short sentence. Skip otherwise.
+6. **Conditions grid** (Surf / Wind / Tide) — three boxes only, ~6 words each:
    - Surf: height range + dominant swell summary (e.g. "1.2-1.5m · 8s SW + 13s WNW")
    - Wind: speed + direction + offshore/cross/onshore + gust if material (e.g. "17kph E · cross g24")
    - Tide: state + next event (e.g. "1.6m ↑ · H 08:41 2.2m")
 
-That is the entire card. No "session-why" paragraph, no "alternatives" paragraph, no "best advice" card per day.
+That is the entire card. No additional "alternatives" paragraph, no "best advice" card per day.
+
+**Extended outlook cards (days 8-14)** get the same structure but ONE merged summary line (max ~50 words) inside `.ext-summary` instead of a per-session `.session-summary`. One card per day, not three.
 
 For `wave-pool` / `travel` / `rest` days: a single card with the time window, the spot/label ("URBNSURF · Sun 3pm" or "Travelling · MEL→LIS" or "Rest day"), and a rating. Skip the conditions grid if not relevant.
 
@@ -237,18 +240,18 @@ Write like a knowledgeable local surf forecaster talking to a mate, but in **chi
 
 The dashboard exists to answer three questions in under 30 seconds: **where do I surf today, what time, and is it worth it?** Everything else gets in the way.
 
-**Per-day total budget: ~120 words of human-readable text MAX** (excluding the conditions grid values themselves). If you're writing more, you're writing too much.
+**Per-session text budget: 100 words MAX inside `.session-summary`.** Per-day total (3 sessions × 100w + cam-notes) is ~300w of human-readable prose ceiling. If you're writing more, you're writing too much. Quality of insight beats volume — a single sharp sentence often beats a paragraph.
 
 **HARD BANS — do not generate any of these on the dashboard:**
 
 1. **No overview paragraph above the day strip.** The chip strip + the active day card already answer "what's the week look like."
-2. **No per-day overview/summary `<p>` block** above or below the session cards. The session cards are self-explanatory.
-3. **No `session-why` paragraph** explaining why the spot was chosen. The conditions grid + rating + spot name says it. If the call genuinely needs context, use the one-line cam-note.
-4. **No `alternatives` paragraph.** If there are real alternatives in the same area, list them inline in the spot field with a slash: "Supertubos / Lagide". Don't write a sentence about it.
-5. **No `advice-card` ("Best Advice for the Day") block per day.** It duplicates the session ratings. Keep the global "Days to Watch" list at the bottom for cycle-level highlights — but as one-liners only.
-6. **No "Recent Observations calibrated" days-to-watch card listing every observation.** Observations should silently change the recommendation; don't narrate them. (One short line in Data Sources is fine: "X observations calibrated, latest [date] [spot] [rating]/10".)
+2. **No per-day overview/summary `<p>` block** above the session cards. Each session has its own summary inside the card; that's where prose lives.
+3. **No "session-why" paragraph beyond the 100-word `.session-summary`.** Don't add a second prose block underneath.
+4. **No `alternatives` paragraph.** If there are real alternatives in the same area, list them inline in the spot field with a slash ("Supertubos / Lagide") or weave them into the session summary in a clause. Don't dedicate a paragraph.
+5. **No `advice-card` ("Best Advice for the Day") block per day.** The session summaries already carry the call. Keep the global "Days to Watch" list at the bottom for cycle-level highlights — one-liners only.
+6. **No "Recent Observations calibrated" days-to-watch card listing every observation.** Observations should silently shape the recommendations and may be referenced inline in a session summary ("Roman's 4 May obs calibrates today's reef threshold"). Don't dedicate a card. One short line in Data Sources is fine.
 7. **No "Major model shift vs yesterday" cards.** The ratings already changed; that's the signal.
-8. **No verbose Data Sources block.** One short line/paragraph: spots fetched, model run timestamp, observations count, confidence note.
+8. **No verbose Data Sources block.** One short paragraph: spots fetched, model run timestamp, observations count, confidence note.
 
 **Cam-check note rules:**
 - Maximum ONE sentence per session card.
@@ -268,7 +271,7 @@ The dashboard exists to answer three questions in under 30 seconds: **where do I
 - No card may exceed two lines visually on mobile.
 
 **Self-check before writing the file:**
-After generating the dashboard content, count `<p>` tags in the body (excluding the data-sources line and footer). It should be **zero**. If you see paragraphs, delete them. The dashboard renders through cards and grids — never prose blocks.
+After generating the dashboard content, count words inside each `.session-summary` and `.ext-summary` block. Each must be ≤100w (`.session-summary`) or ≤50w (`.ext-summary`). If any block is over budget, trim it. The dashboard answers "where, when, why, and is it worth it" — anything beyond that is noise. Prose only ever lives inside `.session-summary` / `.ext-summary` / `.cam-note` / Data Sources line — never as a free-floating `<p>`.
 
 These rules exist because the user (Roman) has explicitly asked for a compact dashboard and pointed out that adding text drift is a recurring failure mode of past runs. **The skill author trusts you to keep the dashboard tight. Don't break that trust by smuggling prose back in via "just one more sentence of context."**
 
@@ -293,8 +296,8 @@ The HTML is a single self-contained file (no external dependencies except CDN-ho
 
 - Status bar: last updated timestamp + Chrome connection dot (warning banner only if disconnected)
 - Day strip: 14 chips, each showing day-of-week, date, rating, and size range. Add a tiny location label only when the location differs from the previous day.
-- Active day panel: 1-3 session cards (`surf`/`home`) OR a single rest/travel/wave-pool card. Each session card is exactly: time, spot+drive, rating, optional one-line cam-note, three-box conditions grid. **Nothing else.** No overview paragraph, no advice card, no alternatives block.
-- Extended outlook cards (days 8-14): one compact card per day with a single short header line and the same three-box conditions grid.
+- Active day panel: 1-3 session cards (`surf`/`home`) OR a single rest/travel/wave-pool card. Each session card is exactly: time, spot+drive, rating, **`.session-summary` block (≤100 words explaining the call)**, optional one-line cam-note, three-box conditions grid. **Nothing else.** No free-floating overview paragraph above or below the session cards, no advice card, no alternatives block.
+- Extended outlook cards (days 8-14): one compact card per day with a single short header line, a `.ext-summary` block (≤50 words), and the same three-box conditions grid.
 - Days to Watch: max 4 one-liner cards.
 - Data Sources: ONE short paragraph — spots fetched, model run timestamp, observations count, confidence note.
 
