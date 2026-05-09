@@ -202,94 +202,75 @@ Divide each day into four session windows based on sunrise/sunset times (extract
    - 10: Epic, once-in-a-trip conditions
 9. **Note any caveats** (crowd risk, drive time, hazards)
 
-### Report structure
+### Report structure (BREVITY IS THE RULE — see "Dashboard Brevity Rules" below)
 
 For each day (14-day window: today + next 13 days), use the **day type** from the location map to determine the format.
 
-**Days 1-8 (today + next 7)** get FULL session-by-session breakdowns as described below.
+**Days 1-7 (today + next 6)** get session-by-session cards (typically 2-3 sessions per day: a banked window plus a "skip the rest" or stack-on card). Don't pad to four sessions if the day really only has one window — collapse the rest into a single "PM / Evening — skip" card.
 
-**Days 9-14 (the extended outlook)** get a LIGHTER format: one daily overview card with the best expected session window, key swell/wind numbers, a spot suggestion, a 1-10 rating, and a confidence indicator (low/medium — these forecasts WILL change). No per-session breakdown needed for the extended days. This keeps the dashboard scannable while still giving the surfer a planning horizon. As days roll closer and model runs update, they'll graduate into the full-detail format.
+**Days 8-14 (the extended outlook)** get ONE compact card per day — a single conditions grid plus a one-line spot/window note and rating. No per-session breakdown. As days roll closer they graduate into the full session-card format.
 
-### Full format (days 1-8):
+### Compact format for ALL days
 
-#### For `surf` / `home` days — full forecast:
+The dashboard is the deliverable, not a written report. Use the existing HTML card patterns. **Every session card is just five things, in this order:**
 
-```
-## [Day, Date] — [Location name]
+1. **Time window** (e.g. "Dawn · 6:30–9:30 AM")
+2. **Spot name + drive time** (e.g. "Supertubos / Lagide · 1hr 15 drive"). For skip sessions: "Skip — [one-clause reason]" with no spot.
+3. **Rating** (1-10 number with /10 label)
+4. **Optional one-line cam-check note** — only when the call genuinely depends on a cam. Maximum one sentence. Skip entirely otherwise.
+5. **Conditions grid** (Surf / Wind / Tide) — three boxes only, ~6 words each:
+   - Surf: height range + dominant swell summary (e.g. "1.2-1.5m · 8s SW + 13s WNW")
+   - Wind: speed + direction + offshore/cross/onshore + gust if material (e.g. "17kph E · cross g24")
+   - Tide: state + next event (e.g. "1.6m ↑ · H 08:41 2.2m")
 
-**Overview**: [1-2 sentence summary of the day — overall vibe, dominant swell, wind trend]
+That is the entire card. No "session-why" paragraph, no "alternatives" paragraph, no "best advice" card per day.
 
-### Dawn Patrol (5:30am - 8:00am)
-**Best spot**: [Name] ([drive time] drive)
-**Also worth checking**: [Nearby spot B] and [Nearby spot C] — [brief reason, e.g. "if the crowd's too much at Snapper, Greenmount handles the same swell with fewer people"]
-**Check the cams**: [Specific camera suggestion, e.g. "Pull up the Snapper and D-Bah cams before you leave — if Snapper's packed, head straight to D-Bah"]
-**Rating**: [X/10]
-**Why**: [2-3 sentences explaining conditions and why this spot works]
-**Surf**: [height range], [swell details]
-**Wind**: [speed] [direction] ([offshore/onshore/cross])
-**Tide**: [height]m [rising/falling]
+For `wave-pool` / `travel` / `rest` days: a single card with the time window, the spot/label ("URBNSURF · Sun 3pm" or "Travelling · MEL→LIS" or "Rest day"), and a rating. Skip the conditions grid if not relevant.
 
-### Pre-lunch (9:00am - 12:00pm)
-[same format]
-
-### Afternoon (12:00pm - 4:00pm)
-[same format]
-
-### Evening Session (4:00pm - 6:30pm)
-[same format]
-
-### Best advice for the day
-[Your honest recommendation — which session to prioritize, whether to drive far or stay local, etc.]
-```
-
-#### For `wave-pool` days — minimal card:
-
-```
-## [Day, Date] — [Location] (Wave Pool)
-
-**Sessions**: [Times from itinerary, e.g. "Evening session + 3pm Sunday"]
-**Weather**: [Temperature, wind if outdoor pool]
-**Notes**: [Any relevant notes]
-```
-
-#### For `travel` days — rest card:
-
-```
-## [Day, Date] — Travelling
-
-[Route/notes from itinerary, e.g. "Melbourne → Portugal via Dubai"]
-No surf today.
-```
-
-#### For `rest` days — rest card:
-
-```
-## [Day, Date] — Rest Day
-
-[Optional notes]
-```
-
-**Multi-location transitions:** When the location changes between consecutive days, add a brief transition note in the day header or overview — e.g. "Last day on the Gold Coast before flying to Melbourne tomorrow." This helps the surfer mentally prepare for the transition.
-
-### Extended outlook format (days 9-14):
-
-```
-## [Day, Date] — [Location name] (Extended outlook · [Low/Medium] confidence)
-
-**Best window**: [Time of day] — [Spot name]
-**Rating**: [X/10]
-**Surf**: [height range], [swell summary]
-**Wind**: [speed] [direction] ([offshore/onshore/cross])
-**Summary**: [1-2 sentence overview of conditions — keep it honest about uncertainty]
-```
-
-For skip/rest/travel days in the extended range, use the same minimal format as days 1-8.
-
-**Note on "Also worth checking" and "Check the cams"**: These lines are OPTIONAL — only include them when there are genuine alternatives in the same area. If one spot is the clear winner, skip these lines entirely. A clean single recommendation is better than forced alternatives.
+**Multi-location transitions:** put a tiny transition label in the day chip's location field (e.g. "SAT 28 — Melbourne") — no overview prose required.
 
 ### Tone
 
-Write like a knowledgeable local surf forecaster talking to a mate. Be direct, honest, and practical. Don't hype mediocre conditions. If it's flat, say it's flat. If there's a once-in-a-trip swell coming, get excited about it.
+Write like a knowledgeable local surf forecaster talking to a mate, but in **chip-and-grid form, not prose**. Be direct. Don't hype mediocre conditions. If it's flat, the card just says "Flat" with the size box reading 0-0.3m — that's enough. The user has Surfline themselves for the long version.
+
+## Dashboard Brevity Rules — STRICT, NEVER VIOLATE
+
+The dashboard exists to answer three questions in under 30 seconds: **where do I surf today, what time, and is it worth it?** Everything else gets in the way.
+
+**Per-day total budget: ~120 words of human-readable text MAX** (excluding the conditions grid values themselves). If you're writing more, you're writing too much.
+
+**HARD BANS — do not generate any of these on the dashboard:**
+
+1. **No overview paragraph above the day strip.** The chip strip + the active day card already answer "what's the week look like."
+2. **No per-day overview/summary `<p>` block** above or below the session cards. The session cards are self-explanatory.
+3. **No `session-why` paragraph** explaining why the spot was chosen. The conditions grid + rating + spot name says it. If the call genuinely needs context, use the one-line cam-note.
+4. **No `alternatives` paragraph.** If there are real alternatives in the same area, list them inline in the spot field with a slash: "Supertubos / Lagide". Don't write a sentence about it.
+5. **No `advice-card` ("Best Advice for the Day") block per day.** It duplicates the session ratings. Keep the global "Days to Watch" list at the bottom for cycle-level highlights — but as one-liners only.
+6. **No "Recent Observations calibrated" days-to-watch card listing every observation.** Observations should silently change the recommendation; don't narrate them. (One short line in Data Sources is fine: "X observations calibrated, latest [date] [spot] [rating]/10".)
+7. **No "Major model shift vs yesterday" cards.** The ratings already changed; that's the signal.
+8. **No verbose Data Sources block.** One short line/paragraph: spots fetched, model run timestamp, observations count, confidence note.
+
+**Cam-check note rules:**
+- Maximum ONE sentence per session card.
+- Only include when the call genuinely depends on a cam confirmation. If the spot is a clear paddle, omit.
+- Format: "Cam-confirm [spot1] + [spot2] before leaving." or "[Why it matters in 8 words]."
+- Never list cam URLs, never narrate fall-back logic ("if X looks bad then go to Y"), never explain the wind shadow.
+
+**Conditions grid rules:**
+- Three boxes per session: Surf / Wind / Tide. Always exactly these three, in this order.
+- Top line (`cond-value`): the headline number/value. ~6-12 chars.
+- Bottom line (`cond-detail`): the qualifier. ~6-15 chars. NEVER a full sentence.
+- Examples of what's allowed in `cond-detail`: "8s SW + 13s WNW", "cross g24", "H 08:41 2.2m". Examples of what's banned: "Cross-shore from the storm wind shadow", "Rising from low at 02:24 to high at 08:41".
+
+**Days to Watch (bottom of dashboard) rules:**
+- Maximum 4 cards in the list. Never more.
+- Each card: ONE bold day/spot line + ONE detail line (max ~15 words).
+- No card may exceed two lines visually on mobile.
+
+**Self-check before writing the file:**
+After generating the dashboard content, count `<p>` tags in the body (excluding the data-sources line and footer). It should be **zero**. If you see paragraphs, delete them. The dashboard renders through cards and grids — never prose blocks.
+
+These rules exist because the user (Roman) has explicitly asked for a compact dashboard and pointed out that adding text drift is a recurring failure mode of past runs. **The skill author trusts you to keep the dashboard tight. Don't break that trust by smuggling prose back in via "just one more sentence of context."**
 
 ## Step 5: Update the HTML dashboard
 
@@ -308,18 +289,20 @@ cd /sessions/.../mnt/personal_surf_forecasting_claude && \
 ```
 The `.github_token` file contains a fine-grained personal access token scoped to this repo only (Contents: read/write). It's already in `.gitignore` and will never be committed. This replaces the old Desktop Commander approach — no host-level tool needed.
 
-The HTML should be a single self-contained file (no external dependencies except CDN-hosted CSS/fonts) that works as a mobile-friendly dashboard showing:
-- Last updated timestamp
-- Chrome connection status (warning banner if disconnected)
-- Current location and trip context (may show multiple locations if the 14-day window spans a transition)
-- 14-day forecast with session windows, spot recommendations, alternatives, and camera check suggestions
-- Days 1-8: Full session cards with per-window breakdowns
-- Days 9-14: "Extended Outlook" section with lighter daily overview cards showing best window, rating, key conditions, and a confidence badge (low/medium). These cards should be visually distinct — slightly more compact, with a dashed or dimmer left border, and a small "Extended — forecast may change" label
-- **Multi-location awareness in day chips/tabs**: Each day chip should show the location name if it differs from the previous day (e.g. "THU 26 — Gold Coast" → "SAT 28 — Melbourne" → "THU 2 — Lisbon"). Same-location consecutive days can omit the label after the first. Travel/rest days should show a distinct muted style with "Travelling" or "Rest" label.
-- Day tabs or navigation to switch between days
-- **Day type-specific cards**: `surf`/`home` days get full session cards. `wave-pool` days get a simple info card with session times. `travel`/`rest` days get a minimal rest card.
-- A "days to watch" highlight section for notable days beyond the 14-day window (if any from the Surfline 16-day view)
-- **Data confidence indicators**: For each forecast region used, show whether a human forecaster's written report was available. Regions with written reports should display a small badge like "Forecaster verified — [Name]" to indicate enhanced accuracy. Regions without written reports should note "Numerical data only" so the user knows the analysis is purely algorithmic. This distinction matters because human forecasters account for local nuances (sand movement, rip patterns, local wind effects) that numerical models miss.
+The HTML is a single self-contained file (no external dependencies except CDN-hosted CSS/fonts) that works as a mobile-friendly dashboard. **Apply the Dashboard Brevity Rules from Step 4.** The dashboard shows ONLY:
+
+- Status bar: last updated timestamp + Chrome connection dot (warning banner only if disconnected)
+- Day strip: 14 chips, each showing day-of-week, date, rating, and size range. Add a tiny location label only when the location differs from the previous day.
+- Active day panel: 1-3 session cards (`surf`/`home`) OR a single rest/travel/wave-pool card. Each session card is exactly: time, spot+drive, rating, optional one-line cam-note, three-box conditions grid. **Nothing else.** No overview paragraph, no advice card, no alternatives block.
+- Extended outlook cards (days 8-14): one compact card per day with a single short header line and the same three-box conditions grid.
+- Days to Watch: max 4 one-liner cards.
+- Data Sources: ONE short paragraph — spots fetched, model run timestamp, observations count, confidence note.
+
+**Banned from the dashboard (zero tolerance):** the `.overview` block above the day strip, any `<p>` paragraph longer than one short sentence, the `.advice-card` block, the verbose `.session-why` paragraph, the `.alternatives` paragraph, multi-card "Recent Observations" or "Major model shift" sections in Days to Watch.
+
+**Day type-specific cards:** `surf`/`home` → session cards. `wave-pool` → single info card (session times + rating). `travel`/`rest` → minimal one-card panel with rating 1/10.
+
+**Data confidence indicator:** put it in the Data Sources line as text — "Numerical only — no written reports for [region]" or "Forecaster verified — [Name]". Don't make a separate panel for it.
 
 **Housekeeping — remove past dates:** Every time the dashboard is updated, remove any day tabs and session cards for dates that are now in the past. The dashboard should only ever show today and future days. Don't accumulate stale forecasts — if it's Wednesday, Monday and Tuesday should be gone. This keeps the dashboard clean and ensures the user always sees current information first.
 
