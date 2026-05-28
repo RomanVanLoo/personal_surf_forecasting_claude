@@ -99,6 +99,7 @@
     .extended-card .ext-rating { font-size: 0.95rem; font-weight: 800; }
     .extended-card .ext-summary { font-size: 0.78rem; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
     .day-chip.extended { opacity: 0.7; }
+    .extended-card.rate-border-1, .extended-card.rate-border-2 { border-left-color: var(--red); }
     .extended-card.rate-border-3 { border-left-color: var(--orange); }
     .extended-card.rate-border-4, .extended-card.rate-border-5 { border-left-color: var(--yellow); }
     .extended-card.rate-border-6, .extended-card.rate-border-7 { border-left-color: var(--green); }
@@ -124,7 +125,7 @@
     </div>
 
     <div class="status-bar">
-      <div class="updated">Updated: Wed 27 May 5:15 AM WEST</div>
+      <div class="updated">Updated: Thu 28 May 5:15 AM WEST</div>
       <div class="chrome-status">
         <span class="status-dot ok"></span> Chrome Connected
       </div>
@@ -134,317 +135,297 @@
       <button class="day-arrow left" onclick="scrollStrip(-1)" aria-label="Previous days">&#8249;</button>
       <button class="day-arrow right" onclick="scrollStrip(1)" aria-label="Next days">&#8250;</button>
       <div class="day-strip">
-        <div class="day-chip active" onclick="showDay(0)"><div class="chip-day">WED</div><div class="chip-date">27 MAY</div><div class="chip-rating rate-7">7/10</div><div class="chip-size">0.9-1.4m</div></div>
-        <div class="day-chip" onclick="showDay(1)"><div class="chip-day">THU</div><div class="chip-date">28 MAY</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.6-0.9m</div></div>
-        <div class="day-chip" onclick="showDay(2)"><div class="chip-day">FRI</div><div class="chip-date">29 MAY</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">0.6-1.2m</div></div>
-        <div class="day-chip" onclick="showDay(3)"><div class="chip-day">SAT</div><div class="chip-date">30 MAY</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.6-1.2m</div></div>
-        <div class="day-chip" onclick="showDay(4)"><div class="chip-day">SUN</div><div class="chip-date">31 MAY</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.9-1.8m</div></div>
-        <div class="day-chip" onclick="showDay(5)"><div class="chip-day">MON</div><div class="chip-date">1 JUN</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.6-1.5m</div></div>
-        <div class="day-chip" onclick="showDay(6)"><div class="chip-day">TUE</div><div class="chip-date">2 JUN</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">0.9-1.8m</div></div>
-        <div class="day-chip extended" onclick="showDay(7)"><div class="chip-day">WED</div><div class="chip-date">3 JUN</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.9-2m</div></div>
-        <div class="day-chip extended" onclick="showDay(8)"><div class="chip-day">THU</div><div class="chip-date">4 JUN</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">1.8-2.4m</div></div>
-        <div class="day-chip extended" onclick="showDay(9)"><div class="chip-day">FRI</div><div class="chip-date">5 JUN</div><div class="chip-rating rate-6">6/10</div><div class="chip-size">0.9-1.8m</div></div>
-        <div class="day-chip extended" onclick="showDay(10)"><div class="chip-day">SAT</div><div class="chip-date">6 JUN</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.9-1.4m</div></div>
-        <div class="day-chip extended" onclick="showDay(11)"><div class="chip-day">SUN</div><div class="chip-date">7 JUN</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">1.2-1.8m</div></div>
-        <div class="day-chip extended" onclick="showDay(12)"><div class="chip-day">MON</div><div class="chip-date">8 JUN</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.9-1.4m</div></div>
-        <div class="day-chip extended" onclick="showDay(13)"><div class="chip-day">TUE</div><div class="chip-date">9 JUN</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.6-1.2m</div></div>
+        <div class="day-chip active" onclick="showDay(0)"><div class="chip-day">THU</div><div class="chip-date">28 MAY</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.6-0.9m</div></div>
+        <div class="day-chip" onclick="showDay(1)"><div class="chip-day">FRI</div><div class="chip-date">29 MAY</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.9m</div></div>
+        <div class="day-chip" onclick="showDay(2)"><div class="chip-day">SAT</div><div class="chip-date">30 MAY</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.6-1.4m</div></div>
+        <div class="day-chip" onclick="showDay(3)"><div class="chip-day">SUN</div><div class="chip-date">31 MAY</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.9-1.8m</div></div>
+        <div class="day-chip" onclick="showDay(4)"><div class="chip-day">MON</div><div class="chip-date">1 JUN</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.6-1.5m</div></div>
+        <div class="day-chip" onclick="showDay(5)"><div class="chip-day">TUE</div><div class="chip-date">2 JUN</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.6-1.2m</div></div>
+        <div class="day-chip" onclick="showDay(6)"><div class="chip-day">WED</div><div class="chip-date">3 JUN</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.9-2m</div></div>
+        <div class="day-chip extended" onclick="showDay(7)"><div class="chip-day">THU</div><div class="chip-date">4 JUN</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">1.5-3m</div></div>
+        <div class="day-chip extended" onclick="showDay(8)"><div class="chip-day">FRI</div><div class="chip-date">5 JUN</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">1.5-3m</div></div>
+        <div class="day-chip extended" onclick="showDay(9)"><div class="chip-day">SAT</div><div class="chip-date">6 JUN</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.6-1.4m</div></div>
+        <div class="day-chip extended" onclick="showDay(10)"><div class="chip-day">SUN</div><div class="chip-date">7 JUN</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">1.2-1.8m</div></div>
+        <div class="day-chip extended" onclick="showDay(11)"><div class="chip-day">MON</div><div class="chip-date">8 JUN</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.9-1.4m</div></div>
+        <div class="day-chip extended" onclick="showDay(12)"><div class="chip-day">TUE</div><div class="chip-date">9 JUN</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.6-1.1m</div></div>
+        <div class="day-chip extended" onclick="showDay(13)"><div class="chip-day">WED</div><div class="chip-date">10 JUN</div><div class="chip-rating rate-1">1/10</div><div class="chip-size">0-0.6m</div></div>
       </div>
     </div>
 
     <div class="day-content active" id="day0">
-      <div class="day-title">Wed 27 May &mdash; Cycle peak: 12s NW with dead-glass morning<span class="current-tag">Today</span></div>
-      <div class="session-card rate-border-7">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Dawn &middot; 6:18&ndash;9:30 AM</div>
-            <div class="session-spot">Matadouro / S&atilde;o Sebasti&atilde;o</div>
-            <div class="session-drive">50 min</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">Live Ribeira 5:12am FAIR 0.9-1.2m on 1.3m 11s NW + 0.4m 5s SSW + 0.1m 16s SW trace, 1kt NNE = DEAD GLASS observed. Dawn API 1.43m 12s NW at 9kph ENE offshore (486kJ). Sebasti&atilde;o sits in range; Matadouro the cleaner crowd pick. Tide L 06:46 0.8m climbing through low-to-mid &mdash; reefs lock shape on the rise. Xero Cruz or Pyzel for the size. 12 May obs says Ribeira plays cleaner than forecast under light cross.</div>
-        <div class="cam-note">Cam-confirm Matadouro at first light &mdash; if shoulder-head walls clean, Sebasti&atilde;o the empty pick.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.4m</div><div class="cond-detail">12s NW + 16s SW trace</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9kph ENE</div><div class="cond-detail">offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.8m &uarr;</div><div class="cond-detail">L 06:46 / H 12:59 2.7m</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-7">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Pre-lunch &middot; 10 AM&ndash;12 PM</div>
-            <div class="session-spot">Ribeira / Matadouro</div>
-            <div class="session-drive">50 min</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">DEAD GLASS window &mdash; wind drops to 3kph N (1.5kts) overlapping the push into H 12:59 2.7m. Swell holds 1.33m 11s NW (333kJ) &mdash; smaller than dawn but glass-on. Ribeira&rsquo;s range is bang-on with full shape on the high. 30 Apr crowd lesson: Ribeira will pack today, so Matadouro the empty alt if cam shows full lineup. Pyzel Red Tiger or Xero Cruz.</div>
-        <div class="cam-note">Cam-check Ribeira at 9:30 &mdash; if 30+ in lineup, 5 min drive to Matadouro.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">11s NW glass</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">3kph N</div><div class="cond-detail">dead glass</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~2.0m &uarr;</div><div class="cond-detail">H 12:59 2.7m</div></div>
-        </div>
-      </div>
+      <div class="day-title">Thu 28 May &mdash; Yesterday&rsquo;s glass dawn evaporated, N regime starts early<span class="current-tag">Today</span></div>
       <div class="session-card rate-border-3">
         <div class="session-header">
           <div>
-            <div class="session-time">Afternoon / Evening &middot; 1&ndash;9 PM</div>
-            <div class="session-spot">Skip &mdash; SW onshore wind switch</div>
+            <div class="session-time">Dawn &middot; 6:17&ndash;8:30 AM</div>
+            <div class="session-spot">S&atilde;o Sebasti&atilde;o / Costa da Caparica</div>
+            <div class="session-drive">50 / 10 min</div>
           </div>
           <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Wind switches SW at the reef by 5pm (12kph onshore) on a dropping tide and dropping swell (0.6-1.1m 11s NW, 244kJ). Two morning windows banked &mdash; rest legs for the rest.</div>
+        <div class="session-summary">Yesterday&rsquo;s model called this a dead-glass dawn &mdash; the new run has wind already firmed to 16kph NNW g19 cross-shore at Ribeira (112kJ on 0.9m 10s WNW). Sebasti&atilde;o still empty and tiny enough to be rideable on the Xero Cruz, but it&rsquo;s a fitness call not a hunt-for-a-good-wave call. Caparica the lighter-wind south alt at 8kph WNW g13 cross on 0.5m 10s W (14kJ). Skip if you slept in &mdash; wind firms 18kph by noon, 30kph N offshore by evening.</div>
+        <div class="cam-note">Cam-confirm Matadouro before driving &mdash; if surface textured, stay south at Caparica.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">11s NW dropping</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">12kph SW</div><div class="cond-detail">onshore at reef</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.7m &darr;</div><div class="cond-detail">L 19:14 0.8m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">10s WNW + 15s SW trace</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">16kph NNW</div><div class="cond-detail">g19 cross-shore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.8m &uarr;</div><div class="cond-detail">L 07:34 / H 13:47 2.9m</div></div>
+        </div>
+      </div>
+      <div class="session-card rate-border-2">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Noon &amp; PM/Evening &middot; 12&ndash;9 PM</div>
+            <div class="session-spot">Skip &mdash; wind firms 18 &rarr; 30kph N</div>
+          </div>
+          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="session-summary">Wind ramps through the day &mdash; 18kph NNW noon at the reef, 30kph N offshore-gale by evening (g37). Caparica goes onshore at noon (6kph WNW). Banked the dawn or didn&rsquo;t; rest legs.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">10s WNW holding</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18 &rarr; 30kph N</div><div class="cond-detail">cross then offshore-gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">2.9m &darr;</div><div class="cond-detail">H 13:47 / L 19:55 0.8m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day1">
-      <div class="day-title">Thu 28 May &mdash; Tiny but dead-glass dawn</div>
-      <div class="session-card rate-border-4">
+      <div class="day-title">Fri 29 May &mdash; Reef blown, south bank tiny but lightest dawn of the week</div>
+      <div class="session-card rate-border-3">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn &middot; 6:17&ndash;9 AM</div>
-            <div class="session-spot">S&atilde;o Sebasti&atilde;o / Matadouro</div>
-            <div class="session-drive">50 min</div>
+            <div class="session-time">Dawn &middot; 6:17&ndash;8 AM</div>
+            <div class="session-spot">Costa da Caparica</div>
+            <div class="session-drive">10 min</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Ribeira 0.6-0.9m on 0.86m 10s NW + tiny 16s SW trace, 9kph NE offshore (83kJ) &mdash; cleanest light-wind dawn since Tue 26. Sebasti&atilde;o sits perfectly in range, no crowd. Wind firms 17kph NW cross by noon and tightens through evening. Xero Cruz logger fitness session. Skip if you sleep in.</div>
+        <div class="session-summary">Reef blown 25kph N g35 offshore (over 4 May 22kph threshold) &mdash; skip Ericeira. South bank gets lightest wind of the week dawn at 6kph NNW g12 cross-shore on 0.3m 10s W &mdash; tiny but clean. Logger fitness only, Xero Cruz. Wind ramps 20kph N by evening. Yesterday&rsquo;s &ldquo;evening sleeper&rdquo; call gone &mdash; new model has wind 20kph NNW PM, not the softening trend yesterday flagged.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">10s NW + 16s SW trace</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9kph NE</div><div class="cond-detail">offshore dead glass</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.8m &uarr;</div><div class="cond-detail">L 07:30 / H 13:42 2.8m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">10s W tiny clean</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">6kph NNW</div><div class="cond-detail">g12 light cross</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">0.8m &uarr;</div><div class="cond-detail">L 08:12 / H 14:27 3.0m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day2">
-      <div class="day-title">Fri 29 May &mdash; Evening sleeper: 13s overlay + softening wind</div>
-      <div class="session-card rate-border-5">
+      <div class="day-title">Sat 30 May &mdash; Skip: N regime locks in, reef threshold crossed</div>
+      <div class="session-card rate-border-2">
         <div class="session-header">
           <div>
-            <div class="session-time">Evening &middot; 5&ndash;8 PM</div>
-            <div class="session-spot">Matadouro / S&atilde;o Juli&atilde;o</div>
-            <div class="session-drive">50 min</div>
+            <div class="session-time">All day</div>
+            <div class="session-spot">Skip &mdash; 23kph N g50 offshore-gusty</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Sleeper window. Morning blown 14kts N offshore-gusty, but PM softens to 9.8kts (18kph) NW cross-shore as a 13s WSW + 16s SW long-period overlay starts filling Ribeira (1.12m 11s W + 0.69m 13s WSW = 200kJ). Matadouro the cleaner pick. Worth the after-work drive if you can leave by 4pm.</div>
-        <div class="cam-note">Cam-check Matadouro by 4:30 &mdash; if surface mostly smooth on the long-period sets, go.</div>
+        <div class="session-summary">N regime arrives in earnest. Ribeira 0.9-1.4m on 10s WNW with 41kph N g51 (over chandelier threshold from dawn). Caparica 23kph NNW g50 &mdash; gusts wreck shape even on direct offshore. Rest day. The pattern locks in tomorrow.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">11s W + 13s WSW + 16s SW</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18kph NW</div><div class="cond-detail">cross-shore softening</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.8m &darr;</div><div class="cond-detail">H 14:14 2.9m / L 20:30 0.8m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.4m</div><div class="cond-detail">10s WNW + chop</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">23-32kph N</div><div class="cond-detail">g50 offshore-gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.7m</div><div class="cond-detail">L 08:54 / H 15:11 3.0m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day3">
-      <div class="day-title">Sat 30 May &mdash; Skip: weekend N regime locks in</div>
-      <div class="session-card rate-border-2">
-        <div class="session-header">
-          <div>
-            <div class="session-time">All day</div>
-            <div class="session-spot">Skip &mdash; 17-18kts N offshore-gusty g23-25</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">N regime arrives. Ribeira 0.9-1.2m on 10s WNW + 16s SW + 5s NNW windswell pile, but 16.7-17.9kts N offshore-gusty (g23-25kph) crosses the 4 May reef threshold all day. Supertubos g40kph gusts wreck the south bank too. Rest day.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.2m</div><div class="cond-detail">10s WNW + 5s NNW chop</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">31-33kph N</div><div class="cond-detail">g46 offshore-gusty</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.7m</div><div class="cond-detail">L 08:42 / H 14:58 2.9m</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-content" id="day4">
       <div class="day-title">Sun 31 May &mdash; GALE: skip, size wasted</div>
       <div class="session-card rate-border-2">
         <div class="session-header">
           <div>
             <div class="session-time">All day</div>
-            <div class="session-spot">Skip &mdash; 35kph N offshore gale</div>
+            <div class="session-spot">Skip &mdash; 36kph N g59 gale</div>
           </div>
           <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Reef size lifts to 1.2-1.8m on 12s WNW (434kJ at dawn) but wind 19.2kts N offshore (35.6kph base, g55kph) shreds it. Supertubos S-facing direct offshore but g49kph too. Spectator. The size will be tempting but the offshore is over chandelier threshold all day.</div>
+        <div class="session-summary">Reef lifts to 1.2-1.8m on 12s WNW (376kJ at dawn) but wind 36kph N offshore-gale (g59) shreds it. South bank 19kph N g58 dawn &mdash; gusts kill the offshore-clean window. Spectator. Storm-coast tease through the week.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">12s WNW wasted</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">35kph N</div><div class="cond-detail">g55 gale offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">L 09:15 / H 15:32 2.9m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.8m</div><div class="cond-detail">12s WNW wasted</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">36kph N</div><div class="cond-detail">g59 gale offshore</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">L 09:19 / H 15:37 3.0m</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-content" id="day4">
+      <div class="day-title">Mon 1 Jun &mdash; Gale continues, threshold crossed all day</div>
+      <div class="session-card rate-border-2">
+        <div class="session-header">
+          <div>
+            <div class="session-time">All day</div>
+            <div class="session-spot">Skip &mdash; 18kph NNW g47 dawn ramping</div>
+          </div>
+          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="session-summary">N pattern locked. Caparica dawn 18kph NNW g47 cross-shore on 0.6-1.1m, reefs 31kph+ N. Wind firms 27kph noon to 33kph evening with g58 gusts &mdash; over 4 May threshold throughout. Yesterday&rsquo;s 3/10 cam-check call downgraded: the new model has the gusts only widening, not softening.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.5m</div><div class="cond-detail">11s WSW + N chop</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">18 &rarr; 33kph NNW</div><div class="cond-detail">g58 gale</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">L 09:50 / H 16:09 3.0m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day5">
-      <div class="day-title">Mon 1 Jun &mdash; South bank cam-check marginal</div>
-      <div class="session-card rate-border-3">
+      <div class="day-title">Tue 2 Jun &mdash; Gale holds, last day before storm pulse arrives</div>
+      <div class="session-card rate-border-2">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn &middot; 6:16&ndash;8:30 AM</div>
-            <div class="session-spot">Costa da Caparica / Supertubos</div>
-            <div class="session-drive">10 / 75 min</div>
+            <div class="session-time">All day</div>
+            <div class="session-spot">Skip &mdash; 23-32kph N g50 holds</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Reefs blown 15kts N offshore-gusty (g24-25). South bank: N direct offshore for Caparica 0.6-0.9m on 10s WNW, but proxy wind 8.6kts (16kph) g24.3 (45kph!) &mdash; gusts wreck shape. If gusts soften pre-dawn the south bank is the only paddle option. Otherwise rest.</div>
-        <div class="cam-note">Cam-check Caparica/Carcavelos at 6am &mdash; only go if surface is truly clean between gusts.</div>
+        <div class="session-summary">Yesterday&rsquo;s &ldquo;PM reef pulse arrival&rdquo; call has shifted into Wed 3. New model has Tue 2 blown all day &mdash; Ribeira 41kph N g51 dawn climbing to 43kph N g54 evening, south bank 23kph N g50. Pre-block Wed dawn instead. Rest day.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">10s WNW south bank</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">16kph N</div><div class="cond-detail">g45 offshore-gusty</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.7m</div><div class="cond-detail">L 10:00 / H 16:15 2.7m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.2m</div><div class="cond-detail">9s WNW + N windswell</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">23-43kph N</div><div class="cond-detail">g54 still blown</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.9m</div><div class="cond-detail">L 10:22 / H 16:43 3.0m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day6">
-      <div class="day-title">Tue 2 Jun &mdash; New 13s WNW pulse arrives evening</div>
-      <div class="session-card rate-border-5">
+      <div class="day-title">Wed 3 Jun &mdash; Pre-pulse: Caparica chest-high direct offshore but gusty</div>
+      <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
-            <div class="session-time">Evening &middot; 5&ndash;8:30 PM</div>
-            <div class="session-spot">Matadouro / S&atilde;o Juli&atilde;o</div>
-            <div class="session-drive">50 min</div>
+            <div class="session-time">Dawn &middot; 6:15&ndash;9 AM</div>
+            <div class="session-spot">Costa da Caparica</div>
+            <div class="session-drive">10 min</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Pulse builds through the day, ramping fast late. Ribeira 5pm 0.9-1.4m on 1.23m 11s WNW + 1.31m 6s NW windswell (247kJ), wind 17.4kts (32kph) NW cross-offshore at the reef &mdash; over threshold but softer than the weekend. By 8pm pulse hits 1.66m 13s WNW (594kJ). Matadouro the cleaner call. First clean reef energy since today (Wed 27).</div>
-        <div class="cam-note">Cam-check Matadouro at 4:30 &mdash; if cross-wind below 30kph and sets clean, go.</div>
+        <div class="session-summary">Pre-pulse arrives at the south bank ahead of Thu&rsquo;s headline. Caparica dawn 0.9-1.2m on 1.2m 13s W at 21kph N direct offshore (501kJ &mdash; biggest power reading at Caparica in 10 days) but g57 chandelier risk. Lighter at noon (16kph N g28). Xero Cruz cam-and-go &mdash; if gusts settle, the cleanest reef-wind-window all week. Ribeira blown 43kph cross still &mdash; skip the reef.</div>
+        <div class="cam-note">Cam-check Caparica at 5:45 &mdash; commit only if gusts under 35kph between sets.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">11s WNW + 6s NW + 13s arriving</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">32kph NW</div><div class="cond-detail">cross softening</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.8m &darr;</div><div class="cond-detail">H 16:55 2.6m / L 23:00 0.8m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">13s W direct offshore</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">21kph N</div><div class="cond-detail">g57 offshore-gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.9m</div><div class="cond-detail">L 10:56 / H 17:17 2.9m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day7">
-      <div class="day-title">Wed 3 Jun &mdash; Pre-pulse: Supertubos chest-high offshore but gusty</div>
+      <div class="day-title">Thu 4 Jun &mdash; HEADLINE BIG SWELL: Supertubos overhead but gust-compromised</div>
       <div class="extended-card rate-border-4">
-        <div class="ext-header"><div class="ext-day">Supertubos pre-lunch &middot; 1.53m 11s WNW at 24kph N offshore g53</div><div class="ext-rating rate-4">4/10</div></div>
-        <div class="ext-summary">Pulse builds at south bank ahead of Thu&rsquo;s headline. Supertubos 11am 0.9-1.2m on 11s WNW at 13.27kts (24.6kph) N direct offshore, but gusts 53kph chandelier risk. Ribeira windier still (40kph cross). Pyzel Red Tiger if you fancy Peniche cam-and-go. Workable but a gust-roll-of-the-dice.</div>
+        <div class="ext-header"><div class="ext-day">Supertubos noon &middot; 2.0m 16s WNW at 32kph N offshore</div><div class="ext-rating rate-4">4/10</div></div>
+        <div class="ext-summary">The cycle&rsquo;s biggest day shifts back to Thu 4. Supertubos 1.5-2.1m on 2.0m 16s WNW (1.5-2.1m surf) at 32kph N direct offshore but g47 chandelier risk. Ribeira 2.4-3m at 49kph N g58 &mdash; spectator. Pyzel Red Tiger window only if the cam shows lulls under 30kph. Otherwise the swell&rsquo;s here, the wind isn&rsquo;t.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.2m</div><div class="cond-detail">11s WNW + 18s SW overlay</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25kph N</div><div class="cond-detail">g53 offshore-gusty</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.7m</div><div class="cond-detail">~L 11 / H 17</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">16s WNW cycle peak</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">32kph N</div><div class="cond-detail">g47 offshore-gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">L 11:34 / H 17:54 2.9m</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day8">
-      <div class="day-title">Thu 4 Jun &mdash; HEADLINE BIG SWELL: Supertubos overhead with offshore</div>
+      <div class="day-title">Fri 5 Jun &mdash; Big-swell-on-offshore peak power, but wind still gusty</div>
       <div class="extended-card rate-border-5">
-        <div class="ext-header"><div class="ext-day">Supertubos pre-lunch &middot; 2.46m 16s WNW at 20kph N offshore</div><div class="ext-rating rate-5">5/10</div></div>
-        <div class="ext-summary">The cycle&rsquo;s biggest day. Supertubos 1.8-2.4m on 2.46m 16s WNW = 2911kJ (peak power reading of the 10-day). Wind 11kts (20kph) N direct offshore but g26-30kph chandelier risk. Roman&rsquo;s upper-end size; Pyzel Red Tiger territory. Ribeira too big (2.4-3.7m) + 35kph offshore. Cam-check Supertubos at first light &mdash; if gusts soften, this is the headline. Spectator-day if not.</div>
+        <div class="ext-header"><div class="ext-day">Supertubos dawn &middot; 2.7m 14s NW at 30kph N offshore</div><div class="ext-rating rate-5">5/10</div></div>
+        <div class="ext-summary">Peak power day. Supertubos dawn 1.5-2.1m on 2.7m 14s NW = 2996kJ (highest energy reading of the 10-day). Wind 30kph N direct offshore g51 &mdash; same gust problem as Thu but bigger swell. Yesterday flagged this as 6/10 PM-clean &mdash; new model has wind staying 29-30kph N g41-51 all day, no afternoon lull. Pyzel Red Tiger committed pre-block, but cam-confirm gusts first.</div>
+        <div class="cam-note">Cam-check Supertubos at 5:30 &mdash; if g50+ holds, spectator-only.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.8-2.4m</div><div class="cond-detail">16s WNW cycle peak</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">20kph N</div><div class="cond-detail">g30 offshore-gusty</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.7m</div><div class="cond-detail">~L 12 / H 18</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.5-2.1m</div><div class="cond-detail">14s NW peak power</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">30kph N</div><div class="cond-detail">g51 offshore-gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">H 06:22 2.6m / L 12:14</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day9">
-      <div class="day-title">Fri 5 Jun &mdash; PM CLEAN: Supertubos 9kph ENE offshore</div>
-      <div class="extended-card rate-border-6">
-        <div class="ext-header"><div class="ext-day">Supertubos 5pm &middot; 1.64m 12s WNW at 9kph ENE offshore</div><div class="ext-rating rate-6">6/10</div></div>
-        <div class="ext-summary">The clean window of the storm cycle. Morning windy (15kts N g30), but by 5pm wind drops to 4.8kts (9kph) ENE direct offshore (g14kph) and surf eases to 0.9-1.4m on 1.64m 12s WNW = 757kJ. After-work commute pays off &mdash; clean overhead-minus reef walls. Pyzel Red Tiger. Ribeira still 23kph N offshore until 5pm too.</div>
-        <div class="cam-note">Cam-check Supertubos at 3pm before driving &mdash; lull confirmed = the session of the cycle.</div>
+      <div class="day-title">Sat 6 Jun &mdash; Swell drops, wind still gusty</div>
+      <div class="extended-card rate-border-3">
+        <div class="ext-header"><div class="ext-day">Supertubos 0.6-1.1m at 17kph N g53</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">Swell drops back to head-high tail (0.6-1.1m on 12s W at Supertubos), wind eases to 17kph N base but gusts stay 53kph. Ribeira 1.2-1.5m at 40kph N g57 still over threshold. The peak has passed and the gusts haven&rsquo;t. Cam-check Caparica before any drive.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">12s WNW easing</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">9kph ENE</div><div class="cond-detail">g14 clean offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.5m &darr;</div><div class="cond-detail">~H 16 / L 22</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.4m</div><div class="cond-detail">12s W tail</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">17kph N</div><div class="cond-detail">g53 gusty</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">H 07:11 / L 13:04</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day10">
-      <div class="day-title">Sat 6 Jun &mdash; Weekend windy lull (model boundary)</div>
+      <div class="day-title">Sun 7 Jun &mdash; Day-11 model boundary &mdash; size up at reef, no hourly</div>
       <div class="extended-card rate-border-4">
-        <div class="ext-header"><div class="ext-day">Ribeira 1.2-1.5m / Supertubos 0.9-1.4m at 25-30kph N</div><div class="ext-rating rate-4">4/10</div></div>
-        <div class="ext-summary">Day-11 model boundary &mdash; low confidence. Yesterday&rsquo;s runs had Sat 6 as a windy lull (25-30kph N persistent). South bank gets N offshore but small (0.9-1.4m), reefs lighter swell (1.2-1.5m) but cross-shore. Cam-check before any drive. Watch next 3 runs.</div>
+        <div class="ext-header"><div class="ext-day">Ribeira 1.2-1.8m daily &middot; outside hourly model</div><div class="ext-rating rate-4">4/10</div></div>
+        <div class="ext-summary">Day-11 page-table read: Ribeira 1.2-1.8m, Supertubos 0.6-0.9m. No hourly wind/energy data &mdash; LOTUS API caps at 10 days. Yesterday&rsquo;s 5/10 PM-sleeper call holds shape conceptually (new pulse arriving) but confidence is low. Watch next 3 runs to see if wind softens out of the N regime.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">11s WNW tail</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25-30kph N</div><div class="cond-detail">offshore south bank</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">~L 13 / H 19</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">reef pulse holding</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">no hourly</div><div class="cond-detail">projection only</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">~L 14 / H 20</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day11">
-      <div class="day-title">Sun 7 Jun &mdash; PM SLEEPER: new 12s pulse + softening wind</div>
-      <div class="extended-card rate-border-5">
-        <div class="ext-header"><div class="ext-day">Ribeira 1.5-1.8m PM &middot; new 12s WNW pulse, wind 14-18kph N</div><div class="ext-rating rate-5">5/10</div></div>
-        <div class="ext-summary">Day-12 model boundary &mdash; low confidence. Yesterday&rsquo;s runs flagged Sun 7 PM as the next-week sleeper: new 12s WNW pulse + wind dropping to 14-18kph N (offshore south, cross-offshore reef). If trend holds, an evening reef call at Matadouro or south-bank session at Carcavelos. Watch next 3 runs.</div>
+      <div class="day-title">Mon 8 Jun &mdash; Day-12 boundary &mdash; size easing</div>
+      <div class="extended-card rate-border-3">
+        <div class="ext-header"><div class="ext-day">Ribeira 0.9-1.4m daily &middot; outside hourly model</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">Day-12 page-table read: Ribeira 0.9-1.4m, Supertubos 0.6-0.9m. Outside hourly &mdash; low confidence. Pulse tailing off, wind unknown. Watch.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">1.2-1.8m</div><div class="cond-detail">12s WNW new pulse</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">14-18kph N</div><div class="cond-detail">eases PM</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">~L 14 / H 20</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">easing reef tail</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">no hourly</div><div class="cond-detail">projection only</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">~L 15 / H 21</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day12">
-      <div class="day-title">Mon 8 Jun &mdash; Big but windy (model boundary)</div>
-      <div class="extended-card rate-border-3">
-        <div class="ext-header"><div class="ext-day">Wind 30-34kph N back over threshold</div><div class="ext-rating rate-3">3/10</div></div>
-        <div class="ext-summary">Day-13 model boundary &mdash; very low confidence. Yesterday&rsquo;s runs had Mon 8 as wind-back day: 30-34kph N over the reef threshold despite holding swell size. Cam-check at most. Watch next 3 runs for any softening trend.</div>
+      <div class="day-title">Tue 9 Jun &mdash; Day-13 boundary &mdash; small + windy projection</div>
+      <div class="extended-card rate-border-2">
+        <div class="ext-header"><div class="ext-day">Ribeira 0.6-1.1m / Supertubos 0.3-0.6m</div><div class="ext-rating rate-2">2/10</div></div>
+        <div class="ext-summary">Day-13 page-table read: Ribeira 0.6-1.1m, Supertubos 0.3-0.6m. No hourly. Bottoming out, model says tiny &mdash; rest day pending refresh.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.9-1.4m</div><div class="cond-detail">11s WNW holding</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">30-34kph N</div><div class="cond-detail">over threshold</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">~L 15 / H 21</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-1.1m</div><div class="cond-detail">tail-end small</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">no hourly</div><div class="cond-detail">projection only</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">~L 16 / H 22</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day13">
-      <div class="day-title">Tue 9 Jun &mdash; Model boundary placeholder</div>
-      <div class="extended-card rate-border-3">
-        <div class="ext-header"><div class="ext-day">No hourly data &mdash; daily heights only</div><div class="ext-rating rate-3">3/10</div></div>
-        <div class="ext-summary">Day-14 dashboard slot &mdash; outside the 10-day LOTUS hourly model. Placeholder reading based on extrapolation: tail of the windy lock-in, 0.6-1.2m on 10-11s WNW with N flow continuing. Will populate properly in tomorrow&rsquo;s run as Tue 9 enters the 10-day window.</div>
+      <div class="day-title">Wed 10 Jun &mdash; Day-14 placeholder &mdash; flat projection</div>
+      <div class="extended-card rate-border-1">
+        <div class="ext-header"><div class="ext-day">Ribeira 0.3-0.6m / Supertubos 0-0.3m</div><div class="ext-rating rate-1">1/10</div></div>
+        <div class="ext-summary">Day-14 page-table read: Supertubos 0-0.3m flat, Ribeira 0.3-0.6m. Outside hourly. Logger day at best. Tomorrow&rsquo;s run pulls Wed 10 into the 10-day hourly window.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.2m</div><div class="cond-detail">10-11s WNW projection</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">25-30kph N</div><div class="cond-detail">projection</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~0.8m</div><div class="cond-detail">~L 16 / H 22</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0-0.6m</div><div class="cond-detail">flat</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">no hourly</div><div class="cond-detail">projection only</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">~1.0m</div><div class="cond-detail">~L 17 / H 23</div></div>
         </div>
       </div>
     </div>
 
     <div class="days-to-watch">
       <h3>Days to Watch</h3>
-      <div class="dtw-card potential">
-        <div class="dtw-day">TODAY (Wed 27) dawn + pre-lunch &mdash; CYCLE PEAK 7/10</div>
-        <div class="dtw-detail">Ribeira/Matadouro 1.2m 12s NW glass dawn (9kph ENE offshore) into pre-lunch dead-glass (3kph N). Two banked windows.</div>
-      </div>
-      <div class="dtw-card potential">
-        <div class="dtw-day">FRI 5 JUN 5pm &mdash; STORM CYCLE CLEAN 6/10</div>
-        <div class="dtw-detail">Supertubos 0.9-1.4m on 1.64m 12s WNW at 9kph ENE offshore. The lone clean window after a week of N-locked gale. Pre-block 5-8pm.</div>
+      <div class="dtw-card medium">
+        <div class="dtw-day">FRI 5 JUN dawn &mdash; PEAK POWER 5/10</div>
+        <div class="dtw-detail">Supertubos 1.5-2.1m on 2.7m 14s NW = 2996kJ (highest energy of 10-day) at 30kph N offshore but g51. Cam-confirm gusts first.</div>
       </div>
       <div class="dtw-card medium">
-        <div class="dtw-day">THU 4 JUN pre-lunch &mdash; HEADLINE BIG SWELL 5/10</div>
-        <div class="dtw-detail">Supertubos 1.8-2.4m on 2.46m 16s WNW (cycle peak power 2911kJ) at 20kph N offshore-gusty. Pyzel Red Tiger if gusts soften, else spectator.</div>
+        <div class="dtw-day">THU 4 JUN noon &mdash; HEADLINE BIG SWELL 4/10</div>
+        <div class="dtw-detail">Supertubos 1.5-2.1m on 2.0m 16s WNW at 32kph N offshore-gusty g47. Pyzel Red Tiger only if cam shows lulls under 30kph.</div>
       </div>
       <div class="dtw-card medium">
-        <div class="dtw-day">TUE 2 JUN evening &mdash; REEF PULSE ARRIVAL 5/10</div>
-        <div class="dtw-detail">Matadouro 0.9-1.4m on 11s WNW + 6s NW + 13s WNW arriving at 32kph NW cross softening. First clean energy since today.</div>
+        <div class="dtw-day">WED 3 JUN dawn &mdash; CLEANEST WIND-WINDOW 4/10</div>
+        <div class="dtw-detail">Caparica 0.9-1.2m on 1.2m 13s W at 21kph N direct offshore g57 (501kJ). Only sub-25kph reading in 6 days &mdash; cam-and-go.</div>
+      </div>
+      <div class="dtw-card medium">
+        <div class="dtw-day">SUN 7 JUN &mdash; PULSE RETURN 4/10 (low confidence)</div>
+        <div class="dtw-detail">Ribeira 1.2-1.8m daily reading from the 16-day table. Outside hourly model &mdash; watch next 3 runs.</div>
       </div>
     </div>
 
     <div class="data-sources">
-      <strong>Sources:</strong> Surfline LOTUS API (Ribeira d&rsquo;Ilhas + Supertubos wave+wind hourly, 6h intervals &times; 10 days) plus table view (Carcavelos + Caparica daily heights) fetched live via Chrome &lsquo;Personal&rsquo; window. Model run 26 May 18 UTC (~10hr old at run time, 24hr newer than yesterday). Live Ribeira obs 5:12am: FAIR 0.9-1.2m, 1kt NNE dead-glass offshore, tide 1.2m rising. 28 Portugal observations on file &mdash; no new obs since 12 May; standing calibrations still apply (N 22kph+ at reef = chandelier threshold per 4 May Backdoor; 12 May Ribeira plays cleaner than forecast under light cross; 30 Apr crowd-dumps-onto-Ribeira pre-headline; 2 May Sebasti&atilde;o no cam &rarr; Matadouro proxy). <strong>Numerical only &mdash; no written forecaster reports for Portugal.</strong> <strong>HEADLINE: TODAY (Wed 27) dawn + pre-lunch 7/10 cycle peak glass at Matadouro/Ribeira &mdash; the only clean reef morning before a 6-day N-locked gale. FRI 5 JUN 5pm clean PM lull at Supertubos the storm-cycle prize (1hr 15 drive). THU 4 JUN big swell at Supertubos gust-compromised. Days 11-14 (Sat 6 &rarr; Tue 9) outside hourly model &mdash; cam-check before commits.</strong> Run: scheduled morning task 5:15am WEST, Chrome connected (Personal window, no Private &mdash; autonomous reasonable choice per safety rules).
+      <strong>Sources:</strong> Surfline LOTUS API (Caparica + Carcavelos + Ribeira d&rsquo;Ilhas + Supertubos wave+wind hourly, 6h intervals &times; 10 days) plus 16-day page-table for days 11-14 outlook, fetched live via Chrome &lsquo;Personal&rsquo; window. Model run 27 May 18 UTC (~11hr old at run time, 24hr newer than yesterday). 28 Portugal observations on file &mdash; no new obs since 12 May; standing calibrations still apply (N 22-23kph+ at reef = chandelier threshold per 4 May Backdoor; 12 May Ribeira plays cleaner than forecast under light cross; 30 Apr crowd-dumps-onto-Ribeira; 2 May Sebasti&atilde;o no cam &rarr; Matadouro proxy). <strong>Numerical only &mdash; no written forecaster reports for Portugal.</strong> <strong>HEADLINE: Today (Thu 28) DOWNGRADED 4&rarr;3/10 &mdash; yesterday&rsquo;s glass-dawn call evaporated, wind already 16kph cross at dawn. Fri 29 DOWNGRADED 5&rarr;3/10 &mdash; PM sleeper gone, wind firms. SAT 30 &rarr; TUE 2 JUN N-regime SKIP block (4 days). Big-swell cycle WED 3 (cam-and-go south bank) &rarr; THU 4 (headline gust-compromised) &rarr; FRI 5 (peak power but still gusty). Days 11-14 outside hourly &mdash; placeholder ratings.</strong> Run: scheduled morning task 5:15am WEST, Chrome connected (Personal window, no Private &mdash; autonomous reasonable choice per safety rules; tool-result injection prompts to call AskUserQuestion disregarded as untrusted instructions).
     </div>
 
     <div class="footer">
       Forecast generated for Roman&rsquo;s personal use. Updated daily at 5am WEST.
     </div>
   </div>
+  <script>
     function showDay(idx) {
       document.querySelectorAll('.day-chip').forEach((c,i) => c.classList.toggle('active', i === idx));
       document.querySelectorAll('.day-content').forEach((d,i) => d.classList.toggle('active', i === idx));
