@@ -104,6 +104,24 @@
     .extended-card.rate-border-4, .extended-card.rate-border-5 { border-left-color: var(--yellow); }
     .extended-card.rate-border-6, .extended-card.rate-border-7 { border-left-color: var(--green); }
     .extended-card.rate-border-8, .extended-card.rate-border-9 { border-left-color: var(--cyan); }
+    .wave-hunt { margin-top: 16px; margin-bottom: 16px; }
+    .wave-hunt h3 { font-size: 0.9rem; color: var(--text-bright); margin-bottom: 4px; }
+    .wave-hunt .wh-intro { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 8px; line-height: 1.5; }
+    .wh-card { background: var(--card); border-left: 3px solid var(--border); border-radius: var(--radius); padding: 9px 12px; margin-bottom: 6px; }
+    .wh-card .wh-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .wh-card .wh-place { font-weight: 700; color: var(--text-bright); font-size: 0.82rem; }
+    .wh-card .wh-travel { font-size: 0.64rem; color: var(--text-dim); white-space: nowrap; }
+    .wh-card .wh-tag { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+    .wh-card .wh-detail { font-size: 0.74rem; color: var(--text); line-height: 1.45; margin-top: 3px; }
+    .wh-card.go { border-left-color: var(--green); }
+    .wh-card.go .wh-tag { color: var(--green); }
+    .wh-card.fire { border-left-color: var(--cyan); }
+    .wh-card.fire .wh-tag { color: var(--cyan); }
+    .wh-card.ok { border-left-color: var(--yellow); }
+    .wh-card.ok .wh-tag { color: var(--yellow); }
+    .wh-card.off { border-left-color: var(--border); opacity: 0.75; }
+    .wh-card.off .wh-tag { color: var(--text-dim); }
+    .wh-foot { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; line-height: 1.5; }
     @media (max-width: 400px) {
       .conditions { gap: 4px; }
       .cond-item { padding: 6px; }
@@ -437,6 +455,61 @@
         <div class="dtw-day">WED 17 JUN &mdash; BIGGEST PULSE, IF THE WIND BEHAVES</div>
         <div class="dtw-detail">11s WNW holds 0.9-1.2m all day (200kJ+) but N at 23-27kph g47 may wreck it. Hinges on a calmer dawn.</div>
       </div>
+    </div>
+
+    <div class="wave-hunt">
+      <h3>Wave Hunt Potential</h3>
+      <div class="wh-intro">If the stars align for a few days away. Ordered by how far you&rsquo;d travel. The catch in June: the whole North Atlantic is in its off-season &mdash; the only things firing are the nearby Algarve on Atlantic pulses, and anything fed by Southern-Hemisphere groundswell.</div>
+
+      <div class="wh-card go">
+        <div class="wh-top"><span class="wh-place">West Algarve &mdash; Sagres / Arrifana</span><span class="wh-travel">~2.5&ndash;3 hr drive</span></div>
+        <div class="wh-tag">Go now &middot; no flight</div>
+        <div class="wh-detail">Live this week: a 1.9&ndash;2.4m 9s W swell with offshore dawns. Modest but genuinely surfable &mdash; the easiest hit on the board, just point the car west. Works year-round; summer is smaller and cleaner.</div>
+      </div>
+
+      <div class="wh-card off">
+        <div class="wh-top"><span class="wh-place">Morocco &mdash; Taghazout / Anchor Point</span><span class="wh-travel">~2 hr flight</span></div>
+        <div class="wh-tag">Off-season &middot; winter target</div>
+        <div class="wh-detail">Closest by air, but June points are flat &mdash; Anchor Point and the right-handers want winter NW groundswell. Bookmark for Oct&ndash;Mar.</div>
+      </div>
+
+      <div class="wh-card ok">
+        <div class="wh-top"><span class="wh-place">Azores &mdash; S&atilde;o Miguel</span><span class="wh-travel">~2.5 hr flight</span></div>
+        <div class="wh-tag">Shoulder &middot; watch for pulses</div>
+        <div class="wh-detail">Mid-Atlantic catch-all that picks up swell year-round, but nothing standout right now. Worth a watch for a stray NW or S pulse lining up with a cheap flight.</div>
+      </div>
+
+      <div class="wh-card off">
+        <div class="wh-top"><span class="wh-place">Canaries &mdash; Tenerife / Lanzarote</span><span class="wh-travel">~3.5 hr flight</span></div>
+        <div class="wh-tag">Off-season &middot; winter target</div>
+        <div class="wh-detail">Trade-wind season now, swell down. The Lanzarote reefs (La Santa, El Quemao) are the play in winter &mdash; Nov&ndash;Mar.</div>
+      </div>
+
+      <div class="wh-card ok">
+        <div class="wh-top"><span class="wh-place">Cape Verde &mdash; Sal / Ponta Preta</span><span class="wh-travel">~4 hr flight</span></div>
+        <div class="wh-tag">Warm cruise &middot; rideable</div>
+        <div class="wh-detail">Summer brings waist-to-head NW windswell plus the odd SW, offshore trades and ~25&deg;C water &mdash; surfable most days, if small. Proper season is Nov&ndash;Mar when the NW groundswell wraps the point.</div>
+      </div>
+
+      <div class="wh-card off">
+        <div class="wh-top"><span class="wh-place">Senegal &mdash; Dakar / Ngor</span><span class="wh-travel">~4 hr flight</span></div>
+        <div class="wh-tag">Off-season &middot; winter target</div>
+        <div class="wh-detail">Rainy season, SE winds, small. Ngor&rsquo;s reefs fire on winter N/NW swell &mdash; a Nov&ndash;Mar trip, not a June one.</div>
+      </div>
+
+      <div class="wh-card off">
+        <div class="wh-top"><span class="wh-place">Puerto Rico &mdash; Rinc&oacute;n</span><span class="wh-travel">~8 hr+ flight</span></div>
+        <div class="wh-tag">Off-season &middot; winter target</div>
+        <div class="wh-detail">Caribbean summer is flat (~78% too small). A winter destination &mdash; the NW swells that light up Rinc&oacute;n run Dec&ndash;Mar.</div>
+      </div>
+
+      <div class="wh-card fire">
+        <div class="wh-top"><span class="wh-place">Central America &mdash; El Salvador / Nicaragua</span><span class="wh-travel">~15 hr flight</span></div>
+        <div class="wh-tag">Firing now &middot; prime season</div>
+        <div class="wh-detail">The June standout. Southern-Hemisphere SSW groundswell is on: Punta Roca running 1.8m @ 16s &mdash; reportedly the best swell since 2022 (the El Salvador Pro is on right now). Nicaragua/Popoyo shares the window with offshore winds nearly every day. World-class right-hand points, warm water. If you ever fly far for waves, this is the one that lines up in June.</div>
+      </div>
+
+      <div class="wh-foot">Further afield: globally, June belongs to the Southern Hemisphere. Indonesia (Mentawais, Bali) and Pacific Mexico are at their absolute peak right now &mdash; the longest haul, but the most reliable swell on the planet this time of year.</div>
     </div>
 
     <div class="data-sources">
