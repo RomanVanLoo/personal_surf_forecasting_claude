@@ -1,8 +1,8 @@
-# Ignore everything
-*
+# Commit everything EXCEPT secrets and local system junk.
+# NEVER commit the GitHub token — it's a live access credential.
+.github_token
 
-# Except skills and index.html
-!skills/
-!skills/**
-!index.html
-!.gitignore
+# macOS / editor / local tooling junk
+.DS_Store
+**/.DS_Store
+.claude/
