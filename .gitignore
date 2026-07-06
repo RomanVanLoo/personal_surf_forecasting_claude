@@ -2,6 +2,10 @@
 # NEVER commit the GitHub token — it's a live access credential.
 .github_token
 
+# Personal data — keep LOCAL only, never publish (was public via Pages before)
+current_situation.md
+observations.json
+
 # macOS / editor / local tooling junk
 .DS_Store
 **/.DS_Store
