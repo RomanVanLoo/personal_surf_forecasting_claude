@@ -1,0 +1,49 @@
+name: Deploy dashboard to GitHub Pages
+
+# Publishes ONLY index.html (the dashboard) to Pages via the GitHub Actions
+# source. This replaces the built-in "deploy from a branch" flow, which was
+# hitting intermittent "Deployment failed, try again later" errors and also
+# published the whole repo root (including current_situation.md / observations.json).
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'index.html'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; never cancel one mid-flight (lets retries queue
+# instead of wedging the github-pages environment).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site (dashboard only)
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
