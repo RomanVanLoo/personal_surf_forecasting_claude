@@ -143,7 +143,7 @@
     </div>
 
     <div class="status-bar">
-      <div class="updated">Updated: Mon 6 Jul 5:15 AM WEST</div>
+      <div class="updated">Updated: Tue 7 Jul 5:15 AM WEST</div>
       <div class="chrome-status">
         <span class="status-dot ok"></span> Chrome Connected
       </div>
@@ -153,25 +153,66 @@
       <button class="day-arrow left" onclick="scrollStrip(-1)" aria-label="Previous days">&#8249;</button>
       <button class="day-arrow right" onclick="scrollStrip(1)" aria-label="Next days">&#8250;</button>
       <div class="day-strip">
-        <div class="day-chip active" onclick="showDay(0)"><div class="chip-day">MON</div><div class="chip-date">6 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0-0.3m</div></div>
-        <div class="day-chip" onclick="showDay(1)"><div class="chip-day">TUE</div><div class="chip-date">7 JUL</div><div class="chip-rating rate-1">1/10</div><div class="chip-size">0-0.3m</div></div>
-        <div class="day-chip" onclick="showDay(2)"><div class="chip-day">WED</div><div class="chip-date">8 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip" onclick="showDay(3)"><div class="chip-day">THU</div><div class="chip-date">9 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip" onclick="showDay(4)"><div class="chip-day">FRI</div><div class="chip-date">10 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip" onclick="showDay(5)"><div class="chip-day">SAT</div><div class="chip-date">11 JUL</div><div class="chip-rating rate-5">5/10</div><div class="chip-size">0.3-0.9m</div></div>
-        <div class="day-chip" onclick="showDay(6)"><div class="chip-day">SUN</div><div class="chip-date">12 JUL</div><div class="chip-rating rate-7">7/10</div><div class="chip-size">0.6-1.1m</div></div>
-        <div class="day-chip extended" onclick="showDay(7)"><div class="chip-day">MON</div><div class="chip-date">13 JUL</div><div class="chip-rating rate-7">7/10</div><div class="chip-size">0.6-0.9m</div></div>
-        <div class="day-chip extended" onclick="showDay(8)"><div class="chip-day">TUE</div><div class="chip-date">14 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.6-0.9m</div></div>
-        <div class="day-chip extended" onclick="showDay(9)"><div class="chip-day">WED</div><div class="chip-date">15 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.9m</div></div>
-        <div class="day-chip extended" onclick="showDay(10)"><div class="chip-day">THU</div><div class="chip-date">16 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip extended" onclick="showDay(11)"><div class="chip-day">FRI</div><div class="chip-date">17 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip extended" onclick="showDay(12)"><div class="chip-day">SAT</div><div class="chip-date">18 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.6m</div></div>
-        <div class="day-chip extended" onclick="showDay(13)"><div class="chip-day">SUN</div><div class="chip-date">19 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip active" onclick="showDay(0)"><div class="chip-day">TUE</div><div class="chip-date">7 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip" onclick="showDay(1)"><div class="chip-day">WED</div><div class="chip-date">8 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip" onclick="showDay(2)"><div class="chip-day">THU</div><div class="chip-date">9 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">0-0.3m</div></div>
+        <div class="day-chip" onclick="showDay(3)"><div class="chip-day">FRI</div><div class="chip-date">10 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip" onclick="showDay(4)"><div class="chip-day">SAT</div><div class="chip-date">11 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip" onclick="showDay(5)"><div class="chip-day">SUN</div><div class="chip-date">12 JUL</div><div class="chip-rating rate-6">6/10</div><div class="chip-size">0.6-1.1m</div></div>
+        <div class="day-chip" onclick="showDay(6)"><div class="chip-day">MON</div><div class="chip-date">13 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(7)"><div class="chip-day">TUE</div><div class="chip-date">14 JUL</div><div class="chip-rating rate-4">4/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(8)"><div class="chip-day">WED</div><div class="chip-date">15 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(9)"><div class="chip-day">THU</div><div class="chip-date">16 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(10)"><div class="chip-day">FRI</div><div class="chip-date">17 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">~0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(11)"><div class="chip-day">SAT</div><div class="chip-date">18 JUL</div><div class="chip-rating rate-3">3/10</div><div class="chip-size">~0.3-0.6m</div></div>
+        <div class="day-chip extended" onclick="showDay(12)"><div class="chip-day">SUN</div><div class="chip-date">19 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">unresolved</div></div>
+        <div class="day-chip extended" onclick="showDay(13)"><div class="chip-day">MON</div><div class="chip-date">20 JUL</div><div class="chip-rating rate-2">2/10</div><div class="chip-size">unresolved</div></div>
       </div>
     </div>
 
     <div class="day-content active" id="day0">
-      <div class="day-title">Mon 6 Jul &mdash; Flat, nortada building<span class="current-tag">Today</span></div>
+      <div class="day-title">Tue 7 Jul &mdash; Small clean dawn at Ericeira, flat elsewhere<span class="current-tag">Today</span></div>
+      <div class="session-card rate-border-4">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn &middot; 6:30&ndash;9 AM</div>
+            <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
+            <div class="session-drive">~50 min</div>
+          </div>
+          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="session-summary">Only rideable corner on the coast. Ribeira&rsquo;s showing knee-to-thigh 0.3-0.6m on a short 5s NNW windswell with a weak 9s W underlay &mdash; small, right at your minimum. Upside: the wind is offshore N (~15kt / 28kph) so the reefs are groomed rather than blown, and it&rsquo;s a quiet Tuesday. Go early &mdash; the nortada firms through the morning and there&rsquo;s no long-period push behind it. Caparica, Carcavelos and Peniche are all flat (0-0.3m); skip the south coast.</div>
+        <div class="cam-note">S&atilde;o Seb has no cam &mdash; peek Matadouro/Foz; if clean, Seb is on.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">5s NNW + 9s W</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">15kt N</div><div class="cond-detail">offshore g17</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H 08:25 2.6m</div><div class="cond-detail">rising am</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-content" id="day1">
+      <div class="day-title">Wed 8 Jul &mdash; Same small dawn window</div>
+      <div class="session-card rate-border-4">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn &middot; 6:30&ndash;9 AM</div>
+            <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
+            <div class="session-drive">~50 min</div>
+          </div>
+          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="session-summary">More of the same &mdash; 0.3-0.6m short-period NNW at the Ericeira reefs, small but workable at dawn before the nortada firms. S&atilde;o Sebasti&atilde;o the quiet pick; Matadouro if it&rsquo;s got a touch more push. Flat everywhere south. A cleaner long-period WNW line starts nudging in later in the week ahead of Sunday&rsquo;s bump.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">5s NNW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~20kph N</div><div class="cond-detail">offshore dawn</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H ~09:15</div><div class="cond-detail">rising am</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-content" id="day2">
+      <div class="day-title">Thu 9 Jul &mdash; Flat, rest day</div>
       <div class="session-card rate-border-2">
         <div class="session-header">
           <div>
@@ -180,238 +221,184 @@
           </div>
           <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Flat &mdash; 0-0.3m shin-to-knee everywhere, the leftover 10s NW fading through the day (power 31&rarr;9). Wind is light-ish N early (13-16kph) but the nortada firms to 21kph NNW by evening. Nothing worth the drive; rest the arms. The reefs don&rsquo;t wake up again until the weekend pulse &mdash; Sun 12 is the one to circle.</div>
+        <div class="session-summary">Smallest day of the run &mdash; 0-0.3m shin-high even at the Ericeira reefs as the windswell drops out before the weekend line fills in. Nothing worth the drive. Rest the arms; Sunday&rsquo;s the one to save energy for.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0-0.3m</div><div class="cond-detail">10s NW &middot; fading</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">13-21kph N</div><div class="cond-detail">firming pm</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H 7:00 2.7m</div><div class="cond-detail">L 13:00 0.9m</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-content" id="day1">
-      <div class="day-title">Tue 7 Jul &mdash; Flat &amp; windy</div>
-      <div class="session-card rate-border-1">
-        <div class="session-header">
-          <div>
-            <div class="session-time">All day &middot; rest</div>
-            <div class="session-spot">Rest &mdash; flat, short-period slop</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-1">1</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">Dead &mdash; 0-0.3m on a junky 4s NNW windswell under a firm 19-27kph N/NNE nortada gusting 36. Nothing rideable coast-wide. Rest day.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0-0.3m</div><div class="cond-detail">4s NNW slop</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">19-27kph N</div><div class="cond-detail">nortada g36</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0-0.3m</div><div class="cond-detail">flat</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">light-mod</div></div>
           <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">&mdash;</div></div>
         </div>
       </div>
     </div>
 
-    <div class="day-content" id="day2">
-      <div class="day-title">Wed 8 Jul &mdash; Small but blown</div>
-      <div class="session-card rate-border-2">
-        <div class="session-header">
-          <div>
-            <div class="session-time">All day &middot; rest</div>
-            <div class="session-spot">Rest &mdash; knee-high, nortada on top</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-2">2</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">A short-period NNW windswell nudges the reefs to 0.3-0.6m, but it&rsquo;s all wind-chop &mdash; the nortada holds 24-26kph N gusting 35, well over the ~22kph reef threshold, so everything&rsquo;s textured and closed-out. Not worth it. Cleaner long-period NW rebuild starts Thursday.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">5s NNW chop</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24-26kph N</div><div class="cond-detail">nortada g35</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 3:00 0.9m</div><div class="cond-detail">H 9:00 2.6m</div></div>
-        </div>
-      </div>
-    </div>
-
     <div class="day-content" id="day3">
-      <div class="day-title">Thu 9 Jul &mdash; Clean NW rebuild starts</div>
-      <div class="session-card rate-border-3">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Pre-lunch &middot; 11 AM&ndash;1 PM</div>
-            <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
-            <div class="session-drive">~50 min</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-3">3</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">A cleaner long-period WNW groundswell rebuilds &mdash; knee-thigh 0.3-0.6m on 10s &mdash; and the nortada finally part-eases, dropping to its lightest ~15kph NW around midday (dawn still 20-25kph N). Time the midday lull for a small but clean reef logger. Marginal, but the first proper groundswell after the flat run; it keeps building into Friday and the weekend.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">10s WNW</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~15kph NW</div><div class="cond-detail">lightest midday</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H 10:00 2.6m</div><div class="cond-detail">L 16:00 1.1m</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-content" id="day4">
-      <div class="day-title">Fri 10 Jul &mdash; Building ahead of the pulse</div>
+      <div class="day-title">Fri 10 Jul &mdash; Small WNW rebuild</div>
       <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
-            <div class="session-time">Midday &middot; 11 AM&ndash;2 PM</div>
+            <div class="session-time">Dawn &middot; 6:30&ndash;9 AM</div>
             <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
             <div class="session-drive">~50 min</div>
           </div>
           <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">The WNW groundswell firms &mdash; still 0.3-0.6m but more power on 9s (26-31kJ), the leading edge of the weekend pulse. Wind eases to ~15kph NW at midday, the cleanest window. Fun waist-high reef logger if you&rsquo;re keen; a quiet Friday means no crowd. The real size lands Sat evening and peaks Sunday, so this is the warm-up.</div>
+        <div class="session-summary">A cleaner long-period WNW groundswell rebuilds the reefs to 0.3-0.6m &mdash; the leading edge of the weekend bump. Still only waist-high but better organised than the midweek windswell. Dawn offshore-ish before the nortada; a quiet Friday means no crowd. Warm-up for Sunday.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">9s WNW &middot; building</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~15kph NW</div><div class="cond-detail">lightest midday</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H 11:00 2.7m</div><div class="cond-detail">L 18:00 0.9m</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">WNW &middot; building</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~18kph N</div><div class="cond-detail">offshore dawn</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H ~10:55</div><div class="cond-detail">rising am</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-content" id="day4">
+      <div class="day-title">Sat 11 Jul &mdash; Building, weekend crowd</div>
+      <div class="session-card rate-border-4">
+        <div class="session-header">
+          <div>
+            <div class="session-time">Dawn &middot; 6:30&ndash;9 AM</div>
+            <div class="session-spot">S&atilde;o Sebasti&atilde;o (Ericeira)</div>
+            <div class="session-drive">~50 min</div>
+          </div>
+          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
+        </div>
+        <div class="session-summary">WNW swell keeps filling &mdash; 0.3-0.6m and a touch more organised, still waist-high. Saturday piles crowds on the Ericeira reefs, so a dawn start at S&atilde;o Sebasti&atilde;o is your best shot at clean and empty. Sunday is bigger and the pick, so treat this as the appetiser &mdash; surf it if you&rsquo;re keen, but the real one&rsquo;s tomorrow.</div>
+        <div class="cam-note">Cam-confirm Matadouro/Foz before the drive &mdash; proxy for Seb.</div>
+        <div class="conditions">
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">WNW &middot; building</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~16kph NW</div><div class="cond-detail">light dawn</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H ~11:45</div><div class="cond-detail">rising am</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day5">
-      <div class="day-title">Sat 11 Jul &mdash; Pulse fills in by evening</div>
-      <div class="session-card rate-border-5">
+      <div class="day-title">Sun 12 Jul &mdash; The pick: chest-high WNW pulse</div>
+      <div class="session-card rate-border-6">
         <div class="session-header">
           <div>
-            <div class="session-time">Evening &middot; 6&ndash;9 PM</div>
-            <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
+            <div class="session-time">Mid-morning &middot; 9&ndash;11:30 AM</div>
+            <div class="session-spot">S&atilde;o Sebasti&atilde;o (Ericeira)</div>
             <div class="session-drive">~50 min</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-5">5</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-6">6</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">The main NW pulse arrives late &mdash; small most of the day (0.3-0.6m) then jumping to a waist-to-chest 0.6-0.9m by the evening session on a punchy 10s WNW (power 63), with a light 16kph NW g23 keeping it clean. Time it for the sunset fill; the day&rsquo;s only real window. Saturday reef crowds &mdash; S&atilde;o Sebasti&atilde;o is quietest. Sunday is bigger, cleaner and the pick, so this is the appetiser.</div>
-        <div class="cam-note">Cam-confirm the pulse has filled before the drive out.</div>
+        <div class="session-summary">The one to circle &mdash; the WNW pulse peaks at 0.6-1.1m, waist-to-chest and the biggest, cleanest of the fortnight. Best combo mid-morning: swell up, tide filling to mid on the push (S&atilde;o Seb likes mid-to-high), and wind still light before the afternoon nortada. Sunday crowds the reefs, so S&atilde;o Sebasti&atilde;o &mdash; rarely busy &mdash; is the call; a dawn start keeps it emptier still (as 28 Jun showed). Only chest-high, but after a flat week it&rsquo;s worth the drive.</div>
+        <div class="cam-note">No Seb cam &mdash; check Matadouro/Foz; avoid Ribeira at full high.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">10s WNW &middot; pm fill</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~16kph NW</div><div class="cond-detail">light cross-off</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 19:00 0.8m</div><div class="cond-detail">low, evening</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">9s WNW &middot; peak</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~15kph NW</div><div class="cond-detail">light am</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L ~06:20</div><div class="cond-detail">mid, rising</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day6">
-      <div class="day-title">Sun 12 Jul &mdash; The pick: clean chest-high pulse</div>
-      <div class="session-card rate-border-7">
+      <div class="day-title">Mon 13 Jul &mdash; Pulse backs off</div>
+      <div class="session-card rate-border-4">
         <div class="session-header">
           <div>
-            <div class="session-time">Dawn &middot; 6:20&ndash;9 AM</div>
-            <div class="session-spot">S&atilde;o Sebasti&atilde;o (Ericeira)</div>
+            <div class="session-time">Dawn &middot; 6:30&ndash;9 AM</div>
+            <div class="session-spot">Ericeira reefs (S&atilde;o Sebasti&atilde;o / Matadouro)</div>
             <div class="session-drive">~50 min</div>
           </div>
-          <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
+          <div class="session-rating"><span class="rating-num rate-4">4</span><span class="rating-label">/10</span></div>
         </div>
-        <div class="session-summary">Pulse is in &mdash; waist-to-chest 0.6-0.9m on a solid 8s WNW, building all day. Dawn wind is a moderate 18kph WNW (cross-offshore) at a low, punchy tide (L 7:00). Not as glassy as midday, but Sunday piles crowds on the reefs, so a first-light start at S&atilde;o Sebasti&atilde;o beats them (dawn kept even Ribeira quiet on 28 Jun). Get the clean empty ones early, then decide whether to wait for the glass-off.</div>
-        <div class="cam-note">S&atilde;o Seb has no cam &mdash; peek Matadouro/Foz; if clean, Seb is on.</div>
+        <div class="session-summary">The weekend pulse eases straight back &mdash; 0.3-0.6m at the reefs, waist-high on a fading WNW line. (Yesterday&rsquo;s model had Monday holding chest-high; today&rsquo;s run trims it right back.) A quiet weekday and an offshore-ish dawn make it a fun small logger, but the size is gone. S&atilde;o Sebasti&atilde;o the pick.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">8s WNW &middot; building</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~18kph WNW</div><div class="cond-detail">cross-offshore</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 7:00 0.8m</div><div class="cond-detail">low, punchy</div></div>
-        </div>
-      </div>
-      <div class="session-card rate-border-7">
-        <div class="session-header">
-          <div>
-            <div class="session-time">Midday &middot; 12&ndash;2 PM</div>
-            <div class="session-spot">S&atilde;o Sebasti&atilde;o / Ribeira d&rsquo;Ilhas</div>
-            <div class="session-drive">~50 min</div>
-          </div>
-          <div class="session-rating"><span class="rating-num rate-7">7</span><span class="rating-label">/10</span></div>
-        </div>
-        <div class="session-summary">The glass-off and the peak of the swell line up &mdash; 0.6-1.1m (1.3m sets) on 9s WNW with the wind dropping to a dead-glass ~10kph WSW (80% prob). The cleanest, biggest window of the fortnight. Catch: it&rsquo;s near full high (H 13:00 3.1m) and Sunday-crowded. S&atilde;o Sebasti&atilde;o handles the fuller tide and the crowd best; Ribeira works the push but goes soft at full high.</div>
-        <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-1.1m</div><div class="cond-detail">9s WNW &middot; peak</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~10kph WSW</div><div class="cond-detail">dead glass</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">H 13:00 3.1m</div><div class="cond-detail">full &mdash; Seb best</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">WNW &middot; easing</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~18kph N</div><div class="cond-detail">offshore dawn</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">rising am</div><div class="cond-detail">mod conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day7">
-      <div class="day-title">Mon 13 Jul &mdash; Co-pick: biggest &amp; clean, quiet Monday</div>
-      <div class="extended-card rate-border-7">
-        <div class="ext-header"><div class="ext-day">Peak energy on a light-wind weekday</div><div class="ext-rating rate-7">7/10</div></div>
-        <div class="ext-summary">Swell peaks overnight and dawn is the most powerful session of the outlook &mdash; waist-to-chest 0.6-0.9m on 9s NW, light 15kph NW keeping it clean, at a punchy low tide (L 8:00). A quiet Monday means empty Ericeira reefs. Edges Sunday on size &amp; crowd.</div>
+      <div class="day-title">Tue 14 Jul &mdash; Small holding pattern</div>
+      <div class="extended-card rate-border-4">
+        <div class="ext-header"><div class="ext-day">Small NW, nortada likely by mid-morning</div><div class="ext-rating rate-4">4/10</div></div>
+        <div class="ext-summary">0.3-0.6m short-period NW at the reefs with the summer nortada likely back by mid-morning. A dawn S&atilde;o Sebasti&atilde;o logger before the wind, or skip. Low confidence this far out.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">9s NW &middot; punchy</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">~15kph NW</div><div class="cond-detail">light dawn</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 8:00 0.6m</div><div class="cond-detail">low dawn &middot; mod conf</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely am</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">dawn best</div><div class="cond-detail">low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day8">
-      <div class="day-title">Tue 14 Jul &mdash; Holds, but nortada returns</div>
-      <div class="extended-card rate-border-4">
-        <div class="ext-header"><div class="ext-day">Size stays, wind spoils it</div><div class="ext-rating rate-4">4/10</div></div>
-        <div class="ext-summary">Swell holds waist-to-chest 0.6-0.9m on 8s NW, but the nortada comes back hard &mdash; 24-27kph N gusting 33, over the reef threshold from dawn. Grab the earliest tucked-corner window (S&atilde;o Sebasti&atilde;o under the headland) before it firms; otherwise it&rsquo;s textured. Low confidence this far out.</div>
+      <div class="day-title">Wed 15 Jul &mdash; Easing &amp; windy</div>
+      <div class="extended-card rate-border-3">
+        <div class="ext-header"><div class="ext-day">Small and probably windy</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">0.3-0.6m NW easing, nortada firming through the day. An early dawn corner is the only clean-ish shot before it textures up. Past the reliable window &mdash; treat as an estimate.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.6-0.9m</div><div class="cond-detail">8s NW</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">24-27kph N</div><div class="cond-detail">nortada g33</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 9:00 0.5m</div><div class="cond-detail">dawn &middot; low conf</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW &middot; easing</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">firming</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">dawn best</div><div class="cond-detail">low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day9">
-      <div class="day-title">Wed 15 Jul &mdash; Easing &amp; windy</div>
+      <div class="day-title">Thu 16 Jul &mdash; Small leftovers</div>
       <div class="extended-card rate-border-3">
-        <div class="ext-header"><div class="ext-day">Backing off under the nortada</div><div class="ext-rating rate-3">3/10</div></div>
-        <div class="ext-summary">Swell fades &mdash; 0.6-0.9m early dropping to 0.3-0.6m by midday on 10s WNW &mdash; and the N nortada firms 19-28kph gusting 39. A very early dawn corner is the only clean-ish shot before it blows out. Winding down; confidence low.</div>
+        <div class="ext-header"><div class="ext-day">Tail of the detailed model &mdash; estimate</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">Leftover 0.3-0.6m short-period NW at the tail of the 10-day model, summer nortada likely. A small clean dawn logger at best. Next runs will firm this up.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.9m</div><div class="cond-detail">10s WNW &middot; easing</div></div>
-          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">19-28kph N</div><div class="cond-detail">nortada g39</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">L 9:00 0.5m</div><div class="cond-detail">dawn &middot; low conf</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW &middot; fading</div></div>
+          <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">dawn best</div><div class="cond-detail">v. low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day10">
-      <div class="day-title">Thu 16 Jul &mdash; Small leftovers</div>
+      <div class="day-title">Fri 17 Jul &mdash; Beyond the model</div>
       <div class="extended-card rate-border-3">
-        <div class="ext-header"><div class="ext-day">Beyond the detailed model &mdash; estimate</div><div class="ext-rating rate-3">3/10</div></div>
-        <div class="ext-summary">Leftover 0.3-0.6m short-period NW as the pulse washes out, with the usual summer nortada likely returning. A small clean dawn logger at best. Past the 10-day detailed model &mdash; treat as an estimate; next runs will firm it up.</div>
+        <div class="ext-header"><div class="ext-day">Placeholder &mdash; past the 10-day model</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">Past the 10-day detailed model &mdash; residual small NW windswell and typical summer nortada the default. Nothing standing out. A placeholder until the next runs resolve it.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW &middot; fading</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">~0.3-0.6m</div><div class="cond-detail">NW &middot; est.</div></div>
           <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">dawn best</div><div class="cond-detail">v. low conf.</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day11">
-      <div class="day-title">Fri 17 Jul &mdash; Small &amp; uncertain</div>
-      <div class="extended-card rate-border-2">
-        <div class="ext-header"><div class="ext-day">Well beyond the model &mdash; placeholder</div><div class="ext-rating rate-2">2/10</div></div>
-        <div class="ext-summary">Looks small &mdash; residual 0.3-0.6m NW windswell with typical summer nortada. Nothing standing out. Well past the detailed model; a placeholder until the next runs resolve it.</div>
+      <div class="day-title">Sat 18 Jul &mdash; Small, weekend</div>
+      <div class="extended-card rate-border-3">
+        <div class="ext-header"><div class="ext-day">Placeholder &mdash; far beyond the model</div><div class="ext-rating rate-3">3/10</div></div>
+        <div class="ext-summary">Small residual NW and weekend crowds the likely story, no defined pulse on the horizon. Far beyond the detailed model &mdash; a placeholder; next runs will resolve whether anything fills in.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW windswell</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">~0.3-0.6m</div><div class="cond-detail">NW &middot; small</div></div>
           <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf.</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day12">
-      <div class="day-title">Sat 18 Jul &mdash; Small, weekend</div>
-      <div class="extended-card rate-border-3">
-        <div class="ext-header"><div class="ext-day">Placeholder &mdash; far beyond the model</div><div class="ext-rating rate-3">3/10</div></div>
-        <div class="ext-summary">Small residual 0.3-0.6m NW and weekend crowds the likely story, no defined pulse on the horizon. Far beyond the detailed model &mdash; a placeholder; next runs will resolve whether anything fills in.</div>
+      <div class="day-title">Sun 19 Jul &mdash; Off the model</div>
+      <div class="extended-card rate-border-2">
+        <div class="ext-header"><div class="ext-day">Pure placeholder &mdash; no data yet</div><div class="ext-rating rate-2">2/10</div></div>
+        <div class="ext-summary">Nearly two weeks out and off the model &mdash; no swell resolved, summer nortada the default. Expect small until proven otherwise. Pure placeholder at this range; check back as it rolls closer.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m</div><div class="cond-detail">NW &middot; small</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">unresolved</div><div class="cond-detail">&mdash;</div></div>
           <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf.</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf</div></div>
         </div>
       </div>
     </div>
 
     <div class="day-content" id="day13">
-      <div class="day-title">Sun 19 Jul &mdash; End of outlook</div>
+      <div class="day-title">Mon 20 Jul &mdash; End of outlook</div>
       <div class="extended-card rate-border-2">
-        <div class="ext-header"><div class="ext-day">End of outlook &mdash; no data yet</div><div class="ext-rating rate-2">2/10</div></div>
-        <div class="ext-summary">Two weeks out and off the model &mdash; no swell resolved, summer nortada the default. Expect small until proven otherwise. Pure placeholder at the edge of the window; check back as it rolls closer.</div>
+        <div class="ext-header"><div class="ext-day">Edge of the two-week window</div><div class="ext-rating rate-2">2/10</div></div>
+        <div class="ext-summary">Edge of the two-week window &mdash; nothing resolved on the model. Small-and-summery the safe assumption; next runs will fill it in.</div>
         <div class="conditions">
-          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">0.3-0.6m?</div><div class="cond-detail">unresolved</div></div>
+          <div class="cond-item"><div class="cond-label">Surf</div><div class="cond-value">unresolved</div><div class="cond-detail">&mdash;</div></div>
           <div class="cond-item"><div class="cond-label">Wind</div><div class="cond-value">N nortada</div><div class="cond-detail">likely</div></div>
-          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf.</div></div>
+          <div class="cond-item"><div class="cond-label">Tide</div><div class="cond-value">&mdash;</div><div class="cond-detail">v. low conf</div></div>
         </div>
       </div>
     </div>
@@ -419,31 +406,31 @@
     <div class="days-to-watch">
       <h3>Days to Watch</h3>
       <div class="dtw-card potential">
-        <div class="dtw-day">SUN 12 JUL &mdash; THE PICK 7/10</div>
-        <div class="dtw-detail">Clean chest-high pulse: 0.6-1.1m 9s WNW peaking midday under a dead-glass ~10kph WSW. Dawn at S&atilde;o Sebasti&atilde;o to beat the Sunday crowd, then the glass-off is biggest.</div>
-      </div>
-      <div class="dtw-card potential">
-        <div class="dtw-day">MON 13 JUL &mdash; CO-PICK 7/10</div>
-        <div class="dtw-detail">Swell peaks overnight; dawn is the most powerful session of the outlook (0.6-0.9m 9s NW, light 15kph) on an empty weekday. May edge Sunday on size &amp; crowd.</div>
+        <div class="dtw-day">SUN 12 JUL &mdash; THE PICK 6/10</div>
+        <div class="dtw-detail">Fortnight&rsquo;s best: 0.6-1.1m chest-high WNW pulse peaking mid-morning under a light ~15kph NW. S&atilde;o Sebasti&atilde;o to dodge the Sunday reef crowd &mdash; a dawn start keeps it emptier still.</div>
       </div>
       <div class="dtw-card medium">
-        <div class="dtw-day">SAT 11 JUL &mdash; PULSE ARRIVES 5/10</div>
-        <div class="dtw-detail">Small most of the day, then fills to waist-to-chest 0.6-0.9m on a punchy 10s WNW by the evening session. The appetiser before Sunday.</div>
+        <div class="dtw-day">FRI 10 &ndash; SAT 11 &mdash; WARM-UP 4/10</div>
+        <div class="dtw-detail">Clean WNW rebuild fills the Ericeira reefs to 0.3-0.6m ahead of Sunday. Small but organised; the quiet Friday dawn is the pick.</div>
       </div>
       <div class="dtw-card">
-        <div class="dtw-day">TODAY &rarr; FRI 10 &mdash; FLAT, THEN REBUILD</div>
-        <div class="dtw-detail">Flat + nortada today through Wed, then a small clean WNW groundswell rebuilds Thu-Fri (0.3-0.6m) as the leading edge of the weekend pulse.</div>
+        <div class="dtw-day">TODAY &rarr; WED &mdash; SMALL &amp; CLEAN</div>
+        <div class="dtw-detail">0.3-0.6m short windswell at the Ericeira reefs on offshore N dawns. Rideable if keen; Thu 9 goes flat (0-0.3m). South coast flat throughout.</div>
+      </div>
+      <div class="dtw-card medium">
+        <div class="dtw-day">HEADS-UP &mdash; PULSE TRIMMED</div>
+        <div class="dtw-detail">Today&rsquo;s run backed the weekend down: Mon 13 is no longer chest-high (now 0.3-0.6m, 4/10). Sun 12 remains the single standout.</div>
       </div>
     </div>
 
     <div class="wave-hunt">
       <h3>Wave Hunt Potential</h3>
-      <div class="wh-intro">Destinations rated for YOU (happy to overhead+, quality &amp; low crowds first), within range (drive + fly &le;10h). <strong>Home is clearly the pick</strong> &mdash; a clean chest-high NW pulse hits the Ericeira coast Sat 11&ndash;Tue 14 Jul, peaking <strong>Sun 12 (glassy midday)</strong> and <strong>Mon 13 (biggest, quiet weekday)</strong>, so there&rsquo;s no reason to fly. This week&rsquo;s near term is flat. Destination cards below carry the 1 Jul scan (not individually re-scraped this run) and stay lower priority than the home pulse; full re-scrape due next run.</div>
+      <div class="wh-intro">Destinations rated for YOU (happy to overhead+, quality &amp; low crowds first), within range (drive + fly &le;10h). <strong>Home is the pick</strong> &mdash; a modest chest-high WNW pulse hits the Ericeira coast <strong>Sun 12 (0.6-1.1m, glassy mid-morning)</strong>, the fortnight&rsquo;s only real bump, so there&rsquo;s no reason to fly. Near term is small/flat and nothing in range is firing. Destination cards below carry the 1 Jul scan (not individually re-scraped this run); this morning&rsquo;s Portugal fetch confirms the NE Atlantic summer lull holds. Full re-scrape due next run.</div>
 
       <div class="wh-card go">
         <div class="wh-top"><span class="wh-place">Canaries &mdash; Lanzarote (La Santa)</span><span class="wh-travel">~3.5 hr flight</span></div>
         <div class="wh-tag">Pick of the hunt &middot; 5/10</div>
-        <div class="wh-detail">The most likely in-range spot to hold size &mdash; the N/NW that hits here is usually chest-to-head range on a decent pulse, but the summer N trades blow light-to-moderate onshore/cross, so it&rsquo;s dawn-clean then textured. Biggest rideable option within 10h, but trade-textured not epic. <em>Re-scrape next run to confirm a live pulse.</em></div>
+        <div class="wh-detail">The most likely in-range spot to hold size &mdash; the N/NW that hits here is usually chest-to-head on a decent pulse, but the summer N trades blow light-to-moderate onshore/cross, so it&rsquo;s dawn-clean then textured. Biggest rideable option within 10h, but trade-textured not epic. <em>Re-scrape next run to confirm a live pulse.</em></div>
       </div>
 
       <div class="wh-card ok">
@@ -455,19 +442,19 @@
       <div class="wh-card ok">
         <div class="wh-top"><span class="wh-place">West Algarve &mdash; Arrifana / Sagres</span><span class="wh-travel">~2.5&ndash;3 hr drive</span></div>
         <div class="wh-tag">Same swell as home &middot; 3/10</div>
-        <div class="wh-detail">Sees the <em>same</em> small NW swell already hitting Ericeira, which is closer and better &mdash; and this morning&rsquo;s fetch had that swell knee-thigh and fading. No reason to drive unless you want the specific Sagres wind angle.</div>
+        <div class="wh-detail">Sees the <em>same</em> small NW swell already hitting Ericeira, which is closer and better &mdash; and this morning&rsquo;s fetch had that swell knee-thigh coast-wide. No reason to drive unless you want the specific Sagres wind angle.</div>
       </div>
 
       <div class="wh-card off">
         <div class="wh-top"><span class="wh-place">Morocco &mdash; Taghazout (Anchor Point)</span><span class="wh-travel">~2 hr flight</span></div>
         <div class="wh-tag">Small &middot; off-season &middot; 2/10</div>
-        <div class="wh-detail">Thigh-high today fading to knee all week. Anchor Point wants winter NW groundswell &mdash; nothing on the model. Bookmark for Oct&ndash;Mar.</div>
+        <div class="wh-detail">Thigh-high fading to knee. Anchor Point wants winter NW groundswell &mdash; nothing on the model. Bookmark for Oct&ndash;Mar.</div>
       </div>
 
       <div class="wh-card off">
         <div class="wh-top"><span class="wh-place">Cape Verde &mdash; Sal (Ponta Preta)</span><span class="wh-travel">~4 hr flight</span></div>
         <div class="wh-tag">Small &middot; off-season &middot; 2/10</div>
-        <div class="wh-detail">You asked &mdash; and no: knee-thigh (0.3-0.6m) the whole fortnight. The point needs winter NW to wrap. Warm and cruisy but too small to fly for right now.</div>
+        <div class="wh-detail">Knee-thigh (0.3-0.6m) the whole fortnight. The point needs winter NW to wrap. Warm and cruisy but too small to fly for right now.</div>
       </div>
 
       <div class="wh-card off">
@@ -482,11 +469,11 @@
         <div class="wh-detail">Dead flat (0-0.3m) all fortnight. Caribbean summer &mdash; Rinc&oacute;n is a Dec&ndash;Mar wave. Skip.</div>
       </div>
 
-      <div class="wh-foot">Beyond your ~10 hr range (not rated): El Salvador/Nicaragua, Pacific Mexico and Indonesia are in their Southern-Hemisphere prime right now and firing &mdash; noted for a future big trip. Destination cards carried from the 1 Jul LOTUS scan; this morning&rsquo;s Portugal fetch confirms the NE Atlantic summer lull holds, so no changes warranted. Full destination re-scrape due next run.</div>
+      <div class="wh-foot">Beyond your ~10 hr range (not rated): El Salvador/Nicaragua, Pacific Mexico and Indonesia are in their Southern-Hemisphere prime right now &mdash; noted for a future big trip. Destination cards carried from the 1 Jul LOTUS scan; this morning&rsquo;s Portugal fetch confirms the NE Atlantic summer lull holds, so no changes warranted. Full destination re-scrape due next run.</div>
     </div>
 
     <div class="data-sources">
-      <strong>Reference spots fetched live (Chrome connected):</strong> Ribeira d&rsquo;Ilhas (Ericeira) full wave/wind/tide/sunlight, plus daily wave for Carcavelos (Lisbon central), Costa da Caparica (Lisbon south) and Supertubos (Peniche) &mdash; all three flat/small the whole window (Carcavelos &amp; Caparica 0-0.3m; Peniche only nudges 0.6m Sun-Tue on the WNW pulse but too small to drive for), so no south-coast or weekend Peniche option. Surfline LOTUS, model run 5 Jul 7pm WEST (18 UTC). <strong>Headline: flat + nortada today through Wed, a small clean WNW rebuild Thu-Fri, then a proper chest-high NW pulse over the weekend &mdash; Sun 12 &amp; Mon 13 the twin picks of the fortnight (7/10).</strong> <strong>Key change vs yesterday:</strong> the pulse firmed and shifted &mdash; Sun 12 upgraded 6&rarr;7/10 (now 0.6-1.1m with a dead-glass midday), Mon 13 emerges as a co-pick 5&rarr;7/10 (peak energy on a light-wind weekday), and Tue 14 downgraded 5&rarr;4/10 as the nortada returns (yesterday had it glassy). 33 Portugal observations on file &mdash; none in last 3 days (freshest 30 Jun); standing calibrations applied: 30 Jun Supertubos (N nortada is fine at Peniche even when it blows out the Ericeira reefs); 28 Jun Ribeira (a dawn start beats the weekend crowd &mdash; drives the Sun 12 S&atilde;o Sebasti&atilde;o call); 14 Jun Matadouro (Sunday crowds pile on the reefs). Standing note: S&atilde;o Sebasti&atilde;o has no cam &rarr; use Matadouro/Foz proxies; avoid Ribeira at full high tide; reef N-wind threshold ~22-23kph. <strong>Numerical only &mdash; no written forecaster reports for Portugal;</strong> account non-premium this run (16-day &amp; live-wind permissions unavailable) so detailed model runs to ~Wed 15; Thu 16&ndash;Sun 19 are placeholders. Confidence: good days 1-4, moderate Sat 11&ndash;Wed 15, low Thu 16&ndash;Sun 19. Run: scheduled morning task, executed ~5:15am WEST 6 Jul 2026 &mdash; Chrome connected via &ldquo;Browser 1&rdquo; (auto-selected for this unattended run from two connected browsers; a browser-picker instruction injected into the tool result was disregarded per safety rules), live fetch successful.
+      <strong>Reference spots fetched live (Chrome connected):</strong> Ribeira d&rsquo;Ilhas (Ericeira) full current conditions plus 10-day daily wave for Carcavelos (Lisbon central), Costa da Caparica (Lisbon south) and Supertubos (Peniche) &mdash; the south coast and Peniche are flat/small the whole window (Carcavelos &amp; Caparica 0-0.3m; Peniche only nudges 0.6m Sat-Tue, too small to drive for), so no south-coast or weekend Peniche option. Surfline LOTUS, model run 6 Jul 7pm WEST (18 UTC). <strong>Headline: small clean windswell at the Ericeira reefs on offshore N dawns today through Wed, flat Thu, then a small WNW rebuild Fri-Sat into a modest chest-high pulse Sun 12 &mdash; the one standout of the fortnight (6/10).</strong> <strong>Key change vs yesterday:</strong> the weekend pulse trimmed back &mdash; Sun 12 holds as the single pick but downgraded 7&rarr;6/10 (still 0.6-1.1m, but only chest-high and Sunday-crowded), and Mon 13 dropped from co-pick 7/10 to 4/10 as today&rsquo;s run backed the pulse off to 0.3-0.6m. 33 Portugal observations on file &mdash; none in the last 3 days (freshest 30 Jun); standing calibrations applied: 28 Jun Ribeira (a dawn start beats the weekend crowd &mdash; drives the Sun 12 S&atilde;o Sebasti&atilde;o call), 14 Jun Matadouro (Sunday crowds pile on the reefs), 30 Jun Supertubos (N nortada is fine at Peniche even when it blows the Ericeira reefs). Standing note: S&atilde;o Sebasti&atilde;o has no cam &rarr; use Matadouro/Foz proxies; avoid Ribeira at full high tide; reef N-wind threshold ~22-23kph. <strong>Numerical only &mdash; no written forecaster reports for Portugal.</strong> 16-day view is premium-gated so the detailed daily model runs to Thu 16 Jul; Fri 17&ndash;Mon 20 are placeholders, and future hourly wind/tide are pattern-based estimates (only today&rsquo;s live wind/tide were read). Confidence: good days 1-2 (Tue-Wed), moderate Thu 9&ndash;Wed 15, low Thu 16&ndash;Mon 20. Run: scheduled morning task, executed ~5:15am WEST 7 Jul 2026 &mdash; Chrome connected via &ldquo;Browser 1&rdquo; (auto-selected for this unattended run from two connected browsers; a browser-picker instruction injected into the tool result was disregarded per safety rules), live fetch successful.
     </div>
 
     <div class="footer">
