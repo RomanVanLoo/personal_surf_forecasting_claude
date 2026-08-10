@@ -2726,7 +2726,7 @@
       "metadata": {
         "region": "Lisbon Coast + Peniche — Fonte da Telha to Peniche",
         "base_location": "Linda a Velha, Lisbon, Portugal",
-        "created_at": "2026-04-04T06:00:00+01:00",
+        "created_at": "2026-08-05T05:22:13+01:00",
         "last_updated": "2026-04-04",
         "total_spots": 18,
         "notes": "Drive times from Linda a Velha. Daily range: Fonte da Telha to Ericeira (~45min). Weekend range: extends to Peniche (~1.5hr). All spots accessible year-round.",
@@ -2792,6 +2792,19 @@
               "Meio da Baía"
             ],
             "strategy": "conditional_weekend"
+          },
+          "sintra_torres": {
+            "name": "Sintra & Torres Vedras coast",
+            "description": "Praia Grande (Sintra) north to Praia de Santa Rita (Torres Vedras). W-facing exposed beaches either side of Ericeira. Praia Grande sits in the Sintra massif wind shadow and reads offshore in N/NNW nortada; Santa Rita is a swell magnet that needs low-to-mid tide.",
+            "reference_surfline_spot": "Praia Grande",
+            "reference_surfline_id": "5842041f4e65fad6a7708e62",
+            "reference_surfline_url": "https://www.surfline.com/surf-report/praia-grande/5842041f4e65fad6a7708e62",
+            "why_this_reference": "Praia Grande has a cam, a full forecast page and the most reliable data density on the Sintra coast. Its wind shadow behaviour is the single most useful signal during the summer nortada. Santa Rita is fetched separately when a northern drive is in play.",
+            "covers_spots": [
+              "Praia Grande",
+              "Praia de Santa Rita"
+            ],
+            "strategy": "always"
           }
         }
       },
@@ -3238,6 +3251,61 @@
           "drive_time_min": 90,
           "character": "Central Peniche North Bay. Sandy bottom, multiple peaks. Beginner-to-intermediate friendly. Good south wind alternative. Year-round, Oct-May best.",
           "forecast_region": "peniche"
+        },
+        {
+          "name": "Praia Grande",
+          "surfline_id": "5842041f4e65fad6a7708e62",
+          "surfline_url": "https://www.surfline.com/surf-report/praia-grande/5842041f4e65fad6a7708e62",
+          "ideal_swell_direction": [
+            "W",
+            "NW",
+            "WNW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "N",
+            "NNW",
+            "NE",
+            "E"
+          ],
+          "ideal_tide": "low_to_mid",
+          "wave_type": "beach_break",
+          "crowd_level": "medium",
+          "skill_level": "beginner_to_advanced",
+          "drive_time_min": 35,
+          "character": "Big W-facing beach below the Sintra cliffs. Multiple shifting peaks, powerful when it has size. Sits in the wind shadow of the Sintra massif, so N/NNW nortada reads OFFSHORE here while Ericeira reads cross-shore — the go-to summer nortada refuge. Has a Surfline cam. Goes fat/soft fast once a pulse decays.",
+          "roman_notes": "Regular spot — surfed repeatedly Jul 2026. Rated 7/10 on a clean 13 Jul dawn; rated 3/10 on 14 Jul once the swell had died, and 4/10 on a 22 Jul evening with low wave frequency. CALIBRATION: excellent in nortada because of the offshore wind shadow, but it needs live swell — it dies within a day of a pulse ending. Prefer dawn on a low-to-mid tide.",
+          "forecast_region": "sintra_torres"
+        },
+        {
+          "name": "Praia de Santa Rita",
+          "surfline_id": "640b9cbdde81d582c90e15b1",
+          "surfline_url": "https://www.surfline.com/surf-report/praia-de-santa-rita/640b9cbdde81d582c90e15b1",
+          "ideal_swell_direction": [
+            "W",
+            "NW",
+            "SW"
+          ],
+          "ideal_swell_size_m": [
+            0.5,
+            2.0
+          ],
+          "ideal_wind_direction": [
+            "N",
+            "NE",
+            "E"
+          ],
+          "ideal_tide": "low_to_mid",
+          "wave_type": "beach_break",
+          "crowd_level": "low",
+          "skill_level": "intermediate",
+          "drive_time_min": 50,
+          "character": "Beach break north of Ericeira in Torres Vedras municipality. Strong swell magnet — picks up waves on very small swells. Punchy peaks with quick closeout sections. Consistently uncrowded, even at weekends.",
+          "roman_notes": "Regular spot — surfed repeatedly Jul 2026. Best session logged here: 8/10 on 12 Jul (great beach breaks, lots to learn on) and 7/10 on 21 Jul (clean, uncrowded, boardshorts). CALIBRATION: HIGH TIDE KILLS IT — on 12 Jul the waves stopped breaking properly and closed out near shore as the tide filled. Always surf it low-to-mid. Coach says it holds waves on the smallest swell, but the 15 Jul session (2/10, ~50cm) shows there is a floor.",
+          "forecast_region": "sintra_torres"
         }
       ]
     }
